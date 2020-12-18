@@ -3,6 +3,6 @@
     <title>test</title>
 </head>
 <body>
-<div class="ladiv1">bonjour paris</div>
+<div class="ladiv1">bonjour User</div>
 <div class="ladiv2">Vous avez bien répondu</div>
 </body></html>
