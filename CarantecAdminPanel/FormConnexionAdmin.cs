@@ -10,24 +10,14 @@ using System.Windows.Forms;
 
 namespace CarantecAdminPanel
 {
-    public partial class Form1 : Form
+    public partial class FormConnexionAdmin : Form
     {
-        public Form1()
+        public FormConnexionAdmin()
         {
             InitializeComponent();
         }
 
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void PictureBox1_Click(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void gradientPanel1_Paint(object sender, PaintEventArgs e)
+        private void FormConnexionAdmin_Load(object sender, EventArgs e)
         {
 
         }
