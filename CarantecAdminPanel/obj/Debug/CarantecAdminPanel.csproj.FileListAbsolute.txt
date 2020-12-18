@@ -1,0 +1,9 @@
+P:\PPE\CarantecAdminPanel\CarantecAdminPanel\CarantecAdminPanel\bin\Debug\CarantecAdminPanel.exe.config
+P:\PPE\CarantecAdminPanel\CarantecAdminPanel\CarantecAdminPanel\bin\Debug\CarantecAdminPanel.exe
+P:\PPE\CarantecAdminPanel\CarantecAdminPanel\CarantecAdminPanel\bin\Debug\CarantecAdminPanel.pdb
+P:\PPE\CarantecAdminPanel\CarantecAdminPanel\CarantecAdminPanel\obj\Debug\CarantecAdminPanel.Form1.resources
+P:\PPE\CarantecAdminPanel\CarantecAdminPanel\CarantecAdminPanel\obj\Debug\CarantecAdminPanel.Properties.Resources.resources
+P:\PPE\CarantecAdminPanel\CarantecAdminPanel\CarantecAdminPanel\obj\Debug\CarantecAdminPanel.csproj.GenerateResource.cache
+P:\PPE\CarantecAdminPanel\CarantecAdminPanel\CarantecAdminPanel\obj\Debug\CarantecAdminPanel.csproj.CoreCompileInputs.cache
+P:\PPE\CarantecAdminPanel\CarantecAdminPanel\CarantecAdminPanel\obj\Debug\CarantecAdminPanel.exe
+P:\PPE\CarantecAdminPanel\CarantecAdminPanel\CarantecAdminPanel\obj\Debug\CarantecAdminPanel.pdb
