@@ -7,3 +7,13 @@ P:\PPE\CarantecAdminPanel\CarantecAdminPanel\CarantecAdminPanel\obj\Debug\Carant
 P:\PPE\CarantecAdminPanel\CarantecAdminPanel\CarantecAdminPanel\obj\Debug\CarantecAdminPanel.csproj.CoreCompileInputs.cache
 P:\PPE\CarantecAdminPanel\CarantecAdminPanel\CarantecAdminPanel\obj\Debug\CarantecAdminPanel.exe
 P:\PPE\CarantecAdminPanel\CarantecAdminPanel\CarantecAdminPanel\obj\Debug\CarantecAdminPanel.pdb
+C:\Users\satis\Source\Repos\PoseidonEUW\PPE4_Ragnarok\CarantecAdminPanel\bin\Debug\CarantecAdminPanel.exe.config
+C:\Users\satis\Source\Repos\PoseidonEUW\PPE4_Ragnarok\CarantecAdminPanel\bin\Debug\CarantecAdminPanel.exe
+C:\Users\satis\Source\Repos\PoseidonEUW\PPE4_Ragnarok\CarantecAdminPanel\bin\Debug\CarantecAdminPanel.pdb
+C:\Users\satis\Source\Repos\PoseidonEUW\PPE4_Ragnarok\CarantecAdminPanel\obj\Debug\CarantecAdminPanel.csprojAssemblyReference.cache
+C:\Users\satis\Source\Repos\PoseidonEUW\PPE4_Ragnarok\CarantecAdminPanel\obj\Debug\CarantecAdminPanel.Form1.resources
+C:\Users\satis\Source\Repos\PoseidonEUW\PPE4_Ragnarok\CarantecAdminPanel\obj\Debug\CarantecAdminPanel.Properties.Resources.resources
+C:\Users\satis\Source\Repos\PoseidonEUW\PPE4_Ragnarok\CarantecAdminPanel\obj\Debug\CarantecAdminPanel.csproj.GenerateResource.cache
+C:\Users\satis\Source\Repos\PoseidonEUW\PPE4_Ragnarok\CarantecAdminPanel\obj\Debug\CarantecAdminPanel.csproj.CoreCompileInputs.cache
+C:\Users\satis\Source\Repos\PoseidonEUW\PPE4_Ragnarok\CarantecAdminPanel\obj\Debug\CarantecAdminPanel.exe
+C:\Users\satis\Source\Repos\PoseidonEUW\PPE4_Ragnarok\CarantecAdminPanel\obj\Debug\CarantecAdminPanel.pdb
