@@ -28,45 +28,45 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgvDonnees = new System.Windows.Forms.DataGridView();
             this.gradientPanel1 = new CarantecAdminPanel.GradientPanel();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnAvis = new System.Windows.Forms.Button();
+            this.btnLieux = new System.Windows.Forms.Button();
+            this.btnPublic = new System.Windows.Forms.Button();
+            this.btnReservation = new System.Windows.Forms.Button();
+            this.btnManifestation = new System.Windows.Forms.Button();
             this.btnDeco = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnFestival = new System.Windows.Forms.Button();
             this.btnUsers = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDonnees)).BeginInit();
             this.gradientPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
-            // dataGridView1
+            // dgvDonnees
             // 
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
-            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
-            this.dataGridView1.Location = new System.Drawing.Point(62, 113);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(665, 298);
-            this.dataGridView1.TabIndex = 1;
+            this.dgvDonnees.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
+            this.dgvDonnees.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.dgvDonnees.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvDonnees.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
+            this.dgvDonnees.Location = new System.Drawing.Point(62, 113);
+            this.dgvDonnees.Name = "dgvDonnees";
+            this.dgvDonnees.Size = new System.Drawing.Size(665, 298);
+            this.dgvDonnees.TabIndex = 1;
             // 
             // gradientPanel1
             // 
             this.gradientPanel1.BackColor = System.Drawing.Color.Transparent;
             this.gradientPanel1.ColorBottom = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
             this.gradientPanel1.ColorTop = System.Drawing.Color.Black;
-            this.gradientPanel1.Controls.Add(this.button6);
-            this.gradientPanel1.Controls.Add(this.button5);
-            this.gradientPanel1.Controls.Add(this.button4);
-            this.gradientPanel1.Controls.Add(this.button3);
-            this.gradientPanel1.Controls.Add(this.button2);
+            this.gradientPanel1.Controls.Add(this.btnAvis);
+            this.gradientPanel1.Controls.Add(this.btnLieux);
+            this.gradientPanel1.Controls.Add(this.btnPublic);
+            this.gradientPanel1.Controls.Add(this.btnReservation);
+            this.gradientPanel1.Controls.Add(this.btnManifestation);
             this.gradientPanel1.Controls.Add(this.btnDeco);
-            this.gradientPanel1.Controls.Add(this.button1);
+            this.gradientPanel1.Controls.Add(this.btnFestival);
             this.gradientPanel1.Controls.Add(this.btnUsers);
             this.gradientPanel1.Controls.Add(this.pictureBox1);
             this.gradientPanel1.Location = new System.Drawing.Point(-1, -3);
@@ -74,80 +74,85 @@
             this.gradientPanel1.Size = new System.Drawing.Size(804, 83);
             this.gradientPanel1.TabIndex = 0;
             // 
-            // button6
+            // btnAvis
             // 
-            this.button6.FlatAppearance.BorderSize = 0;
-            this.button6.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.button6.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button6.Font = new System.Drawing.Font("Netflix Sans", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button6.ForeColor = System.Drawing.Color.White;
-            this.button6.Location = new System.Drawing.Point(370, 46);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(45, 25);
-            this.button6.TabIndex = 8;
-            this.button6.Text = "Avis";
-            this.button6.UseVisualStyleBackColor = true;
+            this.btnAvis.FlatAppearance.BorderSize = 0;
+            this.btnAvis.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnAvis.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnAvis.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAvis.Font = new System.Drawing.Font("Netflix Sans", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAvis.ForeColor = System.Drawing.Color.White;
+            this.btnAvis.Location = new System.Drawing.Point(370, 46);
+            this.btnAvis.Name = "btnAvis";
+            this.btnAvis.Size = new System.Drawing.Size(45, 25);
+            this.btnAvis.TabIndex = 8;
+            this.btnAvis.Text = "Avis";
+            this.btnAvis.UseVisualStyleBackColor = true;
+            this.btnAvis.Click += new System.EventHandler(this.btnAvis_Click);
             // 
-            // button5
+            // btnLieux
             // 
-            this.button5.FlatAppearance.BorderSize = 0;
-            this.button5.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.button5.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Font = new System.Drawing.Font("Netflix Sans", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.ForeColor = System.Drawing.Color.White;
-            this.button5.Location = new System.Drawing.Point(274, 46);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(54, 25);
-            this.button5.TabIndex = 7;
-            this.button5.Text = "Lieux";
-            this.button5.UseVisualStyleBackColor = true;
+            this.btnLieux.FlatAppearance.BorderSize = 0;
+            this.btnLieux.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnLieux.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnLieux.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLieux.Font = new System.Drawing.Font("Netflix Sans", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLieux.ForeColor = System.Drawing.Color.White;
+            this.btnLieux.Location = new System.Drawing.Point(274, 46);
+            this.btnLieux.Name = "btnLieux";
+            this.btnLieux.Size = new System.Drawing.Size(54, 25);
+            this.btnLieux.TabIndex = 7;
+            this.btnLieux.Text = "Lieux";
+            this.btnLieux.UseVisualStyleBackColor = true;
+            this.btnLieux.Click += new System.EventHandler(this.btnLieux_Click);
             // 
-            // button4
+            // btnPublic
             // 
-            this.button4.FlatAppearance.BorderSize = 0;
-            this.button4.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.button4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("Netflix Sans", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.ForeColor = System.Drawing.Color.White;
-            this.button4.Location = new System.Drawing.Point(476, 46);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(63, 25);
-            this.button4.TabIndex = 6;
-            this.button4.Text = "Public";
-            this.button4.UseVisualStyleBackColor = true;
+            this.btnPublic.FlatAppearance.BorderSize = 0;
+            this.btnPublic.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnPublic.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnPublic.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPublic.Font = new System.Drawing.Font("Netflix Sans", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPublic.ForeColor = System.Drawing.Color.White;
+            this.btnPublic.Location = new System.Drawing.Point(476, 46);
+            this.btnPublic.Name = "btnPublic";
+            this.btnPublic.Size = new System.Drawing.Size(63, 25);
+            this.btnPublic.TabIndex = 6;
+            this.btnPublic.Text = "Public";
+            this.btnPublic.UseVisualStyleBackColor = true;
+            this.btnPublic.Click += new System.EventHandler(this.btnPublic_Click);
             // 
-            // button3
+            // btnReservation
             // 
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Netflix Sans", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(510, 15);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(110, 25);
-            this.button3.TabIndex = 5;
-            this.button3.Text = "Réservations";
-            this.button3.UseVisualStyleBackColor = true;
+            this.btnReservation.FlatAppearance.BorderSize = 0;
+            this.btnReservation.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnReservation.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnReservation.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnReservation.Font = new System.Drawing.Font("Netflix Sans", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReservation.ForeColor = System.Drawing.Color.White;
+            this.btnReservation.Location = new System.Drawing.Point(510, 15);
+            this.btnReservation.Name = "btnReservation";
+            this.btnReservation.Size = new System.Drawing.Size(110, 25);
+            this.btnReservation.TabIndex = 5;
+            this.btnReservation.Text = "Réservations";
+            this.btnReservation.UseVisualStyleBackColor = true;
+            this.btnReservation.Click += new System.EventHandler(this.btnReservation_Click);
             // 
-            // button2
+            // btnManifestation
             // 
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Netflix Sans", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(394, 15);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(110, 25);
-            this.button2.TabIndex = 4;
-            this.button2.Text = "Manifestations";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnManifestation.FlatAppearance.BorderSize = 0;
+            this.btnManifestation.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnManifestation.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnManifestation.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnManifestation.Font = new System.Drawing.Font("Netflix Sans", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnManifestation.ForeColor = System.Drawing.Color.White;
+            this.btnManifestation.Location = new System.Drawing.Point(394, 15);
+            this.btnManifestation.Name = "btnManifestation";
+            this.btnManifestation.Size = new System.Drawing.Size(110, 25);
+            this.btnManifestation.TabIndex = 4;
+            this.btnManifestation.Text = "Manifestations";
+            this.btnManifestation.UseVisualStyleBackColor = true;
+            this.btnManifestation.Click += new System.EventHandler(this.btnManifestation_Click);
             // 
             // btnDeco
             // 
@@ -165,20 +170,21 @@
             this.btnDeco.UseVisualStyleBackColor = true;
             this.btnDeco.Click += new System.EventHandler(this.btnDeco_Click);
             // 
-            // button1
+            // btnFestival
             // 
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Netflix Sans", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(299, 15);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(89, 25);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "Festivals";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnFestival.FlatAppearance.BorderSize = 0;
+            this.btnFestival.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnFestival.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnFestival.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnFestival.Font = new System.Drawing.Font("Netflix Sans", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFestival.ForeColor = System.Drawing.Color.White;
+            this.btnFestival.Location = new System.Drawing.Point(299, 15);
+            this.btnFestival.Name = "btnFestival";
+            this.btnFestival.Size = new System.Drawing.Size(89, 25);
+            this.btnFestival.TabIndex = 2;
+            this.btnFestival.Text = "Festivals";
+            this.btnFestival.UseVisualStyleBackColor = true;
+            this.btnFestival.Click += new System.EventHandler(this.btnFestival_Click);
             // 
             // btnUsers
             // 
@@ -194,6 +200,7 @@
             this.btnUsers.TabIndex = 1;
             this.btnUsers.Text = "Utilisateurs";
             this.btnUsers.UseVisualStyleBackColor = true;
+            this.btnUsers.Click += new System.EventHandler(this.btnUsers_Click);
             // 
             // pictureBox1
             // 
@@ -213,14 +220,15 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dgvDonnees);
             this.Controls.Add(this.gradientPanel1);
             this.ForeColor = System.Drawing.Color.White;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Form1";
             this.Text = "Form1";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Form1_FormClosed);
             this.Load += new System.EventHandler(this.Form1_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDonnees)).EndInit();
             this.gradientPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
@@ -231,15 +239,15 @@
 
         private GradientPanel gradientPanel1;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnAvis;
+        private System.Windows.Forms.Button btnLieux;
+        private System.Windows.Forms.Button btnPublic;
+        private System.Windows.Forms.Button btnReservation;
+        private System.Windows.Forms.Button btnManifestation;
         private System.Windows.Forms.Button btnDeco;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnFestival;
         private System.Windows.Forms.Button btnUsers;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvDonnees;
     }
 }
 
