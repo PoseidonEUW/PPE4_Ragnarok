@@ -1,31 +1,63 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace CarantecAdminPanel
 {
+    /// <summary>
+    /// Controleur du projet CARANTEC
+    /// </summary>
     class Controleur
     {
-        #region Propriétés
-        private static Modele modele;
+        #region propriétés
+        private static Modele vmodele;
         #endregion
-        #region Accesseurs
-        public static Modele GetModele()
+
+        #region accesseurs
+        /// <summary>
+        /// propriété Vmodele
+        /// </summary>
+        public static Modele Vmodele
         {
-            return modele;
-        }
-        public static void SetVModele(Modele value)
-        {
-            modele = value;
+            get { return vmodele; }
+            set { vmodele = value; }
         }
         #endregion
-        #region Méthodes
+
+        #region methodes modele
+        /// <summary>
+        /// instanciation du modele
+        /// </summary>
         public static void init()
         {
-            modele = new Modele();
+            Vmodele = new Modele();
         }
+
+        #region MD5
+        public static string MD5Hash(string text)
+        {
+            MD5 md5 = new MD5CryptoServiceProvider();
+
+            //compute hash from the bytes of text  
+            md5.ComputeHash(ASCIIEncoding.ASCII.GetBytes(text));
+
+            //get hash result after compute it  
+            byte[] result = md5.Hash;
+
+            StringBuilder strBuilder = new StringBuilder();
+            for (int i = 0; i < result.Length; i++)
+            {
+                //change it into 2 hexadecimal digits  
+                //for each byte  
+                strBuilder.Append(result[i].ToString("x2"));
+            }
+            return strBuilder.ToString();
+        }
+        #endregion
+
         #endregion
     }
 }

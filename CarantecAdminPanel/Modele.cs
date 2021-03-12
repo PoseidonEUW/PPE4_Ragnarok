@@ -1,59 +1,128 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using MySql.Data.MySqlClient;
-using System.Data;
 using System.Windows.Forms;
-using System.Diagnostics.Eventing.Reader;
 
 namespace CarantecAdminPanel
 {
     class Modele
     {
-        #region Propriétés
-        private MySqlConnection myConnection; // objet de connexion
-        private bool connopen = false; // test si la connexion est faite
-        private bool chargement = false; // test si le chargement d'une requête est fait
-        private DataTable dT1 = new DataTable();
+        #region propriétés
+
+        private MySqlConnection myConnection;   // objet de connexion
+        private bool connopen = false;          // test si la connexion est faite
+        private bool errgrave = false;          // test si erreur lors de la connexion
+        private bool chargement = false;        // test si le chargement d'une requête est fait
+
+        // les DataAdapter et DataTable seront gérés dans des collections avec pour chaque un indice correspondant :
+        // indice 0 : récupération des noms des tables
+        // indice 1 : Table borne
+        // indice 2 : Table adherent
+        // indice 3 : Table ... à vous de créer la suite
+
+        // collection de DataAdapter
+        private List<MySqlDataAdapter> dA = new List<MySqlDataAdapter>();
+
+        // collection de DataTable récupérant les données correspond au DA associé
+        private List<DataTable> dT = new List<DataTable>();
+
         #endregion
-        #region Accesseurs
-        public bool GetConnopen()
+
+        #region accesseurs
+        /// <summary>
+        /// test si la connexion à la BD est ouverte
+        /// </summary>
+        public bool Connopen
         {
-            return connopen;
+            get { return connopen; }
+            set { connopen = value; }
         }
-        public bool GetChargement()
+
+        /// <summary>
+        /// test si erreur lors de la connexion
+        /// </summary>
+        public bool Errgrave
         {
-            return chargement;
+            get { return errgrave; }
+            set { errgrave = value; }
         }
-        public DataTable GetDT1()
+
+        /// <summary>
+        /// test si le chargement d'une requête est fait
+        /// </summary>
+        public bool Chargement
         {
-            return dT1;
+            get { return chargement; }
+            set { chargement = value; }
         }
-        public void SetDT1(DataTable value)
+
+        /// <summary>
+        /// Accesseur de la collection des DataAdapter
+        /// </summary>
+        public List<MySqlDataAdapter> DA
         {
-            dT1 = value;
+            get { return dA; }
+            set { dA = value; }
         }
+
+        /// <summary>
+        /// Accesseur de la collection des DataTable
+        /// </summary>
+        public List<DataTable> DT
+        {
+            get { return dT; }
+            set { dT = value; }
+        }
+
+        public MySqlConnection MyConnection { get => myConnection; set => myConnection = value; }
         #endregion
-        #region Méthodes
+
+        /// <summary>
+        /// Modele() : constructeur permettant l'ajout des DataAdpater et DataTable nécessaires (4 nécessaires pour l'existant actuel)
+        /// indice 0 : récupération des noms des tables
+        /// indice 1 : Table borne
+        /// indice 2 : Table adherent
+        /// indice 3 : Table ...
+        /// </summary>
+        public Modele()
+        {
+            // instanciation des collections des Datatable et DataAdapter
+            for (int i = 0; i <= 11; i++)
+            {
+                dA.Add(new MySqlDataAdapter());
+                dT.Add(new DataTable());
+            }
+        }
+
+        /// <summary>
+        /// méthode seconnecter permettant la connexion à la BD : bd_ppe3_notagame
+        /// </summary>
         public void seconnecter()
         {
-            // paramètres de connexion à modifier selon sa BD et son serveur de BD
-            string myConnectionString = "Database=PPE4_Ragnarok; Data Source=192.168.164.1; UserId=Elliot_Guittet; Password=Php#1MyAdmin;";
+            string myConnectionString = "Database=carantec;Data Source=localhost;User Id=root;Password=;";
+            //string myConnectionString = "Database=PPE3_VELIBERTE;Data Source=192.168.153.1;User Id=YoBrnq;Password=azerty;";
+            //string myConnectionString = "Database=2021_slamBDD4;Data Source=192.168.10.70;User Id=2021_slamBDD4;Password=P@ssw0rd;";
             myConnection = new MySqlConnection(myConnectionString);
-            try // tentative
+            try // tentative 
             {
                 myConnection.Open();
                 connopen = true;
+                MessageBox.Show("BDD OK");
             }
             catch (Exception err)// gestion des erreurs
             {
-                MessageBox.Show("Erreur ouverture bdd : " + err, "PBS connection",
-               MessageBoxButtons.OK, MessageBoxIcon.Error);
-                connopen = false;
+                MessageBox.Show("Erreur ouverture BD Veliberte : " + err, "PBS connection", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                connopen = false; errgrave = true;
             }
         }
+
+        /// <summary>
+        /// méthode sedeconnecter pour se déconnecter à la BD
+        /// </summary>
         public void sedeconnecter()
         {
             if (!connopen)
@@ -66,32 +135,90 @@ namespace CarantecAdminPanel
             }
             catch (Exception err)
             {
-                MessageBox.Show("Erreur fermeture bdd : " + err, "PBS deconnection",
-               MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Erreur fermeture BD Veliberte : " + err, "PBS deconnection", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                errgrave = true;
             }
         }
-        public void charger(string requete, DataTable DT)
+
+        /// <summary>
+        /// méthode générique privée pour charger le résultat d'une requête dans un dataTable via un dataAdapter
+        /// Méthode appelée par charger_donnees(string table)
+        /// </summary>
+        /// <param name="requete">requete à charger</param>
+        /// <param name="DT">dataTable</param>
+        /// <param name="DA">dataAdapter</param>
+        private void charger(string requete, DataTable DT, MySqlDataAdapter DA)
         {
-            MySqlCommand command = myConnection.CreateCommand();
-            MySqlDataReader reader;
+            DA.SelectCommand = new MySqlCommand(requete, myConnection);
+
+            // pour spécifier les instructions de mise à jour (insert, delete, update)
+            MySqlCommandBuilder CB1 = new MySqlCommandBuilder(DA);
             try
             {
-                command.CommandText = requete;
-                reader = command.ExecuteReader();
-                DT.Load(reader);
+                DT.Clear();
+                DA.Fill(DT);
                 chargement = true;
             }
             catch (Exception err)
             {
-                MessageBox.Show("Erreur chargement dataTable: " + err, "PBS table",
-               MessageBoxButtons.OK, MessageBoxIcon.Error);
-                chargement = false;
+                MessageBox.Show("Erreur chargement dataTable : " + err, "PBS table", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                errgrave = true;
             }
         }
-        public void charger_donnees(string table)
+
+        /// <summary>
+        /// charge dans un DT les données de la table passée en paramètre
+        /// </summary>
+        /// <param name="table">nom de la table à requêter</param>
+        public void charger_donnees(string table, int numV)
         {
-            if (table == "ADMIN") charger("select * from ADMIN;", dT1);
+            chargement = false;
+            if (!connopen) return;		// pour vérifier que la BD est bien ouverte
+
+            if (table == "toutes")
+            {
+                charger("show tables;", dT[0], dA[0]);
+            }
+            if (table == "utilisateur")
+            {
+                charger("select * from personne;", dT[1], dA[1]);
+            }
+            if (table == "festival")
+            {
+                charger("select * from festival;", dT[1], dA[1]);
+            }
+            if (table == "manifestation")
+            {
+                charger("select * from manifestation;", dT[1], dA[1]);
+            }
+            if (table == "reservation")
+            {
+                charger("select * from reservation;", dT[1], dA[1]);
+            }
+            if (table == "lieu")
+            {
+                charger("select * from lieu;", dT[1], dA[1]);
+            }
+            if (table == "avis")
+            {
+                charger("select * from avis;", dT[1], dA[1]);
+            }
+            if (table == "public")
+            {
+                charger("select * from public;", dT[1], dA[1]);
+            }
+            //if (table == "PPE_REPARERUT")
+            //{
+            //    charger("select IdR, numV, T.LibelleT, dateR, tempsR, U.loginU from (PPE_REPARER P INNER JOIN PPE_TRAVAUX T ON P.IdT = T.IdT) INNER JOIN PPE_UTILISATEURS U ON P.IdU = U.numU;", dT[9], dA[9]);
+            //}
+            //if (table == "PPE_AREPARER")
+            //{
+            //    charger("select V.numV, etatV from vehicule V WHERE etatV='R' and numV not in (SELECT numV FROM PPE_REPARER); ", dT[10], dA[10]);
+            //}
+            //if (table == "SUMTEMPSR")
+            //{
+            //    charger("SELECT SEC_TO_TIME( SUM( TIME_TO_SEC( `tempsR` ) ) ) from PPE_REPARER WHERE `numV`= " + numV + ";", dT[11], dA[11]);
+            //}
         }
-        #endregion
     }
 }
