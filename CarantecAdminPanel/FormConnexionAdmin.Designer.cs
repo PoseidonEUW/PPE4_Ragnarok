@@ -136,6 +136,7 @@
             this.TextBoxMdpAdmin.ForeColor = System.Drawing.Color.Snow;
             this.TextBoxMdpAdmin.Location = new System.Drawing.Point(230, 304);
             this.TextBoxMdpAdmin.Name = "TextBoxMdpAdmin";
+            this.TextBoxMdpAdmin.PasswordChar = '*';
             this.TextBoxMdpAdmin.Size = new System.Drawing.Size(354, 33);
             this.TextBoxMdpAdmin.TabIndex = 5;
             // 

@@ -34,7 +34,7 @@ namespace CarantecAdminPanel
             Controleur.GetModele().charger_donnees("ADMIN");
             for(int i = 0; i < Controleur.GetModele().GetDT1().Rows.Count; i++)
             {
-                if (logAdmin == Controleur.GetModele().GetDT1().Rows[i]["LOGINADMIN"].ToString() && mdpAdmin == Controleur.GetModele().GetDT1().Rows[i]["MDPADMIN"].ToString())
+                if (logAdmin == Controleur.GetModele().GetDT1().Rows[i]["LOGADMIN"].ToString() && mdpAdmin == Controleur.GetModele().GetDT1().Rows[i]["MDPADMIN"].ToString())
                 {
                     MessageBox.Show("Bienvenue " + logAdmin + " !", "Connexion réussie",
                     MessageBoxButtons.OK, MessageBoxIcon.Information);
