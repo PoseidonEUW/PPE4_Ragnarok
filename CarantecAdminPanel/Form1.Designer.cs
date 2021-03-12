@@ -54,6 +54,7 @@
             this.dgvDonnees.Name = "dgvDonnees";
             this.dgvDonnees.Size = new System.Drawing.Size(665, 298);
             this.dgvDonnees.TabIndex = 1;
+            this.dgvDonnees.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDonnees_CellContentClick);
             // 
             // gradientPanel1
             // 

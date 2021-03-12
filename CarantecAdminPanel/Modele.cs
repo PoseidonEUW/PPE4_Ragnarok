@@ -103,7 +103,7 @@ namespace CarantecAdminPanel
         /// </summary>
         public void seconnecter()
         {
-            string myConnectionString = "Database=carantec;Data Source=localhost;User Id=root;Password=;";
+            string myConnectionString = "Database=PPE4_Ragnarok;Data Source=192.168.164.1;User Id=Titouan_Annaix;Password=JeSappelleTitouan;";
             //string myConnectionString = "Database=PPE3_VELIBERTE;Data Source=192.168.153.1;User Id=YoBrnq;Password=azerty;";
             //string myConnectionString = "Database=2021_slamBDD4;Data Source=192.168.10.70;User Id=2021_slamBDD4;Password=P@ssw0rd;";
             myConnection = new MySqlConnection(myConnectionString);
@@ -111,11 +111,10 @@ namespace CarantecAdminPanel
             {
                 myConnection.Open();
                 connopen = true;
-                MessageBox.Show("BDD OK");
             }
             catch (Exception err)// gestion des erreurs
             {
-                MessageBox.Show("Erreur ouverture BD Veliberte : " + err, "PBS connection", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Erreur ouverture BD Carantec : " + err, "PBS connection", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 connopen = false; errgrave = true;
             }
         }
@@ -135,7 +134,7 @@ namespace CarantecAdminPanel
             }
             catch (Exception err)
             {
-                MessageBox.Show("Erreur fermeture BD Veliberte : " + err, "PBS deconnection", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Erreur fermeture BD Carantec : " + err, "PBS deconnection", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 errgrave = true;
             }
         }
@@ -170,7 +169,7 @@ namespace CarantecAdminPanel
         /// charge dans un DT les données de la table passée en paramètre
         /// </summary>
         /// <param name="table">nom de la table à requêter</param>
-        public void charger_donnees(string table, int numV)
+        public void charger_donnees(string table)
         {
             chargement = false;
             if (!connopen) return;		// pour vérifier que la BD est bien ouverte
@@ -181,31 +180,35 @@ namespace CarantecAdminPanel
             }
             if (table == "utilisateur")
             {
-                charger("select * from personne;", dT[1], dA[1]);
+                charger("select * from PERSONNE;", dT[1], dA[1]);
             }
             if (table == "festival")
             {
-                charger("select * from festival;", dT[1], dA[1]);
+                charger("select * from FESTIVAL;", dT[2], dA[2]);
             }
             if (table == "manifestation")
             {
-                charger("select * from manifestation;", dT[1], dA[1]);
+                charger("select * from MANIFESTATION;", dT[3], dA[3]);
             }
             if (table == "reservation")
             {
-                charger("select * from reservation;", dT[1], dA[1]);
+                charger("select * from RESERVATION;", dT[4], dA[4]);
             }
             if (table == "lieu")
             {
-                charger("select * from lieu;", dT[1], dA[1]);
+                charger("select * from LIEU;", dT[5], dA[5]);
             }
             if (table == "avis")
             {
-                charger("select * from avis;", dT[1], dA[1]);
+                charger("select * from AVIS;", dT[6], dA[6]);
             }
             if (table == "public")
             {
-                charger("select * from public;", dT[1], dA[1]);
+                charger("select * from PUBLIC;", dT[7], dA[7]);
+            }
+            if (table == "ADMIN")
+            {
+                charger("select * from ADMIN;", dT[1], dA[1]);
             }
             //if (table == "PPE_REPARERUT")
             //{
