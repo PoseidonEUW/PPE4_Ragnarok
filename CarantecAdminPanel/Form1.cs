@@ -36,7 +36,7 @@ namespace CarantecAdminPanel
 
         public void btnTables(string table)
         {
-            Controleur.Vmodele.charger_donnees(table, -1);      // chargement des données de la table sélectionné dans le DT correspondant
+            Controleur.Vmodele.charger_donnees(table);      // chargement des données de la table sélectionné dans le DT correspondant
             if (Controleur.Vmodele.Chargement)
             {
                 // un DT par table
@@ -116,7 +116,9 @@ namespace CarantecAdminPanel
 
         private void btnDeco_Click(object sender, EventArgs e)
         {
-            this.Close();
+            this.Visible = false;
+            FormConnexionAdmin FCA = new FormConnexionAdmin();
+            FCA.Show();
         }
 
         private void Form1_FormClosed(object sender, FormClosedEventArgs e)
@@ -160,6 +162,11 @@ namespace CarantecAdminPanel
         private void btnPublic_Click(object sender, EventArgs e)
         {
             btnTables("public");
+        }
+
+        private void dgvDonnees_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

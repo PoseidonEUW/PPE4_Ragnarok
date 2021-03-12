@@ -54,6 +54,7 @@
             this.dgvDonnees.Name = "dgvDonnees";
             this.dgvDonnees.Size = new System.Drawing.Size(665, 298);
             this.dgvDonnees.TabIndex = 1;
+            this.dgvDonnees.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDonnees_CellContentClick);
             // 
             // gradientPanel1
             // 
@@ -80,7 +81,7 @@
             this.btnAvis.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.btnAvis.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnAvis.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAvis.Font = new System.Drawing.Font("Netflix Sans", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAvis.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAvis.ForeColor = System.Drawing.Color.White;
             this.btnAvis.Location = new System.Drawing.Point(370, 46);
             this.btnAvis.Name = "btnAvis";
@@ -96,7 +97,7 @@
             this.btnLieux.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.btnLieux.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnLieux.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLieux.Font = new System.Drawing.Font("Netflix Sans", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLieux.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLieux.ForeColor = System.Drawing.Color.White;
             this.btnLieux.Location = new System.Drawing.Point(274, 46);
             this.btnLieux.Name = "btnLieux";
@@ -112,7 +113,7 @@
             this.btnPublic.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.btnPublic.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnPublic.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPublic.Font = new System.Drawing.Font("Netflix Sans", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPublic.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPublic.ForeColor = System.Drawing.Color.White;
             this.btnPublic.Location = new System.Drawing.Point(476, 46);
             this.btnPublic.Name = "btnPublic";
@@ -128,7 +129,7 @@
             this.btnReservation.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.btnReservation.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnReservation.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnReservation.Font = new System.Drawing.Font("Netflix Sans", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReservation.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnReservation.ForeColor = System.Drawing.Color.White;
             this.btnReservation.Location = new System.Drawing.Point(510, 15);
             this.btnReservation.Name = "btnReservation";
@@ -144,7 +145,7 @@
             this.btnManifestation.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.btnManifestation.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnManifestation.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnManifestation.Font = new System.Drawing.Font("Netflix Sans", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnManifestation.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnManifestation.ForeColor = System.Drawing.Color.White;
             this.btnManifestation.Location = new System.Drawing.Point(394, 15);
             this.btnManifestation.Name = "btnManifestation";
@@ -160,11 +161,11 @@
             this.btnDeco.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.btnDeco.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnDeco.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDeco.Font = new System.Drawing.Font("Netflix Sans", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDeco.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDeco.ForeColor = System.Drawing.Color.White;
-            this.btnDeco.Location = new System.Drawing.Point(680, 29);
+            this.btnDeco.Location = new System.Drawing.Point(648, 29);
             this.btnDeco.Name = "btnDeco";
-            this.btnDeco.Size = new System.Drawing.Size(109, 25);
+            this.btnDeco.Size = new System.Drawing.Size(141, 25);
             this.btnDeco.TabIndex = 3;
             this.btnDeco.Text = "Se déconnecter";
             this.btnDeco.UseVisualStyleBackColor = true;
@@ -176,7 +177,7 @@
             this.btnFestival.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.btnFestival.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnFestival.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnFestival.Font = new System.Drawing.Font("Netflix Sans", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFestival.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnFestival.ForeColor = System.Drawing.Color.White;
             this.btnFestival.Location = new System.Drawing.Point(299, 15);
             this.btnFestival.Name = "btnFestival";
@@ -192,7 +193,7 @@
             this.btnUsers.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.btnUsers.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnUsers.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnUsers.Font = new System.Drawing.Font("Netflix Sans", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUsers.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUsers.ForeColor = System.Drawing.Color.White;
             this.btnUsers.Location = new System.Drawing.Point(208, 15);
             this.btnUsers.Name = "btnUsers";

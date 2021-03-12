@@ -31,14 +31,15 @@ namespace CarantecAdminPanel
         {
             logAdmin = TextBoxLogAdmin.Text;
             mdpAdmin = TextBoxMdpAdmin.Text;
-            Controleur.GetModele().charger_donnees("ADMIN");
-            for(int i = 0; i < Controleur.GetModele().GetDT1().Rows.Count; i++)
+            Controleur.Vmodele.charger_donnees("ADMIN");
+            for(int i = 0; i < Controleur.Vmodele.DT[1].Rows.Count; i++)
             {
-                if (logAdmin == Controleur.GetModele().GetDT1().Rows[i]["LOGADMIN"].ToString() && mdpAdmin == Controleur.GetModele().GetDT1().Rows[i]["MDPADMIN"].ToString())
+                if (logAdmin == Controleur.Vmodele.DT[1].Rows[i]["LOGADMIN"].ToString() && mdpAdmin == Controleur.Vmodele.DT[1].Rows[i]["MDPADMIN"].ToString())
                 {
-                    MessageBox.Show("Bienvenue " + logAdmin + " !", "Connexion réussie",
-                    MessageBoxButtons.OK, MessageBoxIcon.Information);
                     erreur = 1;
+                    this.Visible = false;
+                    Form1 F1 = new Form1();
+                    F1.Show();
                 }
             }
             if (erreur == 0)
@@ -52,8 +53,8 @@ namespace CarantecAdminPanel
         private void FormConnexionAdmin_Load(object sender, EventArgs e)
         {
             Controleur.init();
-            Controleur.GetModele().seconnecter();
-            if (Controleur.GetModele().GetConnopen() == false)
+            Controleur.Vmodele.seconnecter();
+            if (Controleur.Vmodele.Connopen == false)
             {
                 MessageBox.Show("Erreur");
             }
