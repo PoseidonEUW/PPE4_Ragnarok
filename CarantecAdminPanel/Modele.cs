@@ -40,7 +40,7 @@ namespace CarantecAdminPanel
         public void seconnecter()
         {
             // paramètres de connexion à modifier selon sa BD et son serveur de BD
-            string myConnectionString = "Database=PPE4_Ragnarök;Data Source=192.168.164.1;UserId = eguittet; Password =chr17011970; ";
+            string myConnectionString = "Database=PPE4_Ragnarok; Data Source=192.168.164.1; UserId=Elliot_Guittet; Password=Php#1MyAdmin;";
             myConnection = new MySqlConnection(myConnectionString);
             try // tentative
             {
