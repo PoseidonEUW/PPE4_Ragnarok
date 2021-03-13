@@ -174,9 +174,9 @@ namespace CarantecAdminPanel
             chargement = false;
             if (!connopen) return;		// pour vérifier que la BD est bien ouverte
 
-            if (table == "toutes")
+            if (table == "ADMIN")
             {
-                charger("show tables;", dT[0], dA[0]);
+                charger("select * from ADMIN;", dT[0], dA[0]);
             }
             if (table == "utilisateur")
             {
@@ -206,9 +206,9 @@ namespace CarantecAdminPanel
             {
                 charger("select * from PUBLIC;", dT[7], dA[7]);
             }
-            if (table == "ADMIN")
+            if (table == "toutes")
             {
-                charger("select * from ADMIN;", dT[1], dA[1]);
+                charger("show tables;", dT[8], dA[8]);
             }
             //if (table == "PPE_REPARERUT")
             //{
