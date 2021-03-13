@@ -31,15 +31,15 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormTemplateCRUD));
             this.gradientPanel1 = new CarantecAdminPanel.GradientPanel();
             this.btnRetour = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.labelActionTitle = new System.Windows.Forms.Label();
             this.btnEnregistrer = new System.Windows.Forms.Button();
             this.labelSample = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.labelError = new System.Windows.Forms.Label();
             this.tbSample = new System.Windows.Forms.TextBox();
             this.rtbSample = new System.Windows.Forms.RichTextBox();
-            this.checkedListBox1 = new System.Windows.Forms.CheckedListBox();
+            this.cbListSample = new System.Windows.Forms.CheckedListBox();
             this.cbbSample = new System.Windows.Forms.ComboBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.gradientPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -70,16 +70,28 @@
             this.btnRetour.Text = "Retour";
             this.btnRetour.UseVisualStyleBackColor = false;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.BackgroundImage = global::CarantecAdminPanel.Properties.Resources.carantec;
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox1.Location = new System.Drawing.Point(360, -25);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(349, 148);
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            // 
             // labelActionTitle
             // 
             this.labelActionTitle.AutoSize = true;
             this.labelActionTitle.Font = new System.Drawing.Font("Netflix Sans", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelActionTitle.Location = new System.Drawing.Point(448, 126);
+            this.labelActionTitle.Location = new System.Drawing.Point(375, 126);
             this.labelActionTitle.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelActionTitle.Name = "labelActionTitle";
-            this.labelActionTitle.Size = new System.Drawing.Size(168, 27);
+            this.labelActionTitle.Size = new System.Drawing.Size(325, 27);
             this.labelActionTitle.TabIndex = 2;
-            this.labelActionTitle.Text = "MODIFICATION";
+            this.labelActionTitle.Text = "MODIFICATION/SUPPRESSION";
             this.labelActionTitle.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // btnEnregistrer
@@ -106,16 +118,16 @@
             this.labelSample.TabIndex = 4;
             this.labelSample.Text = "SAMPLE";
             // 
-            // label1
+            // labelError
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Netflix Sans", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Firebrick;
-            this.label1.Location = new System.Drawing.Point(366, 457);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(371, 19);
-            this.label1.TabIndex = 5;
-            this.label1.Text = "ERROR SAMPLE ERROR SAMPLE ERROR SAMPLE";
+            this.labelError.AutoSize = true;
+            this.labelError.Font = new System.Drawing.Font("Netflix Sans", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelError.ForeColor = System.Drawing.Color.Firebrick;
+            this.labelError.Location = new System.Drawing.Point(366, 457);
+            this.labelError.Name = "labelError";
+            this.labelError.Size = new System.Drawing.Size(371, 19);
+            this.labelError.TabIndex = 5;
+            this.labelError.Text = "ERROR SAMPLE ERROR SAMPLE ERROR SAMPLE";
             // 
             // tbSample
             // 
@@ -139,19 +151,19 @@
             this.rtbSample.TabIndex = 11;
             this.rtbSample.Text = "";
             // 
-            // checkedListBox1
+            // cbListSample
             // 
-            this.checkedListBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
-            this.checkedListBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.checkedListBox1.Font = new System.Drawing.Font("Netflix Sans", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkedListBox1.ForeColor = System.Drawing.Color.White;
-            this.checkedListBox1.FormattingEnabled = true;
-            this.checkedListBox1.Items.AddRange(new object[] {
+            this.cbListSample.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
+            this.cbListSample.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.cbListSample.Font = new System.Drawing.Font("Netflix Sans", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbListSample.ForeColor = System.Drawing.Color.White;
+            this.cbListSample.FormattingEnabled = true;
+            this.cbListSample.Items.AddRange(new object[] {
             "cbListSample"});
-            this.checkedListBox1.Location = new System.Drawing.Point(360, 334);
-            this.checkedListBox1.Name = "checkedListBox1";
-            this.checkedListBox1.Size = new System.Drawing.Size(139, 76);
-            this.checkedListBox1.TabIndex = 13;
+            this.cbListSample.Location = new System.Drawing.Point(360, 334);
+            this.cbListSample.Name = "cbListSample";
+            this.cbListSample.Size = new System.Drawing.Size(138, 19);
+            this.cbListSample.TabIndex = 13;
             // 
             // cbbSample
             // 
@@ -161,23 +173,11 @@
             this.cbbSample.Font = new System.Drawing.Font("Netflix Sans", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbbSample.ForeColor = System.Drawing.Color.White;
             this.cbbSample.FormattingEnabled = true;
-            this.cbbSample.Location = new System.Drawing.Point(360, 372);
+            this.cbbSample.Location = new System.Drawing.Point(360, 370);
             this.cbbSample.Name = "cbbSample";
             this.cbbSample.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.cbbSample.Size = new System.Drawing.Size(121, 24);
             this.cbbSample.TabIndex = 14;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.BackgroundImage = global::CarantecAdminPanel.Properties.Resources.carantec;
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox1.Location = new System.Drawing.Point(360, -25);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(349, 148);
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
             // 
             // FormTemplateCRUD
             // 
@@ -186,10 +186,10 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
             this.ClientSize = new System.Drawing.Size(1067, 554);
             this.Controls.Add(this.cbbSample);
-            this.Controls.Add(this.checkedListBox1);
+            this.Controls.Add(this.cbListSample);
             this.Controls.Add(this.rtbSample);
             this.Controls.Add(this.tbSample);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.labelError);
             this.Controls.Add(this.labelSample);
             this.Controls.Add(this.btnEnregistrer);
             this.Controls.Add(this.labelActionTitle);
@@ -198,7 +198,7 @@
             this.ForeColor = System.Drawing.Color.White;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FormTemplateCRUD";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormTemplateCRUD";
@@ -217,10 +217,10 @@
         private System.Windows.Forms.Label labelActionTitle;
         private System.Windows.Forms.Button btnEnregistrer;
         private System.Windows.Forms.Label labelSample;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label labelError;
         private System.Windows.Forms.TextBox tbSample;
         private System.Windows.Forms.RichTextBox rtbSample;
-        private System.Windows.Forms.CheckedListBox checkedListBox1;
+        private System.Windows.Forms.CheckedListBox cbListSample;
         private System.Windows.Forms.ComboBox cbbSample;
     }
 }
