@@ -30,6 +30,7 @@
         {
             this.gradientPanel1 = new CarantecAdminPanel.GradientPanel();
             this.BoutonExitCoAdmin = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -37,7 +38,6 @@
             this.TextBoxLogAdmin = new System.Windows.Forms.TextBox();
             this.TextBoxMdpAdmin = new System.Windows.Forms.TextBox();
             this.BoutonValiderCoAdmin = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.gradientPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -51,7 +51,7 @@
             this.gradientPanel1.Controls.Add(this.pictureBox1);
             this.gradientPanel1.Controls.Add(this.panel1);
             this.gradientPanel1.Location = new System.Drawing.Point(0, 0);
-            this.gradientPanel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.gradientPanel1.Margin = new System.Windows.Forms.Padding(2);
             this.gradientPanel1.Name = "gradientPanel1";
             this.gradientPanel1.Size = new System.Drawing.Size(599, 84);
             this.gradientPanel1.TabIndex = 0;
@@ -62,19 +62,31 @@
             this.BoutonExitCoAdmin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BoutonExitCoAdmin.ForeColor = System.Drawing.Color.Snow;
             this.BoutonExitCoAdmin.Location = new System.Drawing.Point(506, 11);
-            this.BoutonExitCoAdmin.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.BoutonExitCoAdmin.Margin = new System.Windows.Forms.Padding(2);
             this.BoutonExitCoAdmin.Name = "BoutonExitCoAdmin";
             this.BoutonExitCoAdmin.Size = new System.Drawing.Size(83, 24);
-            this.BoutonExitCoAdmin.TabIndex = 2;
+            this.BoutonExitCoAdmin.TabIndex = 4;
             this.BoutonExitCoAdmin.Text = "Fermer";
             this.BoutonExitCoAdmin.UseVisualStyleBackColor = false;
             this.BoutonExitCoAdmin.Click += new System.EventHandler(this.BoutonExitCoAdmin_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.BackgroundImage = global::CarantecAdminPanel.Properties.Resources.carantec;
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox1.Location = new System.Drawing.Point(170, -20);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(262, 120);
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
             this.panel1.Location = new System.Drawing.Point(2, 81);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(597, 289);
             this.panel1.TabIndex = 1;
@@ -122,10 +134,10 @@
             this.TextBoxLogAdmin.Font = new System.Drawing.Font("Netflix Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TextBoxLogAdmin.ForeColor = System.Drawing.Color.Snow;
             this.TextBoxLogAdmin.Location = new System.Drawing.Point(172, 186);
-            this.TextBoxLogAdmin.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.TextBoxLogAdmin.Margin = new System.Windows.Forms.Padding(2);
             this.TextBoxLogAdmin.Name = "TextBoxLogAdmin";
             this.TextBoxLogAdmin.Size = new System.Drawing.Size(266, 28);
-            this.TextBoxLogAdmin.TabIndex = 4;
+            this.TextBoxLogAdmin.TabIndex = 1;
             // 
             // TextBoxMdpAdmin
             // 
@@ -134,11 +146,11 @@
             this.TextBoxMdpAdmin.Font = new System.Drawing.Font("Netflix Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TextBoxMdpAdmin.ForeColor = System.Drawing.Color.Snow;
             this.TextBoxMdpAdmin.Location = new System.Drawing.Point(172, 247);
-            this.TextBoxMdpAdmin.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.TextBoxMdpAdmin.Margin = new System.Windows.Forms.Padding(2);
             this.TextBoxMdpAdmin.Name = "TextBoxMdpAdmin";
             this.TextBoxMdpAdmin.PasswordChar = '*';
             this.TextBoxMdpAdmin.Size = new System.Drawing.Size(266, 28);
-            this.TextBoxMdpAdmin.TabIndex = 5;
+            this.TextBoxMdpAdmin.TabIndex = 2;
             // 
             // BoutonValiderCoAdmin
             // 
@@ -147,25 +159,13 @@
             this.BoutonValiderCoAdmin.Font = new System.Drawing.Font("Netflix Sans", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BoutonValiderCoAdmin.ForeColor = System.Drawing.Color.Snow;
             this.BoutonValiderCoAdmin.Location = new System.Drawing.Point(471, 321);
-            this.BoutonValiderCoAdmin.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.BoutonValiderCoAdmin.Margin = new System.Windows.Forms.Padding(2);
             this.BoutonValiderCoAdmin.Name = "BoutonValiderCoAdmin";
             this.BoutonValiderCoAdmin.Size = new System.Drawing.Size(118, 34);
-            this.BoutonValiderCoAdmin.TabIndex = 6;
+            this.BoutonValiderCoAdmin.TabIndex = 3;
             this.BoutonValiderCoAdmin.Text = "VALIDER";
             this.BoutonValiderCoAdmin.UseVisualStyleBackColor = false;
             this.BoutonValiderCoAdmin.Click += new System.EventHandler(this.BoutonValiderCoAdmin_Click);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.BackgroundImage = global::CarantecAdminPanel.Properties.Resources.carantec;
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox1.Location = new System.Drawing.Point(170, -20);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(262, 120);
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
             // 
             // FormConnexionAdmin
             // 
@@ -182,7 +182,7 @@
             this.Controls.Add(this.gradientPanel1);
             this.ForeColor = System.Drawing.SystemColors.ControlText;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FormConnexionAdmin";
             this.Text = "FormConnexionAdmin";
             this.Load += new System.EventHandler(this.FormConnexionAdmin_Load);

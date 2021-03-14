@@ -53,3 +53,6 @@ C:\Users\satis\Desktop\CODE\Carantec\PPE4_Ragnarok\CarantecAdminPanel\bin\Debug\
 C:\Users\satis\Desktop\CODE\Carantec\PPE4_Ragnarok\CarantecAdminPanel\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
 C:\Users\satis\Desktop\CODE\Carantec\PPE4_Ragnarok\CarantecAdminPanel\obj\Debug\CarantecAdminPanel.csproj.CopyComplete
 C:\Users\satis\Desktop\CODE\Carantec\PPE4_Ragnarok\CarantecAdminPanel\obj\Debug\CarantecAdminPanel.FormConnexionAdmin.resources
+C:\Users\satis\Desktop\CODE\Carantec\PPE4_Ragnarok\CarantecAdminPanel\obj\Debug\CarantecAdminPanel.FormCRUDTemplate.resources
+C:\Users\satis\Desktop\CODE\Carantec\PPE4_Ragnarok\CarantecAdminPanel\obj\Debug\CarantecAdminPanel.FormSampleItems.resources
+C:\Users\satis\Desktop\CODE\Carantec\PPE4_Ragnarok\CarantecAdminPanel\obj\Debug\CarantecAdminPanel.FormCRUDUtilisateur.resources

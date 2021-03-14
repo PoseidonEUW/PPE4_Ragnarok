@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace CarantecAdminPanel
 {
-    public partial class FormTemplateCRUD : Form
+    public partial class FormSampleItems : Form
     {
-        public FormTemplateCRUD()
+        public FormSampleItems()
         {
             InitializeComponent();
         }

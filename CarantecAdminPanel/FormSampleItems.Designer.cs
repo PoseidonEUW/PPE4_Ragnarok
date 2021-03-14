@@ -1,6 +1,6 @@
 ﻿namespace CarantecAdminPanel
 {
-    partial class FormTemplateCRUD
+    partial class FormSampleItems
     {
         /// <summary>
         /// Required designer variable.
@@ -28,10 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormTemplateCRUD));
-            this.gradientPanel1 = new CarantecAdminPanel.GradientPanel();
-            this.btnRetour = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormSampleItems));
             this.labelActionTitle = new System.Windows.Forms.Label();
             this.btnEnregistrer = new System.Windows.Forms.Button();
             this.labelSample = new System.Windows.Forms.Label();
@@ -40,47 +37,11 @@
             this.rtbSample = new System.Windows.Forms.RichTextBox();
             this.cbListSample = new System.Windows.Forms.CheckedListBox();
             this.cbbSample = new System.Windows.Forms.ComboBox();
+            this.gradientPanel1 = new CarantecAdminPanel.GradientPanel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.gradientPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // gradientPanel1
-            // 
-            this.gradientPanel1.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.gradientPanel1.ColorBottom = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
-            this.gradientPanel1.ColorTop = System.Drawing.Color.Black;
-            this.gradientPanel1.Controls.Add(this.btnRetour);
-            this.gradientPanel1.Controls.Add(this.pictureBox1);
-            this.gradientPanel1.Location = new System.Drawing.Point(0, 1);
-            this.gradientPanel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.gradientPanel1.Name = "gradientPanel1";
-            this.gradientPanel1.Size = new System.Drawing.Size(1071, 103);
-            this.gradientPanel1.TabIndex = 1;
-            // 
-            // btnRetour
-            // 
-            this.btnRetour.BackColor = System.Drawing.Color.Transparent;
-            this.btnRetour.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRetour.ForeColor = System.Drawing.Color.Snow;
-            this.btnRetour.Location = new System.Drawing.Point(970, 10);
-            this.btnRetour.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnRetour.Name = "btnRetour";
-            this.btnRetour.Size = new System.Drawing.Size(85, 31);
-            this.btnRetour.TabIndex = 2;
-            this.btnRetour.Text = "Retour";
-            this.btnRetour.UseVisualStyleBackColor = false;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.BackgroundImage = global::CarantecAdminPanel.Properties.Resources.carantec;
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox1.Location = new System.Drawing.Point(360, -25);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(349, 148);
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
             // 
             // labelActionTitle
             // 
@@ -179,12 +140,36 @@
             this.cbbSample.Size = new System.Drawing.Size(121, 24);
             this.cbbSample.TabIndex = 14;
             // 
-            // FormTemplateCRUD
+            // gradientPanel1
+            // 
+            this.gradientPanel1.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.gradientPanel1.ColorBottom = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
+            this.gradientPanel1.ColorTop = System.Drawing.Color.Black;
+            this.gradientPanel1.Controls.Add(this.pictureBox1);
+            this.gradientPanel1.Location = new System.Drawing.Point(0, 1);
+            this.gradientPanel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.gradientPanel1.Name = "gradientPanel1";
+            this.gradientPanel1.Size = new System.Drawing.Size(1071, 103);
+            this.gradientPanel1.TabIndex = 1;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.BackgroundImage = global::CarantecAdminPanel.Properties.Resources.carantec;
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox1.Location = new System.Drawing.Point(360, -25);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(349, 148);
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            // 
+            // FormSampleItems
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
-            this.ClientSize = new System.Drawing.Size(1067, 554);
+            this.ClientSize = new System.Drawing.Size(1070, 550);
             this.Controls.Add(this.cbbSample);
             this.Controls.Add(this.cbListSample);
             this.Controls.Add(this.rtbSample);
@@ -199,7 +184,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
-            this.Name = "FormTemplateCRUD";
+            this.Name = "FormSampleItems";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormTemplateCRUD";
             this.gradientPanel1.ResumeLayout(false);
@@ -212,7 +197,6 @@
         #endregion
 
         private GradientPanel gradientPanel1;
-        private System.Windows.Forms.Button btnRetour;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label labelActionTitle;
         private System.Windows.Forms.Button btnEnregistrer;

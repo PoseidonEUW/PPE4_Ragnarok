@@ -107,11 +107,17 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="FormTemplateCRUD.cs">
+    <Compile Include="FormCRUDUtilisateur.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormTemplateCRUD.Designer.cs">
-      <DependentUpon>FormTemplateCRUD.cs</DependentUpon>
+    <Compile Include="FormCRUDUtilisateur.Designer.cs">
+      <DependentUpon>FormCRUDUtilisateur.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormSampleItems.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSampleItems.Designer.cs">
+      <DependentUpon>FormSampleItems.cs</DependentUpon>
     </Compile>
     <Compile Include="FormConnexionAdmin.cs">
       <SubType>Form</SubType>
@@ -135,8 +141,11 @@
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormTemplateCRUD.resx">
-      <DependentUpon>FormTemplateCRUD.cs</DependentUpon>
+    <EmbeddedResource Include="FormCRUDUtilisateur.resx">
+      <DependentUpon>FormCRUDUtilisateur.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSampleItems.resx">
+      <DependentUpon>FormSampleItems.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormConnexionAdmin.resx">
       <DependentUpon>FormConnexionAdmin.cs</DependentUpon>
