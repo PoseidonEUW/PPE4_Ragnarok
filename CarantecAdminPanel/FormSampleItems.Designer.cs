@@ -50,7 +50,7 @@
             this.labelActionTitle.Location = new System.Drawing.Point(375, 126);
             this.labelActionTitle.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelActionTitle.Name = "labelActionTitle";
-            this.labelActionTitle.Size = new System.Drawing.Size(325, 27);
+            this.labelActionTitle.Size = new System.Drawing.Size(420, 34);
             this.labelActionTitle.TabIndex = 2;
             this.labelActionTitle.Text = "MODIFICATION/SUPPRESSION";
             this.labelActionTitle.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -75,7 +75,7 @@
             this.labelSample.Font = new System.Drawing.Font("Netflix Sans", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelSample.Location = new System.Drawing.Point(279, 193);
             this.labelSample.Name = "labelSample";
-            this.labelSample.Size = new System.Drawing.Size(71, 19);
+            this.labelSample.Size = new System.Drawing.Size(89, 24);
             this.labelSample.TabIndex = 4;
             this.labelSample.Text = "SAMPLE";
             // 
@@ -86,7 +86,7 @@
             this.labelError.ForeColor = System.Drawing.Color.Firebrick;
             this.labelError.Location = new System.Drawing.Point(366, 457);
             this.labelError.Name = "labelError";
-            this.labelError.Size = new System.Drawing.Size(371, 19);
+            this.labelError.Size = new System.Drawing.Size(465, 24);
             this.labelError.TabIndex = 5;
             this.labelError.Text = "ERROR SAMPLE ERROR SAMPLE ERROR SAMPLE";
             // 
@@ -98,7 +98,7 @@
             this.tbSample.ForeColor = System.Drawing.Color.White;
             this.tbSample.Location = new System.Drawing.Point(360, 191);
             this.tbSample.Name = "tbSample";
-            this.tbSample.Size = new System.Drawing.Size(349, 24);
+            this.tbSample.Size = new System.Drawing.Size(349, 28);
             this.tbSample.TabIndex = 6;
             // 
             // rtbSample
@@ -123,7 +123,7 @@
             "cbListSample"});
             this.cbListSample.Location = new System.Drawing.Point(360, 334);
             this.cbListSample.Name = "cbListSample";
-            this.cbListSample.Size = new System.Drawing.Size(138, 19);
+            this.cbListSample.Size = new System.Drawing.Size(138, 23);
             this.cbListSample.TabIndex = 13;
             // 
             // cbbSample
@@ -137,7 +137,7 @@
             this.cbbSample.Location = new System.Drawing.Point(360, 370);
             this.cbbSample.Name = "cbbSample";
             this.cbbSample.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.cbbSample.Size = new System.Drawing.Size(121, 24);
+            this.cbbSample.Size = new System.Drawing.Size(121, 28);
             this.cbbSample.TabIndex = 14;
             // 
             // gradientPanel1
@@ -166,7 +166,7 @@
             // 
             // FormSampleItems
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
             this.ClientSize = new System.Drawing.Size(1070, 550);
