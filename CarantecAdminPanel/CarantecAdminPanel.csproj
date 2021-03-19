@@ -113,6 +113,12 @@
     <Compile Include="FormCRUDFestival.Designer.cs">
       <DependentUpon>FormCRUDFestival.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormCRUDLieux.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCRUDLieux.Designer.cs">
+      <DependentUpon>FormCRUDLieux.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormCRUDManifestation.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -155,6 +161,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormCRUDFestival.resx">
       <DependentUpon>FormCRUDFestival.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormCRUDLieux.resx">
+      <DependentUpon>FormCRUDLieux.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormCRUDManifestation.resx">
       <DependentUpon>FormCRUDManifestation.cs</DependentUpon>
