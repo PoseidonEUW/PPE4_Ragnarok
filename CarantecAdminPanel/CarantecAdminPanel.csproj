@@ -107,6 +107,18 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FormCRUDUtilisateur.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCRUDUtilisateur.Designer.cs">
+      <DependentUpon>FormCRUDUtilisateur.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormSampleItems.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSampleItems.Designer.cs">
+      <DependentUpon>FormSampleItems.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormConnexionAdmin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -128,6 +140,12 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormCRUDUtilisateur.resx">
+      <DependentUpon>FormCRUDUtilisateur.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSampleItems.resx">
+      <DependentUpon>FormSampleItems.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormConnexionAdmin.resx">
       <DependentUpon>FormConnexionAdmin.cs</DependentUpon>
@@ -170,6 +188,9 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\settings.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

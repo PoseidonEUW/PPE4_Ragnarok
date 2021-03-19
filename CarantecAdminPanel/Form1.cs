@@ -13,6 +13,7 @@ namespace CarantecAdminPanel
     public partial class Form1 : Form
     {
         private BindingSource bindingSource1;
+        public string tableG;
 
         public Form1()
         {
@@ -36,6 +37,7 @@ namespace CarantecAdminPanel
 
         public void btnTables(string table)
         {
+            tableG = table;
             Controleur.Vmodele.charger_donnees(table);      // chargement des données de la table sélectionné dans le DT correspondant
             if (Controleur.Vmodele.Chargement)
             {
@@ -99,16 +101,6 @@ namespace CarantecAdminPanel
             }
         }
 
-        /// <summary>
-        /// Gestion du menu contextuel pour AJOUTER/SUPPRIMER/MODIFIER des données
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void contextMenuStrip1_Click(object sender, EventArgs e)
-        { 
-            
-        }
-
         private void PictureBox1_Click(object sender, EventArgs e)
         {
             
@@ -167,6 +159,68 @@ namespace CarantecAdminPanel
         private void dgvDonnees_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void ajouterToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void contextMenuStrip1_Opening(object sender, CancelEventArgs e)
+        {
+
+        }
+
+        private void contextMenuStrip1_Click(object sender, EventArgs e)
+        {
+            if (sender == ajouterToolStripMenuItem)
+            {
+                // appel de la méthode du controleur en mode create
+
+                //if (tableG == "festival") Controleur.crud_festival('c', -1);
+                if (tableG == "utilisateur") Controleur.crud_utilisateur('c', -1);
+                //if (tableG == "reservation") Controleur.crud_reservation('c', -1);
+                //if (tableG == "avis") Controleur.crud_avis('c', -1);
+                //if (tableG == "manifestation") Controleur.crud_manifestation('c', -1);
+                //if (tableG == "public") Controleur.crud_public('c', -1);
+                //if (tableG == "lieu") Controleur.crud_reparation('c', -1);
+            }
+            else
+            {
+                // vérifier qu’une ligne est bien sélectionnée dans le dataGridView
+                if (dgvDonnees.SelectedRows.Count == 1)
+                {
+                    if (sender == modifierToolStripMenuItem)
+                    {
+                        //if (tableG == "festival") Controleur.crud_festival('u', Convert.ToInt32(dgvDonnees.SelectedRows[0].Index));
+                        if (tableG == "utilisateur") Controleur.crud_utilisateur('u', Convert.ToInt32(dgvDonnees.SelectedRows[0].Index));
+                        //if (tableG == "reservation") Controleur.crud_reservation('u', Convert.ToInt32(dgvDonnees.SelectedRows[0].Index));
+                        //if (tableG == "avis") Controleur.crud_avis('u', Convert.ToInt32(dgvDonnees.SelectedRows[0].Index));
+                        //if (tableG == "manifestation") Controleur.crud_manifestation('u', Convert.ToInt32(dgvDonnees.SelectedRows[0].Index));
+                        //if (tableG == "public") Controleur.crud_public('u', Convert.ToInt32(dgvDonnees.SelectedRows[0].Index));
+                        //if (tableG == "lieu") Controleur.crud_lieu('u', Convert.ToInt32(dgvDonnees.SelectedRows[0].Index));
+                    }
+                    if (sender == supprimerToolStripMenuItem)
+                    {
+                        //if (tableG == "festival") Controleur.crud_festival('r', Convert.ToInt32(dgvDonnees.SelectedRows[0].Index));
+                        if (tableG == "utilisateur") Controleur.crud_utilisateur('r', Convert.ToInt32(dgvDonnees.SelectedRows[0].Index));
+                        //if (tableG == "reservation") Controleur.crud_reservation('r', Convert.ToInt32(dgvDonnees.SelectedRows[0].Index));
+                        //if (tableG == "avis") Controleur.crud_avis('r', Convert.ToInt32(dgvDonnees.SelectedRows[0].Index));
+                        //if (tableG == "manifestation") Controleur.crud_manifestation('r', Convert.ToInt32(dgvDonnees.SelectedRows[0].Index));
+                        //if (tableG == "public") Controleur.crud_public('r', Convert.ToInt32(dgvDonnees.SelectedRows[0].Index));
+                        //if (tableG == "lieu") Controleur.crud_lieu('r', Convert.ToInt32(dgvDonnees.SelectedRows[0].Index));
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Sélectionner une ligne à modifier/supprimer");
+                }
+            }
+            // mise à jour du dataGridView en affichage
+            // appel de la méthode pour recharger toutes les données dans le DataGridView en cas d'ajout
+            bindingSource1.MoveLast();
+            bindingSource1.MoveFirst();
+            dgvDonnees.Refresh();
         }
     }
 }
