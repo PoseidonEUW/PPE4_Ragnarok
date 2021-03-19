@@ -1,4 +1,6 @@
-﻿namespace CarantecAdminPanel
+﻿using System.Windows.Forms;
+
+namespace CarantecAdminPanel
 {
     partial class FormCRUDUtilisateur
     {
@@ -187,5 +189,9 @@
         private System.Windows.Forms.Label labelPrenom;
         private System.Windows.Forms.TextBox tbNom;
         private System.Windows.Forms.Label labelNom;
+
+        public TextBox TbNom { get => tbNom; set => tbNom = value; }
+        public Label LabelNom { get => labelNom; set => labelNom = value; }
+        public TextBox TbPrenom { get => tbPrenom; set => tbPrenom = value; }
     }
 }

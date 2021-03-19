@@ -74,30 +74,23 @@ namespace CarantecAdminPanel
                 {
                     vmodele.DT[1].Rows[indice].Delete();		// suppression dans le DataTable
                     vmodele.DA[1].Update(vmodele.DT[1]);        // on supprime l’élément du DataTable
-
                 }
             }
             else
             {
                 // cas de l'ajout et modification
-                FormCRUDBorne formCRUD = new FormCRUDBorne();  // création de la nouvelle forme
+                FormCRUDUtilisateur formCRUD = new FormCRUDUtilisateur();  // création de la nouvelle forme
                 if (c == 'c')  // mode ajout donc pas de valeur à passer à la nouvelle forme
                 {
-                    formCRUD.TbNomBorne.Clear();
-                    formCRUD.TbNomAdresseRue.Clear();
-                    formCRUD.TbnumAdresseRue.Clear();
-                    formCRUD.TbLat.Clear();
-                    formCRUD.TbLong.Clear();
+                    formCRUD.TbNom.Clear();
+                    formCRUD.TbPrenom.Clear();
                 }
 
                 if (c == 'u')   // mode update donc on récupère les champs
                 {
                     // on remplit les zones par les valeurs du dataGridView correspondantes
-                    formCRUD.TbNomBorne.Text = vmodele.DT[1].Rows[indice][1].ToString();
-                    formCRUD.TbnumAdresseRue.Text = vmodele.DT[1].Rows[indice][2].ToString();
-                    formCRUD.TbNomAdresseRue.Text = vmodele.DT[1].Rows[indice][3].ToString();
-                    formCRUD.TbLat.Text = vmodele.DT[1].Rows[indice][4].ToString();
-                    formCRUD.TbLong.Text = vmodele.DT[1].Rows[indice][5].ToString();
+                    formCRUD.TbNom.Text = vmodele.DT[1].Rows[indice][1].ToString();
+                    formCRUD.TbPrenom.Text = vmodele.DT[1].Rows[indice][2].ToString();
                 }
             eti:
                 // on affiche la nouvelle form
