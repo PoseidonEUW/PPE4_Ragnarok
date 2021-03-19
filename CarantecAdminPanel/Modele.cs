@@ -91,7 +91,7 @@ namespace CarantecAdminPanel
         public Modele()
         {
             // instanciation des collections des Datatable et DataAdapter
-            for (int i = 0; i <= 11; i++)
+            for (int i = 0; i <= 20; i++)
             {
                 dA.Add(new MySqlDataAdapter());
                 dT.Add(new DataTable());
@@ -209,6 +209,18 @@ namespace CarantecAdminPanel
             if (table == "toutes")
             {
                 charger("show tables;", dT[8], dA[8]);
+            }
+            if (table == "festivalDisplay")
+            {
+                charger("select * from infosFestival;", dT[9], dA[9]);
+            }
+            if (table == "thematique")
+            {
+                charger("select * from THEMATIQUE;", dT[10], dA[10]);
+            }
+            if (table == "respToPers")
+            {
+                charger("select * from respToPers;", dT[11], dA[11]);
             }
             //if (table == "PPE_REPARERUT")
             //{

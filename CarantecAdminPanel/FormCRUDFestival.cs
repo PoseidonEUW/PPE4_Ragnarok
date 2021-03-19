@@ -16,5 +16,15 @@ namespace CarantecAdminPanel
         {
             InitializeComponent();
         }
+
+        private void labelNom_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tbNomFestival_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -51,11 +51,14 @@ namespace CarantecAdminPanel
                     dgvDonnees.Columns["NOMPERSONNE"].HeaderText = "Nom";
                     dgvDonnees.Columns["PRENOMPERSONNE"].HeaderText = "Prénom";
                 }
-                else if (table == "festival")
+                else if (table == "festivalDisplay")
                 {
-                    bindingSource1.DataSource = Controleur.Vmodele.DT[2];
+                    bindingSource1.DataSource = Controleur.Vmodele.DT[9];
                     dgvDonnees.DataSource = bindingSource1;
-
+                    dgvDonnees.Columns["ANNEEFESTIVAL"].HeaderText = "Année";
+                    dgvDonnees.Columns["NOMFESTIVAL"].HeaderText = "Nom";
+                    dgvDonnees.Columns["LIBELLETHEMATIQUE"].HeaderText = "Libelle";
+                    dgvDonnees.Columns["NOMPRENOMPERSONNE"].HeaderText = "Nom prénom de l'organisateur";
                 }
                 else if (table == "manifestation")
                 {
@@ -124,7 +127,7 @@ namespace CarantecAdminPanel
 
         private void btnFestival_Click(object sender, EventArgs e)
         {
-            btnTables("festival");
+            btnTables("festivalDisplay");
         }
 
         private void btnManifestation_Click(object sender, EventArgs e)
@@ -169,7 +172,7 @@ namespace CarantecAdminPanel
             if (sender == ajouterToolStripMenuItem)
             {
                 // appel de la méthode du controleur en mode create
-                //if (tableG == "festival") Controleur.crud_festival('c', -1);
+                if (tableG == "festivalDisplay") Controleur.crud_festival('c', -1);
                 if (tableG == "utilisateur") Controleur.crud_utilisateur('c', -1);
                 //if (tableG == "reservation") Controleur.crud_reservation('c', -1);
                 //if (tableG == "avis") Controleur.crud_avis('c', -1);
@@ -184,7 +187,7 @@ namespace CarantecAdminPanel
                 {
                     if (sender == modifierToolStripMenuItem)
                     {
-                        //if (tableG == "festival") Controleur.crud_festival('u', Convert.ToInt32(dgvDonnees.SelectedRows[0].Index));
+                        if (tableG == "festivalDisplay") Controleur.crud_festival('u', Convert.ToInt32(dgvDonnees.SelectedRows[0].Index));
                         if (tableG == "utilisateur") Controleur.crud_utilisateur('u', Convert.ToInt32(dgvDonnees.SelectedRows[0].Index));
                         //if (tableG == "reservation") Controleur.crud_reservation('u', Convert.ToInt32(dgvDonnees.SelectedRows[0].Index));
                         //if (tableG == "avis") Controleur.crud_avis('u', Convert.ToInt32(dgvDonnees.SelectedRows[0].Index));
@@ -194,7 +197,7 @@ namespace CarantecAdminPanel
                     }
                     if (sender == supprimerToolStripMenuItem)
                     {
-                        //if (tableG == "festival") Controleur.crud_festival('d', Convert.ToInt32(dgvDonnees.SelectedRows[0].Index));
+                        if (tableG == "festivalDisplay") Controleur.crud_festival('d', Convert.ToInt32(dgvDonnees.SelectedRows[0].Index));
                         if (tableG == "utilisateur") Controleur.crud_utilisateur('d', Convert.ToInt32(dgvDonnees.SelectedRows[0].Index));
                         //if (tableG == "reservation") Controleur.crud_reservation('d', Convert.ToInt32(dgvDonnees.SelectedRows[0].Index));
                         //if (tableG == "avis") Controleur.crud_avis('d', Convert.ToInt32(dgvDonnees.SelectedRows[0].Index));

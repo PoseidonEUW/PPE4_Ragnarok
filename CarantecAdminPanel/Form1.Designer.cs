@@ -75,28 +75,28 @@
             this.modifierToolStripMenuItem,
             this.supprimerToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(181, 92);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(130, 70);
             this.contextMenuStrip1.Opening += new System.ComponentModel.CancelEventHandler(this.contextMenuStrip1_Opening);
             this.contextMenuStrip1.Click += new System.EventHandler(this.contextMenuStrip1_Click);
             // 
             // ajouterToolStripMenuItem
             // 
             this.ajouterToolStripMenuItem.Name = "ajouterToolStripMenuItem";
-            this.ajouterToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.ajouterToolStripMenuItem.Size = new System.Drawing.Size(129, 22);
             this.ajouterToolStripMenuItem.Text = "Ajouter";
             this.ajouterToolStripMenuItem.Click += new System.EventHandler(this.ajouterToolStripMenuItem_Click);
             // 
             // modifierToolStripMenuItem
             // 
             this.modifierToolStripMenuItem.Name = "modifierToolStripMenuItem";
-            this.modifierToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.modifierToolStripMenuItem.Size = new System.Drawing.Size(129, 22);
             this.modifierToolStripMenuItem.Text = "Modifier";
             this.modifierToolStripMenuItem.Click += new System.EventHandler(this.modifierToolStripMenuItem_Click_1);
             // 
             // supprimerToolStripMenuItem
             // 
             this.supprimerToolStripMenuItem.Name = "supprimerToolStripMenuItem";
-            this.supprimerToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.supprimerToolStripMenuItem.Size = new System.Drawing.Size(129, 22);
             this.supprimerToolStripMenuItem.Text = "Supprimer";
             this.supprimerToolStripMenuItem.Click += new System.EventHandler(this.supprimerToolStripMenuItem_Click_1);
             // 
@@ -127,7 +127,7 @@
             this.btnAvis.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAvis.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAvis.ForeColor = System.Drawing.Color.White;
-            this.btnAvis.Location = new System.Drawing.Point(1253, 82);
+            this.btnAvis.Location = new System.Drawing.Point(1397, 82);
             this.btnAvis.Name = "btnAvis";
             this.btnAvis.Size = new System.Drawing.Size(45, 25);
             this.btnAvis.TabIndex = 8;
@@ -143,7 +143,7 @@
             this.btnLieux.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLieux.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLieux.ForeColor = System.Drawing.Color.White;
-            this.btnLieux.Location = new System.Drawing.Point(1494, 82);
+            this.btnLieux.Location = new System.Drawing.Point(753, 82);
             this.btnLieux.Name = "btnLieux";
             this.btnLieux.Size = new System.Drawing.Size(54, 25);
             this.btnLieux.TabIndex = 7;
@@ -159,7 +159,7 @@
             this.btnPublic.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPublic.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPublic.ForeColor = System.Drawing.Color.White;
-            this.btnPublic.Location = new System.Drawing.Point(937, 82);
+            this.btnPublic.Location = new System.Drawing.Point(1081, 82);
             this.btnPublic.Name = "btnPublic";
             this.btnPublic.Size = new System.Drawing.Size(63, 25);
             this.btnPublic.TabIndex = 6;
@@ -175,7 +175,7 @@
             this.btnReservation.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnReservation.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnReservation.ForeColor = System.Drawing.Color.White;
-            this.btnReservation.Location = new System.Drawing.Point(1071, 82);
+            this.btnReservation.Location = new System.Drawing.Point(1215, 82);
             this.btnReservation.Name = "btnReservation";
             this.btnReservation.Size = new System.Drawing.Size(110, 25);
             this.btnReservation.TabIndex = 5;
@@ -239,7 +239,7 @@
             this.btnUsers.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnUsers.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUsers.ForeColor = System.Drawing.Color.White;
-            this.btnUsers.Location = new System.Drawing.Point(752, 82);
+            this.btnUsers.Location = new System.Drawing.Point(896, 82);
             this.btnUsers.Name = "btnUsers";
             this.btnUsers.Size = new System.Drawing.Size(85, 25);
             this.btnUsers.TabIndex = 1;
@@ -264,7 +264,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
-            this.ClientSize = new System.Drawing.Size(1455, 894);
+            this.ClientSize = new System.Drawing.Size(1940, 1100);
             this.Controls.Add(this.dgvDonnees);
             this.Controls.Add(this.gradientPanel1);
             this.ForeColor = System.Drawing.Color.White;
