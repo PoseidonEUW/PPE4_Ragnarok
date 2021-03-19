@@ -51,7 +51,7 @@ namespace CarantecAdminPanel
             this.labelError.ForeColor = System.Drawing.Color.Firebrick;
             this.labelError.Location = new System.Drawing.Point(365, 453);
             this.labelError.Name = "labelError";
-            this.labelError.Size = new System.Drawing.Size(371, 19);
+            this.labelError.Size = new System.Drawing.Size(465, 24);
             this.labelError.TabIndex = 19;
             this.labelError.Text = "ERROR SAMPLE ERROR SAMPLE ERROR SAMPLE";
             this.labelError.Visible = false;
@@ -78,7 +78,7 @@ namespace CarantecAdminPanel
             this.labelActionTitle.Location = new System.Drawing.Point(375, 129);
             this.labelActionTitle.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelActionTitle.Name = "labelActionTitle";
-            this.labelActionTitle.Size = new System.Drawing.Size(325, 27);
+            this.labelActionTitle.Size = new System.Drawing.Size(420, 34);
             this.labelActionTitle.TabIndex = 16;
             this.labelActionTitle.Text = "MODIFICATION/SUPPRESSION";
             this.labelActionTitle.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -115,7 +115,7 @@ namespace CarantecAdminPanel
             this.tbPrenom.ForeColor = System.Drawing.Color.White;
             this.tbPrenom.Location = new System.Drawing.Point(395, 301);
             this.tbPrenom.Name = "tbPrenom";
-            this.tbPrenom.Size = new System.Drawing.Size(349, 24);
+            this.tbPrenom.Size = new System.Drawing.Size(349, 28);
             this.tbPrenom.TabIndex = 27;
             // 
             // labelPrenom
@@ -124,7 +124,7 @@ namespace CarantecAdminPanel
             this.labelPrenom.Font = new System.Drawing.Font("Netflix Sans", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelPrenom.Location = new System.Drawing.Point(326, 301);
             this.labelPrenom.Name = "labelPrenom";
-            this.labelPrenom.Size = new System.Drawing.Size(63, 19);
+            this.labelPrenom.Size = new System.Drawing.Size(79, 24);
             this.labelPrenom.TabIndex = 26;
             this.labelPrenom.Text = "Prénom";
             // 
@@ -136,7 +136,7 @@ namespace CarantecAdminPanel
             this.tbNom.ForeColor = System.Drawing.Color.White;
             this.tbNom.Location = new System.Drawing.Point(395, 226);
             this.tbNom.Name = "tbNom";
-            this.tbNom.Size = new System.Drawing.Size(349, 24);
+            this.tbNom.Size = new System.Drawing.Size(349, 28);
             this.tbNom.TabIndex = 25;
             // 
             // labelNom
@@ -145,13 +145,13 @@ namespace CarantecAdminPanel
             this.labelNom.Font = new System.Drawing.Font("Netflix Sans", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelNom.Location = new System.Drawing.Point(347, 226);
             this.labelNom.Name = "labelNom";
-            this.labelNom.Size = new System.Drawing.Size(42, 19);
+            this.labelNom.Size = new System.Drawing.Size(52, 24);
             this.labelNom.TabIndex = 24;
             this.labelNom.Text = "Nom";
             // 
-            // FormCRUDTemplate
+            // FormCRUDUtilisateur
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
             this.ClientSize = new System.Drawing.Size(1070, 550);
@@ -168,9 +168,9 @@ namespace CarantecAdminPanel
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
-            this.Name = "FormCRUDTemplate";
+            this.Name = "FormCRUDUtilisateur";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FormCRUDFestival";
+            this.Text = "FormCRUDUtilisateur";
             this.gradientPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);

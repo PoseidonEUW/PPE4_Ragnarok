@@ -107,6 +107,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FormCRUDFestival.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCRUDFestival.Designer.cs">
+      <DependentUpon>FormCRUDFestival.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormCRUDUtilisateur.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -140,6 +146,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormCRUDFestival.resx">
+      <DependentUpon>FormCRUDFestival.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormCRUDUtilisateur.resx">
       <DependentUpon>FormCRUDUtilisateur.cs</DependentUpon>

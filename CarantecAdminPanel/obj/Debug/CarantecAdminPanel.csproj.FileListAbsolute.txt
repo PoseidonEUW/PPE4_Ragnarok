@@ -56,3 +56,14 @@ C:\Users\satis\Desktop\CODE\Carantec\PPE4_Ragnarok\CarantecAdminPanel\obj\Debug\
 C:\Users\satis\Desktop\CODE\Carantec\PPE4_Ragnarok\CarantecAdminPanel\obj\Debug\CarantecAdminPanel.FormCRUDTemplate.resources
 C:\Users\satis\Desktop\CODE\Carantec\PPE4_Ragnarok\CarantecAdminPanel\obj\Debug\CarantecAdminPanel.FormSampleItems.resources
 C:\Users\satis\Desktop\CODE\Carantec\PPE4_Ragnarok\CarantecAdminPanel\obj\Debug\CarantecAdminPanel.FormCRUDUtilisateur.resources
+C:\Users\33762\Projets\PPE4_Ragnarok\CarantecAdminPanel\obj\Debug\CarantecAdminPanel.csprojAssemblyReference.cache
+C:\Users\33762\Projets\PPE4_Ragnarok\CarantecAdminPanel\obj\Debug\CarantecAdminPanel.Form1.resources
+C:\Users\33762\Projets\PPE4_Ragnarok\CarantecAdminPanel\obj\Debug\CarantecAdminPanel.FormCRUDFestival.resources
+C:\Users\33762\Projets\PPE4_Ragnarok\CarantecAdminPanel\obj\Debug\CarantecAdminPanel.FormCRUDUtilisateur.resources
+C:\Users\33762\Projets\PPE4_Ragnarok\CarantecAdminPanel\obj\Debug\CarantecAdminPanel.FormSampleItems.resources
+C:\Users\33762\Projets\PPE4_Ragnarok\CarantecAdminPanel\obj\Debug\CarantecAdminPanel.FormConnexionAdmin.resources
+C:\Users\33762\Projets\PPE4_Ragnarok\CarantecAdminPanel\obj\Debug\CarantecAdminPanel.Properties.Resources.resources
+C:\Users\33762\Projets\PPE4_Ragnarok\CarantecAdminPanel\obj\Debug\CarantecAdminPanel.csproj.GenerateResource.cache
+C:\Users\33762\Projets\PPE4_Ragnarok\CarantecAdminPanel\obj\Debug\CarantecAdminPanel.csproj.CoreCompileInputs.cache
+C:\Users\33762\Projets\PPE4_Ragnarok\CarantecAdminPanel\obj\Debug\CarantecAdminPanel.exe
+C:\Users\33762\Projets\PPE4_Ragnarok\CarantecAdminPanel\obj\Debug\CarantecAdminPanel.pdb
