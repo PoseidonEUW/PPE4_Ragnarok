@@ -59,6 +59,7 @@ namespace CarantecAdminPanel
             // btnEnregistrer
             // 
             this.btnEnregistrer.BackColor = System.Drawing.Color.Transparent;
+            this.btnEnregistrer.DialogResult = System.Windows.Forms.DialogResult.OK;
             this.btnEnregistrer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEnregistrer.Font = new System.Drawing.Font("Netflix Sans", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEnregistrer.ForeColor = System.Drawing.Color.Snow;
@@ -149,7 +150,7 @@ namespace CarantecAdminPanel
             this.labelNom.TabIndex = 24;
             this.labelNom.Text = "Nom";
             // 
-            // FormCRUDTemplate
+            // FormCRUDUtilisateur
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -168,7 +169,7 @@ namespace CarantecAdminPanel
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
-            this.Name = "FormCRUDTemplate";
+            this.Name = "FormCRUDUtilisateur";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormCRUDFestival";
             this.gradientPanel1.ResumeLayout(false);
@@ -193,5 +194,7 @@ namespace CarantecAdminPanel
         public TextBox TbNom { get => tbNom; set => tbNom = value; }
         public Label LabelNom { get => labelNom; set => labelNom = value; }
         public TextBox TbPrenom { get => tbPrenom; set => tbPrenom = value; }
+        public Button BtnEnregistrer { get => btnEnregistrer; set => btnEnregistrer = value; }
+        public Label LabelActionTitle { get => labelActionTitle; set => labelActionTitle = value; }
     }
 }

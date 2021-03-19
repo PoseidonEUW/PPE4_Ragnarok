@@ -1,4 +1,6 @@
-﻿namespace CarantecAdminPanel
+﻿using System.Windows.Forms;
+
+namespace CarantecAdminPanel
 {
     partial class Form1
     {
@@ -54,6 +56,7 @@
             // 
             this.dgvDonnees.AllowUserToAddRows = false;
             this.dgvDonnees.AllowUserToDeleteRows = false;
+            this.dgvDonnees.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dgvDonnees.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
             this.dgvDonnees.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dgvDonnees.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -63,7 +66,7 @@
             this.dgvDonnees.Name = "dgvDonnees";
             this.dgvDonnees.ReadOnly = true;
             this.dgvDonnees.Size = new System.Drawing.Size(1791, 852);
-            this.dgvDonnees.TabIndex = 1;
+            this.dgvDonnees.TabIndex = 2;
             this.dgvDonnees.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDonnees_CellContentClick);
             // 
             // contextMenuStrip1
@@ -89,12 +92,14 @@
             this.modifierToolStripMenuItem.Name = "modifierToolStripMenuItem";
             this.modifierToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.modifierToolStripMenuItem.Text = "Modifier";
+            this.modifierToolStripMenuItem.Click += new System.EventHandler(this.modifierToolStripMenuItem_Click);
             // 
             // supprimerToolStripMenuItem
             // 
             this.supprimerToolStripMenuItem.Name = "supprimerToolStripMenuItem";
             this.supprimerToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.supprimerToolStripMenuItem.Text = "Supprimer";
+            this.supprimerToolStripMenuItem.Click += new System.EventHandler(this.supprimerToolStripMenuItem_Click);
             // 
             // gradientPanel1
             // 

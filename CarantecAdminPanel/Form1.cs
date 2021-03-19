@@ -38,7 +38,7 @@ namespace CarantecAdminPanel
         public void btnTables(string table)
         {
             tableG = table;
-            Controleur.Vmodele.charger_donnees(table);      // chargement des données de la table sélectionné dans le DT correspondant
+            Controleur.Vmodele.charger_donnees(table, -1);      // chargement des données de la table sélectionné dans le DT correspondant
             if (Controleur.Vmodele.Chargement)
             {
                 // un DT par table
@@ -47,13 +47,9 @@ namespace CarantecAdminPanel
                 {
                     bindingSource1.DataSource = Controleur.Vmodele.DT[1];
                     dgvDonnees.DataSource = bindingSource1;
-                    //dgvDonnees.Columns["codeB"].HeaderText = "Code";
-                    //dgvDonnees.Columns["nomB"].HeaderText = "Nom Borne";
-                    //dgvDonnees.Columns["numRueB"].HeaderText = "Numéro Rue";
-                    //dgvDonnees.Columns["nomRueB"].HeaderText = "Rue";
-                    //dgvDonnees.Columns["latitudeB"].HeaderText = "Latitude";
-                    //dgvDonnees.Columns["longitudeB"].HeaderText = "Longitude";
-
+                    dgvDonnees.Columns["IDPERSONNE"].HeaderText = "ID Utilisateur";
+                    dgvDonnees.Columns["NOMPERSONNE"].HeaderText = "Nom";
+                    dgvDonnees.Columns["PRENOMPERSONNE"].HeaderText = "Prénom";
                 }
                 else if (table == "festival")
                 {
@@ -163,20 +159,16 @@ namespace CarantecAdminPanel
 
         private void ajouterToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            clickOnMenuItem(sender, e);
         }
 
-        private void contextMenuStrip1_Opening(object sender, CancelEventArgs e)
-        {
 
-        }
 
-        private void contextMenuStrip1_Click(object sender, EventArgs e)
+        private void clickOnMenuItem(object sender, EventArgs e)
         {
             if (sender == ajouterToolStripMenuItem)
             {
                 // appel de la méthode du controleur en mode create
-
                 //if (tableG == "festival") Controleur.crud_festival('c', -1);
                 if (tableG == "utilisateur") Controleur.crud_utilisateur('c', -1);
                 //if (tableG == "reservation") Controleur.crud_reservation('c', -1);
@@ -202,13 +194,13 @@ namespace CarantecAdminPanel
                     }
                     if (sender == supprimerToolStripMenuItem)
                     {
-                        //if (tableG == "festival") Controleur.crud_festival('r', Convert.ToInt32(dgvDonnees.SelectedRows[0].Index));
-                        if (tableG == "utilisateur") Controleur.crud_utilisateur('r', Convert.ToInt32(dgvDonnees.SelectedRows[0].Index));
-                        //if (tableG == "reservation") Controleur.crud_reservation('r', Convert.ToInt32(dgvDonnees.SelectedRows[0].Index));
-                        //if (tableG == "avis") Controleur.crud_avis('r', Convert.ToInt32(dgvDonnees.SelectedRows[0].Index));
-                        //if (tableG == "manifestation") Controleur.crud_manifestation('r', Convert.ToInt32(dgvDonnees.SelectedRows[0].Index));
-                        //if (tableG == "public") Controleur.crud_public('r', Convert.ToInt32(dgvDonnees.SelectedRows[0].Index));
-                        //if (tableG == "lieu") Controleur.crud_lieu('r', Convert.ToInt32(dgvDonnees.SelectedRows[0].Index));
+                        //if (tableG == "festival") Controleur.crud_festival('d', Convert.ToInt32(dgvDonnees.SelectedRows[0].Index));
+                        if (tableG == "utilisateur") Controleur.crud_utilisateur('d', Convert.ToInt32(dgvDonnees.SelectedRows[0].Index));
+                        //if (tableG == "reservation") Controleur.crud_reservation('d', Convert.ToInt32(dgvDonnees.SelectedRows[0].Index));
+                        //if (tableG == "avis") Controleur.crud_avis('d', Convert.ToInt32(dgvDonnees.SelectedRows[0].Index));
+                        //if (tableG == "manifestation") Controleur.crud_manifestation('d', Convert.ToInt32(dgvDonnees.SelectedRows[0].Index));
+                        //if (tableG == "public") Controleur.crud_public('d', Convert.ToInt32(dgvDonnees.SelectedRows[0].Index));
+                        //if (tableG == "lieu") Controleur.crud_lieu('d', Convert.ToInt32(dgvDonnees.SelectedRows[0].Index));
                     }
                 }
                 else
@@ -221,6 +213,26 @@ namespace CarantecAdminPanel
             bindingSource1.MoveLast();
             bindingSource1.MoveFirst();
             dgvDonnees.Refresh();
+        }
+
+        private void contextMenuStrip1_Opening(object sender, CancelEventArgs e)
+        {
+
+        }
+
+        private void contextMenuStrip1_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void modifierToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            clickOnMenuItem(sender, e);
+        }
+
+        private void supprimerToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            clickOnMenuItem(sender, e);
         }
     }
 }

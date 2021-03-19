@@ -169,7 +169,7 @@ namespace CarantecAdminPanel
         /// charge dans un DT les données de la table passée en paramètre
         /// </summary>
         /// <param name="table">nom de la table à requêter</param>
-        public void charger_donnees(string table)
+        public void charger_donnees(string table, int indice)
         {
             chargement = false;
             if (!connopen) return;		// pour vérifier que la BD est bien ouverte
