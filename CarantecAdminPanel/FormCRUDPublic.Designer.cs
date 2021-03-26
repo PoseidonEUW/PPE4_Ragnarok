@@ -29,13 +29,13 @@
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.cbManifReservation = new System.Windows.Forms.ComboBox();
             this.tbLibellePublic = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.labelError = new System.Windows.Forms.Label();
             this.btnEnregistrer = new System.Windows.Forms.Button();
             this.labelActionTitle = new System.Windows.Forms.Label();
             this.gradientPanel1 = new CarantecAdminPanel.GradientPanel();
+            this.rtbDescrPublic = new System.Windows.Forms.RichTextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.gradientPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -45,22 +45,11 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Netflix Sans", 11.25F);
-            this.label1.Location = new System.Drawing.Point(222, 277);
+            this.label1.Location = new System.Drawing.Point(19, 290);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(132, 24);
+            this.label1.Size = new System.Drawing.Size(113, 24);
             this.label1.TabIndex = 102;
-            this.label1.Text = "Manifestation";
-            // 
-            // cbManifReservation
-            // 
-            this.cbManifReservation.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
-            this.cbManifReservation.Font = new System.Drawing.Font("Netflix Sans", 11.25F);
-            this.cbManifReservation.ForeColor = System.Drawing.Color.White;
-            this.cbManifReservation.FormattingEnabled = true;
-            this.cbManifReservation.Location = new System.Drawing.Point(360, 274);
-            this.cbManifReservation.Name = "cbManifReservation";
-            this.cbManifReservation.Size = new System.Drawing.Size(349, 32);
-            this.cbManifReservation.TabIndex = 101;
+            this.label1.Text = "Description";
             // 
             // tbLibellePublic
             // 
@@ -132,6 +121,16 @@
             this.gradientPanel1.Size = new System.Drawing.Size(1071, 103);
             this.gradientPanel1.TabIndex = 95;
             // 
+            // rtbDescrPublic
+            // 
+            this.rtbDescrPublic.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
+            this.rtbDescrPublic.ForeColor = System.Drawing.Color.White;
+            this.rtbDescrPublic.Location = new System.Drawing.Point(138, 276);
+            this.rtbDescrPublic.Name = "rtbDescrPublic";
+            this.rtbDescrPublic.Size = new System.Drawing.Size(814, 168);
+            this.rtbDescrPublic.TabIndex = 103;
+            this.rtbDescrPublic.Text = "";
+            // 
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
@@ -150,8 +149,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
             this.ClientSize = new System.Drawing.Size(1070, 550);
+            this.Controls.Add(this.rtbDescrPublic);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.cbManifReservation);
             this.Controls.Add(this.tbLibellePublic);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.labelError);
@@ -171,7 +170,6 @@
 
         #endregion
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox cbManifReservation;
         private System.Windows.Forms.TextBox tbLibellePublic;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label labelError;
@@ -179,5 +177,6 @@
         private System.Windows.Forms.Label labelActionTitle;
         private GradientPanel gradientPanel1;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.RichTextBox rtbDescrPublic;
     }
 }

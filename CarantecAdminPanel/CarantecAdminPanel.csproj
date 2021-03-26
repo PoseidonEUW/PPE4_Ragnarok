@@ -107,6 +107,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FormCRUDAvis.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCRUDAvis.Designer.cs">
+      <DependentUpon>FormCRUDAvis.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormCRUDFestival.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -170,6 +176,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormCRUDAvis.resx">
+      <DependentUpon>FormCRUDAvis.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormCRUDFestival.resx">
       <DependentUpon>FormCRUDFestival.cs</DependentUpon>
@@ -236,6 +245,13 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\settings.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\EtoileRempli.png" />
+    <None Include="Resources\EtoileVide1.png" />
+    <None Include="Resources\EtoileRempli1.png" />
+    <Content Include="Resources\EtoileVide.png" />
+    <Content Include="Resources\tardis.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
