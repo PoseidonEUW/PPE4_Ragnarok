@@ -35,8 +35,8 @@
             this.btnEnregistrer = new System.Windows.Forms.Button();
             this.labelActionTitle = new System.Windows.Forms.Label();
             this.gradientPanel1 = new CarantecAdminPanel.GradientPanel();
-            this.rtbDescrPublic = new System.Windows.Forms.RichTextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.rtbDescrPublic = new System.Windows.Forms.RichTextBox();
             this.gradientPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -86,6 +86,7 @@
             // btnEnregistrer
             // 
             this.btnEnregistrer.BackColor = System.Drawing.Color.Transparent;
+            this.btnEnregistrer.DialogResult = System.Windows.Forms.DialogResult.OK;
             this.btnEnregistrer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEnregistrer.Font = new System.Drawing.Font("Netflix Sans", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEnregistrer.ForeColor = System.Drawing.Color.Snow;
@@ -121,16 +122,6 @@
             this.gradientPanel1.Size = new System.Drawing.Size(1071, 103);
             this.gradientPanel1.TabIndex = 95;
             // 
-            // rtbDescrPublic
-            // 
-            this.rtbDescrPublic.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
-            this.rtbDescrPublic.ForeColor = System.Drawing.Color.White;
-            this.rtbDescrPublic.Location = new System.Drawing.Point(138, 276);
-            this.rtbDescrPublic.Name = "rtbDescrPublic";
-            this.rtbDescrPublic.Size = new System.Drawing.Size(814, 168);
-            this.rtbDescrPublic.TabIndex = 103;
-            this.rtbDescrPublic.Text = "";
-            // 
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
@@ -142,6 +133,16 @@
             this.pictureBox1.Size = new System.Drawing.Size(349, 148);
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
+            // 
+            // rtbDescrPublic
+            // 
+            this.rtbDescrPublic.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
+            this.rtbDescrPublic.ForeColor = System.Drawing.Color.White;
+            this.rtbDescrPublic.Location = new System.Drawing.Point(138, 276);
+            this.rtbDescrPublic.Name = "rtbDescrPublic";
+            this.rtbDescrPublic.Size = new System.Drawing.Size(814, 168);
+            this.rtbDescrPublic.TabIndex = 103;
+            this.rtbDescrPublic.Text = "";
             // 
             // FormCRUDPublic
             // 

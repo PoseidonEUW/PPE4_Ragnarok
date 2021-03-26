@@ -135,9 +135,10 @@
             // btnEnregistrer
             // 
             this.btnEnregistrer.BackColor = System.Drawing.Color.Transparent;
+            this.btnEnregistrer.DialogResult = System.Windows.Forms.DialogResult.OK;
             this.btnEnregistrer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEnregistrer.Font = new System.Drawing.Font("Netflix Sans", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEnregistrer.ForeColor = System.Drawing.Color.Snow;
+            this.btnEnregistrer.ForeColor = System.Drawing.Color.White;
             this.btnEnregistrer.Location = new System.Drawing.Point(418, 487);
             this.btnEnregistrer.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnEnregistrer.Name = "btnEnregistrer";

@@ -38,8 +38,8 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.rtbLibelleLieux = new System.Windows.Forms.RichTextBox();
             this.gbIntExtLieux = new System.Windows.Forms.GroupBox();
-            this.rbIntLieux = new System.Windows.Forms.RadioButton();
             this.rbExtLieux = new System.Windows.Forms.RadioButton();
+            this.rbIntLieux = new System.Windows.Forms.RadioButton();
             this.gradientPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.gbIntExtLieux.SuspendLayout();
@@ -90,6 +90,7 @@
             // btnEnregistrer
             // 
             this.btnEnregistrer.BackColor = System.Drawing.Color.Transparent;
+            this.btnEnregistrer.DialogResult = System.Windows.Forms.DialogResult.OK;
             this.btnEnregistrer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEnregistrer.Font = new System.Drawing.Font("Netflix Sans", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEnregistrer.ForeColor = System.Drawing.Color.Snow;
@@ -159,6 +160,16 @@
             this.gbIntExtLieux.TabStop = false;
             this.gbIntExtLieux.Text = "Intérieur / Extérieur";
             // 
+            // rbExtLieux
+            // 
+            this.rbExtLieux.AutoSize = true;
+            this.rbExtLieux.Location = new System.Drawing.Point(81, 96);
+            this.rbExtLieux.Name = "rbExtLieux";
+            this.rbExtLieux.Size = new System.Drawing.Size(89, 22);
+            this.rbExtLieux.TabIndex = 1;
+            this.rbExtLieux.Text = "Extérieur";
+            this.rbExtLieux.UseVisualStyleBackColor = true;
+            // 
             // rbIntLieux
             // 
             this.rbIntLieux.AutoSize = true;
@@ -170,16 +181,6 @@
             this.rbIntLieux.TabStop = true;
             this.rbIntLieux.Text = "Intérieur";
             this.rbIntLieux.UseVisualStyleBackColor = true;
-            // 
-            // rbExtLieux
-            // 
-            this.rbExtLieux.AutoSize = true;
-            this.rbExtLieux.Location = new System.Drawing.Point(81, 96);
-            this.rbExtLieux.Name = "rbExtLieux";
-            this.rbExtLieux.Size = new System.Drawing.Size(89, 22);
-            this.rbExtLieux.TabIndex = 1;
-            this.rbExtLieux.Text = "Extérieur";
-            this.rbExtLieux.UseVisualStyleBackColor = true;
             // 
             // FormCRUDLieux
             // 
