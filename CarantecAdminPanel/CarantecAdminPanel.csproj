@@ -125,6 +125,12 @@
     <Compile Include="FormCRUDManifestation.Designer.cs">
       <DependentUpon>FormCRUDManifestation.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormCRUDPublic.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCRUDPublic.Designer.cs">
+      <DependentUpon>FormCRUDPublic.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormCRUDReservation.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -173,6 +179,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormCRUDManifestation.resx">
       <DependentUpon>FormCRUDManifestation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormCRUDPublic.resx">
+      <DependentUpon>FormCRUDPublic.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormCRUDReservation.resx">
       <DependentUpon>FormCRUDReservation.cs</DependentUpon>
