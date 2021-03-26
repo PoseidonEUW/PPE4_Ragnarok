@@ -262,6 +262,7 @@ namespace CarantecAdminPanel
             // tbLogAdherentUser
             // 
             this.tbLogAdherentUser.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
+            this.tbLogAdherentUser.Enabled = false;
             this.tbLogAdherentUser.ForeColor = System.Drawing.Color.White;
             this.tbLogAdherentUser.Location = new System.Drawing.Point(211, 690);
             this.tbLogAdherentUser.Name = "tbLogAdherentUser";
@@ -271,6 +272,7 @@ namespace CarantecAdminPanel
             // tbMdpAdherentUser
             // 
             this.tbMdpAdherentUser.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
+            this.tbMdpAdherentUser.Enabled = false;
             this.tbMdpAdherentUser.ForeColor = System.Drawing.Color.White;
             this.tbMdpAdherentUser.Location = new System.Drawing.Point(211, 793);
             this.tbMdpAdherentUser.Name = "tbMdpAdherentUser";
@@ -298,6 +300,7 @@ namespace CarantecAdminPanel
             // tbRoleArtisteUser
             // 
             this.tbRoleArtisteUser.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
+            this.tbRoleArtisteUser.Enabled = false;
             this.tbRoleArtisteUser.ForeColor = System.Drawing.Color.White;
             this.tbRoleArtisteUser.Location = new System.Drawing.Point(742, 642);
             this.tbRoleArtisteUser.Name = "tbRoleArtisteUser";
@@ -307,6 +310,7 @@ namespace CarantecAdminPanel
             // tbLienFBArtisteUser
             // 
             this.tbLienFBArtisteUser.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
+            this.tbLienFBArtisteUser.Enabled = false;
             this.tbLienFBArtisteUser.ForeColor = System.Drawing.Color.White;
             this.tbLienFBArtisteUser.Location = new System.Drawing.Point(742, 745);
             this.tbLienFBArtisteUser.Name = "tbLienFBArtisteUser";
@@ -338,6 +342,7 @@ namespace CarantecAdminPanel
             this.Controls.Add(this.btnEnregistrer);
             this.Controls.Add(this.labelActionTitle);
             this.Controls.Add(this.gradientPanel1);
+            this.Enabled = false;
             this.Font = new System.Drawing.Font("Netflix Sans", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.Color.White;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
