@@ -137,9 +137,11 @@
             this.dateTimeAnnee.CalendarTrailingForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.dateTimeAnnee.CustomFormat = "yyyy";
             this.dateTimeAnnee.Font = new System.Drawing.Font("Netflix Sans", 11.25F);
-            this.dateTimeAnnee.Location = new System.Drawing.Point(395, 202);
+            this.dateTimeAnnee.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dateTimeAnnee.Location = new System.Drawing.Point(434, 202);
             this.dateTimeAnnee.Name = "dateTimeAnnee";
-            this.dateTimeAnnee.Size = new System.Drawing.Size(349, 31);
+            this.dateTimeAnnee.ShowUpDown = true;
+            this.dateTimeAnnee.Size = new System.Drawing.Size(104, 31);
             this.dateTimeAnnee.TabIndex = 34;
             // 
             // labelAnnee

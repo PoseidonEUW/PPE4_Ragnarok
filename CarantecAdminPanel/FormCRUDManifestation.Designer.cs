@@ -102,9 +102,11 @@
             this.dateTimeAnneeManif.CalendarTrailingForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.dateTimeAnneeManif.CustomFormat = "yyyy";
             this.dateTimeAnneeManif.Font = new System.Drawing.Font("Netflix Sans", 11.25F);
-            this.dateTimeAnneeManif.Location = new System.Drawing.Point(137, 197);
+            this.dateTimeAnneeManif.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dateTimeAnneeManif.Location = new System.Drawing.Point(167, 197);
             this.dateTimeAnneeManif.Name = "dateTimeAnneeManif";
-            this.dateTimeAnneeManif.Size = new System.Drawing.Size(349, 31);
+            this.dateTimeAnneeManif.ShowUpDown = true;
+            this.dateTimeAnneeManif.Size = new System.Drawing.Size(105, 31);
             this.dateTimeAnneeManif.TabIndex = 46;
             // 
             // tbLibelleManif
@@ -202,11 +204,12 @@
             // 
             // dateManif
             // 
-            this.dateManif.CustomFormat = "MMMM - dd";
+            this.dateManif.CustomFormat = "dd MMMM";
             this.dateManif.Font = new System.Drawing.Font("Netflix Sans", 11.25F);
-            this.dateManif.Location = new System.Drawing.Point(695, 197);
+            this.dateManif.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dateManif.Location = new System.Drawing.Point(711, 197);
             this.dateManif.Name = "dateManif";
-            this.dateManif.Size = new System.Drawing.Size(349, 31);
+            this.dateManif.Size = new System.Drawing.Size(198, 31);
             this.dateManif.TabIndex = 54;
             // 
             // label4
@@ -233,9 +236,10 @@
             // 
             this.HeureManif.CustomFormat = "HH:mm";
             this.HeureManif.Font = new System.Drawing.Font("Netflix Sans", 11.25F);
-            this.HeureManif.Location = new System.Drawing.Point(695, 259);
+            this.HeureManif.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.HeureManif.Location = new System.Drawing.Point(710, 259);
             this.HeureManif.Name = "HeureManif";
-            this.HeureManif.Size = new System.Drawing.Size(347, 31);
+            this.HeureManif.Size = new System.Drawing.Size(96, 31);
             this.HeureManif.TabIndex = 57;
             // 
             // label6
