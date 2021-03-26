@@ -139,7 +139,7 @@ namespace CarantecAdminPanel
             // 
             this.labelPrenom.AutoSize = true;
             this.labelPrenom.Font = new System.Drawing.Font("Netflix Sans", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelPrenom.Location = new System.Drawing.Point(326, 301);
+            this.labelPrenom.Location = new System.Drawing.Point(310, 300);
             this.labelPrenom.Name = "labelPrenom";
             this.labelPrenom.Size = new System.Drawing.Size(79, 24);
             this.labelPrenom.TabIndex = 26;
@@ -160,7 +160,7 @@ namespace CarantecAdminPanel
             // 
             this.labelNom.AutoSize = true;
             this.labelNom.Font = new System.Drawing.Font("Netflix Sans", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelNom.Location = new System.Drawing.Point(347, 226);
+            this.labelNom.Location = new System.Drawing.Point(337, 225);
             this.labelNom.Name = "labelNom";
             this.labelNom.Size = new System.Drawing.Size(52, 24);
             this.labelNom.TabIndex = 24;
