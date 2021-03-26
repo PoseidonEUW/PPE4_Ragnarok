@@ -162,7 +162,7 @@ namespace CarantecAdminPanel
             this.groupBox1.Controls.Add(this.rbAnimUser);
             this.groupBox1.Controls.Add(this.rbAdherentUser);
             this.groupBox1.ForeColor = System.Drawing.Color.White;
-            this.groupBox1.Location = new System.Drawing.Point(79, 347);
+            this.groupBox1.Location = new System.Drawing.Point(72, 348);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(929, 91);
             this.groupBox1.TabIndex = 28;
