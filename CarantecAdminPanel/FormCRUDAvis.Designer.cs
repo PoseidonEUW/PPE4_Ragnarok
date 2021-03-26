@@ -28,26 +28,27 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormCRUDAvis));
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.labelError = new System.Windows.Forms.Label();
             this.btnEnregistrer = new System.Windows.Forms.Button();
             this.labelActionTitle = new System.Windows.Forms.Label();
             this.gradientPanel1 = new CarantecAdminPanel.GradientPanel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.cbAdhAvis = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.cbManifAvis = new System.Windows.Forms.ComboBox();
             this.gbNoteAvis = new System.Windows.Forms.GroupBox();
             this.bNote5Avis = new System.Windows.Forms.Button();
-            this.bNote4Avis = new System.Windows.Forms.Button();
             this.bNote3Avis = new System.Windows.Forms.Button();
             this.bNote2Avis = new System.Windows.Forms.Button();
             this.bNote1Avis = new System.Windows.Forms.Button();
+            this.bNote4Avis = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.gradientPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.gbNoteAvis.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // richTextBox1
@@ -120,18 +121,6 @@
             this.gradientPanel1.Size = new System.Drawing.Size(1071, 103);
             this.gradientPanel1.TabIndex = 104;
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.BackgroundImage = global::CarantecAdminPanel.Properties.Resources.carantec;
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox1.Location = new System.Drawing.Point(360, -25);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(349, 148);
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -177,6 +166,7 @@
             // 
             // gbNoteAvis
             // 
+            this.gbNoteAvis.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
             this.gbNoteAvis.Controls.Add(this.bNote5Avis);
             this.gbNoteAvis.Controls.Add(this.bNote4Avis);
             this.gbNoteAvis.Controls.Add(this.bNote3Avis);
@@ -186,34 +176,30 @@
             this.gbNoteAvis.ForeColor = System.Drawing.Color.White;
             this.gbNoteAvis.Location = new System.Drawing.Point(610, 196);
             this.gbNoteAvis.Name = "gbNoteAvis";
-            this.gbNoteAvis.Size = new System.Drawing.Size(394, 156);
+            this.gbNoteAvis.Size = new System.Drawing.Size(342, 156);
             this.gbNoteAvis.TabIndex = 116;
             this.gbNoteAvis.TabStop = false;
             this.gbNoteAvis.Text = "Note";
             // 
             // bNote5Avis
             // 
-            this.bNote5Avis.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
-            this.bNote5Avis.Location = new System.Drawing.Point(317, 59);
+            this.bNote5Avis.BackColor = System.Drawing.Color.White;
+            this.bNote5Avis.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bNote5Avis.BackgroundImage")));
+            this.bNote5Avis.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bNote5Avis.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bNote5Avis.Location = new System.Drawing.Point(248, 54);
             this.bNote5Avis.Name = "bNote5Avis";
             this.bNote5Avis.Size = new System.Drawing.Size(50, 50);
             this.bNote5Avis.TabIndex = 4;
             this.bNote5Avis.UseVisualStyleBackColor = false;
             // 
-            // bNote4Avis
-            // 
-            this.bNote4Avis.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
-            this.bNote4Avis.BackgroundImage = global::CarantecAdminPanel.Properties.Resources.EtoileVide;
-            this.bNote4Avis.Location = new System.Drawing.Point(242, 59);
-            this.bNote4Avis.Name = "bNote4Avis";
-            this.bNote4Avis.Size = new System.Drawing.Size(50, 50);
-            this.bNote4Avis.TabIndex = 3;
-            this.bNote4Avis.UseVisualStyleBackColor = false;
-            // 
             // bNote3Avis
             // 
-            this.bNote3Avis.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
-            this.bNote3Avis.Location = new System.Drawing.Point(170, 59);
+            this.bNote3Avis.BackColor = System.Drawing.Color.White;
+            this.bNote3Avis.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bNote3Avis.BackgroundImage")));
+            this.bNote3Avis.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bNote3Avis.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bNote3Avis.Location = new System.Drawing.Point(151, 54);
             this.bNote3Avis.Name = "bNote3Avis";
             this.bNote3Avis.Size = new System.Drawing.Size(50, 50);
             this.bNote3Avis.TabIndex = 2;
@@ -221,8 +207,11 @@
             // 
             // bNote2Avis
             // 
-            this.bNote2Avis.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
-            this.bNote2Avis.Location = new System.Drawing.Point(98, 59);
+            this.bNote2Avis.BackColor = System.Drawing.Color.White;
+            this.bNote2Avis.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bNote2Avis.BackgroundImage")));
+            this.bNote2Avis.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bNote2Avis.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bNote2Avis.Location = new System.Drawing.Point(102, 54);
             this.bNote2Avis.Name = "bNote2Avis";
             this.bNote2Avis.Size = new System.Drawing.Size(50, 50);
             this.bNote2Avis.TabIndex = 1;
@@ -230,12 +219,39 @@
             // 
             // bNote1Avis
             // 
-            this.bNote1Avis.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
-            this.bNote1Avis.Location = new System.Drawing.Point(24, 59);
+            this.bNote1Avis.BackColor = System.Drawing.Color.White;
+            this.bNote1Avis.BackgroundImage = global::CarantecAdminPanel.Properties.Resources.EtoileVide;
+            this.bNote1Avis.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bNote1Avis.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bNote1Avis.Location = new System.Drawing.Point(52, 54);
             this.bNote1Avis.Name = "bNote1Avis";
             this.bNote1Avis.Size = new System.Drawing.Size(50, 50);
             this.bNote1Avis.TabIndex = 0;
             this.bNote1Avis.UseVisualStyleBackColor = false;
+            // 
+            // bNote4Avis
+            // 
+            this.bNote4Avis.BackColor = System.Drawing.Color.White;
+            this.bNote4Avis.BackgroundImage = global::CarantecAdminPanel.Properties.Resources.EtoileVide;
+            this.bNote4Avis.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bNote4Avis.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bNote4Avis.Location = new System.Drawing.Point(198, 54);
+            this.bNote4Avis.Name = "bNote4Avis";
+            this.bNote4Avis.Size = new System.Drawing.Size(50, 50);
+            this.bNote4Avis.TabIndex = 3;
+            this.bNote4Avis.UseVisualStyleBackColor = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.BackgroundImage = global::CarantecAdminPanel.Properties.Resources.carantec;
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox1.Location = new System.Drawing.Point(360, -25);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(349, 148);
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
             // 
             // FormCRUDAvis
             // 
@@ -258,8 +274,8 @@
             this.Name = "FormCRUDAvis";
             this.Text = "FormCRUDAvis";
             this.gradientPanel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.gbNoteAvis.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -40,8 +40,14 @@ namespace CarantecAdminPanel
             this.labelPrenom = new System.Windows.Forms.Label();
             this.tbNom = new System.Windows.Forms.TextBox();
             this.labelNom = new System.Windows.Forms.Label();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.rbAdherentUser = new System.Windows.Forms.RadioButton();
+            this.rbAnimUser = new System.Windows.Forms.RadioButton();
+            this.rbArtisteUser = new System.Windows.Forms.RadioButton();
+            this.rbIntSpeUser = new System.Windows.Forms.RadioButton();
             this.gradientPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // labelError
@@ -149,12 +155,72 @@ namespace CarantecAdminPanel
             this.labelNom.TabIndex = 24;
             this.labelNom.Text = "Nom";
             // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.rbIntSpeUser);
+            this.groupBox1.Controls.Add(this.rbArtisteUser);
+            this.groupBox1.Controls.Add(this.rbAnimUser);
+            this.groupBox1.Controls.Add(this.rbAdherentUser);
+            this.groupBox1.ForeColor = System.Drawing.Color.White;
+            this.groupBox1.Location = new System.Drawing.Point(79, 347);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(929, 91);
+            this.groupBox1.TabIndex = 28;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Rôles";
+            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
+            // 
+            // rbAdherentUser
+            // 
+            this.rbAdherentUser.AutoSize = true;
+            this.rbAdherentUser.Location = new System.Drawing.Point(55, 39);
+            this.rbAdherentUser.Name = "rbAdherentUser";
+            this.rbAdherentUser.Size = new System.Drawing.Size(105, 25);
+            this.rbAdherentUser.TabIndex = 0;
+            this.rbAdherentUser.TabStop = true;
+            this.rbAdherentUser.Text = "Adhérent";
+            this.rbAdherentUser.UseVisualStyleBackColor = true;
+            // 
+            // rbAnimUser
+            // 
+            this.rbAnimUser.AutoSize = true;
+            this.rbAnimUser.Location = new System.Drawing.Point(279, 39);
+            this.rbAnimUser.Name = "rbAnimUser";
+            this.rbAnimUser.Size = new System.Drawing.Size(113, 25);
+            this.rbAnimUser.TabIndex = 1;
+            this.rbAnimUser.TabStop = true;
+            this.rbAnimUser.Text = "Animateur";
+            this.rbAnimUser.UseVisualStyleBackColor = true;
+            // 
+            // rbArtisteUser
+            // 
+            this.rbArtisteUser.AutoSize = true;
+            this.rbArtisteUser.Location = new System.Drawing.Point(501, 39);
+            this.rbArtisteUser.Name = "rbArtisteUser";
+            this.rbArtisteUser.Size = new System.Drawing.Size(93, 25);
+            this.rbArtisteUser.TabIndex = 2;
+            this.rbArtisteUser.TabStop = true;
+            this.rbArtisteUser.Text = "Artistes";
+            this.rbArtisteUser.UseVisualStyleBackColor = true;
+            // 
+            // rbIntSpeUser
+            // 
+            this.rbIntSpeUser.AutoSize = true;
+            this.rbIntSpeUser.Location = new System.Drawing.Point(678, 39);
+            this.rbIntSpeUser.Name = "rbIntSpeUser";
+            this.rbIntSpeUser.Size = new System.Drawing.Size(222, 25);
+            this.rbIntSpeUser.TabIndex = 3;
+            this.rbIntSpeUser.TabStop = true;
+            this.rbIntSpeUser.Text = "Intervenants spécialisés";
+            this.rbIntSpeUser.UseVisualStyleBackColor = true;
+            // 
             // FormCRUDUtilisateur
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
             this.ClientSize = new System.Drawing.Size(1070, 550);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.tbPrenom);
             this.Controls.Add(this.labelPrenom);
             this.Controls.Add(this.tbNom);
@@ -173,6 +239,8 @@ namespace CarantecAdminPanel
             this.Text = "FormCRUDUtilisateur";
             this.gradientPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -189,6 +257,11 @@ namespace CarantecAdminPanel
         private System.Windows.Forms.Label labelPrenom;
         private System.Windows.Forms.TextBox tbNom;
         private System.Windows.Forms.Label labelNom;
+        private GroupBox groupBox1;
+        private RadioButton rbIntSpeUser;
+        private RadioButton rbArtisteUser;
+        private RadioButton rbAnimUser;
+        private RadioButton rbAdherentUser;
 
         public TextBox TbNom { get => tbNom; set => tbNom = value; }
         public Label LabelNom { get => labelNom; set => labelNom = value; }
