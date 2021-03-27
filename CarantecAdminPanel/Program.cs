@@ -16,7 +16,7 @@ namespace CarantecAdminPanel
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FormConnexionAdmin());
+            Application.Run(new Form1());
         }
     }
 }

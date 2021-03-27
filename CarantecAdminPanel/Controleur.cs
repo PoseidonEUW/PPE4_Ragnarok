@@ -200,7 +200,7 @@ namespace CarantecAdminPanel
             else
             {
                 // cas de l'ajout et modification
-                FormCRUDUtilisateur formCRUD = new FormCRUDUtilisateur();  // création de la nouvelle forme
+                FormCRUDUtilisateur formCRUD = new FormCRUDUtilisateur(c);  // création de la nouvelle forme
                 if (c == 'c')  // mode ajout donc pas de valeur à passer à la nouvelle forme
                 {
                     formCRUD.TbNom.Clear();
