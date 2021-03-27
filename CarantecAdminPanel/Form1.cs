@@ -216,14 +216,19 @@ namespace CarantecAdminPanel
             clickOnMenuItem(sender, e);
         }
 
-        private void modifierToolStripMenuItem_Click_1(object sender, EventArgs e)
+        private void modifierToolStripMenuItem_Click(object sender, EventArgs e)
         {
             clickOnMenuItem(sender, e);
         }
 
-        private void supprimerToolStripMenuItem_Click_1(object sender, EventArgs e)
+        private void supprimerToolStripMenuItem_Click(object sender, EventArgs e)
         {
             clickOnMenuItem(sender, e);
+        }
+
+        private void contextMenuStrip1_Opening(object sender, CancelEventArgs e)
+        {
+
         }
     }
 }

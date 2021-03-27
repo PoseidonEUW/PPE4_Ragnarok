@@ -55,9 +55,10 @@
             // 
             this.richTextBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
             this.richTextBox1.ForeColor = System.Drawing.Color.White;
-            this.richTextBox1.Location = new System.Drawing.Point(150, 369);
+            this.richTextBox1.Location = new System.Drawing.Point(112, 300);
+            this.richTextBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(802, 75);
+            this.richTextBox1.Size = new System.Drawing.Size(602, 62);
             this.richTextBox1.TabIndex = 111;
             this.richTextBox1.Text = "";
             // 
@@ -65,9 +66,10 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Netflix Sans", 11.25F);
-            this.label1.Location = new System.Drawing.Point(31, 378);
+            this.label1.Location = new System.Drawing.Point(23, 307);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(113, 24);
+            this.label1.Size = new System.Drawing.Size(86, 19);
             this.label1.TabIndex = 110;
             this.label1.Text = "Description";
             // 
@@ -76,9 +78,10 @@
             this.labelError.AutoSize = true;
             this.labelError.Font = new System.Drawing.Font("Netflix Sans", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelError.ForeColor = System.Drawing.Color.Firebrick;
-            this.labelError.Location = new System.Drawing.Point(365, 457);
+            this.labelError.Location = new System.Drawing.Point(274, 371);
+            this.labelError.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelError.Name = "labelError";
-            this.labelError.Size = new System.Drawing.Size(465, 24);
+            this.labelError.Size = new System.Drawing.Size(371, 19);
             this.labelError.TabIndex = 107;
             this.labelError.Text = "ERROR SAMPLE ERROR SAMPLE ERROR SAMPLE";
             this.labelError.Visible = false;
@@ -90,10 +93,10 @@
             this.btnEnregistrer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEnregistrer.Font = new System.Drawing.Font("Netflix Sans", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEnregistrer.ForeColor = System.Drawing.Color.Snow;
-            this.btnEnregistrer.Location = new System.Drawing.Point(418, 487);
-            this.btnEnregistrer.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnEnregistrer.Location = new System.Drawing.Point(314, 396);
+            this.btnEnregistrer.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnEnregistrer.Name = "btnEnregistrer";
-            this.btnEnregistrer.Size = new System.Drawing.Size(248, 56);
+            this.btnEnregistrer.Size = new System.Drawing.Size(186, 46);
             this.btnEnregistrer.TabIndex = 106;
             this.btnEnregistrer.Text = "Enregistrer";
             this.btnEnregistrer.UseVisualStyleBackColor = false;
@@ -102,10 +105,9 @@
             // 
             this.labelActionTitle.AutoSize = true;
             this.labelActionTitle.Font = new System.Drawing.Font("Netflix Sans", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelActionTitle.Location = new System.Drawing.Point(363, 133);
-            this.labelActionTitle.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelActionTitle.Location = new System.Drawing.Point(332, 108);
             this.labelActionTitle.Name = "labelActionTitle";
-            this.labelActionTitle.Size = new System.Drawing.Size(420, 34);
+            this.labelActionTitle.Size = new System.Drawing.Size(325, 27);
             this.labelActionTitle.TabIndex = 105;
             this.labelActionTitle.Text = "MODIFICATION/SUPPRESSION";
             this.labelActionTitle.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -116,10 +118,10 @@
             this.gradientPanel1.ColorBottom = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
             this.gradientPanel1.ColorTop = System.Drawing.Color.Black;
             this.gradientPanel1.Controls.Add(this.pictureBox1);
-            this.gradientPanel1.Location = new System.Drawing.Point(0, 8);
-            this.gradientPanel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.gradientPanel1.Location = new System.Drawing.Point(0, 6);
+            this.gradientPanel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.gradientPanel1.Name = "gradientPanel1";
-            this.gradientPanel1.Size = new System.Drawing.Size(1071, 103);
+            this.gradientPanel1.Size = new System.Drawing.Size(803, 84);
             this.gradientPanel1.TabIndex = 104;
             // 
             // pictureBox1
@@ -127,10 +129,10 @@
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.BackgroundImage = global::CarantecAdminPanel.Properties.Resources.carantec;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox1.Location = new System.Drawing.Point(360, -25);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureBox1.Location = new System.Drawing.Point(270, -20);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(349, 148);
+            this.pictureBox1.Size = new System.Drawing.Size(262, 120);
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
@@ -138,9 +140,10 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Netflix Sans", 11.25F);
-            this.label2.Location = new System.Drawing.Point(51, 300);
+            this.label2.Location = new System.Drawing.Point(38, 244);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(93, 24);
+            this.label2.Size = new System.Drawing.Size(72, 19);
             this.label2.TabIndex = 115;
             this.label2.Text = "Adhérent";
             // 
@@ -150,18 +153,20 @@
             this.cbAdhAvis.Font = new System.Drawing.Font("Netflix Sans", 11.25F);
             this.cbAdhAvis.ForeColor = System.Drawing.Color.White;
             this.cbAdhAvis.FormattingEnabled = true;
-            this.cbAdhAvis.Location = new System.Drawing.Point(150, 297);
+            this.cbAdhAvis.Location = new System.Drawing.Point(112, 241);
+            this.cbAdhAvis.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cbAdhAvis.Name = "cbAdhAvis";
-            this.cbAdhAvis.Size = new System.Drawing.Size(349, 32);
+            this.cbAdhAvis.Size = new System.Drawing.Size(263, 27);
             this.cbAdhAvis.TabIndex = 114;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Netflix Sans", 11.25F);
-            this.label3.Location = new System.Drawing.Point(12, 216);
+            this.label3.Location = new System.Drawing.Point(9, 176);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(132, 24);
+            this.label3.Size = new System.Drawing.Size(101, 19);
             this.label3.TabIndex = 113;
             this.label3.Text = "Manifestation";
             this.label3.Click += new System.EventHandler(this.label3_Click);
@@ -172,9 +177,10 @@
             this.cbManifAvis.Font = new System.Drawing.Font("Netflix Sans", 11.25F);
             this.cbManifAvis.ForeColor = System.Drawing.Color.White;
             this.cbManifAvis.FormattingEnabled = true;
-            this.cbManifAvis.Location = new System.Drawing.Point(150, 213);
+            this.cbManifAvis.Location = new System.Drawing.Point(112, 173);
+            this.cbManifAvis.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cbManifAvis.Name = "cbManifAvis";
-            this.cbManifAvis.Size = new System.Drawing.Size(349, 32);
+            this.cbManifAvis.Size = new System.Drawing.Size(263, 27);
             this.cbManifAvis.TabIndex = 112;
             // 
             // gbNoteAvis
@@ -187,79 +193,96 @@
             this.gbNoteAvis.Controls.Add(this.bNote1Avis);
             this.gbNoteAvis.Font = new System.Drawing.Font("Netflix Sans", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbNoteAvis.ForeColor = System.Drawing.Color.White;
-            this.gbNoteAvis.Location = new System.Drawing.Point(610, 196);
+            this.gbNoteAvis.Location = new System.Drawing.Point(458, 159);
+            this.gbNoteAvis.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.gbNoteAvis.Name = "gbNoteAvis";
-            this.gbNoteAvis.Size = new System.Drawing.Size(342, 156);
+            this.gbNoteAvis.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.gbNoteAvis.Size = new System.Drawing.Size(256, 127);
             this.gbNoteAvis.TabIndex = 116;
             this.gbNoteAvis.TabStop = false;
             this.gbNoteAvis.Text = "Note";
             // 
             // bNote5Avis
             // 
-            this.bNote5Avis.BackColor = System.Drawing.Color.White;
+            this.bNote5Avis.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.bNote5Avis.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bNote5Avis.BackgroundImage")));
             this.bNote5Avis.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.bNote5Avis.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bNote5Avis.Location = new System.Drawing.Point(248, 54);
+            this.bNote5Avis.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.bNote5Avis.Location = new System.Drawing.Point(186, 44);
+            this.bNote5Avis.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.bNote5Avis.Name = "bNote5Avis";
-            this.bNote5Avis.Size = new System.Drawing.Size(50, 50);
+            this.bNote5Avis.Size = new System.Drawing.Size(38, 41);
             this.bNote5Avis.TabIndex = 4;
             this.bNote5Avis.UseVisualStyleBackColor = false;
+            this.bNote5Avis.Click += new System.EventHandler(this.bNote5Avis_Click);
             // 
             // bNote4Avis
             // 
-            this.bNote4Avis.BackColor = System.Drawing.Color.White;
+            this.bNote4Avis.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.bNote4Avis.BackgroundImage = global::CarantecAdminPanel.Properties.Resources.EtoileVide;
             this.bNote4Avis.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.bNote4Avis.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bNote4Avis.Location = new System.Drawing.Point(198, 54);
+            this.bNote4Avis.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.bNote4Avis.Location = new System.Drawing.Point(148, 44);
+            this.bNote4Avis.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.bNote4Avis.Name = "bNote4Avis";
-            this.bNote4Avis.Size = new System.Drawing.Size(50, 50);
+            this.bNote4Avis.Size = new System.Drawing.Size(38, 41);
             this.bNote4Avis.TabIndex = 3;
             this.bNote4Avis.UseVisualStyleBackColor = false;
+            this.bNote4Avis.Click += new System.EventHandler(this.bNote4Avis_Click);
             // 
             // bNote3Avis
             // 
-            this.bNote3Avis.BackColor = System.Drawing.Color.White;
+            this.bNote3Avis.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.bNote3Avis.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bNote3Avis.BackgroundImage")));
             this.bNote3Avis.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.bNote3Avis.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bNote3Avis.Location = new System.Drawing.Point(151, 54);
+            this.bNote3Avis.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.bNote3Avis.Location = new System.Drawing.Point(113, 44);
+            this.bNote3Avis.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.bNote3Avis.Name = "bNote3Avis";
-            this.bNote3Avis.Size = new System.Drawing.Size(50, 50);
+            this.bNote3Avis.Size = new System.Drawing.Size(38, 41);
             this.bNote3Avis.TabIndex = 2;
             this.bNote3Avis.UseVisualStyleBackColor = false;
+            this.bNote3Avis.Click += new System.EventHandler(this.bNote3Avis_Click);
             // 
             // bNote2Avis
             // 
-            this.bNote2Avis.BackColor = System.Drawing.Color.White;
+            this.bNote2Avis.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.bNote2Avis.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bNote2Avis.BackgroundImage")));
             this.bNote2Avis.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.bNote2Avis.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bNote2Avis.Location = new System.Drawing.Point(102, 54);
+            this.bNote2Avis.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.bNote2Avis.Location = new System.Drawing.Point(76, 44);
+            this.bNote2Avis.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.bNote2Avis.Name = "bNote2Avis";
-            this.bNote2Avis.Size = new System.Drawing.Size(50, 50);
+            this.bNote2Avis.Size = new System.Drawing.Size(38, 41);
             this.bNote2Avis.TabIndex = 1;
             this.bNote2Avis.UseVisualStyleBackColor = false;
+            this.bNote2Avis.Click += new System.EventHandler(this.bNote2Avis_Click);
             // 
             // bNote1Avis
             // 
-            this.bNote1Avis.BackColor = System.Drawing.Color.White;
+            this.bNote1Avis.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.bNote1Avis.BackgroundImage = global::CarantecAdminPanel.Properties.Resources.EtoileVide;
             this.bNote1Avis.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.bNote1Avis.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bNote1Avis.Location = new System.Drawing.Point(52, 54);
+            this.bNote1Avis.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.bNote1Avis.Location = new System.Drawing.Point(39, 44);
+            this.bNote1Avis.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.bNote1Avis.Name = "bNote1Avis";
-            this.bNote1Avis.Size = new System.Drawing.Size(50, 50);
+            this.bNote1Avis.Size = new System.Drawing.Size(38, 41);
             this.bNote1Avis.TabIndex = 0;
             this.bNote1Avis.UseVisualStyleBackColor = false;
+            this.bNote1Avis.Click += new System.EventHandler(this.bNote1Avis_Click);
             // 
             // FormCRUDAvis
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
-            this.ClientSize = new System.Drawing.Size(1070, 550);
+            this.ClientSize = new System.Drawing.Size(802, 447);
             this.Controls.Add(this.gbNoteAvis);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.cbAdhAvis);
@@ -272,6 +295,7 @@
             this.Controls.Add(this.labelActionTitle);
             this.Controls.Add(this.gradientPanel1);
             this.ForeColor = System.Drawing.Color.White;
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "FormCRUDAvis";
             this.Text = "FormCRUDAvis";
             this.gradientPanel1.ResumeLayout(false);
