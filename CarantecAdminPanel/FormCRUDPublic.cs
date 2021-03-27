@@ -10,21 +10,11 @@ using System.Windows.Forms;
 
 namespace CarantecAdminPanel
 {
-    public partial class FormCRUDUtilisateur : Form
+    public partial class FormCRUDPublic : Form
     {
-        public FormCRUDUtilisateur()
+        public FormCRUDPublic()
         {
             InitializeComponent();
-        }
-
-        private void btnEnregistrer_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void groupBox1_Enter(object sender, EventArgs e)
-        {
-
         }
     }
 }
