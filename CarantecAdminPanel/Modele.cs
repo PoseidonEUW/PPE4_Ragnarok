@@ -169,7 +169,7 @@ namespace CarantecAdminPanel
         /// charge dans un DT les données de la table passée en paramètre
         /// </summary>
         /// <param name="table">nom de la table à requêter</param>
-        public void charger_donnees(string table, int indice)
+        public void charger_donnees(string table, int indice, string text)
         {
             chargement = false;
             if (!connopen) return;		// pour vérifier que la BD est bien ouverte
@@ -221,6 +221,18 @@ namespace CarantecAdminPanel
             if (table == "respToPers")
             {
                 charger("select * from respToPers;", dT[11], dA[11]);
+            }
+            if (table == "responsable")
+            {
+                charger("select * from RESPONSABLE;", dT[12], dA[12]);
+            }
+            if (table == "persToResp")
+            {
+                charger("CALL persToResp('" + text + "')", dT[13], dA[13]);
+            }
+            if (table == "nomThemeToIdTheme")
+            {
+                charger("CALL nomThemeToIdTheme('" + text + "')", dT[14], dA[14]);
             }
             //if (table == "PPE_REPARERUT")
             //{

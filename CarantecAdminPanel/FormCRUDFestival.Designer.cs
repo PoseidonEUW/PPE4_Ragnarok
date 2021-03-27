@@ -85,6 +85,7 @@ namespace CarantecAdminPanel
             // btnEnregistrer
             // 
             this.btnEnregistrer.BackColor = System.Drawing.Color.Transparent;
+            this.btnEnregistrer.DialogResult = System.Windows.Forms.DialogResult.OK;
             this.btnEnregistrer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEnregistrer.Font = new System.Drawing.Font("Netflix Sans", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEnregistrer.ForeColor = System.Drawing.Color.Snow;
@@ -100,7 +101,7 @@ namespace CarantecAdminPanel
             // 
             this.labelActionTitle.AutoSize = true;
             this.labelActionTitle.Font = new System.Drawing.Font("Netflix Sans", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelActionTitle.Location = new System.Drawing.Point(384, 133);
+            this.labelActionTitle.Location = new System.Drawing.Point(413, 133);
             this.labelActionTitle.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelActionTitle.Name = "labelActionTitle";
             this.labelActionTitle.Size = new System.Drawing.Size(248, 27);

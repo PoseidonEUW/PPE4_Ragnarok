@@ -38,7 +38,7 @@ namespace CarantecAdminPanel
         public void btnTables(string table)
         {
             tableG = table;
-            Controleur.Vmodele.charger_donnees(table, -1);      // chargement des données de la table sélectionné dans le DT correspondant
+            Controleur.Vmodele.charger_donnees(table, -1, "");      // chargement des données de la table sélectionné dans le DT correspondant
             if (Controleur.Vmodele.Chargement)
             {
                 // un DT par table
@@ -160,13 +160,6 @@ namespace CarantecAdminPanel
 
         }
 
-        private void ajouterToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            clickOnMenuItem(sender, e);
-        }
-
-
-
         private void clickOnMenuItem(object sender, EventArgs e)
         {
             if (sender == ajouterToolStripMenuItem)
@@ -218,22 +211,7 @@ namespace CarantecAdminPanel
             dgvDonnees.Refresh();
         }
 
-        private void contextMenuStrip1_Opening(object sender, CancelEventArgs e)
-        {
-
-        }
-
-        private void contextMenuStrip1_Click(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void modifierToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            clickOnMenuItem(sender, e);
-        }
-
-        private void supprimerToolStripMenuItem_Click(object sender, EventArgs e)
+        private void ajouterToolStripMenuItem_Click(object sender, EventArgs e)
         {
             clickOnMenuItem(sender, e);
         }
