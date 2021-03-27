@@ -1,3 +1,16 @@
 CarantecAdminPanel/obj
 CarantecAdminPanel/bin
 .vs
+*.exe
+*.pdb
+*.cache
+*.txt
+CarantecAdminPanel/bin/Debug/CarantecAdminPanel.exe
+CarantecAdminPanel/bin/Debug/CarantecAdminPanel.pdb
+CarantecAdminPanel/obj/Debug/CarantecAdminPanel.csproj.CoreCompileInputs.cache
+CarantecAdminPanel/obj/Debug/CarantecAdminPanel.csproj.FileListAbsolute.txt
+CarantecAdminPanel/obj/Debug/CarantecAdminPanel.csproj.GenerateResource.cache
+CarantecAdminPanel/obj/Debug/CarantecAdminPanel.csprojAssemblyReference.cache
+CarantecAdminPanel/obj/Debug/CarantecAdminPanel.exe
+CarantecAdminPanel/obj/Debug/CarantecAdminPanel.pdb
+.vs/CarantecAdminPanel/v16/.suo
