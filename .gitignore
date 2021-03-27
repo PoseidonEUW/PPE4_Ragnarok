@@ -21,3 +21,6 @@ CarantecAdminPanel/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache
 CarantecAdminPanel/obj/Debug/TempPE/Properties.Resources.Designer.cs.dll
 CarantecAdminPanel/obj/Debug/DesignTimeResolveAssemblyReferences.cache
 CarantecAdminPanel/obj/Debug/DesignTimeResolveAssemblyReferences.cache
+*.exe
+*.pdb
+*.cache
