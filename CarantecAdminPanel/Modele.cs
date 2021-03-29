@@ -91,7 +91,7 @@ namespace CarantecAdminPanel
         public Modele()
         {
             // instanciation des collections des Datatable et DataAdapter
-            for (int i = 0; i <= 20; i++)
+            for (int i = 0; i <= 30; i++)
             {
                 dA.Add(new MySqlDataAdapter());
                 dT.Add(new DataTable());
@@ -257,6 +257,38 @@ namespace CarantecAdminPanel
             if (table == "nomsLieuxFromManifs")
             {
                 charger("select * from nomsLieuxFromManifs;", dT[20], dA[20]);
+            }
+            if (table == "nomsManifsFromReserv")
+            {
+                charger("select * from nomsManifsFromReserv;", dT[21], dA[21]);
+            }
+            if (table == "nomsAdhFromReserv")
+            {
+                charger("select * from nomsAdhFromReserv;", dT[22], dA[22]);
+            }
+            if (table == "nomManifToIdManif")
+            {
+                charger("CALL nomManifToIdManif('" + text + "')", dT[23], dA[23]);
+            }
+            if (table == "nomPersToIdPers")
+            {
+                charger("CALL nomPersToIdPers('" + text + "')", dT[24], dA[24]);
+            }
+            if (table == "adherentPersonne")
+            {
+                charger("select * from adherentPersonne;", dT[25], dA[25]);
+            }
+            if (table == "artistePersonne")
+            {
+                charger("select * from artistePersonne;", dT[26], dA[26]);
+            }
+            if (table == "animateurPersonne")
+            {
+                charger("select * from animateurPersonne;", dT[27], dA[27]);
+            }
+            if (table == "intervenantSpecialisePersonne")
+            {
+                charger("select * from intervenantSpecialisePersonne;", dT[28], dA[28]);
             }
             //if (table == "PPE_REPARERUT")
             //{

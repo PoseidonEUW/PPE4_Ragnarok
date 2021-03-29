@@ -649,6 +649,175 @@ namespace CarantecAdminPanel
 
         #endregion
 
+        #region crud_reservation
+
+        public static void crud_reservation(Char c, int indice)
+        {
+            Controleur.Vmodele.charger_donnees("reservation", -1, "");
+            if (c == 'd') // cas de la suppression
+            {
+                //   DialogResult rep = MessageBox.Show("Etes-vous sûr de vouloir supprimer ce constructeur "+ vmodele.DTConstructeur.Rows[indice][1].ToString()+ " ? ", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                DialogResult rep = MessageBox.Show("Etes-vous sûr de vouloir supprimer la réservation ref : #" + vmodele.DT[4].Rows[indice][0].ToString() + " ? ", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (rep == DialogResult.Yes)
+                {
+                    vmodele.DT[4].Rows[indice].Delete();		// suppression dans le DataTable
+                    vmodele.DA[4].Update(vmodele.DT[4]);        // on supprime l’élément du DataTable
+                }
+            }
+            else
+            {
+                Controleur.Vmodele.charger_donnees("manifestation", -1, "");
+                Controleur.Vmodele.charger_donnees("adherent", -1, "");
+                // cas de l'ajout et modification
+                FormCRUDReservation formCRUD = new FormCRUDReservation();  // création de la nouvelle forme
+                if (c == 'c')  // mode ajout donc pas de valeur à passer à la nouvelle forme
+                {
+                    for (int i = 0; i < vmodele.DT[3].Rows.Count; i++)
+                    {
+                        formCRUD.CbManifReservation.Items.Add(vmodele.DT[3].Rows[i][3].ToString());
+                    }
+                    for (int i = 0; i < vmodele.DT[15].Rows.Count; i++)
+                    {
+                        formCRUD.CbAdhReservation.Items.Add(vmodele.DT[15].Rows[i][1].ToString());
+                    }
+                    formCRUD.CbManifReservation.SelectedIndex = -1;
+                    formCRUD.CbAdhReservation.SelectedIndex = -1;
+                    formCRUD.NudPersReservation.Value = 0;
+                    formCRUD.LabelActionTitle.Text = "AJOUT";
+                }
+
+                if (c == 'u')   // mode update donc on récupère les champs
+                {
+                    Controleur.Vmodele.charger_donnees("nomsManifsFromReserv", -1, "");
+                    Controleur.Vmodele.charger_donnees("nomsAdhFromReserv", -1, "");
+                    //formCRUD.ComboBoxLieuManif.SelectedItem = vmodele.DT[20].Rows[indice][2].ToString();
+                    for (int i = 0; i < vmodele.DT[3].Rows.Count; i++)
+                    {
+                        formCRUD.CbManifReservation.Items.Add(vmodele.DT[3].Rows[i][3].ToString());
+                    }
+                    for (int i = 0; i < vmodele.DT[15].Rows.Count; i++)
+                    {
+                        formCRUD.CbAdhReservation.Items.Add(vmodele.DT[15].Rows[i][1].ToString());
+                    }
+                    formCRUD.CbManifReservation.SelectedItem = vmodele.DT[21].Rows[indice][1].ToString();
+                    formCRUD.CbAdhReservation.SelectedItem = vmodele.DT[22].Rows[indice][1].ToString();
+                    formCRUD.NudPersReservation.Value = Convert.ToInt32(vmodele.DT[4].Rows[indice][3]);
+                    formCRUD.LabelActionTitle.Text = "MODIFICATION";
+                }
+            eti:
+                // on affiche la nouvelle form
+                formCRUD.ShowDialog();
+
+                // si l’utilisateur clique sur OK
+                if (formCRUD.DialogResult == DialogResult.OK)
+                {
+                    if (c == 'c') // ajout
+                    {
+                        // on crée une nouvelle ligne dans le dataView
+                        if (formCRUD.CbManifReservation.SelectedIndex != -1 && formCRUD.CbAdhReservation.SelectedIndex != -1 && formCRUD.NudPersReservation.Value > 0)
+                        {
+                            DataRow NouvLigne = vmodele.DT[4].NewRow();
+                            NouvLigne["REFRESERVATION"] = Convert.ToInt32(vmodele.DT[4].Rows[vmodele.DT[4].Rows.Count - 1][0]) + 1;
+                            string libelleManif = formCRUD.CbManifReservation.SelectedItem.ToString();
+                            Controleur.Vmodele.charger_donnees("nomManifToIdManif", -1, libelleManif);
+                            NouvLigne["IDMANIF"] = Convert.ToInt32(vmodele.DT[23].Rows[0][0].ToString());
+                            string libellePersonne = formCRUD.CbAdhReservation.SelectedItem.ToString();
+                            Controleur.Vmodele.charger_donnees("nomPersToIdPers", -1, libellePersonne);
+                            NouvLigne["IDPERSONNE"] = Convert.ToInt32(vmodele.DT[24].Rows[0][0].ToString());
+                            NouvLigne["QUANTITERESERVATION"] = formCRUD.NudPersReservation.Value;
+                            vmodele.DT[4].Rows.Add(NouvLigne);
+                            vmodele.DA[4].Update(vmodele.DT[4]);
+                        }
+                        else
+                        {
+                            MessageBox.Show("Erreur : il faut remplir tout les champs", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            goto eti;
+                        }
+                    }
+
+                    if (c == 'u')  // modif
+                    {
+                        if (formCRUD.CbManifReservation.SelectedIndex != -1 && formCRUD.CbAdhReservation.SelectedIndex != -1 && formCRUD.NudPersReservation.Value > 0)
+                        {
+                            string libelleManif = formCRUD.CbManifReservation.SelectedItem.ToString();
+                            Controleur.Vmodele.charger_donnees("nomManifToIdManif", -1, libelleManif);
+                            vmodele.DT[4].Rows[indice]["IDMANIF"] = Convert.ToInt32(vmodele.DT[23].Rows[0][0].ToString());
+                            string libellePersonne = formCRUD.CbAdhReservation.SelectedItem.ToString();
+                            Controleur.Vmodele.charger_donnees("nomPersToIdPers", -1, libellePersonne);
+                            vmodele.DT[4].Rows[indice]["IDPERSONNE"] = Convert.ToInt32(vmodele.DT[24].Rows[0][0].ToString());
+                            vmodele.DT[4].Rows[indice]["QUANTITERESERVATION"] = formCRUD.NudPersReservation.Value;
+                            vmodele.DA[4].Update(vmodele.DT[4]);
+                        }
+                        else
+                        {
+                            MessageBox.Show("Erreur : il faut remplir tout les champs", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            goto eti;
+                        }
+                    }
+
+                    MessageBox.Show("OK : données enregistrées public");
+                    formCRUD.Dispose();  // on ferme la form
+                }
+                else
+                {
+                    MessageBox.Show("Annulation : aucune donnée enregistrée public");
+                    formCRUD.Dispose();
+                }
+            }
+        }
+
+        #endregion
+
+        #region crud_avis
+
+        public static void crud_avis(Char c, int indice)
+        {
+            Controleur.Vmodele.charger_donnees("avis", -1, "");
+            if (c == 'd') // cas de la suppression
+            {
+                //   DialogResult rep = MessageBox.Show("Etes-vous sûr de vouloir supprimer ce constructeur "+ vmodele.DTConstructeur.Rows[indice][1].ToString()+ " ? ", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                DialogResult rep = MessageBox.Show("Etes-vous sûr de vouloir supprimer l'avis " + vmodele.DT[6].Rows[indice][0].ToString() + " ? ", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (rep == DialogResult.Yes)
+                {
+                    vmodele.DT[6].Rows[indice].Delete();		// suppression dans le DataTable
+                    vmodele.DA[6].Update(vmodele.DT[6]);        // on supprime l’élément du DataTable
+                }
+            }
+            else
+            {
+                // cas de l'ajout et modification
+                FormUpdateAvis formCRUD = new FormUpdateAvis();  // création de la nouvelle forme
+                if (c == 'u')   // mode update donc on récupère les champs
+                {
+                    if (Convert.ToInt32(vmodele.DT[6].Rows[indice][5]) == 0) formCRUD.RbRefuser.Checked = true;
+                    else formCRUD.RbAccepter.Checked = true;
+                    formCRUD.LabelActionTitle.Text = "MODIFICATION";
+                }
+            eti:
+                // on affiche la nouvelle form
+                formCRUD.ShowDialog();
+                // si l’utilisateur clique sur OK
+                if (formCRUD.DialogResult == DialogResult.OK)
+                {
+                    if (c == 'u')  // modif
+                    {
+                        if(formCRUD.RbAccepter.Checked == true) vmodele.DT[6].Rows[indice]["VALIDEAVIS"] = 1;
+                        else vmodele.DT[6].Rows[indice]["VALIDEAVIS"] = 0;
+                        vmodele.DA[6].Update(vmodele.DT[6]);
+                    }
+                    MessageBox.Show("OK : données enregistrées avis");
+                    formCRUD.Dispose();  // on ferme la form
+                }
+                else
+                {
+                    MessageBox.Show("Annulation : aucune donnée enregistrée avis");
+                    formCRUD.Dispose();
+                }
+            }
+        }
+
+        #endregion
+
         #endregion
     }
 }

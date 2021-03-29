@@ -1,4 +1,6 @@
-﻿namespace CarantecAdminPanel
+﻿using System.Windows.Forms;
+
+namespace CarantecAdminPanel
 {
     partial class FormCRUDAvis
     {
@@ -79,7 +81,7 @@
             this.labelError.AutoSize = true;
             this.labelError.Font = new System.Drawing.Font("Netflix Sans", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelError.ForeColor = System.Drawing.Color.Firebrick;
-            this.labelError.Location = new System.Drawing.Point(274, 371);
+            this.labelError.Location = new System.Drawing.Point(224, 367);
             this.labelError.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelError.Name = "labelError";
             this.labelError.Size = new System.Drawing.Size(371, 19);
@@ -94,7 +96,7 @@
             this.btnEnregistrer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEnregistrer.Font = new System.Drawing.Font("Netflix Sans", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEnregistrer.ForeColor = System.Drawing.Color.Snow;
-            this.btnEnregistrer.Location = new System.Drawing.Point(314, 396);
+            this.btnEnregistrer.Location = new System.Drawing.Point(297, 392);
             this.btnEnregistrer.Margin = new System.Windows.Forms.Padding(2);
             this.btnEnregistrer.Name = "btnEnregistrer";
             this.btnEnregistrer.Size = new System.Drawing.Size(186, 46);
@@ -331,5 +333,23 @@
         private System.Windows.Forms.Button bNote3Avis;
         private System.Windows.Forms.Button bNote2Avis;
         private System.Windows.Forms.Button bNote1Avis;
+
+        public RichTextBox RichTextBox1 { get => richTextBox1; set => richTextBox1 = value; }
+        public Label Label1 { get => label1; set => label1 = value; }
+        public Label LabelError { get => labelError; set => labelError = value; }
+        public Button BtnEnregistrer { get => btnEnregistrer; set => btnEnregistrer = value; }
+        public Label LabelActionTitle { get => labelActionTitle; set => labelActionTitle = value; }
+        internal GradientPanel GradientPanel1 { get => gradientPanel1; set => gradientPanel1 = value; }
+        public PictureBox PictureBox1 { get => pictureBox1; set => pictureBox1 = value; }
+        public Label Label2 { get => label2; set => label2 = value; }
+        public ComboBox CbAdhAvis { get => cbAdhAvis; set => cbAdhAvis = value; }
+        public Label Label3 { get => label3; set => label3 = value; }
+        public ComboBox CbManifAvis { get => cbManifAvis; set => cbManifAvis = value; }
+        public GroupBox GbNoteAvis { get => gbNoteAvis; set => gbNoteAvis = value; }
+        public Button BNote5Avis { get => bNote5Avis; set => bNote5Avis = value; }
+        public Button BNote4Avis { get => bNote4Avis; set => bNote4Avis = value; }
+        public Button BNote3Avis { get => bNote3Avis; set => bNote3Avis = value; }
+        public Button BNote2Avis { get => bNote2Avis; set => bNote2Avis = value; }
+        public Button BNote1Avis { get => bNote1Avis; set => bNote1Avis = value; }
     }
 }

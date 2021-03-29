@@ -35,6 +35,7 @@ namespace CarantecAdminPanel
             this.btnEnregistrer = new System.Windows.Forms.Button();
             this.labelActionTitle = new System.Windows.Forms.Label();
             this.gradientPanel1 = new CarantecAdminPanel.GradientPanel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.tbPrenom = new System.Windows.Forms.TextBox();
             this.labelPrenom = new System.Windows.Forms.Label();
             this.tbNom = new System.Windows.Forms.TextBox();
@@ -56,10 +57,16 @@ namespace CarantecAdminPanel
             this.tbLienFBArtisteUser = new System.Windows.Forms.TextBox();
             this.tbPhoto = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.wbPrevi = new System.Windows.Forms.WebBrowser();
+            this.gbAdherent = new System.Windows.Forms.GroupBox();
+            this.gbArtiste = new System.Windows.Forms.GroupBox();
+            this.panelHideWb = new System.Windows.Forms.Panel();
             this.gradientPanel1.SuspendLayout();
-            this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.groupBox1.SuspendLayout();
+            this.gbAdherent.SuspendLayout();
+            this.gbArtiste.SuspendLayout();
             this.SuspendLayout();
             // 
             // labelError
@@ -67,7 +74,7 @@ namespace CarantecAdminPanel
             this.labelError.AutoSize = true;
             this.labelError.Font = new System.Drawing.Font("Netflix Sans", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelError.ForeColor = System.Drawing.Color.Firebrick;
-            this.labelError.Location = new System.Drawing.Point(374, 938);
+            this.labelError.Location = new System.Drawing.Point(393, 1161);
             this.labelError.Name = "labelError";
             this.labelError.Size = new System.Drawing.Size(371, 19);
             this.labelError.TabIndex = 19;
@@ -81,7 +88,7 @@ namespace CarantecAdminPanel
             this.btnEnregistrer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEnregistrer.Font = new System.Drawing.Font("Netflix Sans", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEnregistrer.ForeColor = System.Drawing.Color.Snow;
-            this.btnEnregistrer.Location = new System.Drawing.Point(427, 968);
+            this.btnEnregistrer.Location = new System.Drawing.Point(447, 1191);
             this.btnEnregistrer.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnEnregistrer.Name = "btnEnregistrer";
             this.btnEnregistrer.Size = new System.Drawing.Size(248, 56);
@@ -114,6 +121,18 @@ namespace CarantecAdminPanel
             this.gradientPanel1.Name = "gradientPanel1";
             this.gradientPanel1.Size = new System.Drawing.Size(1148, 103);
             this.gradientPanel1.TabIndex = 15;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.BackgroundImage = global::CarantecAdminPanel.Properties.Resources.carantec;
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox1.Location = new System.Drawing.Point(360, -25);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(349, 148);
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
             // 
             // tbPrenom
             // 
@@ -222,7 +241,7 @@ namespace CarantecAdminPanel
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(77, 568);
+            this.label1.Location = new System.Drawing.Point(55, 44);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(94, 16);
             this.label1.TabIndex = 29;
@@ -231,7 +250,7 @@ namespace CarantecAdminPanel
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(76, 672);
+            this.label2.Location = new System.Drawing.Point(54, 124);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(95, 16);
             this.label2.TabIndex = 30;
@@ -240,7 +259,7 @@ namespace CarantecAdminPanel
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(31, 775);
+            this.label3.Location = new System.Drawing.Point(9, 210);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(140, 16);
             this.label3.TabIndex = 31;
@@ -251,7 +270,7 @@ namespace CarantecAdminPanel
             this.tbEmailAdherentUser.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
             this.tbEmailAdherentUser.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tbEmailAdherentUser.ForeColor = System.Drawing.Color.White;
-            this.tbEmailAdherentUser.Location = new System.Drawing.Point(211, 565);
+            this.tbEmailAdherentUser.Location = new System.Drawing.Point(189, 41);
             this.tbEmailAdherentUser.Name = "tbEmailAdherentUser";
             this.tbEmailAdherentUser.Size = new System.Drawing.Size(260, 24);
             this.tbEmailAdherentUser.TabIndex = 32;
@@ -261,7 +280,7 @@ namespace CarantecAdminPanel
             this.tbLogAdherentUser.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
             this.tbLogAdherentUser.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tbLogAdherentUser.ForeColor = System.Drawing.Color.White;
-            this.tbLogAdherentUser.Location = new System.Drawing.Point(211, 669);
+            this.tbLogAdherentUser.Location = new System.Drawing.Point(189, 121);
             this.tbLogAdherentUser.Name = "tbLogAdherentUser";
             this.tbLogAdherentUser.Size = new System.Drawing.Size(260, 24);
             this.tbLogAdherentUser.TabIndex = 33;
@@ -271,7 +290,7 @@ namespace CarantecAdminPanel
             this.tbMdpAdherentUser.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
             this.tbMdpAdherentUser.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tbMdpAdherentUser.ForeColor = System.Drawing.Color.White;
-            this.tbMdpAdherentUser.Location = new System.Drawing.Point(211, 772);
+            this.tbMdpAdherentUser.Location = new System.Drawing.Point(189, 207);
             this.tbMdpAdherentUser.Name = "tbMdpAdherentUser";
             this.tbMdpAdherentUser.Size = new System.Drawing.Size(260, 24);
             this.tbMdpAdherentUser.TabIndex = 34;
@@ -279,7 +298,7 @@ namespace CarantecAdminPanel
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(624, 611);
+            this.label4.Location = new System.Drawing.Point(78, 55);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(72, 16);
             this.label4.TabIndex = 35;
@@ -288,7 +307,7 @@ namespace CarantecAdminPanel
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(564, 717);
+            this.label5.Location = new System.Drawing.Point(18, 132);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(132, 16);
             this.label5.TabIndex = 36;
@@ -298,9 +317,8 @@ namespace CarantecAdminPanel
             // 
             this.tbRoleArtisteUser.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
             this.tbRoleArtisteUser.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.tbRoleArtisteUser.Enabled = false;
             this.tbRoleArtisteUser.ForeColor = System.Drawing.Color.White;
-            this.tbRoleArtisteUser.Location = new System.Drawing.Point(730, 608);
+            this.tbRoleArtisteUser.Location = new System.Drawing.Point(184, 52);
             this.tbRoleArtisteUser.Name = "tbRoleArtisteUser";
             this.tbRoleArtisteUser.Size = new System.Drawing.Size(260, 24);
             this.tbRoleArtisteUser.TabIndex = 37;
@@ -309,9 +327,8 @@ namespace CarantecAdminPanel
             // 
             this.tbLienFBArtisteUser.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
             this.tbLienFBArtisteUser.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.tbLienFBArtisteUser.Enabled = false;
             this.tbLienFBArtisteUser.ForeColor = System.Drawing.Color.White;
-            this.tbLienFBArtisteUser.Location = new System.Drawing.Point(730, 714);
+            this.tbLienFBArtisteUser.Location = new System.Drawing.Point(184, 129);
             this.tbLienFBArtisteUser.Name = "tbLienFBArtisteUser";
             this.tbLienFBArtisteUser.Size = new System.Drawing.Size(260, 24);
             this.tbLienFBArtisteUser.TabIndex = 38;
@@ -321,50 +338,95 @@ namespace CarantecAdminPanel
             this.tbPhoto.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
             this.tbPhoto.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tbPhoto.ForeColor = System.Drawing.Color.White;
-            this.tbPhoto.Location = new System.Drawing.Point(499, 855);
+            this.tbPhoto.Location = new System.Drawing.Point(736, 512);
             this.tbPhoto.Name = "tbPhoto";
             this.tbPhoto.Size = new System.Drawing.Size(260, 24);
             this.tbPhoto.TabIndex = 40;
+            this.tbPhoto.TextChanged += new System.EventHandler(this.tbPhoto_TextChanged);
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(357, 859);
+            this.label6.Location = new System.Drawing.Point(594, 516);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(119, 16);
             this.label6.TabIndex = 39;
             this.label6.Text = "Lien photo de profil";
             // 
-            // pictureBox1
+            // label7
             // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.BackgroundImage = global::CarantecAdminPanel.Properties.Resources.carantec;
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox1.Location = new System.Drawing.Point(360, -25);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(349, 148);
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(771, 562);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(98, 16);
+            this.label7.TabIndex = 41;
+            this.label7.Text = "Prévisualisation";
+            this.label7.Click += new System.EventHandler(this.label7_Click);
+            // 
+            // wbPrevi
+            // 
+            this.wbPrevi.AllowNavigation = false;
+            this.wbPrevi.AllowWebBrowserDrop = false;
+            this.wbPrevi.IsWebBrowserContextMenuEnabled = false;
+            this.wbPrevi.Location = new System.Drawing.Point(516, 603);
+            this.wbPrevi.Margin = new System.Windows.Forms.Padding(0);
+            this.wbPrevi.MinimumSize = new System.Drawing.Size(20, 20);
+            this.wbPrevi.Name = "wbPrevi";
+            this.wbPrevi.ScriptErrorsSuppressed = true;
+            this.wbPrevi.Size = new System.Drawing.Size(603, 541);
+            this.wbPrevi.TabIndex = 42;
+            // 
+            // gbAdherent
+            // 
+            this.gbAdherent.Controls.Add(this.label2);
+            this.gbAdherent.Controls.Add(this.label1);
+            this.gbAdherent.Controls.Add(this.label3);
+            this.gbAdherent.Controls.Add(this.tbEmailAdherentUser);
+            this.gbAdherent.Controls.Add(this.tbLogAdherentUser);
+            this.gbAdherent.Controls.Add(this.tbMdpAdherentUser);
+            this.gbAdherent.ForeColor = System.Drawing.Color.White;
+            this.gbAdherent.Location = new System.Drawing.Point(24, 562);
+            this.gbAdherent.Name = "gbAdherent";
+            this.gbAdherent.Size = new System.Drawing.Size(469, 290);
+            this.gbAdherent.TabIndex = 29;
+            this.gbAdherent.TabStop = false;
+            this.gbAdherent.Text = "Adherent";
+            // 
+            // gbArtiste
+            // 
+            this.gbArtiste.Controls.Add(this.tbLienFBArtisteUser);
+            this.gbArtiste.Controls.Add(this.label4);
+            this.gbArtiste.Controls.Add(this.label5);
+            this.gbArtiste.Controls.Add(this.tbRoleArtisteUser);
+            this.gbArtiste.Enabled = false;
+            this.gbArtiste.ForeColor = System.Drawing.Color.White;
+            this.gbArtiste.Location = new System.Drawing.Point(24, 885);
+            this.gbArtiste.Name = "gbArtiste";
+            this.gbArtiste.Size = new System.Drawing.Size(469, 204);
+            this.gbArtiste.TabIndex = 35;
+            this.gbArtiste.TabStop = false;
+            this.gbArtiste.Text = "Artiste";
+            // 
+            // panelHideWb
+            // 
+            this.panelHideWb.Location = new System.Drawing.Point(516, 552);
+            this.panelHideWb.Name = "panelHideWb";
+            this.panelHideWb.Size = new System.Drawing.Size(618, 592);
+            this.panelHideWb.TabIndex = 43;
             // 
             // FormCRUDUtilisateur
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
-            this.ClientSize = new System.Drawing.Size(1146, 1055);
+            this.ClientSize = new System.Drawing.Size(1146, 1268);
+            this.Controls.Add(this.panelHideWb);
+            this.Controls.Add(this.gbArtiste);
+            this.Controls.Add(this.gbAdherent);
+            this.Controls.Add(this.wbPrevi);
+            this.Controls.Add(this.label7);
             this.Controls.Add(this.tbPhoto);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.tbLienFBArtisteUser);
-            this.Controls.Add(this.tbRoleArtisteUser);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.tbMdpAdherentUser);
-            this.Controls.Add(this.tbLogAdherentUser);
-            this.Controls.Add(this.tbEmailAdherentUser);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.tbPrenom);
             this.Controls.Add(this.labelPrenom);
@@ -384,9 +446,13 @@ namespace CarantecAdminPanel
             this.Text = "FormCRUDUtilisateur";
             this.Load += new System.EventHandler(this.FormCRUDUtilisateur_Load);
             this.gradientPanel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.gbAdherent.ResumeLayout(false);
+            this.gbAdherent.PerformLayout();
+            this.gbArtiste.ResumeLayout(false);
+            this.gbArtiste.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -420,6 +486,11 @@ namespace CarantecAdminPanel
         private TextBox tbLienFBArtisteUser;
         private TextBox tbPhoto;
         private Label label6;
+        private Label label7;
+        private WebBrowser wbPrevi;
+        private GroupBox gbAdherent;
+        private GroupBox gbArtiste;
+        private Panel panelHideWb;
 
         public TextBox TbNom { get => tbNom; set => tbNom = value; }
         public Label LabelNom { get => labelNom; set => labelNom = value; }

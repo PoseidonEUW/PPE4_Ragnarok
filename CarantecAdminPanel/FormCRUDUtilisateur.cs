@@ -17,11 +17,8 @@ namespace CarantecAdminPanel
             InitializeComponent();
             if (etat == 'u')
             {
-                tbEmailAdherentUser.Enabled = false;
-                tbLogAdherentUser.Enabled = false;
-                tbMdpAdherentUser.Enabled = false;
-                tbRoleArtisteUser.Enabled = false;
-                tbLienFBArtisteUser.Enabled = false;
+                gbAdherent.Enabled = false;
+                gbArtiste.Enabled = false;
                 groupBox1.Enabled = false;
             }
         }
@@ -58,22 +55,10 @@ namespace CarantecAdminPanel
 
         private void refreshRb(string role)
         {
-            tbEmailAdherentUser.Enabled = false;
-            tbLogAdherentUser.Enabled = false;
-            tbMdpAdherentUser.Enabled = false;
-            tbRoleArtisteUser.Enabled = false;
-            tbLienFBArtisteUser.Enabled = false;
-            if (role == "adherent")
-            {
-                tbEmailAdherentUser.Enabled = true;
-                tbLogAdherentUser.Enabled = true;
-                tbMdpAdherentUser.Enabled = true;
-            }
-            if (role == "artiste")
-            {
-                tbRoleArtisteUser.Enabled = true;
-                tbLienFBArtisteUser.Enabled = true;
-            }
+            gbAdherent.Enabled = false;
+            gbArtiste.Enabled = false;
+            if (role == "adherent") gbAdherent.Enabled = true;
+            if (role == "artiste") gbArtiste.Enabled = true;
         }
 
         private void groupBox1_MouseCaptureChanged(object sender, EventArgs e)
@@ -87,6 +72,17 @@ namespace CarantecAdminPanel
         }
 
         private void FormCRUDUtilisateur_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tbPhoto_TextChanged(object sender, EventArgs e)
+        {
+            panelHideWb.Visible = (tbPhoto.Text == "");
+            if(tbPhoto.Text != "") wbPrevi.Url = new Uri(tbPhoto.Text);
+        }
+
+        private void label7_Click(object sender, EventArgs e)
         {
 
         }

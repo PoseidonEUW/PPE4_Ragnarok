@@ -1,4 +1,6 @@
-﻿namespace CarantecAdminPanel
+﻿using System.Windows.Forms;
+
+namespace CarantecAdminPanel
 {
     partial class FormCRUDReservation
     {
@@ -28,8 +30,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.tbRefReservation = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
             this.labelError = new System.Windows.Forms.Label();
             this.btnEnregistrer = new System.Windows.Forms.Button();
             this.labelActionTitle = new System.Windows.Forms.Label();
@@ -46,34 +46,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.nudPersReservation)).BeginInit();
             this.SuspendLayout();
             // 
-            // tbRefReservation
-            // 
-            this.tbRefReservation.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
-            this.tbRefReservation.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.tbRefReservation.Font = new System.Drawing.Font("Netflix Sans", 11.25F);
-            this.tbRefReservation.ForeColor = System.Drawing.Color.White;
-            this.tbRefReservation.Location = new System.Drawing.Point(360, 203);
-            this.tbRefReservation.Name = "tbRefReservation";
-            this.tbRefReservation.Size = new System.Drawing.Size(349, 27);
-            this.tbRefReservation.TabIndex = 88;
-            this.tbRefReservation.TextChanged += new System.EventHandler(this.tbRefReservation_TextChanged);
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Netflix Sans", 11.25F);
-            this.label6.Location = new System.Drawing.Point(252, 206);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(78, 19);
-            this.label6.TabIndex = 87;
-            this.label6.Text = "Référence";
-            // 
             // labelError
             // 
             this.labelError.AutoSize = true;
             this.labelError.Font = new System.Drawing.Font("Netflix Sans", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelError.ForeColor = System.Drawing.Color.Firebrick;
-            this.labelError.Location = new System.Drawing.Point(365, 457);
+            this.labelError.Location = new System.Drawing.Point(366, 408);
             this.labelError.Name = "labelError";
             this.labelError.Size = new System.Drawing.Size(371, 19);
             this.labelError.TabIndex = 85;
@@ -87,7 +65,7 @@
             this.btnEnregistrer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEnregistrer.Font = new System.Drawing.Font("Netflix Sans", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEnregistrer.ForeColor = System.Drawing.Color.Snow;
-            this.btnEnregistrer.Location = new System.Drawing.Point(418, 487);
+            this.btnEnregistrer.Location = new System.Drawing.Point(419, 438);
             this.btnEnregistrer.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnEnregistrer.Name = "btnEnregistrer";
             this.btnEnregistrer.Size = new System.Drawing.Size(248, 56);
@@ -99,7 +77,7 @@
             // 
             this.labelActionTitle.AutoSize = true;
             this.labelActionTitle.Font = new System.Drawing.Font("Netflix Sans", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelActionTitle.Location = new System.Drawing.Point(363, 133);
+            this.labelActionTitle.Location = new System.Drawing.Point(469, 133);
             this.labelActionTitle.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelActionTitle.Name = "labelActionTitle";
             this.labelActionTitle.Size = new System.Drawing.Size(325, 27);
@@ -139,7 +117,7 @@
             this.cbManifReservation.Font = new System.Drawing.Font("Netflix Sans", 11.25F);
             this.cbManifReservation.ForeColor = System.Drawing.Color.White;
             this.cbManifReservation.FormattingEnabled = true;
-            this.cbManifReservation.Location = new System.Drawing.Point(360, 274);
+            this.cbManifReservation.Location = new System.Drawing.Point(360, 208);
             this.cbManifReservation.Name = "cbManifReservation";
             this.cbManifReservation.Size = new System.Drawing.Size(349, 27);
             this.cbManifReservation.TabIndex = 89;
@@ -149,7 +127,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Netflix Sans", 11.25F);
-            this.label1.Location = new System.Drawing.Point(222, 277);
+            this.label1.Location = new System.Drawing.Point(229, 211);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(101, 19);
             this.label1.TabIndex = 90;
@@ -159,7 +137,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Netflix Sans", 11.25F);
-            this.label2.Location = new System.Drawing.Point(261, 344);
+            this.label2.Location = new System.Drawing.Point(261, 278);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(72, 19);
             this.label2.TabIndex = 92;
@@ -173,7 +151,7 @@
             this.cbAdhReservation.Font = new System.Drawing.Font("Netflix Sans", 11.25F);
             this.cbAdhReservation.ForeColor = System.Drawing.Color.White;
             this.cbAdhReservation.FormattingEnabled = true;
-            this.cbAdhReservation.Location = new System.Drawing.Point(360, 341);
+            this.cbAdhReservation.Location = new System.Drawing.Point(360, 275);
             this.cbAdhReservation.Name = "cbAdhReservation";
             this.cbAdhReservation.Size = new System.Drawing.Size(349, 27);
             this.cbAdhReservation.TabIndex = 91;
@@ -185,7 +163,7 @@
             this.nudPersReservation.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.nudPersReservation.Font = new System.Drawing.Font("Netflix Sans", 11.25F);
             this.nudPersReservation.ForeColor = System.Drawing.Color.White;
-            this.nudPersReservation.Location = new System.Drawing.Point(483, 402);
+            this.nudPersReservation.Location = new System.Drawing.Point(360, 336);
             this.nudPersReservation.Name = "nudPersReservation";
             this.nudPersReservation.Size = new System.Drawing.Size(70, 27);
             this.nudPersReservation.TabIndex = 93;
@@ -200,7 +178,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Netflix Sans", 11.25F);
-            this.label3.Location = new System.Drawing.Point(228, 404);
+            this.label3.Location = new System.Drawing.Point(170, 338);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(160, 19);
             this.label3.TabIndex = 94;
@@ -211,15 +189,13 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
-            this.ClientSize = new System.Drawing.Size(1070, 550);
+            this.ClientSize = new System.Drawing.Size(1070, 529);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.nudPersReservation);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.cbAdhReservation);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.cbManifReservation);
-            this.Controls.Add(this.tbRefReservation);
-            this.Controls.Add(this.label6);
             this.Controls.Add(this.labelError);
             this.Controls.Add(this.btnEnregistrer);
             this.Controls.Add(this.labelActionTitle);
@@ -237,8 +213,6 @@
         }
 
         #endregion
-        private System.Windows.Forms.TextBox tbRefReservation;
-        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label labelError;
         private System.Windows.Forms.Button btnEnregistrer;
         private System.Windows.Forms.Label labelActionTitle;
@@ -250,5 +224,17 @@
         private System.Windows.Forms.ComboBox cbAdhReservation;
         private System.Windows.Forms.NumericUpDown nudPersReservation;
         private System.Windows.Forms.Label label3;
+
+        public Label LabelError { get => labelError; set => labelError = value; }
+        public Button BtnEnregistrer { get => btnEnregistrer; set => btnEnregistrer = value; }
+        public Label LabelActionTitle { get => labelActionTitle; set => labelActionTitle = value; }
+        internal GradientPanel GradientPanel1 { get => gradientPanel1; set => gradientPanel1 = value; }
+        public PictureBox PictureBox1 { get => pictureBox1; set => pictureBox1 = value; }
+        public ComboBox CbManifReservation { get => cbManifReservation; set => cbManifReservation = value; }
+        public Label Label1 { get => label1; set => label1 = value; }
+        public Label Label2 { get => label2; set => label2 = value; }
+        public ComboBox CbAdhReservation { get => cbAdhReservation; set => cbAdhReservation = value; }
+        public NumericUpDown NudPersReservation { get => nudPersReservation; set => nudPersReservation = value; }
+        public Label Label3 { get => label3; set => label3 = value; }
     }
 }
