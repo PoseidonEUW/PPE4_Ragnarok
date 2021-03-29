@@ -161,6 +161,12 @@
     <Compile Include="FormConnexionAdmin.Designer.cs">
       <DependentUpon>FormConnexionAdmin.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormUpdateUtilisateur.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormUpdateUtilisateur.Designer.cs">
+      <DependentUpon>FormUpdateUtilisateur.cs</DependentUpon>
+    </Compile>
     <Compile Include="Modele.cs" />
     <Compile Include="Controleur.cs" />
     <Compile Include="Form1.cs">
@@ -203,6 +209,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormConnexionAdmin.resx">
       <DependentUpon>FormConnexionAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormUpdateUtilisateur.resx">
+      <DependentUpon>FormUpdateUtilisateur.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

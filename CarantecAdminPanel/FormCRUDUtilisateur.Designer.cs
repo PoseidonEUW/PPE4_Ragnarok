@@ -35,7 +35,6 @@ namespace CarantecAdminPanel
             this.btnEnregistrer = new System.Windows.Forms.Button();
             this.labelActionTitle = new System.Windows.Forms.Label();
             this.gradientPanel1 = new CarantecAdminPanel.GradientPanel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.tbPrenom = new System.Windows.Forms.TextBox();
             this.labelPrenom = new System.Windows.Forms.Label();
             this.tbNom = new System.Windows.Forms.TextBox();
@@ -57,9 +56,10 @@ namespace CarantecAdminPanel
             this.tbLienFBArtisteUser = new System.Windows.Forms.TextBox();
             this.tbPhoto = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.gradientPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // labelError
@@ -114,18 +114,6 @@ namespace CarantecAdminPanel
             this.gradientPanel1.Name = "gradientPanel1";
             this.gradientPanel1.Size = new System.Drawing.Size(1148, 103);
             this.gradientPanel1.TabIndex = 15;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.BackgroundImage = global::CarantecAdminPanel.Properties.Resources.carantec;
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox1.Location = new System.Drawing.Point(360, -25);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(349, 148);
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
             // 
             // tbPrenom
             // 
@@ -261,6 +249,7 @@ namespace CarantecAdminPanel
             // tbEmailAdherentUser
             // 
             this.tbEmailAdherentUser.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
+            this.tbEmailAdherentUser.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tbEmailAdherentUser.ForeColor = System.Drawing.Color.White;
             this.tbEmailAdherentUser.Location = new System.Drawing.Point(211, 565);
             this.tbEmailAdherentUser.Name = "tbEmailAdherentUser";
@@ -270,6 +259,7 @@ namespace CarantecAdminPanel
             // tbLogAdherentUser
             // 
             this.tbLogAdherentUser.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
+            this.tbLogAdherentUser.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tbLogAdherentUser.ForeColor = System.Drawing.Color.White;
             this.tbLogAdherentUser.Location = new System.Drawing.Point(211, 669);
             this.tbLogAdherentUser.Name = "tbLogAdherentUser";
@@ -279,6 +269,7 @@ namespace CarantecAdminPanel
             // tbMdpAdherentUser
             // 
             this.tbMdpAdherentUser.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
+            this.tbMdpAdherentUser.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tbMdpAdherentUser.ForeColor = System.Drawing.Color.White;
             this.tbMdpAdherentUser.Location = new System.Drawing.Point(211, 772);
             this.tbMdpAdherentUser.Name = "tbMdpAdherentUser";
@@ -306,6 +297,7 @@ namespace CarantecAdminPanel
             // tbRoleArtisteUser
             // 
             this.tbRoleArtisteUser.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
+            this.tbRoleArtisteUser.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tbRoleArtisteUser.Enabled = false;
             this.tbRoleArtisteUser.ForeColor = System.Drawing.Color.White;
             this.tbRoleArtisteUser.Location = new System.Drawing.Point(730, 608);
@@ -316,6 +308,7 @@ namespace CarantecAdminPanel
             // tbLienFBArtisteUser
             // 
             this.tbLienFBArtisteUser.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
+            this.tbLienFBArtisteUser.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tbLienFBArtisteUser.Enabled = false;
             this.tbLienFBArtisteUser.ForeColor = System.Drawing.Color.White;
             this.tbLienFBArtisteUser.Location = new System.Drawing.Point(730, 714);
@@ -326,8 +319,9 @@ namespace CarantecAdminPanel
             // tbPhoto
             // 
             this.tbPhoto.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
+            this.tbPhoto.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tbPhoto.ForeColor = System.Drawing.Color.White;
-            this.tbPhoto.Location = new System.Drawing.Point(499, 859);
+            this.tbPhoto.Location = new System.Drawing.Point(499, 855);
             this.tbPhoto.Name = "tbPhoto";
             this.tbPhoto.Size = new System.Drawing.Size(260, 24);
             this.tbPhoto.TabIndex = 40;
@@ -335,11 +329,23 @@ namespace CarantecAdminPanel
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(341, 862);
+            this.label6.Location = new System.Drawing.Point(357, 859);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(119, 16);
             this.label6.TabIndex = 39;
             this.label6.Text = "Lien photo de profil";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.BackgroundImage = global::CarantecAdminPanel.Properties.Resources.carantec;
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox1.Location = new System.Drawing.Point(360, -25);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(349, 148);
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
             // 
             // FormCRUDUtilisateur
             // 
@@ -376,10 +382,11 @@ namespace CarantecAdminPanel
             this.Name = "FormCRUDUtilisateur";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormCRUDUtilisateur";
+            this.Load += new System.EventHandler(this.FormCRUDUtilisateur_Load);
             this.gradientPanel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -419,5 +426,15 @@ namespace CarantecAdminPanel
         public TextBox TbPrenom { get => tbPrenom; set => tbPrenom = value; }
         public Button BtnEnregistrer { get => btnEnregistrer; set => btnEnregistrer = value; }
         public Label LabelActionTitle { get => labelActionTitle; set => labelActionTitle = value; }
+        public TextBox TbRoleArtisteUser { get => tbRoleArtisteUser; set => tbRoleArtisteUser = value; }
+        public TextBox TbLienFBArtisteUser { get => tbLienFBArtisteUser; set => tbLienFBArtisteUser = value; }
+        public TextBox TbPhoto { get => tbPhoto; set => tbPhoto = value; }
+        public TextBox TbEmailAdherentUser { get => tbEmailAdherentUser; set => tbEmailAdherentUser = value; }
+        public TextBox TbLogAdherentUser { get => tbLogAdherentUser; set => tbLogAdherentUser = value; }
+        public TextBox TbMdpAdherentUser { get => tbMdpAdherentUser; set => tbMdpAdherentUser = value; }
+        public RadioButton RbIntSpeUser { get => rbIntSpeUser; set => rbIntSpeUser = value; }
+        public RadioButton RbArtisteUser { get => rbArtisteUser; set => rbArtisteUser = value; }
+        public RadioButton RbAnimUser { get => rbAnimUser; set => rbAnimUser = value; }
+        public RadioButton RbAdherentUser { get => rbAdherentUser; set => rbAdherentUser = value; }
     }
 }

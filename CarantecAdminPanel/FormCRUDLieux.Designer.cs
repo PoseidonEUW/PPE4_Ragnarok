@@ -48,11 +48,12 @@
             // tbCapaciteLieux
             // 
             this.tbCapaciteLieux.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
+            this.tbCapaciteLieux.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tbCapaciteLieux.Font = new System.Drawing.Font("Netflix Sans", 11.25F);
             this.tbCapaciteLieux.ForeColor = System.Drawing.Color.White;
             this.tbCapaciteLieux.Location = new System.Drawing.Point(360, 371);
             this.tbCapaciteLieux.Name = "tbCapaciteLieux";
-            this.tbCapaciteLieux.Size = new System.Drawing.Size(142, 31);
+            this.tbCapaciteLieux.Size = new System.Drawing.Size(142, 27);
             this.tbCapaciteLieux.TabIndex = 79;
             // 
             // label6
@@ -61,7 +62,7 @@
             this.label6.Font = new System.Drawing.Font("Netflix Sans", 11.25F);
             this.label6.Location = new System.Drawing.Point(265, 374);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(89, 24);
+            this.label6.Size = new System.Drawing.Size(69, 19);
             this.label6.TabIndex = 78;
             this.label6.Text = "Capacité";
             // 
@@ -71,7 +72,7 @@
             this.label2.Font = new System.Drawing.Font("Netflix Sans", 11.25F);
             this.label2.Location = new System.Drawing.Point(179, 220);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(71, 24);
+            this.label2.Size = new System.Drawing.Size(52, 19);
             this.label2.TabIndex = 71;
             this.label2.Text = "Libelle";
             // 
@@ -82,7 +83,7 @@
             this.labelError.ForeColor = System.Drawing.Color.Firebrick;
             this.labelError.Location = new System.Drawing.Point(365, 457);
             this.labelError.Name = "labelError";
-            this.labelError.Size = new System.Drawing.Size(465, 24);
+            this.labelError.Size = new System.Drawing.Size(371, 19);
             this.labelError.TabIndex = 65;
             this.labelError.Text = "ERROR SAMPLE ERROR SAMPLE ERROR SAMPLE";
             this.labelError.Visible = false;
@@ -109,7 +110,7 @@
             this.labelActionTitle.Location = new System.Drawing.Point(363, 133);
             this.labelActionTitle.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelActionTitle.Name = "labelActionTitle";
-            this.labelActionTitle.Size = new System.Drawing.Size(420, 34);
+            this.labelActionTitle.Size = new System.Drawing.Size(325, 27);
             this.labelActionTitle.TabIndex = 63;
             this.labelActionTitle.Text = "MODIFICATION/SUPPRESSION";
             this.labelActionTitle.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -141,6 +142,7 @@
             // rtbLibelleLieux
             // 
             this.rtbLibelleLieux.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
+            this.rtbLibelleLieux.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.rtbLibelleLieux.ForeColor = System.Drawing.Color.White;
             this.rtbLibelleLieux.Location = new System.Drawing.Point(256, 193);
             this.rtbLibelleLieux.Name = "rtbLibelleLieux";
@@ -152,6 +154,7 @@
             // 
             this.gbIntExtLieux.Controls.Add(this.rbExtLieux);
             this.gbIntExtLieux.Controls.Add(this.rbIntLieux);
+            this.gbIntExtLieux.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.gbIntExtLieux.ForeColor = System.Drawing.Color.White;
             this.gbIntExtLieux.Location = new System.Drawing.Point(621, 295);
             this.gbIntExtLieux.Name = "gbIntExtLieux";
@@ -165,7 +168,7 @@
             this.rbExtLieux.AutoSize = true;
             this.rbExtLieux.Location = new System.Drawing.Point(81, 96);
             this.rbExtLieux.Name = "rbExtLieux";
-            this.rbExtLieux.Size = new System.Drawing.Size(89, 22);
+            this.rbExtLieux.Size = new System.Drawing.Size(71, 18);
             this.rbExtLieux.TabIndex = 1;
             this.rbExtLieux.Text = "Extérieur";
             this.rbExtLieux.UseVisualStyleBackColor = true;
@@ -176,7 +179,7 @@
             this.rbIntLieux.Checked = true;
             this.rbIntLieux.Location = new System.Drawing.Point(81, 48);
             this.rbIntLieux.Name = "rbIntLieux";
-            this.rbIntLieux.Size = new System.Drawing.Size(84, 22);
+            this.rbIntLieux.Size = new System.Drawing.Size(67, 18);
             this.rbIntLieux.TabIndex = 0;
             this.rbIntLieux.TabStop = true;
             this.rbIntLieux.Text = "Intérieur";
@@ -184,7 +187,7 @@
             // 
             // FormCRUDLieux
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
             this.ClientSize = new System.Drawing.Size(1070, 550);

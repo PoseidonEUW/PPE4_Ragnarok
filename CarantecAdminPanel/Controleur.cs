@@ -187,6 +187,7 @@ namespace CarantecAdminPanel
         #region crudUtilisateur
         public static void crud_utilisateur(Char c, int indice)
         {
+            Controleur.Vmodele.charger_donnees("utilisateur", -1, "");
             if (c == 'd') // cas de la suppression
             {
                 //   DialogResult rep = MessageBox.Show("Etes-vous sûr de vouloir supprimer ce constructeur "+ vmodele.DTConstructeur.Rows[indice][1].ToString()+ " ? ", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
@@ -201,18 +202,201 @@ namespace CarantecAdminPanel
             {
                 // cas de l'ajout et modification
                 FormCRUDUtilisateur formCRUD = new FormCRUDUtilisateur(c);  // création de la nouvelle forme
+                FormUpdateUtilisateur formUpdate = new FormUpdateUtilisateur(c);
                 if (c == 'c')  // mode ajout donc pas de valeur à passer à la nouvelle forme
                 {
                     formCRUD.TbNom.Clear();
                     formCRUD.TbPrenom.Clear();
                     formCRUD.LabelActionTitle.Text = "AJOUT";
                 }
-
                 if (c == 'u')   // mode update donc on récupère les champs
                 {
                     // on remplit les zones par les valeurs du dataGridView correspondantes
-                    formCRUD.TbNom.Text = vmodele.DT[1].Rows[indice][1].ToString();
-                    formCRUD.TbPrenom.Text = vmodele.DT[1].Rows[indice][2].ToString();
+                    formUpdate.TbNom.Text = vmodele.DT[1].Rows[indice][1].ToString();
+                    formUpdate.TbPrenom.Text = vmodele.DT[1].Rows[indice][2].ToString();
+                    formUpdate.LabelActionTitle.Text = "MODIFICATION";
+                }
+            eti:
+                // on affiche la nouvelle form
+                if(c == 'c')
+                {
+                    formCRUD.ShowDialog();
+                    // si l’utilisateur clique sur OK
+                    if (formCRUD.DialogResult == DialogResult.OK)
+                    {
+                        DataRow NouvLigne = vmodele.DT[1].NewRow();
+                        // on crée une nouvelle ligne dans le dataView
+                        if (formCRUD.TbNom.Text != "" && formCRUD.TbPrenom.Text != "" && formCRUD.TbPhoto.Text != "")
+                        {
+                            NouvLigne["IDPERSONNE"] = Convert.ToInt32(vmodele.DT[1].Rows[vmodele.DT[1].Rows.Count - 1][0]);
+                            NouvLigne["PRENOMPERSONNE"] = formCRUD.TbPrenom.Text;
+                            NouvLigne["NOMPERSONNE"] = formCRUD.TbNom.Text;
+                            NouvLigne["URLIMAGE"] = formCRUD.TbPhoto.Text;
+                            vmodele.DT[1].Rows.Add(NouvLigne);
+                            vmodele.DA[1].Update(vmodele.DT[1]);
+                            if (formCRUD.RbAdherentUser.Checked == true)
+                            {
+                                if (formCRUD.TbEmailAdherentUser.Text != "" && formCRUD.TbLogAdherentUser.Text != "" && formCRUD.TbMdpAdherentUser.Text != "")
+                                {
+                                    Controleur.Vmodele.charger_donnees("adherent", -1, "");
+                                    DataRow NouvLigne1 = vmodele.DT[15].NewRow();
+                                    Controleur.Vmodele.charger_donnees("adherent", -1, "");
+                                    NouvLigne1["IDPERSONNE"] = Convert.ToInt32(vmodele.DT[1].Rows[vmodele.DT[1].Rows.Count - 1][0]) + 1;
+                                    NouvLigne1["EMAILADHERENT"] = formCRUD.TbEmailAdherentUser.Text;
+                                    NouvLigne1["LOGINADHERENT"] = formCRUD.TbLogAdherentUser.Text;
+                                    NouvLigne1["MDPADHERENT"] = formCRUD.TbMdpAdherentUser.Text;
+                                    vmodele.DT[15].Rows.Add(NouvLigne1);
+                                    vmodele.DA[15].Update(vmodele.DT[15]);
+                                }
+                                else
+                                {
+                                    MessageBox.Show("Erreur : vous avez oubliez de remplir les champs correspondant à l'adherent", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                    goto eti;
+                                }
+                            }
+                            if (formCRUD.RbArtisteUser.Checked == true)
+                            {
+                                if (formCRUD.TbRoleArtisteUser.Text != "" && formCRUD.TbLienFBArtisteUser.Text != "")
+                                {
+                                    Controleur.Vmodele.charger_donnees("artiste", -1, "");
+                                    DataRow NouvLigne2 = vmodele.DT[16].NewRow();
+                                    NouvLigne2["IDPERSONNE"] = Convert.ToInt32(vmodele.DT[1].Rows[vmodele.DT[1].Rows.Count - 1][0]) + 1;
+                                    NouvLigne2["ROLEARTISTE"] = formCRUD.TbRoleArtisteUser.Text;
+                                    NouvLigne2["LIENFBSITEARTISTE"] = formCRUD.TbLienFBArtisteUser.Text;
+                                    vmodele.DT[16].Rows.Add(NouvLigne2);
+                                    vmodele.DA[16].Update(vmodele.DT[16]);
+                                }
+                                else
+                                {
+                                    MessageBox.Show("Erreur : vous avez oubliez de remplir les champs correspondant à l'artiste", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                    goto eti;
+                                }
+                            }
+                            if (formCRUD.RbAnimUser.Checked == true)
+                            {
+                                Controleur.Vmodele.charger_donnees("animateur", -1, "");
+                                DataRow NouvLigne3 = vmodele.DT[17].NewRow();
+                                NouvLigne3["IDPERSONNE"] = Convert.ToInt32(vmodele.DT[1].Rows[vmodele.DT[1].Rows.Count - 1][0]) + 1;
+                                vmodele.DT[17].Rows.Add(NouvLigne3);
+                                vmodele.DA[17].Update(vmodele.DT[17]);
+                            }
+                            if (formCRUD.RbIntSpeUser.Checked == true)
+                            {
+                                Controleur.Vmodele.charger_donnees("intSpe", -1, "");
+                                DataRow NouvLigne4 = vmodele.DT[18].NewRow();
+                                NouvLigne4["IDPERSONNE"] = Convert.ToInt32(vmodele.DT[1].Rows[vmodele.DT[1].Rows.Count - 1][0]) + 1;
+                                vmodele.DT[18].Rows.Add(NouvLigne4);
+                                vmodele.DA[18].Update(vmodele.DT[18]);
+                            }
+                        }
+                        else
+                        {
+                            MessageBox.Show("Erreur : il faut saisir au moins le nom, le prenom et l'url de la photo de profil", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            goto eti;
+                        }
+                        MessageBox.Show("OK : données enregistrées Utilisateur");
+                        formCRUD.Dispose();  // on ferme la form
+                    }
+                    else
+                    {
+                        MessageBox.Show("Annulation : aucune donnée enregistrée Utilisateur");
+                        formCRUD.Dispose();
+                    }
+                }
+                if(c == 'u')
+                {
+                    formUpdate.ShowDialog();
+
+                    // si l’utilisateur clique sur OK
+                    if (formUpdate.DialogResult == DialogResult.OK)
+                    {
+                        if (formUpdate.TbNom.Text != "" && formUpdate.TbPrenom.Text != "" && formUpdate.TbPhoto.Text != "")
+                        {
+                            // on met à jour le dataTable avec les nouvelles valeurs
+                            vmodele.DT[1].Rows[indice]["NOMPERSONNE"] = formUpdate.TbNom.Text;
+                            vmodele.DT[1].Rows[indice]["PRENOMPERSONNE"] = formUpdate.TbPrenom.Text;
+                            vmodele.DT[1].Rows[indice]["URLIMAGE"] = formUpdate.TbPhoto.Text;
+                            vmodele.DA[1].Update(vmodele.DT[1]);
+                        }
+                        else
+                        {
+                            MessageBox.Show("Erreur : il faut saisir au moins la nom et le prenom", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            goto eti;
+                        }
+                        MessageBox.Show("OK : données enregistrées Utilisateur");
+                        formUpdate.Dispose();  // on ferme la form
+                    }
+                    else
+                    {
+                        MessageBox.Show("Annulation : aucune donnée enregistrée Utilisateur");
+                        formUpdate.Dispose();
+                    }
+                }
+            }
+        }
+        #endregion
+
+        #region crud_manifestation
+
+        public static void crud_manifestation(Char c, int indice)
+        {
+            Controleur.Vmodele.charger_donnees("manifestation", -1, "");
+            if (c == 'd') // cas de la suppression
+            {
+                //   DialogResult rep = MessageBox.Show("Etes-vous sûr de vouloir supprimer ce constructeur "+ vmodele.DTConstructeur.Rows[indice][1].ToString()+ " ? ", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                DialogResult rep = MessageBox.Show("Etes-vous sûr de vouloir supprimer la manifestation " + vmodele.DT[3].Rows[indice][3].ToString() + " ? ", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (rep == DialogResult.Yes)
+                {
+                    vmodele.DT[3].Rows[indice].Delete();		// suppression dans le DataTable
+                    vmodele.DA[3].Update(vmodele.DT[3]);        // on supprime l’élément du DataTable
+                }
+            }
+            else
+            {
+                // cas de l'ajout et modification
+                FormCRUDManifestation formCRUD = new FormCRUDManifestation();  // création de la nouvelle forme
+                if (c == 'c')  // mode ajout donc pas de valeur à passer à la nouvelle forme
+                {
+                    Controleur.Vmodele.charger_donnees("lieu", -1, "");
+                    Controleur.Vmodele.charger_donnees("festival", -1, "");
+                    for (int i = 0; i < vmodele.DT[5].Rows.Count; i++)
+                    {
+                        formCRUD.ComboBoxLieuManif.Items.Add(vmodele.DT[5].Rows[i][1].ToString());
+                    }
+                    formCRUD.ComboBoxLieuManif.SelectedIndex = -1;
+                    for (int i = 0; i < vmodele.DT[2].Rows.Count; i++)
+                    {
+                        formCRUD.CbAnnee.Items.Add(vmodele.DT[2].Rows[i][0].ToString());
+                    }
+                    formCRUD.CbAnnee.SelectedIndex = -1;
+                    formCRUD.TbLibelleManif.Text = "";
+                    formCRUD.TbJaugeManif.Text = "";
+                    formCRUD.TbPrixManif.Text = "";
+                    formCRUD.RtbDescManif.Text = "";
+                    formCRUD.LabelActionTitle.Text = "AJOUT";
+                }
+
+                if (c == 'u')   // mode update donc on récupère les champs
+                {
+                    Controleur.Vmodele.charger_donnees("lieu", -1, "");
+                    Controleur.Vmodele.charger_donnees("festival", -1, "");
+                    Controleur.Vmodele.charger_donnees("nomsLieuxFromManifs", -1, "");
+                    for (int i = 0; i < vmodele.DT[5].Rows.Count; i++)
+                    {
+                        formCRUD.ComboBoxLieuManif.Items.Add(vmodele.DT[5].Rows[i][1].ToString());
+                    }
+                    for (int i = 0; i < vmodele.DT[2].Rows.Count; i++)
+                    {
+                        formCRUD.CbAnnee.Items.Add(vmodele.DT[2].Rows[i][0].ToString());
+                    }
+                    formCRUD.ComboBoxLieuManif.SelectedItem = vmodele.DT[20].Rows[indice][2].ToString(); ;
+                    formCRUD.CbAnnee.SelectedItem = vmodele.DT[3].Rows[indice][1].ToString();
+                    formCRUD.TbLibelleManif.Text = vmodele.DT[3].Rows[indice][3].ToString();
+                    formCRUD.DateManif.Value = Convert.ToDateTime(vmodele.DT[3].Rows[indice][4]);
+                    formCRUD.HeureManif1.Text = vmodele.DT[3].Rows[indice][5].ToString();
+                    formCRUD.TbJaugeManif.Text = vmodele.DT[3].Rows[indice][6].ToString();
+                    formCRUD.RtbDescManif.Text = vmodele.DT[3].Rows[indice][7].ToString();
+                    formCRUD.TbPrixManif.Text = vmodele.DT[3].Rows[indice][8].ToString();
                     formCRUD.LabelActionTitle.Text = "MODIFICATION";
                 }
             eti:
@@ -225,36 +409,51 @@ namespace CarantecAdminPanel
                     if (c == 'c') // ajout
                     {
                         // on crée une nouvelle ligne dans le dataView
-                        if (formCRUD.TbNom.Text != "" && formCRUD.TbPrenom.Text != "")
+                        if (formCRUD.ComboBoxLieuManif.SelectedIndex != -1 && formCRUD.CbAnnee.SelectedIndex != -1 && formCRUD.TbJaugeManif.Text != "" && formCRUD.RtbDescManif.Text != "" && formCRUD.TbPrixManif.Text != "" && formCRUD.TbLibelleManif.Text != "")
                         {
-                            DataRow NouvLigne = vmodele.DT[1].NewRow();
-                            NouvLigne["NOMPERSONNE"] = formCRUD.TbNom.Text;
-                            NouvLigne["PRENOMPERSONNE"] = formCRUD.TbPrenom.Text;
-                            vmodele.DT[1].Rows.Add(NouvLigne);
-                            vmodele.DA[1].Update(vmodele.DT[1]);
+                            DataRow NouvLigne = vmodele.DT[3].NewRow();
+                            NouvLigne["IDMANIF"] = Convert.ToInt32(vmodele.DT[3].Rows[vmodele.DT[3].Rows.Count - 1][0]);
+                            NouvLigne["ANNEEFESTIVAL"] = Convert.ToInt32(formCRUD.CbAnnee.SelectedItem);
+                            string libelleLieu = formCRUD.ComboBoxLieuManif.SelectedItem.ToString();
+                            Controleur.Vmodele.charger_donnees("nomLieuToIdLieu", -1, libelleLieu);
+                            NouvLigne["IDLIEU"] = Convert.ToInt32(vmodele.DT[19].Rows[0][0].ToString());
+                            NouvLigne["LIBELLEMANIF"] = formCRUD.TbLibelleManif.Text;
+                            NouvLigne["DATEMANIF"] = formCRUD.DateManif.Text;
+                            NouvLigne["HORAIREDEBUTMANIF"] = formCRUD.HeureManif1.Text;
+                            NouvLigne["JAUGEPERSMANIF"] = Convert.ToInt32(formCRUD.TbJaugeManif.Text);
+                            NouvLigne["DESCRIPTIONMANIF"] = formCRUD.RtbDescManif.Text;
+                            NouvLigne["PRIXMANIF"] = Convert.ToInt32(formCRUD.TbPrixManif.Text);
+                            vmodele.DT[3].Rows.Add(NouvLigne);
+                            vmodele.DA[3].Update(vmodele.DT[3]);
                         }
                         else
                         {
-                            MessageBox.Show("Erreur : il faut saisir au moins la nom et le prenom", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            MessageBox.Show("Erreur : il faut remplir tout les champs", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
                             goto eti;
                         }
                     }
 
                     if (c == 'u')  // modif
                     {
-                        if (formCRUD.TbNom.Text != "" && formCRUD.TbPrenom.Text != "")
+                        if (formCRUD.ComboBoxLieuManif.SelectedIndex != -1 && formCRUD.CbAnnee.SelectedIndex != -1 && formCRUD.TbJaugeManif.Text != "" && formCRUD.RtbDescManif.Text != "" && formCRUD.TbPrixManif.Text != "" && formCRUD.TbLibelleManif.Text != "")
                         {
-                            // on met à jour le dataTable avec les nouvelles valeurs
-                            vmodele.DT[1].Rows[indice]["NOMPERSONNE"] = formCRUD.TbNom.Text;
-                            vmodele.DT[1].Rows[indice]["PRENOMPERSONNE"] = formCRUD.TbPrenom.Text;
-                            vmodele.DA[1].Update(vmodele.DT[1]);
+                            vmodele.DT[3].Rows[indice]["ANNEEFESTIVAL"] = Convert.ToInt32(formCRUD.CbAnnee.SelectedItem);
+                            string libelleLieu = formCRUD.ComboBoxLieuManif.SelectedItem.ToString();
+                            Controleur.Vmodele.charger_donnees("nomLieuToIdLieu", -1, libelleLieu);
+                            vmodele.DT[3].Rows[indice]["IDLIEU"] = Convert.ToInt32(vmodele.DT[19].Rows[0][0].ToString());
+                            vmodele.DT[3].Rows[indice]["LIBELLEMANIF"] = formCRUD.TbLibelleManif.Text;
+                            vmodele.DT[3].Rows[indice]["DATEMANIF"] = formCRUD.DateManif.Text;
+                            vmodele.DT[3].Rows[indice]["HORAIREDEBUTMANIF"] = formCRUD.HeureManif1.Text;
+                            vmodele.DT[3].Rows[indice]["JAUGEPERSMANIF"] = Convert.ToInt32(formCRUD.TbJaugeManif.Text);
+                            vmodele.DT[3].Rows[indice]["DESCRIPTIONMANIF"] = formCRUD.RtbDescManif.Text;
+                            vmodele.DT[3].Rows[indice]["PRIXMANIF"] = Convert.ToInt32(formCRUD.TbPrixManif.Text);
+                            vmodele.DA[3].Update(vmodele.DT[3]);
                         }
                         else
                         {
-                            MessageBox.Show("Erreur : il faut saisir au moins la nom et le prenom", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            MessageBox.Show("Erreur : il faut remplir tout les champs", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
                             goto eti;
-                        };
-
+                        }
                     }
 
                     MessageBox.Show("OK : données enregistrées Utilisateur");
@@ -267,6 +466,7 @@ namespace CarantecAdminPanel
                 }
             }
         }
+
         #endregion
 
         #endregion

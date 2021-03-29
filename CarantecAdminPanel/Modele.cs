@@ -234,6 +234,30 @@ namespace CarantecAdminPanel
             {
                 charger("CALL nomThemeToIdTheme('" + text + "')", dT[14], dA[14]);
             }
+            if (table == "adherent")
+            {
+                charger("select * from ADHERENT;", dT[15], dA[15]);
+            }
+            if (table == "artiste")
+            {
+                charger("select * from ARTISTES;", dT[16], dA[16]);
+            }
+            if (table == "animateur")
+            {
+                charger("select * from ANIMATEUR;", dT[17], dA[17]);
+            }
+            if (table == "intSpe")
+            {
+                charger("select * from INTERVENANTSPECIALISE;", dT[18], dA[18]);
+            }
+            if (table == "nomLieuToIdLieu")
+            {
+                charger("CALL nomLieuToIdLieu('" + text + "')", dT[19], dA[19]);
+            }
+            if (table == "nomsLieuxFromManifs")
+            {
+                charger("select * from nomsLieuxFromManifs;", dT[20], dA[20]);
+            }
             //if (table == "PPE_REPARERUT")
             //{
             //    charger("select IdR, numV, T.LibelleT, dateR, tempsR, U.loginU from (PPE_REPARER P INNER JOIN PPE_TRAVAUX T ON P.IdT = T.IdT) INNER JOIN PPE_UTILISATEURS U ON P.IdU = U.numU;", dT[9], dA[9]);

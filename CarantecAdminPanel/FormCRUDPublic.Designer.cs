@@ -47,18 +47,19 @@
             this.label1.Font = new System.Drawing.Font("Netflix Sans", 11.25F);
             this.label1.Location = new System.Drawing.Point(19, 290);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(113, 24);
+            this.label1.Size = new System.Drawing.Size(86, 19);
             this.label1.TabIndex = 102;
             this.label1.Text = "Description";
             // 
             // tbLibellePublic
             // 
             this.tbLibellePublic.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
+            this.tbLibellePublic.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tbLibellePublic.Font = new System.Drawing.Font("Netflix Sans", 11.25F);
             this.tbLibellePublic.ForeColor = System.Drawing.Color.White;
             this.tbLibellePublic.Location = new System.Drawing.Point(360, 203);
             this.tbLibellePublic.Name = "tbLibellePublic";
-            this.tbLibellePublic.Size = new System.Drawing.Size(349, 31);
+            this.tbLibellePublic.Size = new System.Drawing.Size(349, 27);
             this.tbLibellePublic.TabIndex = 100;
             // 
             // label6
@@ -67,7 +68,7 @@
             this.label6.Font = new System.Drawing.Font("Netflix Sans", 11.25F);
             this.label6.Location = new System.Drawing.Point(283, 206);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(71, 24);
+            this.label6.Size = new System.Drawing.Size(52, 19);
             this.label6.TabIndex = 99;
             this.label6.Text = "Libelle";
             // 
@@ -78,7 +79,7 @@
             this.labelError.ForeColor = System.Drawing.Color.Firebrick;
             this.labelError.Location = new System.Drawing.Point(365, 457);
             this.labelError.Name = "labelError";
-            this.labelError.Size = new System.Drawing.Size(465, 24);
+            this.labelError.Size = new System.Drawing.Size(371, 19);
             this.labelError.TabIndex = 98;
             this.labelError.Text = "ERROR SAMPLE ERROR SAMPLE ERROR SAMPLE";
             this.labelError.Visible = false;
@@ -105,7 +106,7 @@
             this.labelActionTitle.Location = new System.Drawing.Point(363, 133);
             this.labelActionTitle.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelActionTitle.Name = "labelActionTitle";
-            this.labelActionTitle.Size = new System.Drawing.Size(420, 34);
+            this.labelActionTitle.Size = new System.Drawing.Size(325, 27);
             this.labelActionTitle.TabIndex = 96;
             this.labelActionTitle.Text = "MODIFICATION/SUPPRESSION";
             this.labelActionTitle.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -137,6 +138,7 @@
             // rtbDescrPublic
             // 
             this.rtbDescrPublic.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
+            this.rtbDescrPublic.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.rtbDescrPublic.ForeColor = System.Drawing.Color.White;
             this.rtbDescrPublic.Location = new System.Drawing.Point(138, 276);
             this.rtbDescrPublic.Name = "rtbDescrPublic";
@@ -146,7 +148,7 @@
             // 
             // FormCRUDPublic
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
             this.ClientSize = new System.Drawing.Size(1070, 550);

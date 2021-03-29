@@ -85,5 +85,10 @@ namespace CarantecAdminPanel
         {
 
         }
+
+        private void FormCRUDUtilisateur_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
