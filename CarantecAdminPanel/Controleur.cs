@@ -172,12 +172,12 @@ namespace CarantecAdminPanel
                         }
                     }
 
-                    MessageBox.Show("OK : données enregistrées Utilisateur");
+                    MessageBox.Show("OK : données enregistrées festival");
                     formCRUD.Dispose();  // on ferme la form
                 }
                 else
                 {
-                    MessageBox.Show("Annulation : aucune donnée enregistrée Utilisateur");
+                    MessageBox.Show("Annulation : aucune donnée enregistrée festival");
                     formCRUD.Dispose();
                 }
             }
@@ -456,12 +456,192 @@ namespace CarantecAdminPanel
                         }
                     }
 
-                    MessageBox.Show("OK : données enregistrées Utilisateur");
+                    MessageBox.Show("OK : données enregistrées manifestation");
                     formCRUD.Dispose();  // on ferme la form
                 }
                 else
                 {
-                    MessageBox.Show("Annulation : aucune donnée enregistrée Utilisateur");
+                    MessageBox.Show("Annulation : aucune donnée enregistrée manifestation");
+                    formCRUD.Dispose();
+                }
+            }
+        }
+
+        #endregion
+
+        #region crud_lieu
+
+        public static void crud_lieu(Char c, int indice)
+        {
+            Controleur.Vmodele.charger_donnees("lieu", -1, "");
+            if (c == 'd') // cas de la suppression
+            {
+                //   DialogResult rep = MessageBox.Show("Etes-vous sûr de vouloir supprimer ce constructeur "+ vmodele.DTConstructeur.Rows[indice][1].ToString()+ " ? ", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                DialogResult rep = MessageBox.Show("Etes-vous sûr de vouloir supprimer le lieu " + vmodele.DT[5].Rows[indice][1].ToString() + " ? ", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (rep == DialogResult.Yes)
+                {
+                    vmodele.DT[5].Rows[indice].Delete();		// suppression dans le DataTable
+                    vmodele.DA[5].Update(vmodele.DT[5]);        // on supprime l’élément du DataTable
+                }
+            }
+            else
+            {
+                // cas de l'ajout et modification
+                FormCRUDLieux formCRUD = new FormCRUDLieux();  // création de la nouvelle forme
+                if (c == 'c')  // mode ajout donc pas de valeur à passer à la nouvelle forme
+                {
+                    formCRUD.RtbLibelleLieux.Text = "";
+                    formCRUD.TbCapaciteLieux.Text = "";
+                    formCRUD.RbExtLieux.Checked = true;
+                    formCRUD.RbIntLieux.Checked = false;
+                    formCRUD.LabelActionTitle.Text = "AJOUT";
+                }
+
+                if (c == 'u')   // mode update donc on récupère les champs
+                {
+                    formCRUD.RtbLibelleLieux.Text = vmodele.DT[5].Rows[indice][1].ToString();
+                    formCRUD.TbCapaciteLieux.Text = vmodele.DT[5].Rows[indice][2].ToString();
+                    formCRUD.RbExtLieux.Checked = Convert.ToInt32(vmodele.DT[5].Rows[indice][3]) == 0;
+                    formCRUD.RbIntLieux.Checked = (Convert.ToInt32(vmodele.DT[5].Rows[indice][3]) == 1);
+                    formCRUD.LabelActionTitle.Text = "MODIFICATION";
+                }
+            eti:
+                // on affiche la nouvelle form
+                formCRUD.ShowDialog();
+
+                // si l’utilisateur clique sur OK
+                if (formCRUD.DialogResult == DialogResult.OK)
+                {
+                    if (c == 'c') // ajout
+                    {
+                        // on crée une nouvelle ligne dans le dataView
+                        if (formCRUD.RtbLibelleLieux.Text != "" && formCRUD.TbCapaciteLieux.Text != "")
+                        {
+                            DataRow NouvLigne = vmodele.DT[5].NewRow();
+                            NouvLigne["IDLIEU"] = Convert.ToInt32(vmodele.DT[5].Rows[vmodele.DT[5].Rows.Count - 1][0]);
+                            NouvLigne["LIBELLELIEU"] = formCRUD.RtbLibelleLieux.Text;
+                            NouvLigne["CAPACITELIEU"] = Convert.ToInt32(formCRUD.TbCapaciteLieux.Text);
+                            if (formCRUD.RbExtLieux.Checked) NouvLigne["INTERIEURLIEU"] = 0;
+                            else NouvLigne["INTERIEURLIEU"] = 1;
+                            vmodele.DT[5].Rows.Add(NouvLigne);
+                            vmodele.DA[5].Update(vmodele.DT[5]);
+                        }
+                        else
+                        {
+                            MessageBox.Show("Erreur : il faut remplir tout les champs", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            goto eti;
+                        }
+                    }
+
+                    if (c == 'u')  // modif
+                    {
+                        if (formCRUD.RtbLibelleLieux.Text != "" && formCRUD.TbCapaciteLieux.Text != "")
+                        {
+                            vmodele.DT[5].Rows[indice]["LIBELLELIEU"] = formCRUD.RtbLibelleLieux.Text;
+                            vmodele.DT[5].Rows[indice]["CAPACITELIEU"] = formCRUD.TbCapaciteLieux.Text;
+                            if (formCRUD.RbExtLieux.Checked) vmodele.DT[5].Rows[indice]["INTERIEURLIEU"] = 0;
+                            else vmodele.DT[5].Rows[indice]["INTERIEURLIEU"] = 1;
+                            vmodele.DA[5].Update(vmodele.DT[5]);
+                        }
+                        else
+                        {
+                            MessageBox.Show("Erreur : il faut remplir tout les champs", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            goto eti;
+                        }
+                    }
+
+                    MessageBox.Show("OK : données enregistrées lieu");
+                    formCRUD.Dispose();  // on ferme la form
+                }
+                else
+                {
+                    MessageBox.Show("Annulation : aucune donnée enregistrée lieu");
+                    formCRUD.Dispose();
+                }
+            }
+        }
+
+        #endregion
+
+        #region crud_public
+
+        public static void crud_public(Char c, int indice)
+        {
+            Controleur.Vmodele.charger_donnees("public", -1, "");
+            if (c == 'd') // cas de la suppression
+            {
+                //   DialogResult rep = MessageBox.Show("Etes-vous sûr de vouloir supprimer ce constructeur "+ vmodele.DTConstructeur.Rows[indice][1].ToString()+ " ? ", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                DialogResult rep = MessageBox.Show("Etes-vous sûr de vouloir supprimer le public " + vmodele.DT[7].Rows[indice][1].ToString() + " ? ", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (rep == DialogResult.Yes)
+                {
+                    vmodele.DT[7].Rows[indice].Delete();		// suppression dans le DataTable
+                    vmodele.DA[7].Update(vmodele.DT[7]);        // on supprime l’élément du DataTable
+                }
+            }
+            else
+            {
+                // cas de l'ajout et modification
+                FormCRUDPublic formCRUD = new FormCRUDPublic();  // création de la nouvelle forme
+                if (c == 'c')  // mode ajout donc pas de valeur à passer à la nouvelle forme
+                {
+                    formCRUD.TbLibellePublic.Text = "";
+                    formCRUD.RtbDescrPublic.Text = "";
+                    formCRUD.LabelActionTitle.Text = "AJOUT";
+                }
+
+                if (c == 'u')   // mode update donc on récupère les champs
+                {
+                    formCRUD.TbLibellePublic.Text = vmodele.DT[7].Rows[indice][1].ToString();
+                    formCRUD.RtbDescrPublic.Text = vmodele.DT[7].Rows[indice][2].ToString();
+                    formCRUD.LabelActionTitle.Text = "MODIFICATION";
+                }
+            eti:
+                // on affiche la nouvelle form
+                formCRUD.ShowDialog();
+
+                // si l’utilisateur clique sur OK
+                if (formCRUD.DialogResult == DialogResult.OK)
+                {
+                    if (c == 'c') // ajout
+                    {
+                        // on crée une nouvelle ligne dans le dataView
+                        if (formCRUD.TbLibellePublic.Text != "" && formCRUD.RtbDescrPublic.Text != "")
+                        {
+                            DataRow NouvLigne = vmodele.DT[7].NewRow();
+                            NouvLigne["IDPUBLIC"] = Convert.ToInt32(vmodele.DT[7].Rows[vmodele.DT[7].Rows.Count - 1][0]);
+                            NouvLigne["LIBELLEPUBLIC"] = formCRUD.TbLibellePublic.Text;
+                            NouvLigne["DESCRIPTIONPUBLIC"] = formCRUD.RtbDescrPublic.Text;
+                            vmodele.DT[7].Rows.Add(NouvLigne);
+                            vmodele.DA[7].Update(vmodele.DT[7]);
+                        }
+                        else
+                        {
+                            MessageBox.Show("Erreur : il faut remplir tout les champs", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            goto eti;
+                        }
+                    }
+
+                    if (c == 'u')  // modif
+                    {
+                        if (formCRUD.TbLibellePublic.Text != "" && formCRUD.RtbDescrPublic.Text != "")
+                        {
+                            vmodele.DT[7].Rows[indice]["LIBELLEPUBLIC"] = formCRUD.TbLibellePublic.Text;
+                            vmodele.DT[7].Rows[indice]["DESCRIPTIONPUBLIC"] = formCRUD.RtbDescrPublic.Text;
+                            vmodele.DA[7].Update(vmodele.DT[7]);
+                        }
+                        else
+                        {
+                            MessageBox.Show("Erreur : il faut remplir tout les champs", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            goto eti;
+                        }
+                    }
+
+                    MessageBox.Show("OK : données enregistrées public");
+                    formCRUD.Dispose();  // on ferme la form
+                }
+                else
+                {
+                    MessageBox.Show("Annulation : aucune donnée enregistrée public");
                     formCRUD.Dispose();
                 }
             }

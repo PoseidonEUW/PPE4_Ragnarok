@@ -160,6 +160,8 @@ namespace CarantecAdminPanel
             // cbThematique
             // 
             this.cbThematique.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
+            this.cbThematique.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbThematique.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cbThematique.ForeColor = System.Drawing.Color.White;
             this.cbThematique.FormattingEnabled = true;
             this.cbThematique.Location = new System.Drawing.Point(397, 265);
@@ -180,6 +182,8 @@ namespace CarantecAdminPanel
             // cbResponsable
             // 
             this.cbResponsable.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
+            this.cbResponsable.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbResponsable.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cbResponsable.ForeColor = System.Drawing.Color.White;
             this.cbResponsable.FormattingEnabled = true;
             this.cbResponsable.Location = new System.Drawing.Point(397, 334);

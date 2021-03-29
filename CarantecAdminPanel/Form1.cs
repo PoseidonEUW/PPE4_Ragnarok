@@ -74,18 +74,18 @@ namespace CarantecAdminPanel
                 }
                 else if (table == "lieu")
                 {
-                    bindingSource1.DataSource = Controleur.Vmodele.DT[4];
+                    bindingSource1.DataSource = Controleur.Vmodele.DT[5];
                     dgvDonnees.DataSource = bindingSource1;
 
                 }
                 else if (table == "avis")
                 {
-                    bindingSource1.DataSource = Controleur.Vmodele.DT[5];
+                    bindingSource1.DataSource = Controleur.Vmodele.DT[6];
                     dgvDonnees.DataSource = bindingSource1;
                 }
                 else if (table == "public")
                 {
-                    bindingSource1.DataSource = Controleur.Vmodele.DT[6];
+                    bindingSource1.DataSource = Controleur.Vmodele.DT[7];
                     dgvDonnees.DataSource = bindingSource1;
                 }
 
@@ -170,8 +170,8 @@ namespace CarantecAdminPanel
                 if (tableG == "manifestation") Controleur.crud_manifestation('c', -1);
                 //if (tableG == "reservation") Controleur.crud_reservation('c', -1);
                 //if (tableG == "avis") Controleur.crud_avis('c', -1);
-                //if (tableG == "public") Controleur.crud_public('c', -1);
-                //if (tableG == "lieu") Controleur.crud_lieu('c', -1);
+                if (tableG == "public") Controleur.crud_public('c', -1);
+                if (tableG == "lieu") Controleur.crud_lieu('c', -1);
             }
             else
             {
@@ -185,8 +185,8 @@ namespace CarantecAdminPanel
                         if (tableG == "manifestation") Controleur.crud_manifestation('u', Convert.ToInt32(dgvDonnees.SelectedRows[0].Index));
                         //if (tableG == "reservation") Controleur.crud_reservation('u', Convert.ToInt32(dgvDonnees.SelectedRows[0].Index));
                         //if (tableG == "avis") Controleur.crud_avis('u', Convert.ToInt32(dgvDonnees.SelectedRows[0].Index));
-                        //if (tableG == "public") Controleur.crud_public('u', Convert.ToInt32(dgvDonnees.SelectedRows[0].Index));
-                        //if (tableG == "lieu") Controleur.crud_lieu('u', Convert.ToInt32(dgvDonnees.SelectedRows[0].Index));
+                        if (tableG == "public") Controleur.crud_public('u', Convert.ToInt32(dgvDonnees.SelectedRows[0].Index));
+                        if (tableG == "lieu") Controleur.crud_lieu('u', Convert.ToInt32(dgvDonnees.SelectedRows[0].Index));
                     }
                     if (sender == supprimerToolStripMenuItem)
                     {
@@ -195,8 +195,8 @@ namespace CarantecAdminPanel
                         if (tableG == "manifestation") Controleur.crud_manifestation('d', Convert.ToInt32(dgvDonnees.SelectedRows[0].Index));
                         //if (tableG == "reservation") Controleur.crud_reservation('d', Convert.ToInt32(dgvDonnees.SelectedRows[0].Index));
                         //if (tableG == "avis") Controleur.crud_avis('d', Convert.ToInt32(dgvDonnees.SelectedRows[0].Index));
-                        //if (tableG == "public") Controleur.crud_public('d', Convert.ToInt32(dgvDonnees.SelectedRows[0].Index));
-                        //if (tableG == "lieu") Controleur.crud_lieu('d', Convert.ToInt32(dgvDonnees.SelectedRows[0].Index));
+                        if (tableG == "public") Controleur.crud_public('d', Convert.ToInt32(dgvDonnees.SelectedRows[0].Index));
+                        if (tableG == "lieu") Controleur.crud_lieu('d', Convert.ToInt32(dgvDonnees.SelectedRows[0].Index));
                     }
                 }
                 else
