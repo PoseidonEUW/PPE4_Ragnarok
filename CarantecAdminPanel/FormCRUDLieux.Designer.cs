@@ -1,4 +1,6 @@
-﻿namespace CarantecAdminPanel
+﻿using System.Windows.Forms;
+
+namespace CarantecAdminPanel
 {
     partial class FormCRUDLieux
     {
@@ -48,20 +50,21 @@
             // tbCapaciteLieux
             // 
             this.tbCapaciteLieux.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
+            this.tbCapaciteLieux.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tbCapaciteLieux.Font = new System.Drawing.Font("Netflix Sans", 11.25F);
             this.tbCapaciteLieux.ForeColor = System.Drawing.Color.White;
-            this.tbCapaciteLieux.Location = new System.Drawing.Point(360, 371);
+            this.tbCapaciteLieux.Location = new System.Drawing.Point(314, 413);
             this.tbCapaciteLieux.Name = "tbCapaciteLieux";
-            this.tbCapaciteLieux.Size = new System.Drawing.Size(142, 31);
+            this.tbCapaciteLieux.Size = new System.Drawing.Size(142, 27);
             this.tbCapaciteLieux.TabIndex = 79;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Netflix Sans", 11.25F);
-            this.label6.Location = new System.Drawing.Point(265, 374);
+            this.label6.Location = new System.Drawing.Point(238, 417);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(89, 24);
+            this.label6.Size = new System.Drawing.Size(69, 19);
             this.label6.TabIndex = 78;
             this.label6.Text = "Capacité";
             // 
@@ -69,9 +72,9 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Netflix Sans", 11.25F);
-            this.label2.Location = new System.Drawing.Point(179, 220);
+            this.label2.Location = new System.Drawing.Point(255, 180);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(71, 24);
+            this.label2.Size = new System.Drawing.Size(52, 19);
             this.label2.TabIndex = 71;
             this.label2.Text = "Libelle";
             // 
@@ -82,7 +85,7 @@
             this.labelError.ForeColor = System.Drawing.Color.Firebrick;
             this.labelError.Location = new System.Drawing.Point(365, 457);
             this.labelError.Name = "labelError";
-            this.labelError.Size = new System.Drawing.Size(465, 24);
+            this.labelError.Size = new System.Drawing.Size(371, 19);
             this.labelError.TabIndex = 65;
             this.labelError.Text = "ERROR SAMPLE ERROR SAMPLE ERROR SAMPLE";
             this.labelError.Visible = false;
@@ -106,10 +109,10 @@
             // 
             this.labelActionTitle.AutoSize = true;
             this.labelActionTitle.Font = new System.Drawing.Font("Netflix Sans", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelActionTitle.Location = new System.Drawing.Point(363, 133);
+            this.labelActionTitle.Location = new System.Drawing.Point(450, 133);
             this.labelActionTitle.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelActionTitle.Name = "labelActionTitle";
-            this.labelActionTitle.Size = new System.Drawing.Size(420, 34);
+            this.labelActionTitle.Size = new System.Drawing.Size(325, 27);
             this.labelActionTitle.TabIndex = 63;
             this.labelActionTitle.Text = "MODIFICATION/SUPPRESSION";
             this.labelActionTitle.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -141,8 +144,9 @@
             // rtbLibelleLieux
             // 
             this.rtbLibelleLieux.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
+            this.rtbLibelleLieux.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.rtbLibelleLieux.ForeColor = System.Drawing.Color.White;
-            this.rtbLibelleLieux.Location = new System.Drawing.Point(256, 193);
+            this.rtbLibelleLieux.Location = new System.Drawing.Point(314, 180);
             this.rtbLibelleLieux.Name = "rtbLibelleLieux";
             this.rtbLibelleLieux.Size = new System.Drawing.Size(554, 82);
             this.rtbLibelleLieux.TabIndex = 80;
@@ -152,10 +156,11 @@
             // 
             this.gbIntExtLieux.Controls.Add(this.rbExtLieux);
             this.gbIntExtLieux.Controls.Add(this.rbIntLieux);
+            this.gbIntExtLieux.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.gbIntExtLieux.ForeColor = System.Drawing.Color.White;
-            this.gbIntExtLieux.Location = new System.Drawing.Point(621, 295);
+            this.gbIntExtLieux.Location = new System.Drawing.Point(314, 278);
             this.gbIntExtLieux.Name = "gbIntExtLieux";
-            this.gbIntExtLieux.Size = new System.Drawing.Size(340, 150);
+            this.gbIntExtLieux.Size = new System.Drawing.Size(142, 117);
             this.gbIntExtLieux.TabIndex = 81;
             this.gbIntExtLieux.TabStop = false;
             this.gbIntExtLieux.Text = "Intérieur / Extérieur";
@@ -163,9 +168,9 @@
             // rbExtLieux
             // 
             this.rbExtLieux.AutoSize = true;
-            this.rbExtLieux.Location = new System.Drawing.Point(81, 96);
+            this.rbExtLieux.Location = new System.Drawing.Point(31, 71);
             this.rbExtLieux.Name = "rbExtLieux";
-            this.rbExtLieux.Size = new System.Drawing.Size(89, 22);
+            this.rbExtLieux.Size = new System.Drawing.Size(71, 18);
             this.rbExtLieux.TabIndex = 1;
             this.rbExtLieux.Text = "Extérieur";
             this.rbExtLieux.UseVisualStyleBackColor = true;
@@ -174,9 +179,9 @@
             // 
             this.rbIntLieux.AutoSize = true;
             this.rbIntLieux.Checked = true;
-            this.rbIntLieux.Location = new System.Drawing.Point(81, 48);
+            this.rbIntLieux.Location = new System.Drawing.Point(31, 38);
             this.rbIntLieux.Name = "rbIntLieux";
-            this.rbIntLieux.Size = new System.Drawing.Size(84, 22);
+            this.rbIntLieux.Size = new System.Drawing.Size(67, 18);
             this.rbIntLieux.TabIndex = 0;
             this.rbIntLieux.TabStop = true;
             this.rbIntLieux.Text = "Intérieur";
@@ -184,7 +189,7 @@
             // 
             // FormCRUDLieux
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
             this.ClientSize = new System.Drawing.Size(1070, 550);
@@ -223,5 +228,18 @@
         private System.Windows.Forms.GroupBox gbIntExtLieux;
         private System.Windows.Forms.RadioButton rbExtLieux;
         private System.Windows.Forms.RadioButton rbIntLieux;
+
+        public TextBox TbCapaciteLieux { get => tbCapaciteLieux; set => tbCapaciteLieux = value; }
+        public Label Label6 { get => label6; set => label6 = value; }
+        public Label Label2 { get => label2; set => label2 = value; }
+        public Label LabelError { get => labelError; set => labelError = value; }
+        public Button BtnEnregistrer { get => btnEnregistrer; set => btnEnregistrer = value; }
+        public Label LabelActionTitle { get => labelActionTitle; set => labelActionTitle = value; }
+        internal GradientPanel GradientPanel1 { get => gradientPanel1; set => gradientPanel1 = value; }
+        public PictureBox PictureBox1 { get => pictureBox1; set => pictureBox1 = value; }
+        public RichTextBox RtbLibelleLieux { get => rtbLibelleLieux; set => rtbLibelleLieux = value; }
+        public GroupBox GbIntExtLieux { get => gbIntExtLieux; set => gbIntExtLieux = value; }
+        public RadioButton RbExtLieux { get => rbExtLieux; set => rbExtLieux = value; }
+        public RadioButton RbIntLieux { get => rbIntLieux; set => rbIntLieux = value; }
     }
 }

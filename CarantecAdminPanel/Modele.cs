@@ -91,7 +91,7 @@ namespace CarantecAdminPanel
         public Modele()
         {
             // instanciation des collections des Datatable et DataAdapter
-            for (int i = 0; i <= 11; i++)
+            for (int i = 0; i <= 30; i++)
             {
                 dA.Add(new MySqlDataAdapter());
                 dT.Add(new DataTable());
@@ -169,7 +169,7 @@ namespace CarantecAdminPanel
         /// charge dans un DT les données de la table passée en paramètre
         /// </summary>
         /// <param name="table">nom de la table à requêter</param>
-        public void charger_donnees(string table)
+        public void charger_donnees(string table, int indice, string text)
         {
             chargement = false;
             if (!connopen) return;		// pour vérifier que la BD est bien ouverte
@@ -209,6 +209,86 @@ namespace CarantecAdminPanel
             if (table == "toutes")
             {
                 charger("show tables;", dT[8], dA[8]);
+            }
+            if (table == "festivalDisplay")
+            {
+                charger("select * from infosFestival;", dT[9], dA[9]);
+            }
+            if (table == "thematique")
+            {
+                charger("select * from THEMATIQUE;", dT[10], dA[10]);
+            }
+            if (table == "respToPers")
+            {
+                charger("select * from respToPers;", dT[11], dA[11]);
+            }
+            if (table == "responsable")
+            {
+                charger("select * from RESPONSABLE;", dT[12], dA[12]);
+            }
+            if (table == "persToResp")
+            {
+                charger("CALL persToResp('" + text + "')", dT[13], dA[13]);
+            }
+            if (table == "nomThemeToIdTheme")
+            {
+                charger("CALL nomThemeToIdTheme('" + text + "')", dT[14], dA[14]);
+            }
+            if (table == "adherent")
+            {
+                charger("select * from ADHERENT;", dT[15], dA[15]);
+            }
+            if (table == "artiste")
+            {
+                charger("select * from ARTISTES;", dT[16], dA[16]);
+            }
+            if (table == "animateur")
+            {
+                charger("select * from ANIMATEUR;", dT[17], dA[17]);
+            }
+            if (table == "intSpe")
+            {
+                charger("select * from INTERVENANTSPECIALISE;", dT[18], dA[18]);
+            }
+            if (table == "nomLieuToIdLieu")
+            {
+                charger("CALL nomLieuToIdLieu('" + text + "')", dT[19], dA[19]);
+            }
+            if (table == "nomsLieuxFromManifs")
+            {
+                charger("select * from nomsLieuxFromManifs;", dT[20], dA[20]);
+            }
+            if (table == "nomsManifsFromReserv")
+            {
+                charger("select * from nomsManifsFromReserv;", dT[21], dA[21]);
+            }
+            if (table == "nomsAdhFromReserv")
+            {
+                charger("select * from nomsAdhFromReserv;", dT[22], dA[22]);
+            }
+            if (table == "nomManifToIdManif")
+            {
+                charger("CALL nomManifToIdManif('" + text + "')", dT[23], dA[23]);
+            }
+            if (table == "nomPersToIdPers")
+            {
+                charger("CALL nomPersToIdPers('" + text + "')", dT[24], dA[24]);
+            }
+            if (table == "adherentPersonne")
+            {
+                charger("select * from adherentPersonne;", dT[25], dA[25]);
+            }
+            if (table == "artistePersonne")
+            {
+                charger("select * from artistePersonne;", dT[26], dA[26]);
+            }
+            if (table == "animateurPersonne")
+            {
+                charger("select * from animateurPersonne;", dT[27], dA[27]);
+            }
+            if (table == "intervenantSpecialisePersonne")
+            {
+                charger("select * from intervenantSpecialisePersonne;", dT[28], dA[28]);
             }
             //if (table == "PPE_REPARERUT")
             //{

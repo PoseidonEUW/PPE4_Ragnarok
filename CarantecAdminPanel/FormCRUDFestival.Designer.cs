@@ -1,4 +1,6 @@
-﻿namespace CarantecAdminPanel
+﻿using System.Windows.Forms;
+
+namespace CarantecAdminPanel
 {
     partial class FormCRUDFestival
     {
@@ -37,9 +39,9 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.dateTimeAnnee = new System.Windows.Forms.DateTimePicker();
             this.labelAnnee = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cbThematique = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.cbResponsable = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.gradientPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -51,18 +53,18 @@
             this.tbNomFestival.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tbNomFestival.Font = new System.Drawing.Font("Netflix Sans", 11.25F);
             this.tbNomFestival.ForeColor = System.Drawing.Color.White;
-            this.tbNomFestival.Location = new System.Drawing.Point(395, 412);
+            this.tbNomFestival.Location = new System.Drawing.Point(397, 396);
             this.tbNomFestival.Name = "tbNomFestival";
-            this.tbNomFestival.Size = new System.Drawing.Size(349, 31);
+            this.tbNomFestival.Size = new System.Drawing.Size(349, 27);
             this.tbNomFestival.TabIndex = 33;
             // 
             // labelNom
             // 
             this.labelNom.AutoSize = true;
             this.labelNom.Font = new System.Drawing.Font("Netflix Sans", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelNom.Location = new System.Drawing.Point(337, 419);
+            this.labelNom.Location = new System.Drawing.Point(349, 398);
             this.labelNom.Name = "labelNom";
-            this.labelNom.Size = new System.Drawing.Size(52, 24);
+            this.labelNom.Size = new System.Drawing.Size(42, 19);
             this.labelNom.TabIndex = 32;
             this.labelNom.Text = "Nom";
             // 
@@ -73,7 +75,7 @@
             this.labelError.ForeColor = System.Drawing.Color.Firebrick;
             this.labelError.Location = new System.Drawing.Point(365, 457);
             this.labelError.Name = "labelError";
-            this.labelError.Size = new System.Drawing.Size(465, 24);
+            this.labelError.Size = new System.Drawing.Size(371, 19);
             this.labelError.TabIndex = 31;
             this.labelError.Text = "ERROR SAMPLE ERROR SAMPLE ERROR SAMPLE";
             this.labelError.Visible = false;
@@ -97,10 +99,10 @@
             // 
             this.labelActionTitle.AutoSize = true;
             this.labelActionTitle.Font = new System.Drawing.Font("Netflix Sans", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelActionTitle.Location = new System.Drawing.Point(363, 133);
+            this.labelActionTitle.Location = new System.Drawing.Point(449, 133);
             this.labelActionTitle.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelActionTitle.Name = "labelActionTitle";
-            this.labelActionTitle.Size = new System.Drawing.Size(420, 34);
+            this.labelActionTitle.Size = new System.Drawing.Size(325, 27);
             this.labelActionTitle.TabIndex = 29;
             this.labelActionTitle.Text = "MODIFICATION/SUPPRESSION";
             this.labelActionTitle.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -139,72 +141,76 @@
             this.dateTimeAnnee.CustomFormat = "yyyy";
             this.dateTimeAnnee.Font = new System.Drawing.Font("Netflix Sans", 11.25F);
             this.dateTimeAnnee.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimeAnnee.Location = new System.Drawing.Point(434, 202);
+            this.dateTimeAnnee.Location = new System.Drawing.Point(397, 199);
             this.dateTimeAnnee.Name = "dateTimeAnnee";
             this.dateTimeAnnee.ShowUpDown = true;
-            this.dateTimeAnnee.Size = new System.Drawing.Size(104, 31);
+            this.dateTimeAnnee.Size = new System.Drawing.Size(104, 27);
             this.dateTimeAnnee.TabIndex = 34;
             // 
             // labelAnnee
             // 
             this.labelAnnee.AutoSize = true;
             this.labelAnnee.Font = new System.Drawing.Font("Netflix Sans", 11.25F);
-            this.labelAnnee.Location = new System.Drawing.Point(322, 207);
+            this.labelAnnee.Location = new System.Drawing.Point(338, 205);
             this.labelAnnee.Name = "labelAnnee";
-            this.labelAnnee.Size = new System.Drawing.Size(67, 24);
+            this.labelAnnee.Size = new System.Drawing.Size(53, 19);
             this.labelAnnee.TabIndex = 35;
             this.labelAnnee.Text = "Année";
             // 
-            // comboBox1
+            // cbThematique
             // 
-            this.comboBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
-            this.comboBox1.ForeColor = System.Drawing.Color.White;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(395, 281);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(349, 24);
-            this.comboBox1.TabIndex = 36;
+            this.cbThematique.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
+            this.cbThematique.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbThematique.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cbThematique.ForeColor = System.Drawing.Color.White;
+            this.cbThematique.FormattingEnabled = true;
+            this.cbThematique.Location = new System.Drawing.Point(397, 265);
+            this.cbThematique.Name = "cbThematique";
+            this.cbThematique.Size = new System.Drawing.Size(349, 21);
+            this.cbThematique.TabIndex = 36;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Netflix Sans", 11.25F);
-            this.label1.Location = new System.Drawing.Point(272, 281);
+            this.label1.Location = new System.Drawing.Point(301, 265);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(117, 24);
+            this.label1.Size = new System.Drawing.Size(90, 19);
             this.label1.TabIndex = 37;
             this.label1.Text = "Thématique";
             // 
-            // comboBox2
+            // cbResponsable
             // 
-            this.comboBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
-            this.comboBox2.ForeColor = System.Drawing.Color.White;
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(395, 350);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(349, 24);
-            this.comboBox2.TabIndex = 38;
+            this.cbResponsable.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
+            this.cbResponsable.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbResponsable.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cbResponsable.ForeColor = System.Drawing.Color.White;
+            this.cbResponsable.FormattingEnabled = true;
+            this.cbResponsable.Location = new System.Drawing.Point(397, 334);
+            this.cbResponsable.Name = "cbResponsable";
+            this.cbResponsable.Size = new System.Drawing.Size(349, 21);
+            this.cbResponsable.TabIndex = 38;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Netflix Sans", 11.25F);
-            this.label2.Location = new System.Drawing.Point(263, 350);
+            this.label2.Location = new System.Drawing.Point(295, 334);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(126, 24);
+            this.label2.Size = new System.Drawing.Size(96, 19);
             this.label2.TabIndex = 39;
             this.label2.Text = "Responsable";
             // 
             // FormCRUDFestival
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
             this.ClientSize = new System.Drawing.Size(1070, 550);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.comboBox2);
+            this.Controls.Add(this.cbResponsable);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.cbThematique);
             this.Controls.Add(this.labelAnnee);
             this.Controls.Add(this.dateTimeAnnee);
             this.Controls.Add(this.tbNomFestival);
@@ -235,9 +241,25 @@
         private GradientPanel gradientPanel1;
         private System.Windows.Forms.DateTimePicker dateTimeAnnee;
         private System.Windows.Forms.Label labelAnnee;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cbThematique;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox cbResponsable;
         private System.Windows.Forms.Label label2;
+
+        public PictureBox PictureBox1 { get => pictureBox1; set => pictureBox1 = value; }
+        public TextBox TbNomFestival { get => tbNomFestival; set => tbNomFestival = value; }
+        public Label LabelNom { get => labelNom; set => labelNom = value; }
+        public Label LabelError { get => labelError; set => labelError = value; }
+        public Button BtnEnregistrer { get => btnEnregistrer; set => btnEnregistrer = value; }
+        public Label LabelActionTitle { get => labelActionTitle; set => labelActionTitle = value; }
+        internal GradientPanel GradientPanel1 { get => gradientPanel1; set => gradientPanel1 = value; }
+        public DateTimePicker DateTimeAnnee { get => dateTimeAnnee; set => dateTimeAnnee = value; }
+        public Label LabelAnnee { get => labelAnnee; set => labelAnnee = value; }
+        public ComboBox ComboBox1 { get => cbThematique; set => cbThematique = value; }
+        public Label Label1 { get => label1; set => label1 = value; }
+        public ComboBox ComboBox2 { get => cbResponsable; set => cbResponsable = value; }
+        public Label Label2 { get => label2; set => label2 = value; }
+        public ComboBox CbThematique { get => cbThematique; set => cbThematique = value; }
+        public ComboBox CbResponsable { get => cbResponsable; set => cbResponsable = value; }
     }
 }

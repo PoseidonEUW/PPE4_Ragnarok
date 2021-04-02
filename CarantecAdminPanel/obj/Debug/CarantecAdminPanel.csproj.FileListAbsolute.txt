@@ -53,7 +53,6 @@ C:\Users\satis\Desktop\CODE\Carantec\PPE4_Ragnarok\CarantecAdminPanel\bin\Debug\
 C:\Users\satis\Desktop\CODE\Carantec\PPE4_Ragnarok\CarantecAdminPanel\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
 C:\Users\satis\Desktop\CODE\Carantec\PPE4_Ragnarok\CarantecAdminPanel\obj\Debug\CarantecAdminPanel.csproj.CopyComplete
 C:\Users\satis\Desktop\CODE\Carantec\PPE4_Ragnarok\CarantecAdminPanel\obj\Debug\CarantecAdminPanel.FormConnexionAdmin.resources
-C:\Users\satis\Desktop\CODE\Carantec\PPE4_Ragnarok\CarantecAdminPanel\obj\Debug\CarantecAdminPanel.FormCRUDTemplate.resources
 C:\Users\satis\Desktop\CODE\Carantec\PPE4_Ragnarok\CarantecAdminPanel\obj\Debug\CarantecAdminPanel.FormSampleItems.resources
 C:\Users\satis\Desktop\CODE\Carantec\PPE4_Ragnarok\CarantecAdminPanel\obj\Debug\CarantecAdminPanel.FormCRUDUtilisateur.resources
 C:\Users\33762\Projets\PPE4_Ragnarok\CarantecAdminPanel\obj\Debug\CarantecAdminPanel.csprojAssemblyReference.cache
@@ -67,3 +66,9 @@ C:\Users\33762\Projets\PPE4_Ragnarok\CarantecAdminPanel\obj\Debug\CarantecAdminP
 C:\Users\33762\Projets\PPE4_Ragnarok\CarantecAdminPanel\obj\Debug\CarantecAdminPanel.csproj.CoreCompileInputs.cache
 C:\Users\33762\Projets\PPE4_Ragnarok\CarantecAdminPanel\obj\Debug\CarantecAdminPanel.exe
 C:\Users\33762\Projets\PPE4_Ragnarok\CarantecAdminPanel\obj\Debug\CarantecAdminPanel.pdb
+C:\Users\satis\Desktop\CODE\Carantec\PPE4_Ragnarok\CarantecAdminPanel\obj\Debug\CarantecAdminPanel.FormCRUDAvis.resources
+C:\Users\satis\Desktop\CODE\Carantec\PPE4_Ragnarok\CarantecAdminPanel\obj\Debug\CarantecAdminPanel.FormCRUDFestival.resources
+C:\Users\satis\Desktop\CODE\Carantec\PPE4_Ragnarok\CarantecAdminPanel\obj\Debug\CarantecAdminPanel.FormCRUDLieux.resources
+C:\Users\satis\Desktop\CODE\Carantec\PPE4_Ragnarok\CarantecAdminPanel\obj\Debug\CarantecAdminPanel.FormCRUDManifestation.resources
+C:\Users\satis\Desktop\CODE\Carantec\PPE4_Ragnarok\CarantecAdminPanel\obj\Debug\CarantecAdminPanel.FormCRUDPublic.resources
+C:\Users\satis\Desktop\CODE\Carantec\PPE4_Ragnarok\CarantecAdminPanel\obj\Debug\CarantecAdminPanel.FormCRUDReservation.resources

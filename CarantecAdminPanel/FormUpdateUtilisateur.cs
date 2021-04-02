@@ -10,19 +10,14 @@ using System.Windows.Forms;
 
 namespace CarantecAdminPanel
 {
-    public partial class FormCRUDFestival : Form
+    public partial class FormUpdateUtilisateur : Form
     {
-        public FormCRUDFestival()
+        public FormUpdateUtilisateur(char etat)
         {
             InitializeComponent();
         }
 
-        private void labelNom_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void tbNomFestival_TextChanged(object sender, EventArgs e)
+        private void FormUpdateUtilisateur_Load(object sender, EventArgs e)
         {
 
         }

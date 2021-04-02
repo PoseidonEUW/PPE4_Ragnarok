@@ -16,5 +16,25 @@ namespace CarantecAdminPanel
         {
             InitializeComponent();
         }
+
+        private void tbRefReservation_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cbManifReservation_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cbAdhReservation_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void nudPersReservation_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
