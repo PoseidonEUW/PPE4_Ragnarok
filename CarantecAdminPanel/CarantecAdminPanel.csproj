@@ -224,19 +224,19 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
@@ -265,10 +265,17 @@
     <None Include="Resources\settings.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\AvisInverse.png" />
     <Content Include="Resources\EtoileRempli.png" />
+    <None Include="Resources\UserInverse.png" />
     <None Include="Resources\EtoileVide1.png" />
     <None Include="Resources\EtoileRempli1.png" />
     <Content Include="Resources\EtoileVide.png" />
+    <None Include="Resources\FestivalInverse.png" />
+    <None Include="Resources\ManifestationsInverse.png" />
+    <None Include="Resources\PublicInverse.png" />
+    <None Include="Resources\LieuxInverse.png" />
+    <None Include="Resources\ReservationInverse.png" />
     <Content Include="Resources\tardis.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
