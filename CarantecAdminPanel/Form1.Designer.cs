@@ -29,11 +29,11 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgvDonnees = new System.Windows.Forms.DataGridView();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.ajouterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -42,13 +42,14 @@
             this.labelTrier = new System.Windows.Forms.Label();
             this.cbTrier = new System.Windows.Forms.ComboBox();
             this.gradientPanel1 = new CarantecAdminPanel.GradientPanel();
+            this.btnDeco = new System.Windows.Forms.Button();
+            this.btnParticiper = new System.Windows.Forms.Button();
             this.btnAvis = new System.Windows.Forms.Button();
             this.btnReservation = new System.Windows.Forms.Button();
             this.btnLieux = new System.Windows.Forms.Button();
             this.btnPublic = new System.Windows.Forms.Button();
             this.btnUsers = new System.Windows.Forms.Button();
             this.btnManifestation = new System.Windows.Forms.Button();
-            this.btnDeco = new System.Windows.Forms.Button();
             this.btnFestival = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDonnees)).BeginInit();
@@ -63,35 +64,35 @@
             this.dgvDonnees.AllowUserToDeleteRows = false;
             this.dgvDonnees.AllowUserToResizeColumns = false;
             this.dgvDonnees.AllowUserToResizeRows = false;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Netflix Sans", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.RoyalBlue;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.White;
-            this.dgvDonnees.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Netflix Sans", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.RoyalBlue;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
+            this.dgvDonnees.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvDonnees.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvDonnees.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
             this.dgvDonnees.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical;
             this.dgvDonnees.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Netflix Sans", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.RoyalBlue;
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvDonnees.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Netflix Sans", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.RoyalBlue;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvDonnees.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvDonnees.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvDonnees.ContextMenuStrip = this.contextMenuStrip1;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Netflix Sans", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.RoyalBlue;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvDonnees.DefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Netflix Sans", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.RoyalBlue;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvDonnees.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgvDonnees.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
             this.dgvDonnees.Location = new System.Drawing.Point(67, 222);
             this.dgvDonnees.Margin = new System.Windows.Forms.Padding(4);
@@ -99,24 +100,24 @@
             this.dgvDonnees.Name = "dgvDonnees";
             this.dgvDonnees.ReadOnly = true;
             this.dgvDonnees.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Netflix Sans", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvDonnees.RowHeadersDefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Netflix Sans", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvDonnees.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.dgvDonnees.RowHeadersVisible = false;
             this.dgvDonnees.RowHeadersWidth = 51;
             this.dgvDonnees.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
-            dataGridViewCellStyle10.Font = new System.Drawing.Font("Netflix Sans", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.RoyalBlue;
-            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.Color.White;
-            this.dgvDonnees.RowsDefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Netflix Sans", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.RoyalBlue;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.White;
+            this.dgvDonnees.RowsDefaultCellStyle = dataGridViewCellStyle5;
             this.dgvDonnees.RowTemplate.Height = 25;
             this.dgvDonnees.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvDonnees.Size = new System.Drawing.Size(2388, 1041);
@@ -195,6 +196,7 @@
             this.gradientPanel1.BackColor = System.Drawing.Color.Transparent;
             this.gradientPanel1.ColorBottom = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
             this.gradientPanel1.ColorTop = System.Drawing.Color.Black;
+            this.gradientPanel1.Controls.Add(this.btnParticiper);
             this.gradientPanel1.Controls.Add(this.btnAvis);
             this.gradientPanel1.Controls.Add(this.btnReservation);
             this.gradientPanel1.Controls.Add(this.btnLieux);
@@ -210,6 +212,43 @@
             this.gradientPanel1.Size = new System.Drawing.Size(2567, 148);
             this.gradientPanel1.TabIndex = 0;
             // 
+            // btnDeco
+            // 
+            this.btnDeco.FlatAppearance.BorderSize = 0;
+            this.btnDeco.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnDeco.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnDeco.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDeco.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDeco.ForeColor = System.Drawing.Color.White;
+            this.btnDeco.Location = new System.Drawing.Point(2320, 32);
+            this.btnDeco.Margin = new System.Windows.Forms.Padding(4);
+            this.btnDeco.Name = "btnDeco";
+            this.btnDeco.Size = new System.Drawing.Size(188, 31);
+            this.btnDeco.TabIndex = 3;
+            this.btnDeco.Text = "Se déconnecter";
+            this.btnDeco.UseVisualStyleBackColor = true;
+            this.btnDeco.Click += new System.EventHandler(this.btnDeco_Click);
+            // 
+            // btnParticiper
+            // 
+            this.btnParticiper.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnParticiper.FlatAppearance.BorderSize = 0;
+            this.btnParticiper.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnParticiper.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnParticiper.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnParticiper.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnParticiper.ForeColor = System.Drawing.Color.White;
+            this.btnParticiper.Image = global::CarantecAdminPanel.Properties.Resources.ParticipationInverse;
+            this.btnParticiper.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnParticiper.Location = new System.Drawing.Point(893, 29);
+            this.btnParticiper.Margin = new System.Windows.Forms.Padding(4);
+            this.btnParticiper.Name = "btnParticiper";
+            this.btnParticiper.Size = new System.Drawing.Size(119, 102);
+            this.btnParticiper.TabIndex = 10;
+            this.btnParticiper.Text = "Participation";
+            this.btnParticiper.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnParticiper.UseVisualStyleBackColor = true;
+            // 
             // btnAvis
             // 
             this.btnAvis.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -221,7 +260,7 @@
             this.btnAvis.ForeColor = System.Drawing.Color.White;
             this.btnAvis.Image = global::CarantecAdminPanel.Properties.Resources.AvisInverse;
             this.btnAvis.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnAvis.Location = new System.Drawing.Point(1755, 29);
+            this.btnAvis.Location = new System.Drawing.Point(1863, 29);
             this.btnAvis.Margin = new System.Windows.Forms.Padding(4);
             this.btnAvis.Name = "btnAvis";
             this.btnAvis.Size = new System.Drawing.Size(119, 102);
@@ -242,7 +281,7 @@
             this.btnReservation.ForeColor = System.Drawing.Color.White;
             this.btnReservation.Image = global::CarantecAdminPanel.Properties.Resources.ReservationInverse;
             this.btnReservation.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnReservation.Location = new System.Drawing.Point(1553, 29);
+            this.btnReservation.Location = new System.Drawing.Point(1670, 29);
             this.btnReservation.Margin = new System.Windows.Forms.Padding(4);
             this.btnReservation.Name = "btnReservation";
             this.btnReservation.Size = new System.Drawing.Size(119, 102);
@@ -263,7 +302,7 @@
             this.btnLieux.ForeColor = System.Drawing.Color.White;
             this.btnLieux.Image = global::CarantecAdminPanel.Properties.Resources.LieuxInverse;
             this.btnLieux.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnLieux.Location = new System.Drawing.Point(1347, 29);
+            this.btnLieux.Location = new System.Drawing.Point(1482, 29);
             this.btnLieux.Margin = new System.Windows.Forms.Padding(4);
             this.btnLieux.Name = "btnLieux";
             this.btnLieux.Size = new System.Drawing.Size(119, 102);
@@ -284,7 +323,7 @@
             this.btnPublic.ForeColor = System.Drawing.Color.White;
             this.btnPublic.Image = global::CarantecAdminPanel.Properties.Resources.PublicInverse;
             this.btnPublic.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnPublic.Location = new System.Drawing.Point(1148, 29);
+            this.btnPublic.Location = new System.Drawing.Point(1289, 29);
             this.btnPublic.Margin = new System.Windows.Forms.Padding(4);
             this.btnPublic.Name = "btnPublic";
             this.btnPublic.Size = new System.Drawing.Size(119, 102);
@@ -305,7 +344,7 @@
             this.btnUsers.ForeColor = System.Drawing.Color.White;
             this.btnUsers.Image = global::CarantecAdminPanel.Properties.Resources.UserInverse;
             this.btnUsers.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnUsers.Location = new System.Drawing.Point(941, 29);
+            this.btnUsers.Location = new System.Drawing.Point(1098, 29);
             this.btnUsers.Margin = new System.Windows.Forms.Padding(4);
             this.btnUsers.Name = "btnUsers";
             this.btnUsers.Size = new System.Drawing.Size(119, 102);
@@ -327,7 +366,7 @@
             this.btnManifestation.ForeColor = System.Drawing.Color.White;
             this.btnManifestation.Image = global::CarantecAdminPanel.Properties.Resources.ManifestationsInverse;
             this.btnManifestation.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnManifestation.Location = new System.Drawing.Point(731, 29);
+            this.btnManifestation.Location = new System.Drawing.Point(671, 29);
             this.btnManifestation.Margin = new System.Windows.Forms.Padding(4);
             this.btnManifestation.Name = "btnManifestation";
             this.btnManifestation.Size = new System.Drawing.Size(134, 102);
@@ -336,23 +375,6 @@
             this.btnManifestation.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnManifestation.UseVisualStyleBackColor = true;
             this.btnManifestation.Click += new System.EventHandler(this.btnManifestation_Click_1);
-            // 
-            // btnDeco
-            // 
-            this.btnDeco.FlatAppearance.BorderSize = 0;
-            this.btnDeco.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.btnDeco.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.btnDeco.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDeco.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDeco.ForeColor = System.Drawing.Color.White;
-            this.btnDeco.Location = new System.Drawing.Point(2320, 32);
-            this.btnDeco.Margin = new System.Windows.Forms.Padding(4);
-            this.btnDeco.Name = "btnDeco";
-            this.btnDeco.Size = new System.Drawing.Size(188, 31);
-            this.btnDeco.TabIndex = 3;
-            this.btnDeco.Text = "Se déconnecter";
-            this.btnDeco.UseVisualStyleBackColor = true;
-            this.btnDeco.Click += new System.EventHandler(this.btnDeco_Click);
             // 
             // btnFestival
             // 
@@ -366,7 +388,7 @@
             this.btnFestival.ForeColor = System.Drawing.Color.White;
             this.btnFestival.Image = global::CarantecAdminPanel.Properties.Resources.FestivalInverse;
             this.btnFestival.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnFestival.Location = new System.Drawing.Point(508, 29);
+            this.btnFestival.Location = new System.Drawing.Point(478, 29);
             this.btnFestival.Margin = new System.Windows.Forms.Padding(4);
             this.btnFestival.Name = "btnFestival";
             this.btnFestival.Size = new System.Drawing.Size(119, 102);
@@ -394,7 +416,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
-            this.ClientSize = new System.Drawing.Size(1942, 1102);
+            this.ClientSize = new System.Drawing.Size(2012, 1102);
             this.Controls.Add(this.cbTrier);
             this.Controls.Add(this.labelTrier);
             this.Controls.Add(this.dgvDonnees);
@@ -436,6 +458,7 @@
         private System.Windows.Forms.Button btnPublic;
         private System.Windows.Forms.Button btnUsers;
         private System.Windows.Forms.Button btnManifestation;
+        private System.Windows.Forms.Button btnParticiper;
     }
 }
 

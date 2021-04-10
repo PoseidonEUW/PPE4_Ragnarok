@@ -131,6 +131,12 @@
     <Compile Include="FormCRUDManifestation.Designer.cs">
       <DependentUpon>FormCRUDManifestation.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormCRUDParticiper.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCRUDParticiper.Designer.cs">
+      <DependentUpon>FormCRUDParticiper.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormCRUDPublic.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -200,6 +206,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormCRUDManifestation.resx">
       <DependentUpon>FormCRUDManifestation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormCRUDParticiper.resx">
+      <DependentUpon>FormCRUDParticiper.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormCRUDPublic.resx">
       <DependentUpon>FormCRUDPublic.cs</DependentUpon>
@@ -276,6 +285,7 @@
     <None Include="Resources\PublicInverse.png" />
     <None Include="Resources\LieuxInverse.png" />
     <None Include="Resources\ReservationInverse.png" />
+    <None Include="Resources\ParticipationInverse.png" />
     <Content Include="Resources\tardis.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

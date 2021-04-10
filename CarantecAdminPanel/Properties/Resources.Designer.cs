@@ -133,6 +133,16 @@ namespace CarantecAdminPanel.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap ParticipationInverse {
+            get {
+                object obj = ResourceManager.GetObject("ParticipationInverse", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap PublicInverse {
             get {
                 object obj = ResourceManager.GetObject("PublicInverse", resourceCulture);

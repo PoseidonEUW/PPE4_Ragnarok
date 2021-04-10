@@ -101,7 +101,7 @@ namespace CarantecAdminPanel
             // 
             this.labelActionTitle.AutoSize = true;
             this.labelActionTitle.Font = new System.Drawing.Font("Netflix Sans", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelActionTitle.Location = new System.Drawing.Point(466, 129);
+            this.labelActionTitle.Location = new System.Drawing.Point(335, 129);
             this.labelActionTitle.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelActionTitle.Name = "labelActionTitle";
             this.labelActionTitle.Size = new System.Drawing.Size(420, 34);
@@ -241,7 +241,7 @@ namespace CarantecAdminPanel
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(55, 44);
+            this.label1.Location = new System.Drawing.Point(69, 44);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(128, 21);
             this.label1.TabIndex = 29;
@@ -250,7 +250,7 @@ namespace CarantecAdminPanel
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(54, 124);
+            this.label2.Location = new System.Drawing.Point(68, 124);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(129, 21);
             this.label2.TabIndex = 30;
@@ -259,7 +259,7 @@ namespace CarantecAdminPanel
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(9, 210);
+            this.label3.Location = new System.Drawing.Point(6, 209);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(191, 21);
             this.label3.TabIndex = 31;
@@ -270,7 +270,7 @@ namespace CarantecAdminPanel
             this.tbEmailAdherentUser.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
             this.tbEmailAdherentUser.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tbEmailAdherentUser.ForeColor = System.Drawing.Color.White;
-            this.tbEmailAdherentUser.Location = new System.Drawing.Point(189, 41);
+            this.tbEmailAdherentUser.Location = new System.Drawing.Point(203, 42);
             this.tbEmailAdherentUser.Name = "tbEmailAdherentUser";
             this.tbEmailAdherentUser.Size = new System.Drawing.Size(260, 28);
             this.tbEmailAdherentUser.TabIndex = 32;
@@ -280,7 +280,7 @@ namespace CarantecAdminPanel
             this.tbLogAdherentUser.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
             this.tbLogAdherentUser.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tbLogAdherentUser.ForeColor = System.Drawing.Color.White;
-            this.tbLogAdherentUser.Location = new System.Drawing.Point(189, 121);
+            this.tbLogAdherentUser.Location = new System.Drawing.Point(203, 122);
             this.tbLogAdherentUser.Name = "tbLogAdherentUser";
             this.tbLogAdherentUser.Size = new System.Drawing.Size(260, 28);
             this.tbLogAdherentUser.TabIndex = 33;
@@ -290,7 +290,7 @@ namespace CarantecAdminPanel
             this.tbMdpAdherentUser.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
             this.tbMdpAdherentUser.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tbMdpAdherentUser.ForeColor = System.Drawing.Color.White;
-            this.tbMdpAdherentUser.Location = new System.Drawing.Point(189, 207);
+            this.tbMdpAdherentUser.Location = new System.Drawing.Point(203, 207);
             this.tbMdpAdherentUser.Name = "tbMdpAdherentUser";
             this.tbMdpAdherentUser.Size = new System.Drawing.Size(260, 28);
             this.tbMdpAdherentUser.TabIndex = 34;
@@ -387,7 +387,7 @@ namespace CarantecAdminPanel
             this.gbAdherent.ForeColor = System.Drawing.Color.White;
             this.gbAdherent.Location = new System.Drawing.Point(24, 562);
             this.gbAdherent.Name = "gbAdherent";
-            this.gbAdherent.Size = new System.Drawing.Size(469, 290);
+            this.gbAdherent.Size = new System.Drawing.Size(486, 290);
             this.gbAdherent.TabIndex = 29;
             this.gbAdherent.TabStop = false;
             this.gbAdherent.Text = "Adherent";
