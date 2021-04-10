@@ -55,16 +55,16 @@ namespace CarantecAdminPanel
             this.tbCapaciteLieux.ForeColor = System.Drawing.Color.White;
             this.tbCapaciteLieux.Location = new System.Drawing.Point(314, 413);
             this.tbCapaciteLieux.Name = "tbCapaciteLieux";
-            this.tbCapaciteLieux.Size = new System.Drawing.Size(142, 27);
+            this.tbCapaciteLieux.Size = new System.Drawing.Size(142, 31);
             this.tbCapaciteLieux.TabIndex = 79;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Netflix Sans", 11.25F);
-            this.label6.Location = new System.Drawing.Point(238, 417);
+            this.label6.Location = new System.Drawing.Point(220, 415);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(69, 19);
+            this.label6.Size = new System.Drawing.Size(89, 24);
             this.label6.TabIndex = 78;
             this.label6.Text = "Capacité";
             // 
@@ -72,9 +72,9 @@ namespace CarantecAdminPanel
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Netflix Sans", 11.25F);
-            this.label2.Location = new System.Drawing.Point(255, 180);
+            this.label2.Location = new System.Drawing.Point(238, 176);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(52, 19);
+            this.label2.Size = new System.Drawing.Size(71, 24);
             this.label2.TabIndex = 71;
             this.label2.Text = "Libelle";
             // 
@@ -85,7 +85,7 @@ namespace CarantecAdminPanel
             this.labelError.ForeColor = System.Drawing.Color.Firebrick;
             this.labelError.Location = new System.Drawing.Point(365, 457);
             this.labelError.Name = "labelError";
-            this.labelError.Size = new System.Drawing.Size(371, 19);
+            this.labelError.Size = new System.Drawing.Size(465, 24);
             this.labelError.TabIndex = 65;
             this.labelError.Text = "ERROR SAMPLE ERROR SAMPLE ERROR SAMPLE";
             this.labelError.Visible = false;
@@ -112,7 +112,7 @@ namespace CarantecAdminPanel
             this.labelActionTitle.Location = new System.Drawing.Point(450, 133);
             this.labelActionTitle.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelActionTitle.Name = "labelActionTitle";
-            this.labelActionTitle.Size = new System.Drawing.Size(325, 27);
+            this.labelActionTitle.Size = new System.Drawing.Size(420, 34);
             this.labelActionTitle.TabIndex = 63;
             this.labelActionTitle.Text = "MODIFICATION/SUPPRESSION";
             this.labelActionTitle.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -170,7 +170,7 @@ namespace CarantecAdminPanel
             this.rbExtLieux.AutoSize = true;
             this.rbExtLieux.Location = new System.Drawing.Point(31, 71);
             this.rbExtLieux.Name = "rbExtLieux";
-            this.rbExtLieux.Size = new System.Drawing.Size(71, 18);
+            this.rbExtLieux.Size = new System.Drawing.Size(89, 22);
             this.rbExtLieux.TabIndex = 1;
             this.rbExtLieux.Text = "Extérieur";
             this.rbExtLieux.UseVisualStyleBackColor = true;
@@ -181,7 +181,7 @@ namespace CarantecAdminPanel
             this.rbIntLieux.Checked = true;
             this.rbIntLieux.Location = new System.Drawing.Point(31, 38);
             this.rbIntLieux.Name = "rbIntLieux";
-            this.rbIntLieux.Size = new System.Drawing.Size(67, 18);
+            this.rbIntLieux.Size = new System.Drawing.Size(84, 22);
             this.rbIntLieux.TabIndex = 0;
             this.rbIntLieux.TabStop = true;
             this.rbIntLieux.Text = "Intérieur";
@@ -189,7 +189,7 @@ namespace CarantecAdminPanel
             // 
             // FormCRUDLieux
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
             this.ClientSize = new System.Drawing.Size(1070, 550);
