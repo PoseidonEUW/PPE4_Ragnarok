@@ -117,10 +117,10 @@
             // labelSpecial
             // 
             this.labelSpecial.AutoSize = true;
-            this.labelSpecial.Font = new System.Drawing.Font("Netflix Sans", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelSpecial.Location = new System.Drawing.Point(311, 350);
+            this.labelSpecial.Font = new System.Drawing.Font("Netflix Sans", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelSpecial.Location = new System.Drawing.Point(302, 349);
             this.labelSpecial.Name = "labelSpecial";
-            this.labelSpecial.Size = new System.Drawing.Size(52, 21);
+            this.labelSpecial.Size = new System.Drawing.Size(55, 23);
             this.labelSpecial.TabIndex = 109;
             this.labelSpecial.Text = "Stars";
             this.labelSpecial.Visible = false;
@@ -128,10 +128,10 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Netflix Sans", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(234, 241);
+            this.label1.Font = new System.Drawing.Font("Netflix Sans", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(225, 240);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(129, 21);
+            this.label1.Size = new System.Drawing.Size(138, 23);
             this.label1.TabIndex = 111;
             this.label1.Text = "Manifestations";
             this.label1.Visible = false;

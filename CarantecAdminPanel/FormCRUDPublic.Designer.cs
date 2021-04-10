@@ -68,10 +68,10 @@ namespace CarantecAdminPanel
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Netflix Sans", 11.25F);
+            this.label6.Font = new System.Drawing.Font("Netflix Sans", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(283, 205);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(71, 24);
+            this.label6.Size = new System.Drawing.Size(67, 23);
             this.label6.TabIndex = 99;
             this.label6.Text = "Libelle";
             // 
