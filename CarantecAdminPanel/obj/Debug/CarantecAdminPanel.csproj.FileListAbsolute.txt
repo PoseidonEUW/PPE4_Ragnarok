@@ -107,3 +107,4 @@ C:\Users\33762\Projets\PPE4_Ragnarok\CarantecAdminPanel\obj\Debug\CarantecAdminP
 C:\Users\33762\Projets\PPE4_Ragnarok\CarantecAdminPanel\obj\Debug\CarantecAdminPanel.FormUpdateAvis.resources
 C:\Users\33762\Projets\PPE4_Ragnarok\CarantecAdminPanel\obj\Debug\CarantecAdminPanel.FormUpdateUtilisateur.resources
 C:\Users\33762\Projets\PPE4_Ragnarok\CarantecAdminPanel\obj\Debug\CarantecAdminPanel.csproj.CopyComplete
+C:\Users\33762\Projets\PPE4_Ragnarok\CarantecAdminPanel\obj\Debug\CarantecAdminPanel.FormCRUDParticiper.resources

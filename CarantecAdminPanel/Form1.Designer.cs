@@ -42,7 +42,6 @@
             this.labelTrier = new System.Windows.Forms.Label();
             this.cbTrier = new System.Windows.Forms.ComboBox();
             this.gradientPanel1 = new CarantecAdminPanel.GradientPanel();
-            this.btnDeco = new System.Windows.Forms.Button();
             this.btnParticiper = new System.Windows.Forms.Button();
             this.btnAvis = new System.Windows.Forms.Button();
             this.btnReservation = new System.Windows.Forms.Button();
@@ -50,6 +49,7 @@
             this.btnPublic = new System.Windows.Forms.Button();
             this.btnUsers = new System.Windows.Forms.Button();
             this.btnManifestation = new System.Windows.Forms.Button();
+            this.btnDeco = new System.Windows.Forms.Button();
             this.btnFestival = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDonnees)).BeginInit();
@@ -212,23 +212,6 @@
             this.gradientPanel1.Size = new System.Drawing.Size(2567, 148);
             this.gradientPanel1.TabIndex = 0;
             // 
-            // btnDeco
-            // 
-            this.btnDeco.FlatAppearance.BorderSize = 0;
-            this.btnDeco.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.btnDeco.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.btnDeco.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDeco.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDeco.ForeColor = System.Drawing.Color.White;
-            this.btnDeco.Location = new System.Drawing.Point(2320, 32);
-            this.btnDeco.Margin = new System.Windows.Forms.Padding(4);
-            this.btnDeco.Name = "btnDeco";
-            this.btnDeco.Size = new System.Drawing.Size(188, 31);
-            this.btnDeco.TabIndex = 3;
-            this.btnDeco.Text = "Se déconnecter";
-            this.btnDeco.UseVisualStyleBackColor = true;
-            this.btnDeco.Click += new System.EventHandler(this.btnDeco_Click);
-            // 
             // btnParticiper
             // 
             this.btnParticiper.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -375,6 +358,23 @@
             this.btnManifestation.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnManifestation.UseVisualStyleBackColor = true;
             this.btnManifestation.Click += new System.EventHandler(this.btnManifestation_Click_1);
+            // 
+            // btnDeco
+            // 
+            this.btnDeco.FlatAppearance.BorderSize = 0;
+            this.btnDeco.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnDeco.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnDeco.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDeco.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDeco.ForeColor = System.Drawing.Color.White;
+            this.btnDeco.Location = new System.Drawing.Point(2320, 32);
+            this.btnDeco.Margin = new System.Windows.Forms.Padding(4);
+            this.btnDeco.Name = "btnDeco";
+            this.btnDeco.Size = new System.Drawing.Size(188, 31);
+            this.btnDeco.TabIndex = 3;
+            this.btnDeco.Text = "Se déconnecter";
+            this.btnDeco.UseVisualStyleBackColor = true;
+            this.btnDeco.Click += new System.EventHandler(this.btnDeco_Click);
             // 
             // btnFestival
             // 
