@@ -14,16 +14,22 @@
 
             <!-- Name -->
             <div>
-                <x-label for="name" :value="__('Name')" />
+                <x-label for="NOMPERSONNE" :value="__('Nom')" />
 
-                <x-input id="name" class="block mt-1 w-full" type="text" name="name" :value="old('name')" required autofocus />
+                <x-input id="NOMPERSONNE" class="block mt-1 w-full" type="text" name="NOMPERSONNE" :value="old('NOMPERSONNE')" required autofocus />
+            </div>
+
+            <div>
+                <x-label for="PRENOMPERSONNE" :value="__('Prénom')" />
+
+                <x-input id="PRENOMPERSONNE" class="block mt-1 w-full" type="text" name="PRENOMPERSONNE" :value="old('PRENOMPERSONNE')" required autofocus />
             </div>
 
             <!-- Email Address -->
             <div class="mt-4">
-                <x-label for="email" :value="__('Email')" />
+                <x-label for="EMAILPERSONNE" :value="__('Email')" />
 
-                <x-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required />
+                <x-input id="EMAILPERSONNE" class="block mt-1 w-full" type="email" name="EMAILPERSONNE" :value="old('EMAILPERSONNE')" required />
             </div>
 
             <!-- Password -->
@@ -47,11 +53,11 @@
 
             <div class="flex items-center justify-end mt-4">
                 <a class="underline text-sm text-gray-600 hover:text-gray-900" href="{{ route('login') }}">
-                    {{ __('Already registered?') }}
+                    {{ __('Déja enregistré?') }}
                 </a>
 
                 <x-button class="ml-4">
-                    {{ __('Register') }}
+                    {{ __('S\'enregistrer')}}
                 </x-button>
             </div>
         </form>
