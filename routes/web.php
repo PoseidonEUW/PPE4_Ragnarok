@@ -18,13 +18,17 @@ use Illuminate\Validation\Rule;
 | contains the "web" middleware group. Now create something great!
 |
 */
+// Main Page
 
-Route::get('/', function () {
-    return view('index');
-});
-Route::view('/evenements','show');
 Route::resource('/',ManifestationController::class);
-Route::resource('/evenements',ManifestationController::class);
+Route::resource('/manifestations',ManifestationController::class);
+
+//
+//Show Manifestation
+
+
+//
+
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth'])->name('dashboard');

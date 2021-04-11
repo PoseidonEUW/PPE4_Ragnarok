@@ -16,14 +16,17 @@ class ManifestationController extends Controller
     public function index()
     {
         //Select * from Manifestation
-        $manif = DB::table('manifestation')
-            ->join('lieu','manifestation.IDLIEU','=','lieu.IDLIEU')
+        $manifestations = DB::table('MANIFESTATION')
+            ->join('LIEU','MANIFESTATION.IDLIEU','=','LIEU.IDLIEU')
+            ->join('FESTIVAL','MANIFESTATION.ANNEEFESTIVAL','=','FESTIVAL.ANNEEFESTIVAL')
             ->get();
 
         return view('index',[
-            'manifestations'=>$manif
+            'manifestations'=>$manifestations
 
         ]);
+
+
     }
 
     /**
@@ -55,14 +58,18 @@ class ManifestationController extends Controller
      */
     public function show($id)
     {
-        $id = DB::table('MANIFESTATION')
-        ->join('LIEU','MANIFESTATION.IDLIEU','=','LIEU.IDLIEU')
-            ->where('MANIFESTATION.IDLIEU','=',':id')
-        ->get();
-        return view('show',[
-            'manifestations'=>$id
+        /* $manif = DB::table('MANIFESTATION')
+         ->join('LIEU','MANIFESTATION.IDLIEU','=','LIEU.IDLIEU')
+             ->where('MANIFESTATION.IDMANIF','=',$num)
+         ->get();
+         return view('manifestation.show',[
+             'manifestations'=>$manif[$num]
 
-        ]);
+         ]);*/
+        $manifestation = Manifestation::all();
+        $manifestation = $manifestation->find($id);
+        return view('manifestations.show')->with('manifestation',$manifestation);
+
     }
 
     /**

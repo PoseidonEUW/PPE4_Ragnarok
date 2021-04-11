@@ -15,7 +15,7 @@
 
         <li>
 
-            <a href="#">
+            <a href="/">
 
                 <img class="w-32 ml-6 object-center"src="/images/carantecred.png" alt="Carantec">
 
