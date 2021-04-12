@@ -205,6 +205,7 @@
             this.gradientPanel1.Name = "gradientPanel1";
             this.gradientPanel1.Size = new System.Drawing.Size(1925, 120);
             this.gradientPanel1.TabIndex = 0;
+            this.gradientPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.gradientPanel1_Paint);
             // 
             // btnAvis
             // 

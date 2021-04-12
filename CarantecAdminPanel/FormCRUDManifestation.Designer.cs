@@ -112,7 +112,7 @@ namespace CarantecAdminPanel
             this.labelError.AutoSize = true;
             this.labelError.Font = new System.Drawing.Font("Netflix Sans", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelError.ForeColor = System.Drawing.Color.Firebrick;
-            this.labelError.Location = new System.Drawing.Point(365, 457);
+            this.labelError.Location = new System.Drawing.Point(365, 467);
             this.labelError.Name = "labelError";
             this.labelError.Size = new System.Drawing.Size(371, 19);
             this.labelError.TabIndex = 43;
@@ -126,7 +126,7 @@ namespace CarantecAdminPanel
             this.btnEnregistrer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEnregistrer.Font = new System.Drawing.Font("Netflix Sans", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEnregistrer.ForeColor = System.Drawing.Color.White;
-            this.btnEnregistrer.Location = new System.Drawing.Point(418, 487);
+            this.btnEnregistrer.Location = new System.Drawing.Point(418, 497);
             this.btnEnregistrer.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnEnregistrer.Name = "btnEnregistrer";
             this.btnEnregistrer.Size = new System.Drawing.Size(248, 56);
@@ -289,7 +289,7 @@ namespace CarantecAdminPanel
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
-            this.ClientSize = new System.Drawing.Size(1070, 550);
+            this.ClientSize = new System.Drawing.Size(1070, 564);
             this.Controls.Add(this.cbAnnee);
             this.Controls.Add(this.tbPrixManif);
             this.Controls.Add(this.label7);

@@ -251,5 +251,10 @@ namespace CarantecAdminPanel
         {
             btnTables("utilisateur");
         }
+
+        private void gradientPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
