@@ -48,7 +48,7 @@
             this.labelError.ForeColor = System.Drawing.Color.Firebrick;
             this.labelError.Location = new System.Drawing.Point(365, 457);
             this.labelError.Name = "labelError";
-            this.labelError.Size = new System.Drawing.Size(465, 24);
+            this.labelError.Size = new System.Drawing.Size(371, 19);
             this.labelError.TabIndex = 107;
             this.labelError.Text = "ERROR SAMPLE ERROR SAMPLE ERROR SAMPLE";
             this.labelError.Visible = false;
@@ -75,7 +75,7 @@
             this.labelActionTitle.Location = new System.Drawing.Point(342, 133);
             this.labelActionTitle.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelActionTitle.Name = "labelActionTitle";
-            this.labelActionTitle.Size = new System.Drawing.Size(420, 34);
+            this.labelActionTitle.Size = new System.Drawing.Size(325, 27);
             this.labelActionTitle.TabIndex = 105;
             this.labelActionTitle.Text = "MODIFICATION/SUPPRESSION";
             this.labelActionTitle.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -111,7 +111,7 @@
             this.cbStarsParticiper.FormattingEnabled = true;
             this.cbStarsParticiper.Location = new System.Drawing.Point(369, 347);
             this.cbStarsParticiper.Name = "cbStarsParticiper";
-            this.cbStarsParticiper.Size = new System.Drawing.Size(430, 29);
+            this.cbStarsParticiper.Size = new System.Drawing.Size(430, 26);
             this.cbStarsParticiper.TabIndex = 108;
             // 
             // labelSpecial
@@ -120,7 +120,7 @@
             this.labelSpecial.Font = new System.Drawing.Font("Netflix Sans", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelSpecial.Location = new System.Drawing.Point(302, 349);
             this.labelSpecial.Name = "labelSpecial";
-            this.labelSpecial.Size = new System.Drawing.Size(55, 23);
+            this.labelSpecial.Size = new System.Drawing.Size(47, 19);
             this.labelSpecial.TabIndex = 109;
             this.labelSpecial.Text = "Stars";
             this.labelSpecial.Visible = false;
@@ -131,7 +131,7 @@
             this.label1.Font = new System.Drawing.Font("Netflix Sans", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(225, 240);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(138, 23);
+            this.label1.Size = new System.Drawing.Size(116, 19);
             this.label1.TabIndex = 111;
             this.label1.Text = "Manifestations";
             this.label1.Visible = false;
@@ -143,15 +143,15 @@
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Location = new System.Drawing.Point(369, 238);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(430, 29);
+            this.comboBox1.Size = new System.Drawing.Size(430, 26);
             this.comboBox1.TabIndex = 110;
             // 
             // FormCRUDParticiper
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
-            this.ClientSize = new System.Drawing.Size(1070, 550);
+            this.ClientSize = new System.Drawing.Size(1070, 595);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.labelSpecial);

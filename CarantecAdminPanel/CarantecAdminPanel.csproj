@@ -275,6 +275,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AvisInverse.png" />
+    <None Include="Resources\carantecred.png" />
     <Content Include="Resources\EtoileRempli.png" />
     <None Include="Resources\UserInverse.png" />
     <None Include="Resources\EtoileVide1.png" />

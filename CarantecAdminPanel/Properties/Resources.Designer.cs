@@ -83,6 +83,16 @@ namespace CarantecAdminPanel.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap carantecred {
+            get {
+                object obj = ResourceManager.GetObject("carantecred", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap EtoileRempli {
             get {
                 object obj = ResourceManager.GetObject("EtoileRempli", resourceCulture);
