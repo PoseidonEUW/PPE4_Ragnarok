@@ -58,14 +58,6 @@ class ManifestationController extends Controller
      */
     public function show($id)
     {
-        /* $manif = DB::table('MANIFESTATION')
-         ->join('LIEU','MANIFESTATION.IDLIEU','=','LIEU.IDLIEU')
-             ->where('MANIFESTATION.IDMANIF','=',$num)
-         ->get();
-         return view('manifestation.show',[
-             'manifestations'=>$manif[$num]
-
-         ]);*/
         $manifestation = Manifestation::all();
         $manifestation = $manifestation->find($id);
         return view('manifestations.show')->with('manifestation',$manifestation);

@@ -10,7 +10,7 @@
 </head>
 <body class="font-sans bg-gray-900 text-white">
 <nav class=" border-b border-gray-800">
-<div class="container mix-auto fixed items-center justify-between px4 py6 text-red-600 ">
+<div class="container mix-auto items-center justify-between px4 py6 text-red-600 ">
     <ul class=" flex items-center">
 
         <li>
@@ -76,7 +76,7 @@
 </nav>
 @yield('content')
 
-<footer class=" fixed-bottom bg-gray-800 relative pt-1 border-b-2 border-gray-300">
+<footer class="fixed-bottom bg-gray-800 relative pt-1 border-b-2 border-gray-300">
     <div class="container mx-auto px-6">
 
         <div class="sm:flex sm:mt-8">

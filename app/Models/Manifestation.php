@@ -14,7 +14,4 @@ class Manifestation extends Model
 
 
 
-
-
-
 }
