@@ -136,35 +136,35 @@ namespace CarantecAdminPanel
             dgvDonnees.Visible = true;
         }
 
-        private void btnManifestation_Click(object sender, EventArgs e)
+        private void btnManifestation_Click_1(object sender, EventArgs e)
         {
             btnTables("manifestation");
             dgvDonnees.Columns[0].Width = 150;
             dgvDonnees.Visible = true;
         }
 
-        private void btnReservation_Click(object sender, EventArgs e)
+        private void btnReservation_Click_1(object sender, EventArgs e)
         {
             btnTables("reservation");
             dgvDonnees.Columns[0].Width = 250;
             dgvDonnees.Visible = true;
         }
 
-        private void btnLieux_Click(object sender, EventArgs e)
+        private void btnLieux_Click_1(object sender, EventArgs e)
         {
             btnTables("lieu");
             dgvDonnees.Columns[0].Width = 150;
             dgvDonnees.Visible = true;
         }
 
-        private void btnAvis_Click(object sender, EventArgs e)
+        private void btnAvis_Click_1(object sender, EventArgs e)
         {
             btnTables("avis");
             dgvDonnees.Columns[0].Width = 150;
             dgvDonnees.Visible = true;
         }
 
-        private void btnPublic_Click(object sender, EventArgs e)
+        private void btnPublic_Click_1(object sender, EventArgs e)
         {
             btnTables("public");
             dgvDonnees.Columns[0].Width = 250;
@@ -252,7 +252,11 @@ namespace CarantecAdminPanel
             btnTables("utilisateur");
         }
 
+<<<<<<< HEAD
         private void gradientPanel1_Paint(object sender, PaintEventArgs e)
+=======
+        private void btnFestival_Enter(object sender, EventArgs e)
+>>>>>>> localC#eg
         {
 
         }

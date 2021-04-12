@@ -73,7 +73,7 @@
             // 
             this.labelSample.AutoSize = true;
             this.labelSample.Font = new System.Drawing.Font("Netflix Sans", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelSample.Location = new System.Drawing.Point(279, 193);
+            this.labelSample.Location = new System.Drawing.Point(265, 191);
             this.labelSample.Name = "labelSample";
             this.labelSample.Size = new System.Drawing.Size(89, 24);
             this.labelSample.TabIndex = 4;

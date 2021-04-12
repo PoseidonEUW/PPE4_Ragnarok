@@ -42,14 +42,15 @@
             this.labelTrier = new System.Windows.Forms.Label();
             this.cbTrier = new System.Windows.Forms.ComboBox();
             this.gradientPanel1 = new CarantecAdminPanel.GradientPanel();
+            this.btnDeco = new System.Windows.Forms.Button();
+            this.btnParticiper = new System.Windows.Forms.Button();
             this.btnAvis = new System.Windows.Forms.Button();
+            this.btnReservation = new System.Windows.Forms.Button();
             this.btnLieux = new System.Windows.Forms.Button();
             this.btnPublic = new System.Windows.Forms.Button();
-            this.btnReservation = new System.Windows.Forms.Button();
-            this.btnManifestation = new System.Windows.Forms.Button();
-            this.btnDeco = new System.Windows.Forms.Button();
-            this.btnFestival = new System.Windows.Forms.Button();
             this.btnUsers = new System.Windows.Forms.Button();
+            this.btnManifestation = new System.Windows.Forms.Button();
+            this.btnFestival = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDonnees)).BeginInit();
             this.contextMenuStrip1.SuspendLayout();
@@ -192,100 +193,21 @@
             this.gradientPanel1.BackColor = System.Drawing.Color.Transparent;
             this.gradientPanel1.ColorBottom = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
             this.gradientPanel1.ColorTop = System.Drawing.Color.Black;
+            this.gradientPanel1.Controls.Add(this.btnParticiper);
             this.gradientPanel1.Controls.Add(this.btnAvis);
+            this.gradientPanel1.Controls.Add(this.btnReservation);
             this.gradientPanel1.Controls.Add(this.btnLieux);
             this.gradientPanel1.Controls.Add(this.btnPublic);
-            this.gradientPanel1.Controls.Add(this.btnReservation);
+            this.gradientPanel1.Controls.Add(this.btnUsers);
             this.gradientPanel1.Controls.Add(this.btnManifestation);
             this.gradientPanel1.Controls.Add(this.btnDeco);
             this.gradientPanel1.Controls.Add(this.btnFestival);
-            this.gradientPanel1.Controls.Add(this.btnUsers);
             this.gradientPanel1.Controls.Add(this.pictureBox1);
             this.gradientPanel1.Location = new System.Drawing.Point(-1, -3);
             this.gradientPanel1.Name = "gradientPanel1";
             this.gradientPanel1.Size = new System.Drawing.Size(1925, 120);
             this.gradientPanel1.TabIndex = 0;
             this.gradientPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.gradientPanel1_Paint);
-            // 
-            // btnAvis
-            // 
-            this.btnAvis.FlatAppearance.BorderSize = 0;
-            this.btnAvis.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.btnAvis.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.btnAvis.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAvis.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAvis.ForeColor = System.Drawing.Color.White;
-            this.btnAvis.Location = new System.Drawing.Point(1289, 81);
-            this.btnAvis.Name = "btnAvis";
-            this.btnAvis.Size = new System.Drawing.Size(45, 25);
-            this.btnAvis.TabIndex = 8;
-            this.btnAvis.Text = "Avis";
-            this.btnAvis.UseVisualStyleBackColor = true;
-            this.btnAvis.Click += new System.EventHandler(this.btnAvis_Click);
-            // 
-            // btnLieux
-            // 
-            this.btnLieux.FlatAppearance.BorderSize = 0;
-            this.btnLieux.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.btnLieux.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.btnLieux.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLieux.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLieux.ForeColor = System.Drawing.Color.White;
-            this.btnLieux.Location = new System.Drawing.Point(1425, 81);
-            this.btnLieux.Name = "btnLieux";
-            this.btnLieux.Size = new System.Drawing.Size(54, 25);
-            this.btnLieux.TabIndex = 7;
-            this.btnLieux.Text = "Lieux";
-            this.btnLieux.UseVisualStyleBackColor = true;
-            this.btnLieux.Click += new System.EventHandler(this.btnLieux_Click);
-            // 
-            // btnPublic
-            // 
-            this.btnPublic.FlatAppearance.BorderSize = 0;
-            this.btnPublic.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.btnPublic.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.btnPublic.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPublic.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPublic.ForeColor = System.Drawing.Color.White;
-            this.btnPublic.Location = new System.Drawing.Point(973, 81);
-            this.btnPublic.Name = "btnPublic";
-            this.btnPublic.Size = new System.Drawing.Size(63, 25);
-            this.btnPublic.TabIndex = 6;
-            this.btnPublic.Text = "Public";
-            this.btnPublic.UseVisualStyleBackColor = true;
-            this.btnPublic.Click += new System.EventHandler(this.btnPublic_Click);
-            // 
-            // btnReservation
-            // 
-            this.btnReservation.FlatAppearance.BorderSize = 0;
-            this.btnReservation.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.btnReservation.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.btnReservation.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnReservation.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnReservation.ForeColor = System.Drawing.Color.White;
-            this.btnReservation.Location = new System.Drawing.Point(1107, 81);
-            this.btnReservation.Name = "btnReservation";
-            this.btnReservation.Size = new System.Drawing.Size(110, 25);
-            this.btnReservation.TabIndex = 5;
-            this.btnReservation.Text = "Réservations";
-            this.btnReservation.UseVisualStyleBackColor = true;
-            this.btnReservation.Click += new System.EventHandler(this.btnReservation_Click);
-            // 
-            // btnManifestation
-            // 
-            this.btnManifestation.FlatAppearance.BorderSize = 0;
-            this.btnManifestation.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.btnManifestation.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.btnManifestation.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnManifestation.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnManifestation.ForeColor = System.Drawing.Color.White;
-            this.btnManifestation.Location = new System.Drawing.Point(580, 81);
-            this.btnManifestation.Name = "btnManifestation";
-            this.btnManifestation.Size = new System.Drawing.Size(110, 25);
-            this.btnManifestation.TabIndex = 4;
-            this.btnManifestation.Text = "Manifestations";
-            this.btnManifestation.UseVisualStyleBackColor = true;
-            this.btnManifestation.Click += new System.EventHandler(this.btnManifestation_Click);
             // 
             // btnDeco
             // 
@@ -303,46 +225,176 @@
             this.btnDeco.UseVisualStyleBackColor = true;
             this.btnDeco.Click += new System.EventHandler(this.btnDeco_Click);
             // 
-            // btnFestival
+            // btnParticiper
             // 
-            this.btnFestival.FlatAppearance.BorderSize = 0;
-            this.btnFestival.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.btnFestival.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.btnFestival.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnFestival.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnFestival.ForeColor = System.Drawing.Color.White;
-            this.btnFestival.Location = new System.Drawing.Point(406, 81);
-            this.btnFestival.Name = "btnFestival";
-            this.btnFestival.Size = new System.Drawing.Size(89, 25);
-            this.btnFestival.TabIndex = 2;
-            this.btnFestival.Text = "Festivals";
-            this.btnFestival.UseVisualStyleBackColor = true;
-            this.btnFestival.Click += new System.EventHandler(this.btnFestival_Click);
+            this.btnParticiper.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnParticiper.FlatAppearance.BorderSize = 0;
+            this.btnParticiper.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnParticiper.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnParticiper.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnParticiper.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnParticiper.ForeColor = System.Drawing.Color.White;
+            this.btnParticiper.Image = global::CarantecAdminPanel.Properties.Resources.ParticipationInverse;
+            this.btnParticiper.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnParticiper.Location = new System.Drawing.Point(741, 15);
+            this.btnParticiper.Name = "btnParticiper";
+            this.btnParticiper.Size = new System.Drawing.Size(98, 102);
+            this.btnParticiper.TabIndex = 10;
+            this.btnParticiper.Text = "Participation";
+            this.btnParticiper.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnParticiper.UseVisualStyleBackColor = true;
+            // 
+            // btnAvis
+            // 
+            this.btnAvis.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAvis.FlatAppearance.BorderSize = 0;
+            this.btnAvis.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnAvis.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnAvis.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAvis.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAvis.ForeColor = System.Drawing.Color.White;
+            this.btnAvis.Image = global::CarantecAdminPanel.Properties.Resources.AvisInverse;
+            this.btnAvis.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnAvis.Location = new System.Drawing.Point(1468, 15);
+            this.btnAvis.Name = "btnAvis";
+            this.btnAvis.Size = new System.Drawing.Size(89, 102);
+            this.btnAvis.TabIndex = 9;
+            this.btnAvis.Text = "Avis";
+            this.btnAvis.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnAvis.UseVisualStyleBackColor = true;
+            this.btnAvis.Click += new System.EventHandler(this.btnAvis_Click_1);
+            // 
+            // btnReservation
+            // 
+            this.btnReservation.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnReservation.FlatAppearance.BorderSize = 0;
+            this.btnReservation.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnReservation.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnReservation.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnReservation.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReservation.ForeColor = System.Drawing.Color.White;
+            this.btnReservation.Image = global::CarantecAdminPanel.Properties.Resources.ReservationInverse;
+            this.btnReservation.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnReservation.Location = new System.Drawing.Point(1323, 15);
+            this.btnReservation.Name = "btnReservation";
+            this.btnReservation.Size = new System.Drawing.Size(89, 102);
+            this.btnReservation.TabIndex = 8;
+            this.btnReservation.Text = "Réservation";
+            this.btnReservation.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnReservation.UseVisualStyleBackColor = true;
+            this.btnReservation.Click += new System.EventHandler(this.btnReservation_Click_1);
+            // 
+            // btnLieux
+            // 
+            this.btnLieux.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnLieux.FlatAppearance.BorderSize = 0;
+            this.btnLieux.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnLieux.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnLieux.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLieux.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLieux.ForeColor = System.Drawing.Color.White;
+            this.btnLieux.Image = global::CarantecAdminPanel.Properties.Resources.LieuxInverse;
+            this.btnLieux.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnLieux.Location = new System.Drawing.Point(1183, 15);
+            this.btnLieux.Name = "btnLieux";
+            this.btnLieux.Size = new System.Drawing.Size(89, 102);
+            this.btnLieux.TabIndex = 7;
+            this.btnLieux.Text = "Lieux";
+            this.btnLieux.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnLieux.UseVisualStyleBackColor = true;
+            this.btnLieux.Click += new System.EventHandler(this.btnLieux_Click_1);
+            // 
+            // btnPublic
+            // 
+            this.btnPublic.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnPublic.FlatAppearance.BorderSize = 0;
+            this.btnPublic.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnPublic.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnPublic.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPublic.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPublic.ForeColor = System.Drawing.Color.White;
+            this.btnPublic.Image = global::CarantecAdminPanel.Properties.Resources.PublicInverse;
+            this.btnPublic.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnPublic.Location = new System.Drawing.Point(1038, 15);
+            this.btnPublic.Name = "btnPublic";
+            this.btnPublic.Size = new System.Drawing.Size(89, 102);
+            this.btnPublic.TabIndex = 6;
+            this.btnPublic.Text = "Public";
+            this.btnPublic.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnPublic.UseVisualStyleBackColor = true;
+            this.btnPublic.Click += new System.EventHandler(this.btnPublic_Click_1);
             // 
             // btnUsers
             // 
+            this.btnUsers.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnUsers.FlatAppearance.BorderSize = 0;
             this.btnUsers.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.btnUsers.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnUsers.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnUsers.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUsers.ForeColor = System.Drawing.Color.White;
-            this.btnUsers.Location = new System.Drawing.Point(788, 81);
+            this.btnUsers.Image = global::CarantecAdminPanel.Properties.Resources.UserInverse;
+            this.btnUsers.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnUsers.Location = new System.Drawing.Point(895, 15);
             this.btnUsers.Name = "btnUsers";
-            this.btnUsers.Size = new System.Drawing.Size(85, 25);
-            this.btnUsers.TabIndex = 1;
+            this.btnUsers.Size = new System.Drawing.Size(89, 102);
+            this.btnUsers.TabIndex = 5;
             this.btnUsers.Text = "Utilisateurs";
+            this.btnUsers.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnUsers.UseVisualStyleBackColor = true;
-            this.btnUsers.Click += new System.EventHandler(this.btnUsers_Click);
+            this.btnUsers.Click += new System.EventHandler(this.btnUsers_Click_1);
+            // 
+            // btnManifestation
+            // 
+            this.btnManifestation.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnManifestation.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnManifestation.FlatAppearance.BorderSize = 0;
+            this.btnManifestation.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnManifestation.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnManifestation.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnManifestation.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnManifestation.ForeColor = System.Drawing.Color.White;
+            this.btnManifestation.Image = global::CarantecAdminPanel.Properties.Resources.ManifestationsInverse;
+            this.btnManifestation.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnManifestation.Location = new System.Drawing.Point(573, 15);
+            this.btnManifestation.Name = "btnManifestation";
+            this.btnManifestation.Size = new System.Drawing.Size(105, 102);
+            this.btnManifestation.TabIndex = 4;
+            this.btnManifestation.Text = "Manifestations";
+            this.btnManifestation.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnManifestation.UseVisualStyleBackColor = true;
+            this.btnManifestation.Click += new System.EventHandler(this.btnManifestation_Click_1);
+            // 
+            // btnFestival
+            // 
+            this.btnFestival.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnFestival.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnFestival.FlatAppearance.BorderSize = 0;
+            this.btnFestival.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnFestival.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnFestival.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnFestival.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFestival.ForeColor = System.Drawing.Color.White;
+            this.btnFestival.Image = global::CarantecAdminPanel.Properties.Resources.FestivalInverse;
+            this.btnFestival.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnFestival.Location = new System.Drawing.Point(429, 15);
+            this.btnFestival.Name = "btnFestival";
+            this.btnFestival.Size = new System.Drawing.Size(90, 102);
+            this.btnFestival.TabIndex = 2;
+            this.btnFestival.Text = "Festivals";
+            this.btnFestival.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnFestival.UseVisualStyleBackColor = true;
+            this.btnFestival.Click += new System.EventHandler(this.btnFestival_Click);
+            this.btnFestival.Enter += new System.EventHandler(this.btnFestival_Enter);
             // 
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.BackgroundImage = global::CarantecAdminPanel.Properties.Resources.carantec;
+            this.pictureBox1.BackgroundImage = global::CarantecAdminPanel.Properties.Resources.carantecred;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox1.Location = new System.Drawing.Point(37, 3);
+            this.pictureBox1.Location = new System.Drawing.Point(30, 3);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(250, 103);
+            this.pictureBox1.Size = new System.Drawing.Size(257, 114);
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.PictureBox1_Click);
@@ -352,7 +404,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
-            this.ClientSize = new System.Drawing.Size(1920, 942);
+            this.ClientSize = new System.Drawing.Size(1925, 1209);
             this.Controls.Add(this.cbTrier);
             this.Controls.Add(this.labelTrier);
             this.Controls.Add(this.dgvDonnees);
@@ -378,14 +430,8 @@
 
         private GradientPanel gradientPanel1;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Button btnAvis;
-        private System.Windows.Forms.Button btnLieux;
-        private System.Windows.Forms.Button btnPublic;
-        private System.Windows.Forms.Button btnReservation;
-        private System.Windows.Forms.Button btnManifestation;
         private System.Windows.Forms.Button btnDeco;
         private System.Windows.Forms.Button btnFestival;
-        private System.Windows.Forms.Button btnUsers;
         private System.Windows.Forms.DataGridView dgvDonnees;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.ToolStripMenuItem ajouterToolStripMenuItem;
@@ -393,6 +439,13 @@
         private System.Windows.Forms.ToolStripMenuItem supprimerToolStripMenuItem;
         private System.Windows.Forms.Label labelTrier;
         private System.Windows.Forms.ComboBox cbTrier;
+        private System.Windows.Forms.Button btnAvis;
+        private System.Windows.Forms.Button btnReservation;
+        private System.Windows.Forms.Button btnLieux;
+        private System.Windows.Forms.Button btnPublic;
+        private System.Windows.Forms.Button btnUsers;
+        private System.Windows.Forms.Button btnManifestation;
+        private System.Windows.Forms.Button btnParticiper;
     }
 }
 

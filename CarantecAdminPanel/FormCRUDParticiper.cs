@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace CarantecAdminPanel
 {
-    public partial class FormCRUDPublic : Form
+    public partial class FormCRUDParticiper : Form
     {
-        public FormCRUDPublic()
+        public FormCRUDParticiper()
         {
             InitializeComponent();
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

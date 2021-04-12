@@ -55,16 +55,16 @@ namespace CarantecAdminPanel
             this.tbNomFestival.ForeColor = System.Drawing.Color.White;
             this.tbNomFestival.Location = new System.Drawing.Point(397, 396);
             this.tbNomFestival.Name = "tbNomFestival";
-            this.tbNomFestival.Size = new System.Drawing.Size(349, 27);
+            this.tbNomFestival.Size = new System.Drawing.Size(349, 31);
             this.tbNomFestival.TabIndex = 33;
             // 
             // labelNom
             // 
             this.labelNom.AutoSize = true;
             this.labelNom.Font = new System.Drawing.Font("Netflix Sans", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelNom.Location = new System.Drawing.Point(349, 398);
+            this.labelNom.Location = new System.Drawing.Point(339, 398);
             this.labelNom.Name = "labelNom";
-            this.labelNom.Size = new System.Drawing.Size(42, 19);
+            this.labelNom.Size = new System.Drawing.Size(52, 24);
             this.labelNom.TabIndex = 32;
             this.labelNom.Text = "Nom";
             // 
@@ -75,7 +75,7 @@ namespace CarantecAdminPanel
             this.labelError.ForeColor = System.Drawing.Color.Firebrick;
             this.labelError.Location = new System.Drawing.Point(365, 457);
             this.labelError.Name = "labelError";
-            this.labelError.Size = new System.Drawing.Size(371, 19);
+            this.labelError.Size = new System.Drawing.Size(465, 24);
             this.labelError.TabIndex = 31;
             this.labelError.Text = "ERROR SAMPLE ERROR SAMPLE ERROR SAMPLE";
             this.labelError.Visible = false;
@@ -102,7 +102,7 @@ namespace CarantecAdminPanel
             this.labelActionTitle.Location = new System.Drawing.Point(449, 133);
             this.labelActionTitle.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelActionTitle.Name = "labelActionTitle";
-            this.labelActionTitle.Size = new System.Drawing.Size(325, 27);
+            this.labelActionTitle.Size = new System.Drawing.Size(420, 34);
             this.labelActionTitle.TabIndex = 29;
             this.labelActionTitle.Text = "MODIFICATION/SUPPRESSION";
             this.labelActionTitle.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -144,16 +144,16 @@ namespace CarantecAdminPanel
             this.dateTimeAnnee.Location = new System.Drawing.Point(397, 199);
             this.dateTimeAnnee.Name = "dateTimeAnnee";
             this.dateTimeAnnee.ShowUpDown = true;
-            this.dateTimeAnnee.Size = new System.Drawing.Size(104, 27);
+            this.dateTimeAnnee.Size = new System.Drawing.Size(104, 31);
             this.dateTimeAnnee.TabIndex = 34;
             // 
             // labelAnnee
             // 
             this.labelAnnee.AutoSize = true;
             this.labelAnnee.Font = new System.Drawing.Font("Netflix Sans", 11.25F);
-            this.labelAnnee.Location = new System.Drawing.Point(338, 205);
+            this.labelAnnee.Location = new System.Drawing.Point(324, 204);
             this.labelAnnee.Name = "labelAnnee";
-            this.labelAnnee.Size = new System.Drawing.Size(53, 19);
+            this.labelAnnee.Size = new System.Drawing.Size(67, 24);
             this.labelAnnee.TabIndex = 35;
             this.labelAnnee.Text = "Année";
             // 
@@ -166,16 +166,16 @@ namespace CarantecAdminPanel
             this.cbThematique.FormattingEnabled = true;
             this.cbThematique.Location = new System.Drawing.Point(397, 265);
             this.cbThematique.Name = "cbThematique";
-            this.cbThematique.Size = new System.Drawing.Size(349, 21);
+            this.cbThematique.Size = new System.Drawing.Size(349, 24);
             this.cbThematique.TabIndex = 36;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Netflix Sans", 11.25F);
-            this.label1.Location = new System.Drawing.Point(301, 265);
+            this.label1.Location = new System.Drawing.Point(274, 262);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(90, 19);
+            this.label1.Size = new System.Drawing.Size(117, 24);
             this.label1.TabIndex = 37;
             this.label1.Text = "Thématique";
             // 
@@ -188,22 +188,22 @@ namespace CarantecAdminPanel
             this.cbResponsable.FormattingEnabled = true;
             this.cbResponsable.Location = new System.Drawing.Point(397, 334);
             this.cbResponsable.Name = "cbResponsable";
-            this.cbResponsable.Size = new System.Drawing.Size(349, 21);
+            this.cbResponsable.Size = new System.Drawing.Size(349, 24);
             this.cbResponsable.TabIndex = 38;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Netflix Sans", 11.25F);
-            this.label2.Location = new System.Drawing.Point(295, 334);
+            this.label2.Location = new System.Drawing.Point(265, 331);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(96, 19);
+            this.label2.Size = new System.Drawing.Size(126, 24);
             this.label2.TabIndex = 39;
             this.label2.Text = "Responsable";
             // 
             // FormCRUDFestival
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
             this.ClientSize = new System.Drawing.Size(1070, 550);

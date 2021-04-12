@@ -1,8 +1,6 @@
-﻿using System.Windows.Forms;
-
-namespace CarantecAdminPanel
+﻿namespace CarantecAdminPanel
 {
-    partial class FormCRUDPublic
+    partial class FormCRUDParticiper
     {
         /// <summary>
         /// Required designer variable.
@@ -30,50 +28,18 @@ namespace CarantecAdminPanel
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
-            this.tbLibellePublic = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
             this.labelError = new System.Windows.Forms.Label();
             this.btnEnregistrer = new System.Windows.Forms.Button();
             this.labelActionTitle = new System.Windows.Forms.Label();
             this.gradientPanel1 = new CarantecAdminPanel.GradientPanel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.rtbDescrPublic = new System.Windows.Forms.RichTextBox();
+            this.cbStarsParticiper = new System.Windows.Forms.ComboBox();
+            this.labelSpecial = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.gradientPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Netflix Sans", 11.25F);
-            this.label1.Location = new System.Drawing.Point(19, 272);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(113, 24);
-            this.label1.TabIndex = 102;
-            this.label1.Text = "Description";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
-            // 
-            // tbLibellePublic
-            // 
-            this.tbLibellePublic.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
-            this.tbLibellePublic.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.tbLibellePublic.Font = new System.Drawing.Font("Netflix Sans", 11.25F);
-            this.tbLibellePublic.ForeColor = System.Drawing.Color.White;
-            this.tbLibellePublic.Location = new System.Drawing.Point(360, 203);
-            this.tbLibellePublic.Name = "tbLibellePublic";
-            this.tbLibellePublic.Size = new System.Drawing.Size(349, 31);
-            this.tbLibellePublic.TabIndex = 100;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Netflix Sans", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(283, 205);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(67, 23);
-            this.label6.TabIndex = 99;
-            this.label6.Text = "Libelle";
             // 
             // labelError
             // 
@@ -82,8 +48,8 @@ namespace CarantecAdminPanel
             this.labelError.ForeColor = System.Drawing.Color.Firebrick;
             this.labelError.Location = new System.Drawing.Point(365, 457);
             this.labelError.Name = "labelError";
-            this.labelError.Size = new System.Drawing.Size(465, 24);
-            this.labelError.TabIndex = 98;
+            this.labelError.Size = new System.Drawing.Size(371, 19);
+            this.labelError.TabIndex = 107;
             this.labelError.Text = "ERROR SAMPLE ERROR SAMPLE ERROR SAMPLE";
             this.labelError.Visible = false;
             // 
@@ -98,7 +64,7 @@ namespace CarantecAdminPanel
             this.btnEnregistrer.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnEnregistrer.Name = "btnEnregistrer";
             this.btnEnregistrer.Size = new System.Drawing.Size(248, 56);
-            this.btnEnregistrer.TabIndex = 97;
+            this.btnEnregistrer.TabIndex = 106;
             this.btnEnregistrer.Text = "Enregistrer";
             this.btnEnregistrer.UseVisualStyleBackColor = false;
             // 
@@ -106,11 +72,11 @@ namespace CarantecAdminPanel
             // 
             this.labelActionTitle.AutoSize = true;
             this.labelActionTitle.Font = new System.Drawing.Font("Netflix Sans", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelActionTitle.Location = new System.Drawing.Point(446, 133);
+            this.labelActionTitle.Location = new System.Drawing.Point(342, 133);
             this.labelActionTitle.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelActionTitle.Name = "labelActionTitle";
-            this.labelActionTitle.Size = new System.Drawing.Size(420, 34);
-            this.labelActionTitle.TabIndex = 96;
+            this.labelActionTitle.Size = new System.Drawing.Size(325, 27);
+            this.labelActionTitle.TabIndex = 105;
             this.labelActionTitle.Text = "MODIFICATION/SUPPRESSION";
             this.labelActionTitle.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
@@ -124,7 +90,7 @@ namespace CarantecAdminPanel
             this.gradientPanel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.gradientPanel1.Name = "gradientPanel1";
             this.gradientPanel1.Size = new System.Drawing.Size(1071, 103);
-            this.gradientPanel1.TabIndex = 95;
+            this.gradientPanel1.TabIndex = 104;
             // 
             // pictureBox1
             // 
@@ -138,35 +104,66 @@ namespace CarantecAdminPanel
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // rtbDescrPublic
+            // cbStarsParticiper
             // 
-            this.rtbDescrPublic.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
-            this.rtbDescrPublic.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.rtbDescrPublic.ForeColor = System.Drawing.Color.White;
-            this.rtbDescrPublic.Location = new System.Drawing.Point(138, 276);
-            this.rtbDescrPublic.Name = "rtbDescrPublic";
-            this.rtbDescrPublic.Size = new System.Drawing.Size(814, 168);
-            this.rtbDescrPublic.TabIndex = 103;
-            this.rtbDescrPublic.Text = "";
+            this.cbStarsParticiper.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
+            this.cbStarsParticiper.Font = new System.Drawing.Font("Netflix Sans", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbStarsParticiper.FormattingEnabled = true;
+            this.cbStarsParticiper.Location = new System.Drawing.Point(369, 347);
+            this.cbStarsParticiper.Name = "cbStarsParticiper";
+            this.cbStarsParticiper.Size = new System.Drawing.Size(430, 26);
+            this.cbStarsParticiper.TabIndex = 108;
             // 
-            // FormCRUDPublic
+            // labelSpecial
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.labelSpecial.AutoSize = true;
+            this.labelSpecial.Font = new System.Drawing.Font("Netflix Sans", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelSpecial.Location = new System.Drawing.Point(302, 349);
+            this.labelSpecial.Name = "labelSpecial";
+            this.labelSpecial.Size = new System.Drawing.Size(47, 19);
+            this.labelSpecial.TabIndex = 109;
+            this.labelSpecial.Text = "Stars";
+            this.labelSpecial.Visible = false;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Netflix Sans", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(225, 240);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(116, 19);
+            this.label1.TabIndex = 111;
+            this.label1.Text = "Manifestations";
+            this.label1.Visible = false;
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
+            this.comboBox1.Font = new System.Drawing.Font("Netflix Sans", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(369, 238);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(430, 26);
+            this.comboBox1.TabIndex = 110;
+            // 
+            // FormCRUDParticiper
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
-            this.ClientSize = new System.Drawing.Size(1070, 550);
-            this.Controls.Add(this.rtbDescrPublic);
+            this.ClientSize = new System.Drawing.Size(1070, 595);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.tbLibellePublic);
-            this.Controls.Add(this.label6);
+            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.labelSpecial);
+            this.Controls.Add(this.cbStarsParticiper);
             this.Controls.Add(this.labelError);
             this.Controls.Add(this.btnEnregistrer);
             this.Controls.Add(this.labelActionTitle);
             this.Controls.Add(this.gradientPanel1);
             this.Font = new System.Drawing.Font("Netflix Sans", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.Color.White;
-            this.Name = "FormCRUDPublic";
-            this.Text = "FormCRUDPublic";
+            this.Name = "FormCRUDParticiper";
+            this.Text = "FormCRUDParticiper";
             this.gradientPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
@@ -175,24 +172,14 @@ namespace CarantecAdminPanel
         }
 
         #endregion
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox tbLibellePublic;
-        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label labelError;
         private System.Windows.Forms.Button btnEnregistrer;
         private System.Windows.Forms.Label labelActionTitle;
         private GradientPanel gradientPanel1;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.RichTextBox rtbDescrPublic;
-
-        public Label Label1 { get => label1; set => label1 = value; }
-        public TextBox TbLibellePublic { get => tbLibellePublic; set => tbLibellePublic = value; }
-        public Label Label6 { get => label6; set => label6 = value; }
-        public Label LabelError { get => labelError; set => labelError = value; }
-        public Button BtnEnregistrer { get => btnEnregistrer; set => btnEnregistrer = value; }
-        public Label LabelActionTitle { get => labelActionTitle; set => labelActionTitle = value; }
-        internal GradientPanel GradientPanel1 { get => gradientPanel1; set => gradientPanel1 = value; }
-        public PictureBox PictureBox1 { get => pictureBox1; set => pictureBox1 = value; }
-        public RichTextBox RtbDescrPublic { get => rtbDescrPublic; set => rtbDescrPublic = value; }
+        private System.Windows.Forms.ComboBox cbStarsParticiper;
+        private System.Windows.Forms.Label labelSpecial;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ComboBox comboBox1;
     }
 }
