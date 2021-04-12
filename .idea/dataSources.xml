@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
-    <data-source source="LOCAL" name="@192.168.164.1" uuid="f40967a3-25c0-48ec-a291-cc1ccfaee098">
+    <data-source source="LOCAL" name="Elliot Bases de données" uuid="cc078093-c431-4242-9429-aef81adc17af">
       <driver-ref>mysql.8</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
-      <jdbc-url>jdbc:mysql://192.168.164.1:3306</jdbc-url>
+      <jdbc-url>jdbc:mysql://192.168.164.1:3306/PPE4_Ragnarok</jdbc-url>
+      <working-dir>$ProjectFileDir$</working-dir>
     </data-source>
   </component>
 </project>

@@ -11,6 +11,8 @@ class Manifestation extends Model
     protected $table = 'MANIFESTATION';
     public $timestamps = false;
     protected $primaryKey = 'IDMANIF';
+    protected $dates = ['DATEMANIF', 'HORAIREDEBUTMANIF'];
+
 
 
 

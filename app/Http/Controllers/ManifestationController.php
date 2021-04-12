@@ -58,7 +58,7 @@ class ManifestationController extends Controller
      */
     public function show($id)
     {
-        $manifestation = Manifestation::all();
+        $manifestation = Manifestation::join('LIEU','MANIFESTATION.IDLIEU','=','LIEU.IDLIEU');
         $manifestation = $manifestation->find($id);
         return view('manifestations.show')->with('manifestation',$manifestation);
 

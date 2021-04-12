@@ -57,4 +57,13 @@ Route::post('/settings',function(Request $request){
 });
 
 // Fin de Mettre a jour
+// Show Billets
+Route::get('/reservations', function () {
+    return view('reservations',[
+        'user'=>request()->user(),
+
+    ]);
+})->middleware(['auth'])->name('reservations');
+
+// Fin de Show Billets
 require __DIR__.'/auth.php';
