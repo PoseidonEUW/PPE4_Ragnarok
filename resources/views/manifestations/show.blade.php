@@ -20,14 +20,22 @@
                     {{$manifestation->DESCRIPTIONMANIF}}
                 </p>
                 @if (Auth::check())
-                <div class="mt-12">
+                    <form class="mt-12" action="/manifestations" method="POST">
+                        <div class="flex items-center">
+                        <label class="mx-3" for="quantiter">Quantiter: </label>
+                        <input type="number" id="quantiter" name="quantiter" min="1" max="10">
+                        </div>
+                        <button class="position-center bg-red-600 text-gray-300 rounded font-semibold px-5 py-4 hover:bg-red-400 transition ease-in-out duration-150" type="submit">Réserver</button>
+                    </form>
+                <!-- >div class="mt-12">
 
-                        <button class="flex items-center bg-red-600 text-gray-300 rounded font-semibold px-5 py-4 hover:bg-red-400 transition ease-in-out duration-150">Réserver</button>
-                </div>
+                        <
+                </div> -->
                 @endif
             </div>
 
         </div>
+
 
     </div>
 
