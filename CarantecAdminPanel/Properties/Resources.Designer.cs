@@ -73,6 +73,26 @@ namespace CarantecAdminPanel.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap AvisInverseRed {
+            get {
+                object obj = ResourceManager.GetObject("AvisInverseRed", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap AvisInverseRedH {
+            get {
+                object obj = ResourceManager.GetObject("AvisInverseRedH", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap carantec {
             get {
                 object obj = ResourceManager.GetObject("carantec", resourceCulture);
@@ -86,6 +106,16 @@ namespace CarantecAdminPanel.Properties {
         internal static System.Drawing.Bitmap carantecred {
             get {
                 object obj = ResourceManager.GetObject("carantecred", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap carantecred1 {
+            get {
+                object obj = ResourceManager.GetObject("carantecred1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -123,9 +153,29 @@ namespace CarantecAdminPanel.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap FestivalInverseRed {
+            get {
+                object obj = ResourceManager.GetObject("FestivalInverseRed", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap LieuxInverse {
             get {
                 object obj = ResourceManager.GetObject("LieuxInverse", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap LieuxInverseRed {
+            get {
+                object obj = ResourceManager.GetObject("LieuxInverseRed", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -143,9 +193,29 @@ namespace CarantecAdminPanel.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap ManifestationsInverseRed {
+            get {
+                object obj = ResourceManager.GetObject("ManifestationsInverseRed", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap ParticipationInverse {
             get {
                 object obj = ResourceManager.GetObject("ParticipationInverse", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ParticipationInverseRed {
+            get {
+                object obj = ResourceManager.GetObject("ParticipationInverseRed", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -163,9 +233,29 @@ namespace CarantecAdminPanel.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap PublicInverseRed {
+            get {
+                object obj = ResourceManager.GetObject("PublicInverseRed", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap ReservationInverse {
             get {
                 object obj = ResourceManager.GetObject("ReservationInverse", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ReservationInverseRed {
+            get {
+                object obj = ResourceManager.GetObject("ReservationInverseRed", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -186,6 +276,16 @@ namespace CarantecAdminPanel.Properties {
         internal static System.Drawing.Bitmap UserInverse {
             get {
                 object obj = ResourceManager.GetObject("UserInverse", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap UserInverseRed {
+            get {
+                object obj = ResourceManager.GetObject("UserInverseRed", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

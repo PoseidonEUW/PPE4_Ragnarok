@@ -103,7 +103,8 @@ namespace CarantecAdminPanel
         /// </summary>
         public void seconnecter()
         {
-            string myConnectionString = "Database=PPE4_Ragnarok;Data Source=192.168.164.1;User Id=Titouan_Annaix;Password=JeSappelleTitouan;";
+            //string myConnectionString = "Database=PPE4_Ragnarok;Data Source=192.168.164.1;User Id=Titouan_Annaix;Password=JeSappelleTitouan;";
+            string myConnectionString = "Database=PPE4_Ragnarok;Data Source=localhost;User Id=root;Password=;";
             //string myConnectionString = "Database=PPE3_VELIBERTE;Data Source=192.168.153.1;User Id=YoBrnq;Password=azerty;";
             //string myConnectionString = "Database=2021_slamBDD4;Data Source=192.168.10.70;User Id=2021_slamBDD4;Password=P@ssw0rd;";
             myConnection = new MySqlConnection(myConnectionString);
@@ -264,7 +265,7 @@ namespace CarantecAdminPanel
             }
             if (table == "nomsAdhFromReserv")
             {
-                charger("select * from nomsAdhFromReserv;", dT[22], dA[22]);
+                charger("select * from nomsUserFromReserv;", dT[22], dA[22]);
             }
             if (table == "nomManifToIdManif")
             {
@@ -276,7 +277,7 @@ namespace CarantecAdminPanel
             }
             if (table == "adherentPersonne")
             {
-                charger("select * from adherentPersonne;", dT[25], dA[25]);
+                charger("select * from usersPersonne;", dT[25], dA[25]);
             }
             if (table == "artistePersonne")
             {

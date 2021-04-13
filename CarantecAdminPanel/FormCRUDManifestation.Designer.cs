@@ -118,11 +118,8 @@ namespace CarantecAdminPanel
             this.labelError.AutoSize = true;
             this.labelError.Font = new System.Drawing.Font("Netflix Sans", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelError.ForeColor = System.Drawing.Color.Firebrick;
-<<<<<<< HEAD
             this.labelError.Location = new System.Drawing.Point(365, 467);
-=======
             this.labelError.Location = new System.Drawing.Point(364, 577);
->>>>>>> localC#eg
             this.labelError.Name = "labelError";
             this.labelError.Size = new System.Drawing.Size(465, 24);
             this.labelError.TabIndex = 43;
@@ -136,11 +133,8 @@ namespace CarantecAdminPanel
             this.btnEnregistrer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEnregistrer.Font = new System.Drawing.Font("Netflix Sans", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEnregistrer.ForeColor = System.Drawing.Color.White;
-<<<<<<< HEAD
             this.btnEnregistrer.Location = new System.Drawing.Point(418, 497);
-=======
             this.btnEnregistrer.Location = new System.Drawing.Point(417, 607);
->>>>>>> localC#eg
             this.btnEnregistrer.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnEnregistrer.Name = "btnEnregistrer";
             this.btnEnregistrer.Size = new System.Drawing.Size(248, 56);
@@ -365,12 +359,9 @@ namespace CarantecAdminPanel
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
-<<<<<<< HEAD
             this.ClientSize = new System.Drawing.Size(1070, 564);
-=======
             this.ClientSize = new System.Drawing.Size(1070, 680);
             this.Controls.Add(this.gbTypeManif);
->>>>>>> localC#eg
             this.Controls.Add(this.cbAnnee);
             this.Controls.Add(this.tbPrixManif);
             this.Controls.Add(this.label7);

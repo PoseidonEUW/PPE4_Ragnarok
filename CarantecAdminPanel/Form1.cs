@@ -14,6 +14,7 @@ namespace CarantecAdminPanel
     {
         private BindingSource bindingSource1;
         public string tableG;
+        public string select;
 
         public Form1()
         {
@@ -70,7 +71,6 @@ namespace CarantecAdminPanel
             {
                 bindingSource1.DataSource = Controleur.Vmodele.DT[3];
                 dgvDonnees.DataSource = bindingSource1;
-
             }
             else if (table == "reservation")
             {
@@ -119,18 +119,49 @@ namespace CarantecAdminPanel
             }
         }
 
-        private void btnUsers_Click(object sender, EventArgs e)
+        private void refreshBtnColor(string btn)
         {
-            cbTrier.SelectedIndex = 0;
-            btnTables("utilisateur");
-            dgvDonnees.Columns[0].Width = 150;
-            dgvDonnees.Columns[1].Width = 250;
-            dgvDonnees.Columns[2].Width = 250;
-            dgvDonnees.Visible = true;
+            select = btn;
+            btnFestival.Image = CarantecAdminPanel.Properties.Resources.FestivalInverse;
+            btnManifestation.Image = CarantecAdminPanel.Properties.Resources.ManifestationsInverse;
+            btnReservation.Image = CarantecAdminPanel.Properties.Resources.ReservationInverse;
+            btnLieux.Image = CarantecAdminPanel.Properties.Resources.LieuxInverse;
+            btnAvis.Image = CarantecAdminPanel.Properties.Resources.AvisInverse;
+            btnPublic.Image = CarantecAdminPanel.Properties.Resources.PublicInverse;
+            btnUsers.Image = CarantecAdminPanel.Properties.Resources.UserInverse;
+            btnParticiper.Image = CarantecAdminPanel.Properties.Resources.ParticipationInverse;
+            switch (btn)
+            {
+                case "btnFestival":
+                    btnFestival.Image = CarantecAdminPanel.Properties.Resources.FestivalInverseRed;
+                    break;
+                case "btnManifestation":
+                    btnManifestation.Image = CarantecAdminPanel.Properties.Resources.ManifestationsInverseRed;
+                    break;
+                case "btnReservation":
+                    btnReservation.Image = CarantecAdminPanel.Properties.Resources.ReservationInverseRed;
+                    break;
+                case "btnLieux":
+                    btnLieux.Image = CarantecAdminPanel.Properties.Resources.LieuxInverseRed;
+                    break;
+                case "btnAvis":
+                    btnAvis.Image = CarantecAdminPanel.Properties.Resources.AvisInverseRedH;
+                    break;
+                case "btnPublic":
+                    btnPublic.Image = CarantecAdminPanel.Properties.Resources.PublicInverseRed;
+                    break;
+                case "btnUsers":
+                    btnUsers.Image = CarantecAdminPanel.Properties.Resources.UserInverseRed;
+                    break;
+                case "btnParticiper":
+                    btnParticiper.Image = CarantecAdminPanel.Properties.Resources.ParticipationInverseRed;
+                    break;
+            }
         }
 
         private void btnFestival_Click(object sender, EventArgs e)
         {
+            refreshBtnColor("btnFestival");
             btnTables("festivalDisplay");
             dgvDonnees.Columns[0].Width = 150;
             dgvDonnees.Visible = true;
@@ -138,6 +169,7 @@ namespace CarantecAdminPanel
 
         private void btnManifestation_Click_1(object sender, EventArgs e)
         {
+            refreshBtnColor("btnManifestation");
             btnTables("manifestation");
             dgvDonnees.Columns[0].Width = 150;
             dgvDonnees.Visible = true;
@@ -145,6 +177,7 @@ namespace CarantecAdminPanel
 
         private void btnReservation_Click_1(object sender, EventArgs e)
         {
+            refreshBtnColor("btnReservation");
             btnTables("reservation");
             dgvDonnees.Columns[0].Width = 250;
             dgvDonnees.Visible = true;
@@ -152,6 +185,7 @@ namespace CarantecAdminPanel
 
         private void btnLieux_Click_1(object sender, EventArgs e)
         {
+            refreshBtnColor("btnLieux");
             btnTables("lieu");
             dgvDonnees.Columns[0].Width = 150;
             dgvDonnees.Visible = true;
@@ -159,6 +193,7 @@ namespace CarantecAdminPanel
 
         private void btnAvis_Click_1(object sender, EventArgs e)
         {
+            refreshBtnColor("btnAvis");
             btnTables("avis");
             dgvDonnees.Columns[0].Width = 150;
             dgvDonnees.Visible = true;
@@ -166,6 +201,7 @@ namespace CarantecAdminPanel
 
         private void btnPublic_Click_1(object sender, EventArgs e)
         {
+            refreshBtnColor("btnPublic");
             btnTables("public");
             dgvDonnees.Columns[0].Width = 250;
             dgvDonnees.Visible = true;
@@ -252,13 +288,135 @@ namespace CarantecAdminPanel
             btnTables("utilisateur");
         }
 
-<<<<<<< HEAD
-        private void gradientPanel1_Paint(object sender, PaintEventArgs e)
-=======
         private void btnFestival_Enter(object sender, EventArgs e)
->>>>>>> localC#eg
+        {
+            
+        }
+
+        private void btnFestival_MouseHover(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnFestival_MouseEnter(object sender, EventArgs e)
+        {
+            btnFestival.Image = CarantecAdminPanel.Properties.Resources.FestivalInverseRed;
+        }
+
+        private void btnFestival_MouseLeave(object sender, EventArgs e)
+        {
+            if (select != "btnFestival")
+            {
+                btnFestival.Image = CarantecAdminPanel.Properties.Resources.FestivalInverse;
+            }
+            
+        }
+
+        private void btnUsers_Click_1(object sender, EventArgs e)
+        {
+            refreshBtnColor("btnUsers");
+            cbTrier.SelectedIndex = 0;
+            btnTables("utilisateur");
+            dgvDonnees.Columns[0].Width = 150;
+            dgvDonnees.Columns[1].Width = 250;
+            dgvDonnees.Columns[2].Width = 250;
+            dgvDonnees.Visible = true;
+        }
+
+        private void btnParticiper_Click(object sender, EventArgs e)
+        {
+            refreshBtnColor("btnParticiper");
+        }
+
+        private void btnManifestation_MouseEnter(object sender, EventArgs e)
+        {
+            btnManifestation.Image = CarantecAdminPanel.Properties.Resources.ManifestationsInverseRed;
+        }
+
+        private void btnManifestation_MouseLeave(object sender, EventArgs e)
+        {
+            if (select != "btnManifestation")
+            {
+                btnManifestation.Image = CarantecAdminPanel.Properties.Resources.ManifestationsInverse;
+            }
+        }
+
+        private void btnParticiper_MouseEnter(object sender, EventArgs e)
+        {
+            btnParticiper.Image = CarantecAdminPanel.Properties.Resources.ParticipationInverseRed;
+        }
+
+        private void btnParticiper_MouseLeave(object sender, EventArgs e)
+        {
+            if (select != "btnParticiper")
+            {
+                btnParticiper.Image = CarantecAdminPanel.Properties.Resources.ParticipationInverse;
+            }
+        }
+
+        private void btnUsers_MouseEnter(object sender, EventArgs e)
+        {
+            btnUsers.Image = CarantecAdminPanel.Properties.Resources.UserInverseRed;
+        }
+
+        private void btnUsers_MouseLeave(object sender, EventArgs e)
+        {
+            if (select != "btnUsers")
+            {
+                btnUsers.Image = CarantecAdminPanel.Properties.Resources.UserInverse;
+            }
+        }
+
+        private void btnPublic_MouseEnter(object sender, EventArgs e)
+        {
+            btnPublic.Image = CarantecAdminPanel.Properties.Resources.PublicInverseRed;
+        }
+
+        private void btnPublic_MouseLeave(object sender, EventArgs e)
+        {
+            if (select != "btnPublic")
+            {
+                btnPublic.Image = CarantecAdminPanel.Properties.Resources.PublicInverse;
+            }
+        }
+
+        private void btnLieux_MouseEnter(object sender, EventArgs e)
+        {
+            btnLieux.Image = CarantecAdminPanel.Properties.Resources.LieuxInverseRed;
+        }
+
+        private void btnLieux_MouseLeave(object sender, EventArgs e)
+        {
+            if (select != "btnLieux")
+            {
+                btnLieux.Image = CarantecAdminPanel.Properties.Resources.LieuxInverse;
+            }
+        }
+
+        private void btnReservation_MouseEnter(object sender, EventArgs e)
+        {
+            btnReservation.Image = CarantecAdminPanel.Properties.Resources.ReservationInverseRed;
+        }
+
+        private void btnReservation_MouseLeave(object sender, EventArgs e)
+        {
+            if (select != "btnReservation")
+            {
+                btnReservation.Image = CarantecAdminPanel.Properties.Resources.ReservationInverse;
+            }
+        }
+
+        private void btnAvis_MouseEnter(object sender, EventArgs e)
+        {
+            btnAvis.Image = CarantecAdminPanel.Properties.Resources.AvisInverseRedH;
+        }
+
+        private void btnAvis_MouseLeave(object sender, EventArgs e)
+        {
+            if (select != "btnAvis")
+            {
+                btnAvis.Image = CarantecAdminPanel.Properties.Resources.AvisInverse;
+            }
         }
     }
 }
