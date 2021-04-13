@@ -1,4 +1,6 @@
-﻿namespace CarantecAdminPanel
+﻿using System.Windows.Forms;
+
+namespace CarantecAdminPanel
 {
     partial class FormCRUDParticiper
     {
@@ -33,10 +35,10 @@
             this.labelActionTitle = new System.Windows.Forms.Label();
             this.gradientPanel1 = new CarantecAdminPanel.GradientPanel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.cbStarsParticiper = new System.Windows.Forms.ComboBox();
+            this.cbPersonne = new System.Windows.Forms.ComboBox();
             this.labelSpecial = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cbManif = new System.Windows.Forms.ComboBox();
             this.gradientPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -72,7 +74,7 @@
             // 
             this.labelActionTitle.AutoSize = true;
             this.labelActionTitle.Font = new System.Drawing.Font("Netflix Sans", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelActionTitle.Location = new System.Drawing.Point(342, 133);
+            this.labelActionTitle.Location = new System.Drawing.Point(210, 167);
             this.labelActionTitle.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelActionTitle.Name = "labelActionTitle";
             this.labelActionTitle.Size = new System.Drawing.Size(325, 27);
@@ -104,47 +106,54 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // cbStarsParticiper
+            // cbPersonne
             // 
-            this.cbStarsParticiper.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
-            this.cbStarsParticiper.Font = new System.Drawing.Font("Netflix Sans", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbStarsParticiper.FormattingEnabled = true;
-            this.cbStarsParticiper.Location = new System.Drawing.Point(369, 347);
-            this.cbStarsParticiper.Name = "cbStarsParticiper";
-            this.cbStarsParticiper.Size = new System.Drawing.Size(430, 26);
-            this.cbStarsParticiper.TabIndex = 108;
+            this.cbPersonne.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
+            this.cbPersonne.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbPersonne.Enabled = false;
+            this.cbPersonne.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cbPersonne.Font = new System.Drawing.Font("Netflix Sans", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbPersonne.ForeColor = System.Drawing.Color.White;
+            this.cbPersonne.FormattingEnabled = true;
+            this.cbPersonne.Location = new System.Drawing.Point(369, 347);
+            this.cbPersonne.Name = "cbPersonne";
+            this.cbPersonne.Size = new System.Drawing.Size(430, 26);
+            this.cbPersonne.TabIndex = 108;
             // 
             // labelSpecial
             // 
             this.labelSpecial.AutoSize = true;
-            this.labelSpecial.Font = new System.Drawing.Font("Netflix Sans", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelSpecial.Location = new System.Drawing.Point(302, 349);
+            this.labelSpecial.Font = new System.Drawing.Font("Netflix Sans", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelSpecial.Location = new System.Drawing.Point(266, 354);
             this.labelSpecial.Name = "labelSpecial";
-            this.labelSpecial.Size = new System.Drawing.Size(47, 19);
+            this.labelSpecial.Size = new System.Drawing.Size(97, 19);
             this.labelSpecial.TabIndex = 109;
-            this.labelSpecial.Text = "Stars";
-            this.labelSpecial.Visible = false;
+            this.labelSpecial.Text = "___________";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Netflix Sans", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(225, 240);
+            this.label1.Font = new System.Drawing.Font("Netflix Sans", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(262, 240);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(116, 19);
+            this.label1.Size = new System.Drawing.Size(101, 19);
             this.label1.TabIndex = 111;
-            this.label1.Text = "Manifestations";
-            this.label1.Visible = false;
+            this.label1.Text = "Manifestation";
             // 
-            // comboBox1
+            // cbManif
             // 
-            this.comboBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
-            this.comboBox1.Font = new System.Drawing.Font("Netflix Sans", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(369, 238);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(430, 26);
-            this.comboBox1.TabIndex = 110;
+            this.cbManif.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
+            this.cbManif.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbManif.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cbManif.Font = new System.Drawing.Font("Netflix Sans", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbManif.ForeColor = System.Drawing.Color.White;
+            this.cbManif.FormattingEnabled = true;
+            this.cbManif.Location = new System.Drawing.Point(369, 238);
+            this.cbManif.Name = "cbManif";
+            this.cbManif.Size = new System.Drawing.Size(430, 26);
+            this.cbManif.TabIndex = 110;
+            this.cbManif.SelectedIndexChanged += new System.EventHandler(this.cbManif_SelectedIndexChanged);
+            this.cbManif.SelectionChangeCommitted += new System.EventHandler(this.cbManif_SelectionChangeCommitted);
             // 
             // FormCRUDParticiper
             // 
@@ -152,14 +161,14 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
             this.ClientSize = new System.Drawing.Size(1070, 595);
+            this.Controls.Add(this.cbPersonne);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.labelSpecial);
-            this.Controls.Add(this.cbStarsParticiper);
+            this.Controls.Add(this.cbManif);
             this.Controls.Add(this.labelError);
             this.Controls.Add(this.btnEnregistrer);
             this.Controls.Add(this.labelActionTitle);
             this.Controls.Add(this.gradientPanel1);
+            this.Controls.Add(this.labelSpecial);
             this.Font = new System.Drawing.Font("Netflix Sans", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.Color.White;
             this.Name = "FormCRUDParticiper";
@@ -177,9 +186,19 @@
         private System.Windows.Forms.Label labelActionTitle;
         private GradientPanel gradientPanel1;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.ComboBox cbStarsParticiper;
+        private System.Windows.Forms.ComboBox cbPersonne;
         private System.Windows.Forms.Label labelSpecial;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cbManif;
+
+        public Label LabelError { get => labelError; set => labelError = value; }
+        public Button BtnEnregistrer { get => btnEnregistrer; set => btnEnregistrer = value; }
+        public Label LabelActionTitle { get => labelActionTitle; set => labelActionTitle = value; }
+        internal GradientPanel GradientPanel1 { get => gradientPanel1; set => gradientPanel1 = value; }
+        public PictureBox PictureBox1 { get => pictureBox1; set => pictureBox1 = value; }
+        public ComboBox CbPersonne { get => cbPersonne; set => cbPersonne = value; }
+        public Label LabelSpecial { get => labelSpecial; set => labelSpecial = value; }
+        public Label Label1 { get => label1; set => label1 = value; }
+        public ComboBox CbManif { get => cbManif; set => cbManif = value; }
     }
 }

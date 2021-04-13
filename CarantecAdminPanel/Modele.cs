@@ -91,7 +91,7 @@ namespace CarantecAdminPanel
         public Modele()
         {
             // instanciation des collections des Datatable et DataAdapter
-            for (int i = 0; i <= 30; i++)
+            for (int i = 0; i <= 40; i++)
             {
                 dA.Add(new MySqlDataAdapter());
                 dT.Add(new DataTable());
@@ -235,9 +235,9 @@ namespace CarantecAdminPanel
             {
                 charger("CALL nomThemeToIdTheme('" + text + "')", dT[14], dA[14]);
             }
-            if (table == "adherent")
+            if (table == "users")
             {
-                charger("select * from ADHERENT;", dT[15], dA[15]);
+                charger("select * from users;", dT[15], dA[15]);
             }
             if (table == "artiste")
             {
@@ -271,9 +271,9 @@ namespace CarantecAdminPanel
             {
                 charger("CALL nomManifToIdManif('" + text + "')", dT[23], dA[23]);
             }
-            if (table == "nomPersToIdPers")
+            if (table == "emailPersToIdPers")
             {
-                charger("CALL nomPersToIdPers('" + text + "')", dT[24], dA[24]);
+                charger("CALL emailPersToIdPers('" + text + "')", dT[24], dA[24]);
             }
             if (table == "adherentPersonne")
             {
@@ -291,18 +291,38 @@ namespace CarantecAdminPanel
             {
                 charger("select * from intervenantSpecialisePersonne;", dT[28], dA[28]);
             }
-            //if (table == "PPE_REPARERUT")
-            //{
-            //    charger("select IdR, numV, T.LibelleT, dateR, tempsR, U.loginU from (PPE_REPARER P INNER JOIN PPE_TRAVAUX T ON P.IdT = T.IdT) INNER JOIN PPE_UTILISATEURS U ON P.IdU = U.numU;", dT[9], dA[9]);
-            //}
-            //if (table == "PPE_AREPARER")
-            //{
-            //    charger("select V.numV, etatV from vehicule V WHERE etatV='R' and numV not in (SELECT numV FROM PPE_REPARER); ", dT[10], dA[10]);
-            //}
-            //if (table == "SUMTEMPSR")
-            //{
-            //    charger("SELECT SEC_TO_TIME( SUM( TIME_TO_SEC( `tempsR` ) ) ) from PPE_REPARER WHERE `numV`= " + numV + ";", dT[11], dA[11]);
-            //}
+            if (table == "personnesimplifie")
+            {
+                charger("select * from personnesimplifie;", dT[29], dA[29]);
+            }
+            if (table == "atelier")
+            {
+                charger("select * from atelier;", dT[30], dA[30]);
+            }
+            if (table == "concert")
+            {
+                charger("select * from concert;", dT[31], dA[31]);
+            }
+            if (table == "conference")
+            {
+                charger("select * from conference;", dT[32], dA[32]);
+            }
+            if (table == "debat")
+            {
+                charger("select * from debat;", dT[33], dA[33]);
+            }
+            if (table == "participer")
+            {
+                charger("select * from participer;", dT[34], dA[34]);
+            }
+            if (table == "verifTypeManif")
+            {
+                charger("SELECT verifTypeManif('" + text + "');", dT[35], dA[35]);
+            }
+            if (table == "nomsPersToIdPers")
+            {
+                charger("CALL nomsPersToIdPers('" + text + "')", dT[36], dA[36]);
+            }
         }
     }
 }

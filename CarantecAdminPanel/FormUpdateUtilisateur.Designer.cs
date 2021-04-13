@@ -37,8 +37,6 @@ namespace CarantecAdminPanel
             this.labelActionTitle = new System.Windows.Forms.Label();
             this.gradientPanel1 = new CarantecAdminPanel.GradientPanel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.tbPhoto = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
             this.labelError = new System.Windows.Forms.Label();
             this.btnEnregistrer = new System.Windows.Forms.Button();
             this.gradientPanel1.SuspendLayout();
@@ -123,32 +121,12 @@ namespace CarantecAdminPanel
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // tbPhoto
-            // 
-            this.tbPhoto.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
-            this.tbPhoto.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.tbPhoto.ForeColor = System.Drawing.Color.White;
-            this.tbPhoto.Location = new System.Drawing.Point(263, 307);
-            this.tbPhoto.Name = "tbPhoto";
-            this.tbPhoto.Size = new System.Drawing.Size(349, 20);
-            this.tbPhoto.TabIndex = 44;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Netflix Sans", 11.25F);
-            this.label6.Location = new System.Drawing.Point(99, 305);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(142, 19);
-            this.label6.TabIndex = 43;
-            this.label6.Text = "Lien photo de profil";
-            // 
             // labelError
             // 
             this.labelError.AutoSize = true;
             this.labelError.Font = new System.Drawing.Font("Netflix Sans", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelError.ForeColor = System.Drawing.Color.Firebrick;
-            this.labelError.Location = new System.Drawing.Point(227, 353);
+            this.labelError.Location = new System.Drawing.Point(227, 297);
             this.labelError.Name = "labelError";
             this.labelError.Size = new System.Drawing.Size(371, 19);
             this.labelError.TabIndex = 42;
@@ -162,7 +140,7 @@ namespace CarantecAdminPanel
             this.btnEnregistrer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEnregistrer.Font = new System.Drawing.Font("Netflix Sans", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEnregistrer.ForeColor = System.Drawing.Color.Snow;
-            this.btnEnregistrer.Location = new System.Drawing.Point(280, 383);
+            this.btnEnregistrer.Location = new System.Drawing.Point(280, 327);
             this.btnEnregistrer.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnEnregistrer.Name = "btnEnregistrer";
             this.btnEnregistrer.Size = new System.Drawing.Size(248, 56);
@@ -175,9 +153,7 @@ namespace CarantecAdminPanel
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.tbPhoto);
-            this.Controls.Add(this.label6);
+            this.ClientSize = new System.Drawing.Size(800, 414);
             this.Controls.Add(this.labelError);
             this.Controls.Add(this.btnEnregistrer);
             this.Controls.Add(this.tbPrenom);
@@ -207,8 +183,6 @@ namespace CarantecAdminPanel
         private System.Windows.Forms.Label labelActionTitle;
         private GradientPanel gradientPanel1;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.TextBox tbPhoto;
-        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label labelError;
         private System.Windows.Forms.Button btnEnregistrer;
 
@@ -219,8 +193,6 @@ namespace CarantecAdminPanel
         public Label LabelActionTitle { get => labelActionTitle; set => labelActionTitle = value; }
         internal GradientPanel GradientPanel1 { get => gradientPanel1; set => gradientPanel1 = value; }
         public PictureBox PictureBox1 { get => pictureBox1; set => pictureBox1 = value; }
-        public TextBox TbPhoto { get => tbPhoto; set => tbPhoto = value; }
-        public Label Label6 { get => label6; set => label6 = value; }
         public Label LabelError { get => labelError; set => labelError = value; }
         public Button BtnEnregistrer { get => btnEnregistrer; set => btnEnregistrer = value; }
     }

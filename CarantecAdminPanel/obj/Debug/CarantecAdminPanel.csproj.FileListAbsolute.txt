@@ -74,3 +74,4 @@ C:\Users\satis\Desktop\CODE\Carantec\PPE4_Ragnarok\CarantecAdminPanel\obj\Debug\
 C:\Users\satis\Desktop\CODE\Carantec\PPE4_Ragnarok\CarantecAdminPanel\obj\Debug\CarantecAdminPanel.FormCRUDReservation.resources
 C:\Users\satis\Desktop\CODE\Carantec\PPE4_Ragnarok\CarantecAdminPanel\obj\Debug\CarantecAdminPanel.FormUpdateAvis.resources
 C:\Users\satis\Desktop\CODE\Carantec\PPE4_Ragnarok\CarantecAdminPanel\obj\Debug\CarantecAdminPanel.FormUpdateUtilisateur.resources
+C:\Users\satis\Desktop\CODE\Carantec\PPE4_Ragnarok\CarantecAdminPanel\obj\Debug\CarantecAdminPanel.FormCRUDParticiper.resources

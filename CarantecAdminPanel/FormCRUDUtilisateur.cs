@@ -76,13 +76,17 @@ namespace CarantecAdminPanel
 
         }
 
-        private void tbPhoto_TextChanged(object sender, EventArgs e)
+        private void label7_Click(object sender, EventArgs e)
         {
-            panelHideWb.Visible = (tbPhoto.Text == "");
-            if(tbPhoto.Text != "") wbPrevi.Url = new Uri(tbPhoto.Text);
+
         }
 
-        private void label7_Click(object sender, EventArgs e)
+        private void tbMdpAdherentUser_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
         {
 
         }

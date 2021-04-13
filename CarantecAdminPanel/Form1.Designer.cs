@@ -39,8 +39,6 @@
             this.ajouterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.modifierToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.supprimerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.labelTrier = new System.Windows.Forms.Label();
-            this.cbTrier = new System.Windows.Forms.ComboBox();
             this.gradientPanel1 = new CarantecAdminPanel.GradientPanel();
             this.btnParticiper = new System.Windows.Forms.Button();
             this.btnAvis = new System.Windows.Forms.Button();
@@ -155,38 +153,6 @@
             this.supprimerToolStripMenuItem.Size = new System.Drawing.Size(129, 22);
             this.supprimerToolStripMenuItem.Text = "Supprimer";
             this.supprimerToolStripMenuItem.Click += new System.EventHandler(this.supprimerToolStripMenuItem_Click);
-            // 
-            // labelTrier
-            // 
-            this.labelTrier.AutoSize = true;
-            this.labelTrier.Font = new System.Drawing.Font("Netflix Sans", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelTrier.Location = new System.Drawing.Point(1632, 141);
-            this.labelTrier.Name = "labelTrier";
-            this.labelTrier.Size = new System.Drawing.Size(82, 20);
-            this.labelTrier.TabIndex = 2;
-            this.labelTrier.Text = "Trier par :";
-            this.labelTrier.Visible = false;
-            // 
-            // cbTrier
-            // 
-            this.cbTrier.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
-            this.cbTrier.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbTrier.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cbTrier.Font = new System.Drawing.Font("Netflix Sans", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbTrier.ForeColor = System.Drawing.Color.White;
-            this.cbTrier.FormattingEnabled = true;
-            this.cbTrier.Items.AddRange(new object[] {
-            "Tous",
-            "Adhérents",
-            "Artistes",
-            "Animateur",
-            "Intervenants spécialisés"});
-            this.cbTrier.Location = new System.Drawing.Point(1720, 142);
-            this.cbTrier.Name = "cbTrier";
-            this.cbTrier.Size = new System.Drawing.Size(121, 22);
-            this.cbTrier.TabIndex = 3;
-            this.cbTrier.Visible = false;
-            this.cbTrier.SelectedIndexChanged += new System.EventHandler(this.cbTrier_SelectedIndexChanged);
             // 
             // gradientPanel1
             // 
@@ -405,7 +371,7 @@
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.BackgroundImage = global::CarantecAdminPanel.Properties.Resources.carantecred1;
+            this.pictureBox1.BackgroundImage = global::CarantecAdminPanel.Properties.Resources.carantecred2;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pictureBox1.Location = new System.Drawing.Point(30, 3);
             this.pictureBox1.Name = "pictureBox1";
@@ -420,8 +386,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
             this.ClientSize = new System.Drawing.Size(1925, 1209);
-            this.Controls.Add(this.cbTrier);
-            this.Controls.Add(this.labelTrier);
             this.Controls.Add(this.dgvDonnees);
             this.Controls.Add(this.gradientPanel1);
             this.ForeColor = System.Drawing.Color.White;
@@ -437,7 +401,6 @@
             this.gradientPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -452,8 +415,6 @@
         private System.Windows.Forms.ToolStripMenuItem ajouterToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem modifierToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem supprimerToolStripMenuItem;
-        private System.Windows.Forms.Label labelTrier;
-        private System.Windows.Forms.ComboBox cbTrier;
         private System.Windows.Forms.Button btnAvis;
         private System.Windows.Forms.Button btnReservation;
         private System.Windows.Forms.Button btnLieux;
