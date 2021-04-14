@@ -16,9 +16,9 @@ class ManifestationController extends Controller
     public function index()
     {
         //Select * from Manifestation
-        $manifestations = DB::table('MANIFESTATION')
-            ->join('LIEU','MANIFESTATION.IDLIEU','=','LIEU.IDLIEU')
-            ->join('FESTIVAL','MANIFESTATION.ANNEEFESTIVAL','=','FESTIVAL.ANNEEFESTIVAL')
+        $manifestations = DB::table('manifestation')
+            ->join('lieu','manifestation.IDLIEU','=','lieu.IDLIEU')
+            ->join('festival','manifestation.ANNEEFESTIVAL','=','festival.ANNEEFESTIVAL')
             ->get();
 
         return view('index',[
