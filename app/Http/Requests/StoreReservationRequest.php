@@ -24,7 +24,7 @@ class StoreReservationRequest extends FormRequest
     public function rules()
     {
         return [
-            'QUANTITERESERVATION' => 'numeric|min:1|max:10',
+            'quantiter' => 'numeric|min:1|max:10',
         ];
     }
 }

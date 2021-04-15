@@ -2,6 +2,7 @@
 @section('content')
 
     <div class="manifestation-info border-b border-gray-800 pb-8 pt-8">
+
         <div class="container mx-auto px4 py16 flex">
             <img src="{{asset('images/samantha-gades-fIHozNWfcvs-unsplash.jpg')}}" alt="image" class="w-96" style="width:24rem">
             <div class="ml-24">
@@ -21,9 +22,12 @@
                 </p>
                 @if (Auth::check())
                     <form class="mt-12" action="/manifestations" method="POST">
+                        @csrf
+                        <input type="hidden" name="idmanif" value={{$manifestation->IDMANIF}}>
+                        <input type="hidden" name="idpersonne" value={{Auth::user()->id}}>
                         <div class="flex items-center">
                         <label class="mx-3" for="quantiter">Quantiter: </label>
-                        <input type="number" id="quantiter" name="quantiter" min="1" max="10">
+                        <input class="text-gray-600" type="number" id="quantiter" name="quantiter" min="1" max="10">
                         </div>
                         <button class="position-center bg-red-600 text-gray-300 rounded font-semibold px-5 py-4 hover:bg-red-400 transition ease-in-out duration-150" type="submit">Réserver</button>
                     </form>

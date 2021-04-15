@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Manifestation extends Model
 {
     use HasFactory;
-    protected $table = 'MANIFESTATION';
+    protected $table = 'manifestation';
     public $timestamps = false;
     protected $primaryKey = 'IDMANIF';
     protected $dates = ['DATEMANIF', 'HORAIREDEBUTMANIF'];

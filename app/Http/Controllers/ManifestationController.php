@@ -6,7 +6,9 @@ use App\Http\Requests\StoreReservationRequest;
 use App\Models\Manifestation;
 use App\Models\Reservation;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Str;
 
 class ManifestationController extends Controller
 {
@@ -18,9 +20,9 @@ class ManifestationController extends Controller
     public function index()
     {
         //Select * from Manifestation
-        $manifestations = DB::table('MANIFESTATION')
-            ->join('LIEU','MANIFESTATION.IDLIEU','=','LIEU.IDLIEU')
-            ->join('FESTIVAL','MANIFESTATION.ANNEEFESTIVAL','=','FESTIVAL.ANNEEFESTIVAL')
+        $manifestations = DB::table('manifestation')
+            ->join('lieu','manifestation.IDLIEU','=','lieu.IDLIEU')
+            ->join('festival','manifestation.ANNEEFESTIVAL','=','festival.ANNEEFESTIVAL')
             ->get();
 
         return view('index',[
@@ -44,13 +46,29 @@ class ManifestationController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param \Illuminate\Http\Request $request
      * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Http\RedirectResponse|\Illuminate\Http\Response|\Illuminate\Routing\Redirector
      */
-    public function store(StoreReservationRequest $request)
+    public function store(Request $request)
     {
-    $reservation = Reservation::create($request->all());
-    return redirect('/manifestation');
+        if(Auth::check()){
+            $request->validate([
+                'quantiter' => 'numeric|min:1|max:10',
+            ]);
+
+            $randomr = Str::random(6);
+        $ref = 'REF_';
+    $reservation = Reservation::create([
+        // Elliot Doit reparer ça
+        'REFRESERVATION'=>$request->$randomr.$ref,
+        'IDMANIF'=>$request->input('idmanif'),
+        'IDPERSONNE'=>$request->input('idpersonne'),
+        'QUANTITERESERVATION'=>$request->input('quantiter'),
+
+    ]);
+    return redirect('index');
+    }
+
     }
 
     /**
@@ -61,7 +79,7 @@ class ManifestationController extends Controller
      */
     public function show($id)
     {
-        $manifestation = Manifestation::join('LIEU','MANIFESTATION.IDLIEU','=','LIEU.IDLIEU');
+        $manifestation = Manifestation::join('lieu','manifestation.IDLIEU','=','lieu.IDLIEU');
         $manifestation = $manifestation->find($id);
         return view('manifestations.show')->with('manifestation',$manifestation);
 

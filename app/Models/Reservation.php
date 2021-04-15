@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Reservation extends Model
 {
     use HasFactory;
-    protected $table = 'MANIFESTATION';
+    protected $table = 'reservation';
     protected $fillable = [
         'REFRESERVATION', 'IDMANIF', 'IDPERSONNE','QUANTITERESERVATION'
     ];
