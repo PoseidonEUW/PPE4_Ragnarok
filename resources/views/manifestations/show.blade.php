@@ -29,7 +29,7 @@
                         <label class="mx-3" for="quantiter">Quantiter: </label>
                         <input class="text-gray-600" type="number" id="quantiter" name="quantiter" min="1" max="10">
                         </div>
-                        <button class="position-center bg-red-600 text-gray-300 rounded font-semibold px-5 py-4 hover:bg-red-400 transition ease-in-out duration-150" type="submit">Réserver</button>
+                        <button class="position-center mt-4 bg-red-600 text-gray-300 rounded font-semibold px-5 py-4 hover:bg-red-400 transition ease-in-out duration-150" type="submit">Réserver</button>
                     </form>
                 <!-- >div class="mt-12">
 
