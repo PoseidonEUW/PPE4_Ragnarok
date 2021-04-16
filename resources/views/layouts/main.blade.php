@@ -22,18 +22,18 @@
             </a>
         </li>
         <li class="md:ml-16 mt-3 md:mt-0 ">
-            <a href="#" class="hover:text-gray-300 capitalize">
-                Page 1
+            <a href="/manifestations" class="hover:text-gray-300 capitalize">
+                Programmation
             </a>
         </li>
         <li class="md:ml-6 mt-3 md:mt-0  ">
             <a href="#" class="hover:text-gray-300 capitalize">
-                Page 2
+                Activités
             </a>
         </li>
         <li class="md:ml-6 mt-3 md:mt-0 ">
-            <a href="#" class="hover:text-gray-300 capitalize">
-                Page 3
+            <a href="/about-us" class="hover:text-gray-300 capitalize">
+                Qui sommes nous?
             </a>
         </li>
     </ul>

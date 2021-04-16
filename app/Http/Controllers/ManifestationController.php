@@ -25,7 +25,7 @@ class ManifestationController extends Controller
             ->join('festival','manifestation.ANNEEFESTIVAL','=','festival.ANNEEFESTIVAL')
             ->get();
 
-        return view('index',[
+        return view('manifestations.index',[
             'manifestations'=>$manifestations
 
         ]);
@@ -65,7 +65,7 @@ class ManifestationController extends Controller
         'QUANTITERESERVATION'=>$request->input('quantiter'),
 
     ]);
-    return redirect('index');
+    return redirect('/');
     }
 
     }

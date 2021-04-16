@@ -13,7 +13,7 @@ class Reservation extends Model
         'IDMANIF', 'IDPERSONNE','QUANTITERESERVATION'
     ];
     public $timestamps = false;
-    protected $primaryKey = 'IDMANIF';
+    protected $primaryKey = 'REFRESERVATION';
 public function manifestation(){
     $this->belongsTo(Manifestation::class);
 }
