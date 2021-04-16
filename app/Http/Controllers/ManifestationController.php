@@ -60,7 +60,6 @@ class ManifestationController extends Controller
         $ref = 'REF_';
     $reservation = Reservation::create([
         // Elliot Doit reparer ça
-        'REFRESERVATION'=>$request->$randomr.$ref,
         'IDMANIF'=>$request->input('idmanif'),
         'IDPERSONNE'=>$request->input('idpersonne'),
         'QUANTITERESERVATION'=>$request->input('quantiter'),

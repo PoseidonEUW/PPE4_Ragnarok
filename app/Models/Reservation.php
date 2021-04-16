@@ -10,7 +10,7 @@ class Reservation extends Model
     use HasFactory;
     protected $table = 'reservation';
     protected $fillable = [
-        'REFRESERVATION', 'IDMANIF', 'IDPERSONNE','QUANTITERESERVATION'
+        'IDMANIF', 'IDPERSONNE','QUANTITERESERVATION'
     ];
     public $timestamps = false;
     protected $primaryKey = 'IDMANIF';
