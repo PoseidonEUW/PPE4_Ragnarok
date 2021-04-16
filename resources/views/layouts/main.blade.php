@@ -23,17 +23,17 @@
         </li>
         <li class="md:ml-16 mt-3 md:mt-0 ">
             <a href="#" class="hover:text-gray-300 capitalize">
-                Page 1
+                Programmation
             </a>
         </li>
         <li class="md:ml-6 mt-3 md:mt-0  ">
             <a href="#" class="hover:text-gray-300 capitalize">
-                Page 2
+                Artistes
             </a>
         </li>
         <li class="md:ml-6 mt-3 md:mt-0 ">
             <a href="#" class="hover:text-gray-300 capitalize">
-                Page 3
+                Qui sommes nous ?
             </a>
         </li>
     </ul>
@@ -41,18 +41,18 @@
             <div class="hidden fixed top-0 right-0 px-6 py-4 sm:block">
                 @auth
                     <a href="{{ url('/dashboard') }}" class="text-sm text-red-600 underline hover:text-gray-300"
-                    >Dashboard</a
+                    >Mon Compte</a
                     >
                 @else
                     <a href="{{ route('login') }}" class="text-sm text-red-600 underline hover:text-gray-300"
-                    >Log in</a
+                    >Se Connecter</a
                     >
 
                     @if (Route::has('register'))
                         <a
                             href="{{ route('register') }}"
                             class="ml-4 text-sm text-red-600 underline hover:text-gray-300"
-                        >Register</a
+                        >S'enregistrer</a
                         >
                     @endif @endauth
             </div>
