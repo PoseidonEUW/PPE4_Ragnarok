@@ -2,9 +2,13 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\StoreReservationRequest;
 use App\Models\Manifestation;
+use App\Models\Reservation;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Str;
 
 class ManifestationController extends Controller
 {
@@ -42,12 +46,29 @@ class ManifestationController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
+     * @param \Illuminate\Http\Request $request
+     * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Http\RedirectResponse|\Illuminate\Http\Response|\Illuminate\Routing\Redirector
      */
     public function store(Request $request)
     {
-        //
+        if(Auth::check()){
+            $request->validate([
+                'quantiter' => 'numeric|min:1|max:10',
+            ]);
+
+            $randomr = Str::random(6);
+        $ref = 'REF_';
+    $reservation = Reservation::create([
+        // Elliot Doit reparer ça
+        'REFRESERVATION'=>$request->$randomr.$ref,
+        'IDMANIF'=>$request->input('idmanif'),
+        'IDPERSONNE'=>$request->input('idpersonne'),
+        'QUANTITERESERVATION'=>$request->input('quantiter'),
+
+    ]);
+    return redirect('index');
+    }
+
     }
 
     /**
@@ -58,7 +79,7 @@ class ManifestationController extends Controller
      */
     public function show($id)
     {
-        $manifestation = Manifestation::all();
+        $manifestation = Manifestation::join('lieu','manifestation.IDLIEU','=','lieu.IDLIEU');
         $manifestation = $manifestation->find($id);
         return view('manifestations.show')->with('manifestation',$manifestation);
 

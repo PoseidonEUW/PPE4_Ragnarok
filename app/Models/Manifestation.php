@@ -11,7 +11,11 @@ class Manifestation extends Model
     protected $table = 'manifestation';
     public $timestamps = false;
     protected $primaryKey = 'IDMANIF';
+    protected $dates = ['DATEMANIF', 'HORAIREDEBUTMANIF'];
 
+    public function reservations(){
+        return $this->hasMany(Reservation::class);
+    }
 
 
 }

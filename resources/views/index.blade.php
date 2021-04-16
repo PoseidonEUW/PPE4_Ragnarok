@@ -36,9 +36,6 @@
                                <!-- Info -->
 
                            </div>
-                           @if (Auth::check())
-                               <button>Beep</button>
-                               @endif
 
                        </div>
                    </div>
