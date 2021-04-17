@@ -14,6 +14,8 @@ class Personne extends Model
         'NOMPERSONNE', 'PRENOMPERSONNE', 'EMAILPERSONNE',
     ];
     protected $primaryKey = 'IDPERSONNE';
-
+    public function reservations(){
+        return $this->hasMany(Reservation::class);
+    }
 
 }

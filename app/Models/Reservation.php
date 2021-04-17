@@ -17,5 +17,7 @@ class Reservation extends Model
 public function manifestation(){
     $this->belongsTo(Manifestation::class);
 }
-
+    public function user(){
+        return $this->belongsTo(Personne::class);
+    }
 }
