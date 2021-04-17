@@ -1,6 +1,7 @@
 <?php
 
 
+use App\Http\Controllers\ReservationController;
 use App\Models\Personne;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
@@ -60,12 +61,10 @@ Route::post('/settings',function(Request $request){
 
 // Fin de Mettre a jour
 // Show Billets
-Route::get('/reservations', function () {
-    return view('reservations',[
-        'user'=>request()->user(),
-
-    ]);
+Route::get('reservations', function () {
+    return view('reservations');
 })->middleware(['auth'])->name('reservations');
+Route::get('reservations',[ReservationController::class,'index'])->middleware(['auth'])->name('reservations');
 
 // Fin de Show Billets
 require __DIR__.'/auth.php';

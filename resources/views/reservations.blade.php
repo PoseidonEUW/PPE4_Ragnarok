@@ -11,30 +11,19 @@
                 <div class="p-6 bg-white border-b border-gray-200">
                     Verifier tes reservations
                     <!-- Billet -->
-                    <form method="POST" action="{{ route('reservations') }}">
-                    @csrf
-
                         <!-- Billet-->
-                        <div class="mt-4">
-                            <x-label for="billets" :value="__('Billet')" />
+                    @foreach($reservations as $reservation)
 
-
+                        <div class="flex mt-4">
+                            <span>Nom de Manif : {{$reservation->LIBELLEMANIF}}</span>
+                            <span class="mx-2">| </span>
+                            <span>Quantiter : {{$reservation->QUANTITERESERVATION}}</span>
                         </div>
+                    @endforeach
 
-
-                        <div class="flex items-center justify-end mt-4">
-
-                            <x-button class="ml-4">
-                                {{ __('Update') }}
-                            </x-button>
-                        </div>
-                    </form>
-                    <!-- Update Email -->
-
-                </div>
             </div>
         </div>
-
+        </div>
     </div>
 
 </x-app-layout>

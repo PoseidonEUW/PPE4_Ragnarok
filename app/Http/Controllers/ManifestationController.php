@@ -31,6 +31,7 @@ class ManifestationController extends Controller
         ]);
 
 
+
     }
 
     /**
@@ -56,10 +57,7 @@ class ManifestationController extends Controller
                 'quantiter' => 'numeric|min:1|max:10',
             ]);
 
-            $randomr = Str::random(6);
-        $ref = 'REF_';
     $reservation = Reservation::create([
-        // Elliot Doit reparer ça
         'IDMANIF'=>$request->input('idmanif'),
         'IDPERSONNE'=>$request->input('idpersonne'),
         'QUANTITERESERVATION'=>$request->input('quantiter'),
