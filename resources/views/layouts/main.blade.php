@@ -9,59 +9,62 @@
     <link rel="shortcut icon" href="{{ asset('/images/vectorpaint.svg') }}">
 </head>
 <body class="font-sans bg-gray-900 text-white">
-<nav class=" fixed border-b border-gray-800">
-<div class="container mix-auto items-center justify-between px4 py6 text-red-600 ">
-    <ul class=" flex items-center">
+<div class="py-8">
+<nav class="border-b border-gray-800 fixed top-0 inset-x-0">
+    <div class="container mix-auto items-center justify-between px4 py6 text-gray-300 ">
+        <ul class=" flex items-center">
 
-        <li>
+            <li>
 
-            <a href="/">
+                <a href="/">
 
-                <img class="w-32 ml-6 object-center"src="/images/carantecred.png" alt="Carantec">
+                    <img class="w-32 ml-6 object-center"src="/images/carantecred.png" alt="Carantec">
 
-            </a>
-        </li>
-        <li class="md:ml-16 mt-3 md:mt-0 ">
-            <a href="/manifestations" class="hover:text-gray-300 capitalize">
-                Programmation
-            </a>
-        </li>
-        <li class="md:ml-6 mt-3 md:mt-0  ">
-            <a href="#" class="hover:text-gray-300 capitalize">
-                Activités
-            </a>
-        </li>
-        <li class="md:ml-6 mt-3 md:mt-0 ">
-            <a href="/about-us" class="hover:text-gray-300 capitalize">
-                Qui sommes nous?
-            </a>
-        </li>
-    </ul>
-        @if (Route::has('login'))
-            <div class="hidden fixed top-0 right-0 px-6 py-4 sm:block">
-                @auth
-                    <a href="{{ url('/dashboard') }}" class="text-sm text-red-600 underline hover:text-gray-300"
-                    >Dashboard</a
-                    >
-                @else
-                    <a href="{{ route('login') }}" class="text-sm text-red-600 underline hover:text-gray-300"
-                    >Log in</a
-                    >
-
-                    @if (Route::has('register'))
-                        <a
-                            href="{{ route('register') }}"
-                            class="ml-4 text-sm text-red-600 underline hover:text-gray-300"
-                        >Register</a
+                </a>
+            </li>
+            <li class="md:ml-16 mt-3 md:mt-0 ">
+                <a href="/manifestations" class="hover:text-red-600 capitalize">
+                    Programmation
+                </a>
+            </li>
+            <li class="md:ml-6 mt-3 md:mt-0  ">
+                <a href="#" class="hover:text-red-600 capitalize">
+                    Activités
+                </a>
+            </li>
+            <li class="md:ml-6 mt-3 md:mt-0 ">
+                <a href="/about-us" class="hover:text-red-600 capitalize">
+                    Qui sommes nous?
+                </a>
+            </li>
+        </ul>
+            @if (Route::has('login'))
+                <div class="hidden fixed top-0 right-0 px-6 py-4 sm:block">
+                    @auth
+                        <a href="{{ url('/dashboard') }}" class="text-sm text-gray-300 underline hover:text-red-600"
+                        >Dashboard</a
                         >
-                    @endif @endauth
-            </div>
-        @endif
+                    @else
+                        <a href="{{ route('login') }}" class="text-sm text-gray-300 underline hover:text-red-600"
+                        >Se Connecter</a
+                        >
 
+                        @if (Route::has('register'))
+                            <a
+                                href="{{ route('register') }}"
+                                class="ml-4 text-sm text-gray-300 underline hover:text-red-600"
+                            >S'inscrire</a
+                            >
+                        @endif
+                    @endauth
+
+            @endif
+                </div>
 </nav>
+</div>
 @yield('content')
 
-<footer class="fixed-bottom bg-gray-800 relative pt-1 border-b-2 border-gray-300">
+<footer class="fixed bottom-0 inset-y-0 bg-gray-800 relative pt-1 border-b-2 border-gray-300">
     <div class="container mx-auto px-6">
 
         <div class="sm:flex sm:mt-8">
