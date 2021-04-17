@@ -57,9 +57,9 @@
                             >
                         @endif
                     @endauth
-
-            @endif
                 </div>
+            @endif
+
 </nav>
 </div>
 @yield('content')
