@@ -84,6 +84,7 @@
                 <p class="text-sm text-gray-400 font-bold mb-2">
                     © 2021 Carantec
                 </p>
+                </div>
             </div>
         </div>
     </div>
