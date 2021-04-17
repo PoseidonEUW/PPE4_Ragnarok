@@ -25,7 +25,7 @@ class ManifestationController extends Controller
             ->join('festival','manifestation.ANNEEFESTIVAL','=','festival.ANNEEFESTIVAL')
             ->get();
 
-        return view('index',[
+        return view('manifestations.index',[
             'manifestations'=>$manifestations
 
         ]);
@@ -60,13 +60,12 @@ class ManifestationController extends Controller
         $ref = 'REF_';
     $reservation = Reservation::create([
         // Elliot Doit reparer ça
-        'REFRESERVATION'=>$request->$randomr.$ref,
         'IDMANIF'=>$request->input('idmanif'),
         'IDPERSONNE'=>$request->input('idpersonne'),
         'QUANTITERESERVATION'=>$request->input('quantiter'),
 
     ]);
-    return redirect('index');
+    return redirect('/');
     }
 
     }

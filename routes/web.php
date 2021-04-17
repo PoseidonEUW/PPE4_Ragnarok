@@ -5,6 +5,7 @@ use App\Models\Personne;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ManifestationController;
+use App\Http\Controllers\PagesController;
 use App\Http\Controllers\PersonneController;
 use Illuminate\Validation\Rule;
 
@@ -20,12 +21,13 @@ use Illuminate\Validation\Rule;
 */
 // Main Page
 
-Route::resource('/',ManifestationController::class);
+Route::get('/',[PagesController::class,'index']);
+Route::get('/about-us',[PagesController::class,'aboutus']);
+//Find de main Page
+//Controlleur Manifestation
+Route::get('/manifestations',[ManifestationController::class,'index']);
 Route::resource('/manifestations',ManifestationController::class);
-
 //
-//Show Manifestation
-
 
 //
 
