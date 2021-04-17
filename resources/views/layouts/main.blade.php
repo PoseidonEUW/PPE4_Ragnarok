@@ -29,7 +29,7 @@
             </li>
             <li class="md:ml-6 mt-3 md:mt-0  ">
                 <a href="#" class="hover:text-red-600 capitalize">
-                    Activités
+                    Artistes
                 </a>
             </li>
             <li class="md:ml-6 mt-3 md:mt-0 ">
@@ -42,7 +42,7 @@
                 <div class="hidden fixed top-0 right-0 px-6 py-4 sm:block">
                     @auth
                         <a href="{{ url('/dashboard') }}" class="text-sm text-gray-300 underline hover:text-red-600"
-                        >Dashboard</a
+                        >Mon Compte</a
                         >
                     @else
                         <a href="{{ route('login') }}" class="text-sm text-gray-300 underline hover:text-red-600"
@@ -98,6 +98,7 @@
                 <p class="text-sm text-gray-400 font-bold mb-2">
                     © 2021 Carantec
                 </p>
+                </div>
             </div>
         </div>
     </div>

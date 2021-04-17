@@ -18,7 +18,7 @@
 {{--Premier Container--}}
 <div class="static border-b-4 border-red-600 mb-12"></div>
 <div class="container mx-auto px4 py16 flex mb-12">
-    <img src="{{asset('images/presenter.png')}}" alt="" class=" object-contain ">
+    <img src="{{asset('images/presentation.png')}}" alt="" class=" object-contain ">
     <div class="flex items-center text-gray-300 text-md mt-1 ml-8">
         <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras cursus suscipit interdum. Nam nec libero dictum, ultrices sapien sollicitudin, congue sapien. Nam ut pharetra nibh. Etiam euismod lacus odio, rutrum sagittis mauris tempus in. Praesent imperdiet semper dui sed iaculis. Donec sed nisl in ex luctus tempor. Maecenas feugiat nec massa nec consectetur. Curabitur ipsum quam, sollicitudin non aliquet eu, tincidunt in mi. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
 
