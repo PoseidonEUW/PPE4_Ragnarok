@@ -15,8 +15,10 @@
     <div class="container mx-auto px-4 pt-16">
         <div class="manifestations">
             <h2 class=" cursor-default uppercase tracking-wider ml-12 text-gray-300 text-3xl font-semibold">
+{{--                Change le titre ici--}}
                 Les Evenements
             </h2>
+{{--Changer la Classe dans la ligne 21 --}}
             <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 divide-x-4 divide-y-4 divide-red-600 gap-8 p-6">
 
                 @foreach($artistes as $artiste)
