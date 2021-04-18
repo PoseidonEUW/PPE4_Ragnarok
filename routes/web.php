@@ -1,6 +1,7 @@
 <?php
 
 
+use App\Http\Controllers\ArtistesController;
 use App\Http\Controllers\ReservationController;
 use App\Models\Personne;
 use Illuminate\Http\Request;
@@ -20,16 +21,17 @@ use Illuminate\Validation\Rule;
 | contains the "web" middleware group. Now create something great!
 |
 */
-// Main Page
 
+// Main Page
 Route::get('/',[PagesController::class,'index']);
 Route::get('/about-us',[PagesController::class,'aboutus']);
+
 //Find de main Page
 //Controlleur Manifestation
 Route::get('/manifestations',[ManifestationController::class,'index']);
 Route::resource('/manifestations',ManifestationController::class);
-//
-
+// Controlleur Artistes
+Route::get('/artistes',[ArtistesController::class,'index']);
 //
 
 Route::get('/dashboard', function () {

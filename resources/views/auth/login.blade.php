@@ -43,10 +43,13 @@
 
             <div class="flex items-center justify-end mt-4">
 
-
-                <x-button class="ml-3">
+                <a class="underline text-sm text-gray-600 hover:text-gray-900">
+                    {{ __('S\'enregistrer')}}
+                </a>
+                <x-button class="ml-8">
                     {{ __('Se connecter') }}
                 </x-button>
+
             </div>
         </form>
     </x-auth-card>

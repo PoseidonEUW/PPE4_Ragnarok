@@ -26,15 +26,18 @@
                         <input type="hidden" name="idmanif" value={{$manifestation->IDMANIF}}>
                         <input type="hidden" name="idpersonne" value={{Auth::user()->id}}>
                         <div class="flex items-center">
-                        <label class="mx-3" for="quantiter">Quantiter: </label>
+                        <label class="mx-3" for="quantiter">Quantité : </label>
                         <input class="text-gray-600" type="number" id="quantiter" name="quantiter" min="1" max="10" value="1">
                         </div>
                         <button class="position-center mt-4 bg-red-600 text-gray-300 rounded font-semibold px-5 py-4 hover:bg-red-400 transition ease-in-out duration-150" type="submit">Réserver</button>
+                    {{-- Les Messages Succés / Erreurs--}}
+                        @if(session()->has('message'))
+                            <div class="alert alert-success">
+                                {{ session()->get('message') }}
+                            </div>
+                        @endif
+                        {{--Fin--}}
                     </form>
-                <!-- >div class="mt-12">
-
-                        <
-                </div> -->
                 @endif
             </div>
 

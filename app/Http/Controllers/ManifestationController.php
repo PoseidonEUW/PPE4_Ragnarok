@@ -63,7 +63,8 @@ class ManifestationController extends Controller
 
     ]);
 //    Decrement
-    return redirect('/');
+            return redirect()->back()->with('message', 'Votre place est reservée !');
+
     }
 
     }
