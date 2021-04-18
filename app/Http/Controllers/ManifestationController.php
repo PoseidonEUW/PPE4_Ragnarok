@@ -62,8 +62,9 @@ class ManifestationController extends Controller
         'QUANTITERESERVATION'=>$request->input('quantiter'),
 
     ]);
-//    Decrement 
-    return redirect('/');
+//    Decrement
+            return redirect()->back()->with('message', 'Votre place est reservée !');
+
     }
 
     }
