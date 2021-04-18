@@ -21,8 +21,8 @@ use Illuminate\Validation\Rule;
 | contains the "web" middleware group. Now create something great!
 |
 */
-// Main Page
 
+// Main Page
 Route::get('/',[PagesController::class,'index']);
 Route::get('/about-us',[PagesController::class,'aboutus']);
 

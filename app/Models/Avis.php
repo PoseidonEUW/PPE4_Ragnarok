@@ -2,12 +2,12 @@
 
 namespace App\Models;
 
-use App\Http\Controllers\AvisController;
-use App\Http\Controllers\ReservationController;
+use App\Http\Controllers\PersonneController;
+use App\Http\Controllers\ManifestationController;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Manifestation extends Model
+class Avis extends Model
 {
     use HasFactory;
     protected $table = 'manifestation';
@@ -15,12 +15,11 @@ class Manifestation extends Model
     protected $primaryKey = 'IDMANIF';
     protected $dates = ['DATEMANIF', 'HORAIREDEBUTMANIF'];
 
-    public function reservations(){
-        return $this->hasMany(Reservation::class);
+    public function personnes(){
+        return $this->belongsTo(PersonneController::class);
     }
-    public function avis(){
-        return $this->hasMany(AvisController::class);
+    public function manifestation(){
+        $this->belongsTo(Manifestation::class);
     }
-
 
 }
