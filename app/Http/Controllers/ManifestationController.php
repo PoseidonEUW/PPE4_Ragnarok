@@ -20,8 +20,7 @@ class ManifestationController extends Controller
     public function index()
     {
         //Select * from Manifestation
-        $manifestations = DB::table('manifestation')
-            ->join('lieu','manifestation.IDLIEU','=','lieu.IDLIEU')
+        $manifestations = Manifestation::join('lieu','manifestation.IDLIEU','=','lieu.IDLIEU')
             ->join('festival','manifestation.ANNEEFESTIVAL','=','festival.ANNEEFESTIVAL')
             ->get();
 
@@ -63,6 +62,7 @@ class ManifestationController extends Controller
         'QUANTITERESERVATION'=>$request->input('quantiter'),
 
     ]);
+//    Decrement 
     return redirect('/');
     }
 
