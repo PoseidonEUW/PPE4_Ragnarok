@@ -28,7 +28,7 @@
                 </a>
             </li>
             <li class="md:ml-6 mt-3 md:mt-0  ">
-                <a href="#" class="hover:text-red-600 capitalize">
+                <a href="/artistes" class="hover:text-red-600 capitalize">
                     Artistes
                 </a>
             </li>

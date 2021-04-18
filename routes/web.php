@@ -24,6 +24,7 @@ use Illuminate\Validation\Rule;
 
 Route::get('/',[PagesController::class,'index']);
 Route::get('/about-us',[PagesController::class,'aboutus']);
+
 //Find de main Page
 //Controlleur Manifestation
 Route::get('/manifestations',[ManifestationController::class,'index']);

@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Artistes;
+use App\Models\Manifestation;
 use Illuminate\Http\Request;
 
 class ArtistesController extends Controller
@@ -13,7 +15,14 @@ class ArtistesController extends Controller
      */
     public function index()
     {
-        //
+        //Select * from Artistes
+        $artistes = Artistes::join('personne','artistes.IDPERSONNE','=','personne.IDPERSONNE')
+            ->get();
+
+        return view('artistes',[
+            'artistes'=>artistes
+
+        ]);
     }
 
     /**
