@@ -62,7 +62,7 @@ class ManifestationController extends Controller
         'QUANTITERESERVATION'=>$request->input('quantiter'),
 
     ]);
-//    Decrement 
+//    Decrement
     return redirect('/');
     }
 
