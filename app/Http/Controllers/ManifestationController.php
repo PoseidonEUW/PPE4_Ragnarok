@@ -52,6 +52,7 @@ class ManifestationController extends Controller
      */
     public function store(Request $request)
     {
+
         if(Auth::check()){
             $request->validate([
                 'quantiter' => 'numeric|min:1|max:10',
@@ -62,7 +63,12 @@ class ManifestationController extends Controller
         'IDPERSONNE'=>$request->input('idpersonne'),
         'QUANTITERESERVATION'=>$request->input('quantiter'),
 
-    ]);
+
+
+    ])
+//        Je suis rendu ICI 2:31 AM 4/18/2021
+   ->decrement('JAUGEPERSMANIF') ;
+
     return redirect('/');
     }
 

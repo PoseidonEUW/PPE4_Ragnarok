@@ -23,6 +23,12 @@
                             <span>Prix : {{$reservation->PRIXMANIF}}</span>
 
                         </div>
+                        <div class="flex items-center justify-end mt-4">
+
+                            <x-button class="ml-4">
+                                {{ __('Remboursement') }}
+                            </x-button>
+                        </div>
                         <span class="ml-24 font-bold">Prix Total : </span>{{$reservation->PRIXMANIF*$reservation->QUANTITERESERVATION}} €
 
                         <!-- Billet-->
