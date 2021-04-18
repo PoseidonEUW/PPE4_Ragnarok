@@ -1,6 +1,7 @@
 <?php
 
 
+use App\Http\Controllers\ArtistesController;
 use App\Http\Controllers\ReservationController;
 use App\Models\Personne;
 use Illuminate\Http\Request;
@@ -29,8 +30,8 @@ Route::get('/about-us',[PagesController::class,'aboutus']);
 //Controlleur Manifestation
 Route::get('/manifestations',[ManifestationController::class,'index']);
 Route::resource('/manifestations',ManifestationController::class);
-//
-
+// Controlleur Artistes
+Route::get('/artistes',[ArtistesController::class,'index']);
 //
 
 Route::get('/dashboard', function () {
