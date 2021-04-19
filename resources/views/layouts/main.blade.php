@@ -9,58 +9,54 @@
     <link rel="shortcut icon" href="{{ asset('/images/vectorpaint.svg') }}">
 </head>
 <body class="font-sans bg-gray-900 text-white">
-<div class="py-8">
-<nav class="border-b border-gray-800 fixed top-0 inset-x-0">
-    <div class="container mx-auto items-center flex justify-between px4 py6 text-gray-300 ">
-        <ul class=" flex items-center">
+    <div class="py-8">
+        <nav class="border-b border-gray-800 fixed top-0 inset-x-0">
+            <div class="container mx-auto items-center flex justify-between px4 py6 text-gray-300 ">
+                <ul class=" flex items-center">
+                    <li>
+                        <a href="/">
+                            <img class="w-32 ml-6 object-center"src="/images/carantecred.png" alt="Carantec">
+                        </a>
+                    </li>
+                    <li class="md:ml-16 mt-3 md:mt-0 transition duration-150 ease-in-out transform hover:-translate-y-1 hover:scale-110">
+                        <a href="/manifestations" class="hover:text-red-600 capitalize">
+                            Programmation
+                        </a>
+                    </li>
+                    <li class="md:ml-6 mt-3 md:mt-0 transition duration-150 ease-in-out transform hover:-translate-y-1 hover:scale-110">
+                        <a href="/artistes" class="hover:text-red-600 capitalize">
+                            Artistes
+                        </a>
+                    </li>
+                    <li class="md:ml-6 mt-3 md:mt-0 transition duration-150 ease-in-out transform hover:-translate-y-1 hover:scale-110">
+                        <a href="/about-us" class="hover:text-red-600 capitalize">
+                            Qui sommes nous?
+                        </a>
+                    </li>
+                </ul>
+                    @if (Route::has('login'))
+                        <div class="hidden flex px-6 py-4 sm:block">
+                            @auth
+                                <a href="{{ url('/dashboard') }}" class="text-sm text-gray-300 underline hover:text-red-600"
+                                >Mon Compte</a
+                                >
+                            @else
+                                <a href="{{ route('login') }}" class="text-sm text-gray-300 underline hover:text-red-600"
+                                >Se Connecter</a
+                                >
 
-            <li>
+                                @if (Route::has('register'))
+                                    <a
+                                        href="{{ route('register') }}"
+                                        class="ml-4 text-sm text-gray-300 underline hover:text-red-600"
+                                    >S'inscrire</a
+                                    >
+                                @endif
+                            @endauth
+                                </div>
+                    @endif
 
-                <a href="/">
-
-                    <img class="w-32 ml-6 object-center"src="/images/carantecred.png" alt="Carantec">
-
-                </a>
-            </li>
-            <li class="md:ml-16 mt-3 md:mt-0 ">
-                <a href="/manifestations" class="hover:text-red-600 capitalize">
-                    Programmation
-                </a>
-            </li>
-            <li class="md:ml-6 mt-3 md:mt-0  ">
-                <a href="/artistes" class="hover:text-red-600 capitalize">
-                    Artistes
-                </a>
-            </li>
-            <li class="md:ml-6 mt-3 md:mt-0 ">
-                <a href="/about-us" class="hover:text-red-600 capitalize">
-                    Qui sommes nous?
-                </a>
-            </li>
-        </ul>
-            @if (Route::has('login'))
-                <div class="hidden flex px-6 py-4 sm:block">
-                    @auth
-                        <a href="{{ url('/dashboard') }}" class="text-sm text-gray-300 underline hover:text-red-600"
-                        >Mon Compte</a
-                        >
-                    @else
-                        <a href="{{ route('login') }}" class="text-sm text-gray-300 underline hover:text-red-600"
-                        >Se Connecter</a
-                        >
-
-                        @if (Route::has('register'))
-                            <a
-                                href="{{ route('register') }}"
-                                class="ml-4 text-sm text-gray-300 underline hover:text-red-600"
-                            >S'inscrire</a
-                            >
-                        @endif
-                    @endauth
-                </div>
-            @endif
-
-</nav>
+        </nav>
 </div>
 @yield('content')
 
