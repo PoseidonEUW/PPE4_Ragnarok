@@ -6,11 +6,13 @@
     <div class="m-auto w-4/5 py-24">
         <div class="text-center">
             <h1 class=" cursor-default text-5xl uppercase bold">
-                Les Artistes
+                Les Acteurs | CARANTEC 2021
             </h1>
         </div>
     </div>
-    <div class="center">
+    <h2 class=" cursor-default uppercase tracking-wider ml-12 text-gray-300 text-3xl font-semibold">
+        Les Artistes
+    </h2>
                 @foreach($artistes as $artiste)
 
                     <div class="grid grid-rows-3 grid-flow-col gap-4 ">
@@ -31,6 +33,9 @@
 
                     </div>
                 @endforeach
+    <h2 class=" cursor-default uppercase tracking-wider ml-12 text-gray-300 text-3xl font-semibold">
+        Les Intervenants
+    </h2>
     </div>
     </div>
 @endsection
