@@ -17,7 +17,6 @@ namespace CarantecAdminPanel
             InitializeComponent();
             if (etat == 'u')
             {
-                gbAdherent.Enabled = false;
                 gbArtiste.Enabled = false;
                 groupBox1.Enabled = false;
             }
@@ -55,9 +54,7 @@ namespace CarantecAdminPanel
 
         private void refreshRb(string role)
         {
-            gbAdherent.Enabled = false;
             gbArtiste.Enabled = false;
-            if (role == "adherent") gbAdherent.Enabled = true;
             if (role == "artiste") gbArtiste.Enabled = true;
         }
 

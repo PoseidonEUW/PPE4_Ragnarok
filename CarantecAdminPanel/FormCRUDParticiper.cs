@@ -19,8 +19,8 @@ namespace CarantecAdminPanel
             InitializeComponent();
             CbManif.SelectedIndex = -1;
             CbPersonne.SelectedIndex = -1;
-            Controleur.Vmodele.charger_donnees("participer", -1, "");
-            Controleur.Vmodele.charger_donnees("manifestation", -1, "");
+            Controleur.Vmodele.charger_donnees("participer", -1, "","");
+            Controleur.Vmodele.charger_donnees("manifestation", -1, "","");
             for (int i = 0; i < Controleur.vmodele.DT[3].Rows.Count; i++)
             {
                 CbManif.Items.Add(Controleur.vmodele.DT[3].Rows[i][3].ToString());
@@ -34,9 +34,9 @@ namespace CarantecAdminPanel
 
         private string getTypeManif(string item)
         {
-            Controleur.Vmodele.charger_donnees("nomManifToIdManif", -1, CbManif.SelectedItem.ToString());
+            Controleur.Vmodele.charger_donnees("nomManifToIdManif", -1, CbManif.SelectedItem.ToString(),"");
             string idManif = Controleur.vmodele.DT[23].Rows[0][0].ToString();
-            Controleur.Vmodele.charger_donnees("verifTypeManif", -1, idManif.ToString());
+            Controleur.Vmodele.charger_donnees("verifTypeManif", -1, idManif.ToString(),"") ;
             if (Controleur.vmodele.DT[35].Rows[0][0].ToString() != "") return Controleur.vmodele.DT[35].Rows[0][0].ToString();
             else if (Controleur.vmodele.DT[35].Rows[0][1].ToString() != "") return Controleur.vmodele.DT[35].Rows[0][1].ToString();
             else if (Controleur.vmodele.DT[35].Rows[0][2].ToString() != "") return Controleur.vmodele.DT[35].Rows[0][2].ToString();
@@ -46,9 +46,9 @@ namespace CarantecAdminPanel
 
         private void cbManif_SelectionChangeCommitted(object sender, EventArgs e)
         {
-            Controleur.Vmodele.charger_donnees("animateurPersonne", -1, "");
-            Controleur.Vmodele.charger_donnees("artistePersonne", -1, "");
-            Controleur.Vmodele.charger_donnees("intervenantSpecialisePersonne", -1, "");
+            Controleur.Vmodele.charger_donnees("animateurPersonne", -1, "","");
+            Controleur.Vmodele.charger_donnees("artistePersonne", -1, "","");
+            Controleur.Vmodele.charger_donnees("intervenantSpecialisePersonne", -1, "","");
             CbPersonne.Enabled = true;
             CbPersonne.Items.Clear();
             CbPersonne.SelectedIndex = -1;

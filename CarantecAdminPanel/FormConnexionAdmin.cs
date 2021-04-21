@@ -14,8 +14,7 @@ namespace CarantecAdminPanel
 {
     public partial class FormConnexionAdmin : Form
     {
-        string logAdmin, mdpAdmin, mode = "admin";
-        int erreur;
+        string logAdmin, mdpAdmin;
 
         public FormConnexionAdmin()
         {
@@ -29,22 +28,19 @@ namespace CarantecAdminPanel
 
         private void BoutonValiderCoAdmin_Click(object sender, EventArgs e)
         {
-            logAdmin = TextBoxLogAdmin.Text;
-            mdpAdmin = TextBoxMdpAdmin.Text;
-            Controleur.Vmodele.charger_donnees("ADMIN", -1, "");
-            for(int i = 0; i < Controleur.Vmodele.DT[0].Rows.Count; i++)
+            try
             {
-                if (logAdmin == Controleur.Vmodele.DT[0].Rows[i]["LOGADMIN"].ToString() && mdpAdmin == Controleur.Vmodele.DT[0].Rows[i]["MDPADMIN"].ToString())
-                {
-                    erreur = 1;
-                    this.Visible = false;
-                    Form1 F1 = new Form1();
-                    F1.Show();
-                }
+                logAdmin = TextBoxLogAdmin.Text;
+                mdpAdmin = TextBoxMdpAdmin.Text;
+                Controleur.Vmodele.charger_donnees("IdForAdmin", -1, logAdmin, mdpAdmin);
+                Controleur.vmodele.DT[37].Rows[0][0].ToString();
+                Form1 FA = new Form1();
+                this.Visible = false;
+                FA.Show();
             }
-            if (erreur == 0)
+            catch
             {
-                MessageBox.Show("Erreur dans le login ou le mdp !");
+                MessageBox.Show("Erreur dans le login ou le mot de passe!");
                 TextBoxLogAdmin.Clear();
                 TextBoxMdpAdmin.Clear();
             }

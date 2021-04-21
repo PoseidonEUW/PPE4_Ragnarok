@@ -63,7 +63,7 @@ namespace CarantecAdminPanel
         #region crudFestival
         public static void crud_festival(Char c, int indice)
         {
-            Controleur.Vmodele.charger_donnees("festival", -1, "");
+            Controleur.Vmodele.charger_donnees("festival", -1, "","");
             if (c == 'd') // cas de la suppression
             {
                 //   DialogResult rep = MessageBox.Show("Etes-vous sûr de vouloir supprimer ce constructeur "+ vmodele.DTConstructeur.Rows[indice][1].ToString()+ " ? ", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
@@ -80,8 +80,8 @@ namespace CarantecAdminPanel
                 FormCRUDFestival formCRUD = new FormCRUDFestival();  // création de la nouvelle forme
                 if (c == 'c')  // mode ajout donc pas de valeur à passer à la nouvelle forme
                 {
-                    Controleur.Vmodele.charger_donnees("respToPers", -1, "");
-                    Controleur.Vmodele.charger_donnees("thematique", -1, "");
+                    Controleur.Vmodele.charger_donnees("respToPers", -1, "","");
+                    Controleur.Vmodele.charger_donnees("thematique", -1, "","");
                     formCRUD.DateTimeAnnee.Value = DateTime.Now;
                     for (int i = 0; i < vmodele.DT[10].Rows.Count; i++)
                     {
@@ -100,9 +100,9 @@ namespace CarantecAdminPanel
                 if (c == 'u')   // mode update donc on récupère les champs
                 {
                     formCRUD.DateTimeAnnee.Value = DateTime.Now;
-                    Controleur.Vmodele.charger_donnees("respToPers", -1, "");
-                    Controleur.Vmodele.charger_donnees("thematique", -1, "");
-                    Controleur.Vmodele.charger_donnees("responsable", -1, "");
+                    Controleur.Vmodele.charger_donnees("respToPers", -1, "", "");
+                    Controleur.Vmodele.charger_donnees("thematique", -1, "", "");
+                    Controleur.Vmodele.charger_donnees("responsable", -1, "", "");
                     for (int i = 0; i < vmodele.DT[10].Rows.Count; i++)
                     {
                         formCRUD.CbThematique.Items.Add(vmodele.DT[10].Rows[i][1].ToString());
@@ -131,12 +131,12 @@ namespace CarantecAdminPanel
                             DataRow NouvLigne = vmodele.DT[2].NewRow();
                             NouvLigne["ANNEEFESTIVAL"] = Convert.ToInt32(formCRUD.DateTimeAnnee.Value.Year);
                             string libelleTheme = formCRUD.CbThematique.SelectedItem.ToString();
-                            Controleur.Vmodele.charger_donnees("nomThemeToIdTheme", -1, libelleTheme);
+                            Controleur.Vmodele.charger_donnees("nomThemeToIdTheme", -1, libelleTheme, "");
                             NouvLigne["IDTHEMATIQUE"] = Convert.ToInt32(vmodele.DT[14].Rows[0][0].ToString());
                             string nomPrenom = formCRUD.CbResponsable.SelectedItem.ToString();
                             string[] nomPrenomSplit = nomPrenom.Split(' ');
                             string nom = nomPrenomSplit[0];
-                            Controleur.Vmodele.charger_donnees("persToResp", -1, nom);
+                            Controleur.Vmodele.charger_donnees("persToResp", -1, nom, "");
                             NouvLigne["IDPERSONNE"] = Convert.ToInt32(vmodele.DT[13].Rows[0][0].ToString());
                             NouvLigne["NOMFESTIVAL"] = formCRUD.TbNomFestival.Text;
                             vmodele.DT[2].Rows.Add(NouvLigne);
@@ -155,12 +155,12 @@ namespace CarantecAdminPanel
                         {
                             vmodele.DT[2].Rows[indice]["ANNEEFESTIVAL"] = Convert.ToInt32(formCRUD.DateTimeAnnee.Value.Year);
                             string libelleTheme = formCRUD.CbThematique.SelectedItem.ToString();
-                            Controleur.Vmodele.charger_donnees("nomThemeToIdTheme", -1, libelleTheme);
+                            Controleur.Vmodele.charger_donnees("nomThemeToIdTheme", -1, libelleTheme, "");
                             vmodele.DT[2].Rows[indice]["IDTHEMATIQUE"] = Convert.ToInt32(vmodele.DT[14].Rows[0][0].ToString());
                             string nomPrenom = formCRUD.CbResponsable.SelectedItem.ToString();
                             string[] nomPrenomSplit = nomPrenom.Split(' ');
                             string nom = nomPrenomSplit[0];
-                            Controleur.Vmodele.charger_donnees("persToResp", -1, nom);
+                            Controleur.Vmodele.charger_donnees("persToResp", -1, nom, "");
                             vmodele.DT[2].Rows[indice]["IDPERSONNE"] = Convert.ToInt32(vmodele.DT[13].Rows[0][0].ToString());
                             vmodele.DT[2].Rows[indice]["NOMFESTIVAL"] = formCRUD.TbNomFestival.Text;
                             vmodele.DA[2].Update(vmodele.DT[2]);
@@ -187,8 +187,8 @@ namespace CarantecAdminPanel
         #region crudUtilisateur
         public static void crud_utilisateur(Char c, int indice)
         {
-            Controleur.Vmodele.charger_donnees("utilisateur", -1, "");
-            Controleur.Vmodele.charger_donnees("personnesimplifie", -1, "");
+            Controleur.Vmodele.charger_donnees("utilisateur", -1, "", "");
+            Controleur.Vmodele.charger_donnees("personnesimplifie", -1, "", "");
             if (c == 'd') // cas de la suppression
             {
                 //   DialogResult rep = MessageBox.Show("Etes-vous sûr de vouloir supprimer ce constructeur "+ vmodele.DTConstructeur.Rows[indice][1].ToString()+ " ? ", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
@@ -235,33 +235,20 @@ namespace CarantecAdminPanel
                             NouvLigne["EMAILPERSONNE"] = formCRUD.TbEmailUser.Text;
                             vmodele.DT[1].Rows.Add(NouvLigne);
                             vmodele.DA[1].Update(vmodele.DT[1]);
-                            if (formCRUD.RbAdherentUser.Checked == true)
-                            {
-                                if (formCRUD.TbEmailAdherentUser.Text != "" && formCRUD.TbMdpAdherentUser.Text != "")
-                                {
-                                    Controleur.Vmodele.charger_donnees("users", -1, "");
-                                    DataRow NouvLigne1 = vmodele.DT[15].NewRow();
-                                    NouvLigne1["id"] = Convert.ToInt32(vmodele.DT[1].Rows[vmodele.DT[1].Rows.Count - 1][0]) + 1;
-                                    NouvLigne1["email"] = formCRUD.TbEmailUser.Text;
-                                    NouvLigne1["password"] = formCRUD.TbMdpAdherentUser.Text;
-                                    vmodele.DT[15].Rows.Add(NouvLigne1);
-                                    vmodele.DA[15].Update(vmodele.DT[15]);
-                                }
-                                else
-                                {
-                                    MessageBox.Show("Erreur : vous avez oubliez de remplir les champs correspondant à l'adherent", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                                    goto eti;
-                                }
-                            }
                             if (formCRUD.RbArtisteUser.Checked == true)
                             {
-                                if (formCRUD.TbRoleArtisteUser.Text != "" && formCRUD.TbLienFBArtisteUser.Text != "")
+                                if (formCRUD.TbRoleArtisteUser.Text != "")
                                 {
-                                    Controleur.Vmodele.charger_donnees("artiste", -1, "");
+                                    Controleur.Vmodele.charger_donnees("artiste", -1, "", "");
+                                    Controleur.Vmodele.charger_donnees("personne", -1, "", "");
                                     DataRow NouvLigne2 = vmodele.DT[16].NewRow();
                                     NouvLigne2["IDPERSONNE"] = Convert.ToInt32(vmodele.DT[1].Rows[vmodele.DT[1].Rows.Count - 1][0]) + 1;
                                     NouvLigne2["ROLEARTISTE"] = formCRUD.TbRoleArtisteUser.Text;
-                                    NouvLigne2["LIENFBSITEARTISTE"] = formCRUD.TbLienFBArtisteUser.Text;
+                                    NouvLigne2["IMGARTISTE"] = formCRUD.TbURLArtisteUser.Text;
+                                    if(formCRUD.TbLienFBArtisteUser.Text != "")
+                                    {
+                                        NouvLigne2["LIENFBSITEARTISTE"] = formCRUD.TbLienFBArtisteUser.Text;
+                                    }
                                     vmodele.DT[16].Rows.Add(NouvLigne2);
                                     vmodele.DA[16].Update(vmodele.DT[16]);
                                 }
@@ -273,7 +260,7 @@ namespace CarantecAdminPanel
                             }
                             if (formCRUD.RbAnimUser.Checked == true)
                             {
-                                Controleur.Vmodele.charger_donnees("animateur", -1, "");
+                                Controleur.Vmodele.charger_donnees("animateur", -1, "", "");
                                 DataRow NouvLigne3 = vmodele.DT[17].NewRow();
                                 NouvLigne3["IDPERSONNE"] = Convert.ToInt32(vmodele.DT[1].Rows[vmodele.DT[1].Rows.Count - 1][0]) + 1;
                                 vmodele.DT[17].Rows.Add(NouvLigne3);
@@ -281,7 +268,7 @@ namespace CarantecAdminPanel
                             }
                             if (formCRUD.RbIntSpeUser.Checked == true)
                             {
-                                Controleur.Vmodele.charger_donnees("intSpe", -1, "");
+                                Controleur.Vmodele.charger_donnees("intSpe", -1, "", "");
                                 DataRow NouvLigne4 = vmodele.DT[18].NewRow();
                                 NouvLigne4["IDPERSONNE"] = Convert.ToInt32(vmodele.DT[1].Rows[vmodele.DT[1].Rows.Count - 1][0]) + 1;
                                 vmodele.DT[18].Rows.Add(NouvLigne4);
@@ -338,7 +325,7 @@ namespace CarantecAdminPanel
 
         public static void crud_manifestation(Char c, int indice)
         {
-            Controleur.Vmodele.charger_donnees("manifestation", -1, "");
+            Controleur.Vmodele.charger_donnees("manifestation", -1, "", "");
             if (c == 'd') // cas de la suppression
             {
                 //   DialogResult rep = MessageBox.Show("Etes-vous sûr de vouloir supprimer ce constructeur "+ vmodele.DTConstructeur.Rows[indice][1].ToString()+ " ? ", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
@@ -355,8 +342,8 @@ namespace CarantecAdminPanel
                 FormCRUDManifestation formCRUD = new FormCRUDManifestation();  // création de la nouvelle forme
                 if (c == 'c')  // mode ajout donc pas de valeur à passer à la nouvelle forme
                 {
-                    Controleur.Vmodele.charger_donnees("lieu", -1, "");
-                    Controleur.Vmodele.charger_donnees("festival", -1, "");
+                    Controleur.Vmodele.charger_donnees("lieu", -1, "", "");
+                    Controleur.Vmodele.charger_donnees("festival", -1, "", "");
                     for (int i = 0; i < vmodele.DT[5].Rows.Count; i++)
                     {
                         formCRUD.ComboBoxLieuManif.Items.Add(vmodele.DT[5].Rows[i][1].ToString());
@@ -376,9 +363,9 @@ namespace CarantecAdminPanel
 
                 if (c == 'u')   // mode update donc on récupère les champs
                 {
-                    Controleur.Vmodele.charger_donnees("lieu", -1, "");
-                    Controleur.Vmodele.charger_donnees("festival", -1, "");
-                    Controleur.Vmodele.charger_donnees("nomsLieuxFromManifs", -1, "");
+                    Controleur.Vmodele.charger_donnees("lieu", -1, "", "");
+                    Controleur.Vmodele.charger_donnees("festival", -1, "", "");
+                    Controleur.Vmodele.charger_donnees("nomsLieuxFromManifs", -1, "", "");
                     for (int i = 0; i < vmodele.DT[5].Rows.Count; i++)
                     {
                         formCRUD.ComboBoxLieuManif.Items.Add(vmodele.DT[5].Rows[i][1].ToString());
@@ -413,7 +400,7 @@ namespace CarantecAdminPanel
                             NouvLigne["IDMANIF"] = Convert.ToInt32(vmodele.DT[3].Rows[vmodele.DT[3].Rows.Count - 1][0]);
                             NouvLigne["ANNEEFESTIVAL"] = Convert.ToInt32(formCRUD.CbAnnee.SelectedItem);
                             string libelleLieu = formCRUD.ComboBoxLieuManif.SelectedItem.ToString();
-                            Controleur.Vmodele.charger_donnees("nomLieuToIdLieu", -1, libelleLieu);
+                            Controleur.Vmodele.charger_donnees("nomLieuToIdLieu", -1, libelleLieu, "");
                             NouvLigne["IDLIEU"] = Convert.ToInt32(vmodele.DT[19].Rows[0][0].ToString());
                             NouvLigne["LIBELLEMANIF"] = formCRUD.TbLibelleManif.Text;
                             NouvLigne["DATEMANIF"] = formCRUD.DateManif.Text;
@@ -423,7 +410,7 @@ namespace CarantecAdminPanel
                             NouvLigne["PRIXMANIF"] = Convert.ToInt32(formCRUD.TbPrixManif.Text);
                             if (formCRUD.RbAtelierManif.Checked == true)
                             {
-                                Controleur.Vmodele.charger_donnees("atelier", -1, "");
+                                Controleur.Vmodele.charger_donnees("atelier", -1, "", "");
                                 DataRow NouvLigne1 = vmodele.DT[30].NewRow();
                                 NouvLigne["IDMANIF"] = Convert.ToInt32(vmodele.DT[3].Rows[vmodele.DT[3].Rows.Count - 1][0]);
                                 vmodele.DT[30].Rows.Add(NouvLigne);
@@ -431,7 +418,7 @@ namespace CarantecAdminPanel
                             }
                             if (formCRUD.RbConcertManif.Checked == true)
                             {
-                                Controleur.Vmodele.charger_donnees("concert", -1, "");
+                                Controleur.Vmodele.charger_donnees("concert", -1, "", "");
                                 DataRow NouvLigne1 = vmodele.DT[31].NewRow();
                                 NouvLigne["IDMANIF"] = Convert.ToInt32(vmodele.DT[3].Rows[vmodele.DT[3].Rows.Count - 1][0]);
                                 vmodele.DT[31].Rows.Add(NouvLigne);
@@ -439,7 +426,7 @@ namespace CarantecAdminPanel
                             }
                             if (formCRUD.RbConferenceManif.Checked == true)
                             {
-                                Controleur.Vmodele.charger_donnees("conference", -1, "");
+                                Controleur.Vmodele.charger_donnees("conference", -1, "", "");
                                 DataRow NouvLigne1 = vmodele.DT[32].NewRow();
                                 NouvLigne["IDMANIF"] = Convert.ToInt32(vmodele.DT[3].Rows[vmodele.DT[3].Rows.Count - 1][0]);
                                 vmodele.DT[32].Rows.Add(NouvLigne);
@@ -447,7 +434,7 @@ namespace CarantecAdminPanel
                             }
                             if (formCRUD.RbDebatManif.Checked == true)
                             {
-                                Controleur.Vmodele.charger_donnees("manif", -1, "");
+                                Controleur.Vmodele.charger_donnees("manif", -1, "", "");
                                 DataRow NouvLigne1 = vmodele.DT[33].NewRow();
                                 NouvLigne["IDMANIF"] = Convert.ToInt32(vmodele.DT[3].Rows[vmodele.DT[3].Rows.Count - 1][0]);
                                 vmodele.DT[33].Rows.Add(NouvLigne);
@@ -469,7 +456,7 @@ namespace CarantecAdminPanel
                         {
                             vmodele.DT[3].Rows[indice]["ANNEEFESTIVAL"] = Convert.ToInt32(formCRUD.CbAnnee.SelectedItem);
                             string libelleLieu = formCRUD.ComboBoxLieuManif.SelectedItem.ToString();
-                            Controleur.Vmodele.charger_donnees("nomLieuToIdLieu", -1, libelleLieu);
+                            Controleur.Vmodele.charger_donnees("nomLieuToIdLieu", -1, libelleLieu, "");
                             vmodele.DT[3].Rows[indice]["IDLIEU"] = Convert.ToInt32(vmodele.DT[19].Rows[0][0].ToString());
                             vmodele.DT[3].Rows[indice]["LIBELLEMANIF"] = formCRUD.TbLibelleManif.Text;
                             vmodele.DT[3].Rows[indice]["DATEMANIF"] = formCRUD.DateManif.Text;
@@ -503,7 +490,7 @@ namespace CarantecAdminPanel
 
         public static void crud_lieu(Char c, int indice)
         {
-            Controleur.Vmodele.charger_donnees("lieu", -1, "");
+            Controleur.Vmodele.charger_donnees("lieu", -1, "", "");
             if (c == 'd') // cas de la suppression
             {
                 //   DialogResult rep = MessageBox.Show("Etes-vous sûr de vouloir supprimer ce constructeur "+ vmodele.DTConstructeur.Rows[indice][1].ToString()+ " ? ", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
@@ -597,7 +584,7 @@ namespace CarantecAdminPanel
 
         public static void crud_public(Char c, int indice)
         {
-            Controleur.Vmodele.charger_donnees("public", -1, "");
+            Controleur.Vmodele.charger_donnees("public", -1, "", "");
             if (c == 'd') // cas de la suppression
             {
                 //   DialogResult rep = MessageBox.Show("Etes-vous sûr de vouloir supprimer ce constructeur "+ vmodele.DTConstructeur.Rows[indice][1].ToString()+ " ? ", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
@@ -683,7 +670,7 @@ namespace CarantecAdminPanel
 
         public static void crud_reservation(Char c, int indice)
         {
-            Controleur.Vmodele.charger_donnees("reservation", -1, "");
+            Controleur.Vmodele.charger_donnees("reservation", -1, "", "");
             if (c == 'd') // cas de la suppression
             {
                 //   DialogResult rep = MessageBox.Show("Etes-vous sûr de vouloir supprimer ce constructeur "+ vmodele.DTConstructeur.Rows[indice][1].ToString()+ " ? ", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
@@ -696,8 +683,8 @@ namespace CarantecAdminPanel
             }
             else
             {
-                Controleur.Vmodele.charger_donnees("manifestation", -1, "");
-                Controleur.Vmodele.charger_donnees("adherent", -1, "");
+                Controleur.Vmodele.charger_donnees("manifestation", -1, "", "");
+                Controleur.Vmodele.charger_donnees("adherent", -1, "", "");
                 // cas de l'ajout et modification
                 FormCRUDReservation formCRUD = new FormCRUDReservation();  // création de la nouvelle forme
                 if (c == 'c')  // mode ajout donc pas de valeur à passer à la nouvelle forme
@@ -718,8 +705,8 @@ namespace CarantecAdminPanel
 
                 if (c == 'u')   // mode update donc on récupère les champs
                 {
-                    Controleur.Vmodele.charger_donnees("nomsManifsFromReserv", -1, "");
-                    Controleur.Vmodele.charger_donnees("nomsAdhFromReserv", -1, "");
+                    Controleur.Vmodele.charger_donnees("nomsManifsFromReserv", -1, "", "");
+                    Controleur.Vmodele.charger_donnees("nomsAdhFromReserv", -1, "", "");
                     //formCRUD.ComboBoxLieuManif.SelectedItem = vmodele.DT[20].Rows[indice][2].ToString();
                     for (int i = 0; i < vmodele.DT[3].Rows.Count; i++)
                     {
@@ -749,10 +736,10 @@ namespace CarantecAdminPanel
                             DataRow NouvLigne = vmodele.DT[4].NewRow();
                             NouvLigne["REFRESERVATION"] = Convert.ToInt32(vmodele.DT[4].Rows[vmodele.DT[4].Rows.Count - 1][0]) + 1;
                             string libelleManif = formCRUD.CbManifReservation.SelectedItem.ToString();
-                            Controleur.Vmodele.charger_donnees("nomManifToIdManif", -1, libelleManif);
+                            Controleur.Vmodele.charger_donnees("nomManifToIdManif", -1, libelleManif, "");
                             NouvLigne["IDMANIF"] = Convert.ToInt32(vmodele.DT[23].Rows[0][0].ToString());
                             string libellePersonne = formCRUD.CbAdhReservation.SelectedItem.ToString();
-                            Controleur.Vmodele.charger_donnees("nomPersToIdPers", -1, libellePersonne);
+                            Controleur.Vmodele.charger_donnees("nomPersToIdPers", -1, libellePersonne, "");
                             NouvLigne["IDPERSONNE"] = Convert.ToInt32(vmodele.DT[24].Rows[0][0].ToString());
                             NouvLigne["QUANTITERESERVATION"] = formCRUD.NudPersReservation.Value;
                             vmodele.DT[4].Rows.Add(NouvLigne);
@@ -770,10 +757,10 @@ namespace CarantecAdminPanel
                         if (formCRUD.CbManifReservation.SelectedIndex != -1 && formCRUD.CbAdhReservation.SelectedIndex != -1 && formCRUD.NudPersReservation.Value > 0)
                         {
                             string libelleManif = formCRUD.CbManifReservation.SelectedItem.ToString();
-                            Controleur.Vmodele.charger_donnees("nomManifToIdManif", -1, libelleManif);
+                            Controleur.Vmodele.charger_donnees("nomManifToIdManif", -1, libelleManif, "");
                             vmodele.DT[4].Rows[indice]["IDMANIF"] = Convert.ToInt32(vmodele.DT[23].Rows[0][0].ToString());
                             string libellePersonne = formCRUD.CbAdhReservation.SelectedItem.ToString();
-                            Controleur.Vmodele.charger_donnees("nomPersToIdPers", -1, libellePersonne);
+                            Controleur.Vmodele.charger_donnees("nomPersToIdPers", -1, libellePersonne, "");
                             vmodele.DT[4].Rows[indice]["IDPERSONNE"] = Convert.ToInt32(vmodele.DT[24].Rows[0][0].ToString());
                             vmodele.DT[4].Rows[indice]["QUANTITERESERVATION"] = formCRUD.NudPersReservation.Value;
                             vmodele.DA[4].Update(vmodele.DT[4]);
@@ -802,7 +789,7 @@ namespace CarantecAdminPanel
 
         public static void crud_avis(Char c, int indice)
         {
-            Controleur.Vmodele.charger_donnees("avis", -1, "");
+            Controleur.Vmodele.charger_donnees("avis", -1, "", "");
             if (c == 'd') // cas de la suppression
             {
                 //   DialogResult rep = MessageBox.Show("Etes-vous sûr de vouloir supprimer ce constructeur "+ vmodele.DTConstructeur.Rows[indice][1].ToString()+ " ? ", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
@@ -852,7 +839,7 @@ namespace CarantecAdminPanel
 
         public static void crud_participation(Char c, int indice)
         {
-            Controleur.Vmodele.charger_donnees("participer", -1, "");
+            Controleur.Vmodele.charger_donnees("participer", -1, "", "");
             if (c == 'd') // cas de la suppression
             {
                 //   DialogResult rep = MessageBox.Show("Etes-vous sûr de vouloir supprimer ce constructeur "+ vmodele.DTConstructeur.Rows[indice][1].ToString()+ " ? ", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
@@ -893,13 +880,13 @@ namespace CarantecAdminPanel
                             {
                                 DataRow NouvLigne = vmodele.DT[34].NewRow();
                                 string libelleManif = formCRUD.CbManif.SelectedItem.ToString();
-                                Controleur.Vmodele.charger_donnees("nomManifToIdManif", -1, libelleManif);
+                                Controleur.Vmodele.charger_donnees("nomManifToIdManif", -1, libelleManif, "");
                                 NouvLigne["IDMANIF"] = Convert.ToInt32(vmodele.DT[23].Rows[0][0].ToString());
 
                                 string nomPrenom = formCRUD.CbPersonne.SelectedItem.ToString();
                                 string[] nomPrenomSplit = nomPrenom.Split(' ');
                                 string nom = nomPrenomSplit[0];
-                                Controleur.Vmodele.charger_donnees("nomsPersToIdPers", -1, nom);
+                                Controleur.Vmodele.charger_donnees("nomsPersToIdPers", -1, nom, "");
                                 NouvLigne["IDPERSONNE"] = Convert.ToInt32(vmodele.DT[36].Rows[0][0].ToString());
                                 string libellePersonne = formCRUD.CbPersonne.SelectedItem.ToString();
                                 vmodele.DT[34].Rows.Add(NouvLigne);

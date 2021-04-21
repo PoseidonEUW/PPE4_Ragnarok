@@ -103,10 +103,7 @@ namespace CarantecAdminPanel
         /// </summary>
         public void seconnecter()
         {
-            //string myConnectionString = "Database=PPE4_Ragnarok;Data Source=192.168.164.1;User Id=Titouan_Annaix;Password=JeSappelleTitouan;";
-            string myConnectionString = "Database=PPE4_Ragnarok;Data Source=localhost;User Id=root;Password=;";
-            //string myConnectionString = "Database=PPE3_VELIBERTE;Data Source=192.168.153.1;User Id=YoBrnq;Password=azerty;";
-            //string myConnectionString = "Database=2021_slamBDD4;Data Source=192.168.10.70;User Id=2021_slamBDD4;Password=P@ssw0rd;";
+            string myConnectionString = "Database=PPE4_Ragnarok;Data Source=192.168.164.1;User Id=Elliot_Guittet;Password=Php#1MyAdmin;";
             myConnection = new MySqlConnection(myConnectionString);
             try // tentative 
             {
@@ -170,42 +167,42 @@ namespace CarantecAdminPanel
         /// charge dans un DT les données de la table passée en paramètre
         /// </summary>
         /// <param name="table">nom de la table à requêter</param>
-        public void charger_donnees(string table, int indice, string text)
+        public void charger_donnees(string table, int indice, string text1, string text2)
         {
             chargement = false;
             if (!connopen) return;		// pour vérifier que la BD est bien ouverte
 
             if (table == "ADMIN")
             {
-                charger("select * from ADMIN;", dT[0], dA[0]);
+                charger("select * from admin;", dT[0], dA[0]);
             }
             if (table == "utilisateur")
             {
-                charger("select * from PERSONNE;", dT[1], dA[1]);
+                charger("select * from personne;", dT[1], dA[1]);
             }
             if (table == "festival")
             {
-                charger("select * from FESTIVAL;", dT[2], dA[2]);
+                charger("select * from festival;", dT[2], dA[2]);
             }
             if (table == "manifestation")
             {
-                charger("select * from MANIFESTATION;", dT[3], dA[3]);
+                charger("select * from manifestation;", dT[3], dA[3]);
             }
             if (table == "reservation")
             {
-                charger("select * from RESERVATION;", dT[4], dA[4]);
+                charger("select * from reservation;", dT[4], dA[4]);
             }
             if (table == "lieu")
             {
-                charger("select * from LIEU;", dT[5], dA[5]);
+                charger("select * from lieu;", dT[5], dA[5]);
             }
             if (table == "avis")
             {
-                charger("select * from AVIS;", dT[6], dA[6]);
+                charger("select * from avis;", dT[6], dA[6]);
             }
             if (table == "public")
             {
-                charger("select * from PUBLIC;", dT[7], dA[7]);
+                charger("select * from public;", dT[7], dA[7]);
             }
             if (table == "toutes")
             {
@@ -213,27 +210,27 @@ namespace CarantecAdminPanel
             }
             if (table == "festivalDisplay")
             {
-                charger("select * from infosFestival;", dT[9], dA[9]);
+                charger("select * from infosfestival;", dT[9], dA[9]);
             }
             if (table == "thematique")
             {
-                charger("select * from THEMATIQUE;", dT[10], dA[10]);
+                charger("select * from thematique;", dT[10], dA[10]);
             }
             if (table == "respToPers")
             {
-                charger("select * from respToPers;", dT[11], dA[11]);
+                charger("select * from resptopers;", dT[11], dA[11]);
             }
             if (table == "responsable")
             {
-                charger("select * from RESPONSABLE;", dT[12], dA[12]);
+                charger("select * from responsable;", dT[12], dA[12]);
             }
             if (table == "persToResp")
             {
-                charger("CALL persToResp('" + text + "')", dT[13], dA[13]);
+                charger("CALL persToResp('" + text1 + "')", dT[13], dA[13]);
             }
             if (table == "nomThemeToIdTheme")
             {
-                charger("CALL nomThemeToIdTheme('" + text + "')", dT[14], dA[14]);
+                charger("CALL nomThemeToIdTheme('" + text1 + "')", dT[14], dA[14]);
             }
             if (table == "users")
             {
@@ -241,55 +238,55 @@ namespace CarantecAdminPanel
             }
             if (table == "artiste")
             {
-                charger("select * from ARTISTES;", dT[16], dA[16]);
+                charger("select * from artistes;", dT[16], dA[16]);
             }
             if (table == "animateur")
             {
-                charger("select * from ANIMATEUR;", dT[17], dA[17]);
+                charger("select * from animateur;", dT[17], dA[17]);
             }
             if (table == "intSpe")
             {
-                charger("select * from INTERVENANTSPECIALISE;", dT[18], dA[18]);
+                charger("select * from intervenantspecialise;", dT[18], dA[18]);
             }
             if (table == "nomLieuToIdLieu")
             {
-                charger("CALL nomLieuToIdLieu('" + text + "')", dT[19], dA[19]);
+                charger("CALL nomLieuToIdLieu('" + text1 + "')", dT[19], dA[19]);
             }
             if (table == "nomsLieuxFromManifs")
             {
-                charger("select * from nomsLieuxFromManifs;", dT[20], dA[20]);
+                charger("select * from nomslieuxfrommanifs;", dT[20], dA[20]);
             }
             if (table == "nomsManifsFromReserv")
             {
-                charger("select * from nomsManifsFromReserv;", dT[21], dA[21]);
+                charger("select * from nomsmanifsfromreserv;", dT[21], dA[21]);
             }
             if (table == "nomsAdhFromReserv")
             {
-                charger("select * from nomsUserFromReserv;", dT[22], dA[22]);
+                charger("select * from nomsuserfromreserv;", dT[22], dA[22]);
             }
             if (table == "nomManifToIdManif")
             {
-                charger("CALL nomManifToIdManif('" + text + "')", dT[23], dA[23]);
+                charger("CALL nomManifToIdManif('" + text1 + "')", dT[23], dA[23]);
             }
             if (table == "emailPersToIdPers")
             {
-                charger("CALL emailPersToIdPers('" + text + "')", dT[24], dA[24]);
+                charger("CALL emailPersToIdPers('" + text1 + "')", dT[24], dA[24]);
             }
             if (table == "adherentPersonne")
             {
-                charger("select * from usersPersonne;", dT[25], dA[25]);
+                charger("select * from userspersonne;", dT[25], dA[25]);
             }
             if (table == "artistePersonne")
             {
-                charger("select * from artistePersonne;", dT[26], dA[26]);
+                charger("select * from artistepersonne;", dT[26], dA[26]);
             }
             if (table == "animateurPersonne")
             {
-                charger("select * from animateurPersonne;", dT[27], dA[27]);
+                charger("select * from animateurpersonne;", dT[27], dA[27]);
             }
             if (table == "intervenantSpecialisePersonne")
             {
-                charger("select * from intervenantSpecialisePersonne;", dT[28], dA[28]);
+                charger("select * from intervenantspecialisepersonne;", dT[28], dA[28]);
             }
             if (table == "personnesimplifie")
             {
@@ -317,11 +314,15 @@ namespace CarantecAdminPanel
             }
             if (table == "verifTypeManif")
             {
-                charger("SELECT verifTypeManif('" + text + "');", dT[35], dA[35]);
+                charger("SELECT verifTypeManif('" + text1 + "');", dT[35], dA[35]);
             }
             if (table == "nomsPersToIdPers")
             {
-                charger("CALL nomsPersToIdPers('" + text + "')", dT[36], dA[36]);
+                charger("CALL nomsPersToIdPers('" + text1 + "')", dT[36], dA[36]);
+            }
+            if (table == "IdForAdmin")
+            {
+                charger("CALL IdForAdmin('" + text1 + "', '" + text2 + "')", dT[37], dA[37]);
             }
         }
     }
