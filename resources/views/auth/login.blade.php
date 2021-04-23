@@ -43,7 +43,7 @@
 
             <div class="flex items-center justify-end mt-4">
 
-                <a class="underline text-sm text-gray-600 hover:text-gray-900">
+                <a href="{{ route('register') }}" class="underline text-sm text-gray-600 hover:text-gray-900" >
                     {{ __('S\'enregistrer')}}
                 </a>
                 <x-button class="ml-8">

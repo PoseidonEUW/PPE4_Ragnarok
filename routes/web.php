@@ -2,6 +2,7 @@
 
 
 use App\Http\Controllers\ArtistesController;
+use App\Http\Controllers\AvisController;
 use App\Http\Controllers\ReservationController;
 use App\Models\Personne;
 use Illuminate\Http\Request;
@@ -25,13 +26,15 @@ use Illuminate\Validation\Rule;
 // Main Page
 Route::get('/',[PagesController::class,'index']);
 Route::get('/about-us',[PagesController::class,'aboutus']);
+Route::get('/artistes',[PagesController::class,'artistes']);
 
 //Find de main Page
 //Controlleur Manifestation
 Route::get('/manifestations',[ManifestationController::class,'index']);
 Route::resource('/manifestations',ManifestationController::class);
+Route::resource('/avis',AvisController::class);
 // Controlleur Artistes
-Route::get('/artistes',[ArtistesController::class,'index']);
+//Route::get('/artistes',[ArtistesController::class,'index']);
 //
 
 Route::get('/dashboard', function () {

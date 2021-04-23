@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 use App\Models\Avis;
+use App\Models\Reservation;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class AvisController extends Controller
 {
@@ -30,11 +32,26 @@ class AvisController extends Controller
      * Store a newly created resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
+     * @return \Illuminate\Http\RedirectResponse
      */
     public function store(Request $request)
     {
-        //
+        if(Auth::check()){
+            $request->validate([
+                'quantiter' => 'numeric|min:1|max:10',
+            ]);
+
+            $reservation = Reservation::create([
+                'IDMANIF'=>$request->input('idmanif'),
+                'IDPERSONNE'=>$request->input('idpersonne'),
+                'QUANTITERESERVATION'=>$request->input('quantiter'),
+
+            ]);
+//    Decrement
+            return redirect()->back()->with('message', 'Votre place est reservée !');
+
+        }
+
     }
 
     /**

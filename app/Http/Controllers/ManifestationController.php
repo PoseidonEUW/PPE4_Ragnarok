@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\StoreReservationRequest;
+use App\Models\Avis;
 use App\Models\Manifestation;
 use App\Models\Reservation;
 use Illuminate\Http\Request;
@@ -79,7 +80,10 @@ class ManifestationController extends Controller
     {
         $manifestation = Manifestation::join('lieu','manifestation.IDLIEU','=','lieu.IDLIEU');
         $manifestation = $manifestation->find($id);
-        return view('manifestations.show')->with('manifestation',$manifestation);
+        $avis = Avis::join('users','avis.IDPERSONNE','=','users.id')
+            ->join('personne','users.id','=','personne.IDPERSONNE')
+        ->paginate(4);
+        return view('manifestations.show',["manifestation"=>$manifestation,"avis"=>$avis]);
 
     }
 

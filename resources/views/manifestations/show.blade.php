@@ -3,7 +3,7 @@
 
     <div class="manifestation-info border-b border-gray-800 pb-8 pt-8">
 
-        <div class="container mx-auto px4 py16 flex">
+        <div class="container mx-auto px4 py16 flex mb-12">
             <img src="{{asset('images/samantha-gades-fIHozNWfcvs-unsplash.jpg')}}" alt="image" class="w-96" style="width:24rem">
             <div class="ml-24">
                 <h2 class="text-4xl font-semibold text-red-600">
@@ -14,13 +14,19 @@
                     <span class="mx-2">|</span>
                     <span>Lieu : {{$manifestation->LIBELLELIEU}}</span>
                     <span class="mx-2">|</span>
+                    @if($manifestation->PRIXMANIF==0 || $manifestation->PRIXMANIF==NULL)
+                        <span>Prix : GRATUIT</span>
+                    @else
                     <span>Prix : {{$manifestation->PRIXMANIF}}€</span>
+                        @endif
                 </div>
                 <h2 class="text-xl font-semibold underline text-red-600 mb-1"> Description  </h2>
                 <p class="text-gray-300">
                     {{$manifestation->DESCRIPTIONMANIF}}
                 </p>
+
                 @if (Auth::check())
+                    @if($manifestation->PRIXMANIF !=0)
                     <form class="mt-12" action="/manifestations" method="POST">
                         @csrf
                         <input type="hidden" name="idmanif" value={{$manifestation->IDMANIF}}>
@@ -36,14 +42,47 @@
                                 {{ session()->get('message') }}
                             </div>
                         @endif
+
                         {{--Fin--}}
                     </form>
+                        @endif
+                @else
+                    <a href="{{ route('login') }}">
+                        <button class="position-center mt-4 bg-red-600 text-gray-300 rounded font-semibold px-5 py-4 hover:bg-red-400 transition ease-in-out duration-150" type="submit">Réserver</button>
+                    </a>
                 @endif
+
             </div>
 
         </div>
+        <div class="container mx-auto px4 py16 flex-col">
+        <h2 class="text-5xl font-semibold text-red-600 flex-row">
+            Avis
+        </h2>
 
 
+                @foreach($avis as $a)
+                @if($a->VALIDEAVIS==1)
+                <div class="ml-24 bg-white border-b border-gray-200 rounded-lg">
+                    <div class="flex items-center text-gray-800 text-sm mt-1">
+                        <span class=" text-3xl text-md-center uppercase mt-3">{{$a->NOMPERSONNE}} | {{$a->PRENOMPERSONNE}}</span>
+                        <span class=" text-2xl text-md-center text-red-600 uppercase mt-4 ml-4">Note : {{$a->NOTEAVIS}} </span>
+                    </div>
+                    <h2 class="text-xl font-semibold underline text-red-600 mb-1"> Libelle Avis  </h2>
+                    <p class="text-gray-800">
+                        {{$a->LIBELLEAVIS}}
+                    </p>
+                </div>
+                @endif
+                @endforeach
+                    {!! $avis->render() !!}
+
+{{--               Avis Controller Here--}}
+                    <form class="mt-12" action="/avis" method="POST">
+{{--                   Inserer ton avis--}}
+               </form>
+
+        </div>
     </div>
 
 

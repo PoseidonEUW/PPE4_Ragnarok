@@ -10,7 +10,7 @@
 </head>
 <body class="font-sans bg-gray-900 text-white">
     <div class="py-8">
-        <nav class="border-b border-gray-800 fixed top-0 inset-x-0">
+        <nav class="border-b border-gray-800 bg-gray-900 fixed top-0 inset-x-0">
             <div class="container mx-auto items-center flex justify-between px4 py6 text-gray-300 ">
                 <ul class=" flex items-center">
                     <li>
@@ -37,9 +37,20 @@
                     @if (Route::has('login'))
                         <div class="hidden flex px-6 py-4 sm:block">
                             @auth
-                                <a href="{{ url('/dashboard') }}" class="text-sm text-gray-300 underline hover:text-red-600"
-                                >Mon Compte</a
-                                >
+                                <form class="text-sm hover:text-red-600" method="POST" action="{{ route('logout') }}">
+                                    @csrf
+                                    <a href="{{ url('/reservations') }}" class=" text-gray-300 underline hover:text-red-600 mr-4"
+                                    >Mon Compte</a
+                                    >
+                                    <a href="route('logout')" class="text-red-600 underline hover:text-gray-300 "
+                                       onclick="event.preventDefault();
+                                                this.closest('form').submit();">
+                                        Déconnexion
+                                    </a>
+
+                                </form>
+
+
                             @else
                                 <a href="{{ route('login') }}" class="text-sm text-gray-300 underline hover:text-red-600"
                                 >Se Connecter</a

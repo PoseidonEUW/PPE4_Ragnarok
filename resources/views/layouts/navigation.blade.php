@@ -12,14 +12,8 @@
 
                 <!-- Navigation Links -->
                 <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
-                    <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
-                        {{ __('Mon compte') }}
-                    </x-nav-link>
                     <x-nav-link :href="route('reservations')" :active="request()->routeIs('reservations')">
                         {{ __('Mes Réservations') }}
-                    </x-nav-link>
-                    <x-nav-link :href="route('settings')" :active="request()->routeIs('settings')">
-                        {{ __('Paramètres') }}
                     </x-nav-link>
                 </div>
             </div>
@@ -47,9 +41,12 @@
                             <x-dropdown-link :href="route('logout')"
                                     onclick="event.preventDefault();
                                                 this.closest('form').submit();">
-                                {{ __('Log out') }}
+                                {{ __('Déconnexion') }}
                             </x-dropdown-link>
                         </form>
+                        <x-dropdown-link :href="route('reservations')">
+                            {{ __('Mes Reservations') }}
+                        </x-dropdown-link>
                     </x-slot>
                 </x-dropdown>
             </div>

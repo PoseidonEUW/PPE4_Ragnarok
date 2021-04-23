@@ -10,16 +10,15 @@ use Illuminate\Database\Eloquent\Model;
 class Avis extends Model
 {
     use HasFactory;
-    protected $table = 'manifestation';
+    protected $table = 'avis';
     public $timestamps = false;
-    protected $primaryKey = 'IDMANIF';
-    protected $dates = ['DATEMANIF', 'HORAIREDEBUTMANIF'];
+    protected $primaryKey = 'IDAVIS';
 
     public function personnes(){
-        return $this->belongsTo(PersonneController::class);
+        return $this->belongsTo(PersonneController::class,'IDPERSONNE');
     }
     public function manifestation(){
-        $this->belongsTo(Manifestation::class);
+        $this->belongsTo(Manifestation::class,'IDMANIF');
     }
 
 }
