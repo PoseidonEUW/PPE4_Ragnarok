@@ -27,7 +27,7 @@
                            <img src="{{asset('images/michael-discenza-MxfcoxycH_Y-unsplash.jpg')}}" alt="Image" class=" w-25 h-25">
                        </a>
                        <div class="mt-2 cursor-default ">
-                           <a href="/evenement" class=" text-md-center uppercase mt-2 hover:text-red-600">{{$manifestation->LIBELLEMANIF}} </a>
+                           <a href="/manifestations/{{$manifestation->IDMANIF}}" class=" text-md-center uppercase mt-2 hover:text-red-600">{{$manifestation->LIBELLEMANIF}} </a>
                            <div class="flex items-center divide-x-4 divide-opacity-25 divide-red-600 text-gray-400">
                                <!-- Info -->
                                <h2 class="text-gray-500 ml-2"> {{$manifestation->LIBELLELIEU}} </h2>

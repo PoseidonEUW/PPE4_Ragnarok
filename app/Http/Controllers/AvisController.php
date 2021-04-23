@@ -38,17 +38,19 @@ class AvisController extends Controller
     {
         if(Auth::check()){
             $request->validate([
-                'quantiter' => 'numeric|min:1|max:10',
+                'noteavis' => 'numeric|min:1|max:5',
+                'libelleavis'=>'required|string',
             ]);
 
-            $reservation = Reservation::create([
+            $avis = Avis::create([
                 'IDMANIF'=>$request->input('idmanif'),
                 'IDPERSONNE'=>$request->input('idpersonne'),
-                'QUANTITERESERVATION'=>$request->input('quantiter'),
+                'NOTEAVIS'=>$request->input('noteavis'),
+                'LIBELLEAVIS'=>$request->input('libelleavis')
 
             ]);
 //    Decrement
-            return redirect()->back()->with('message', 'Votre place est reservée !');
+            return redirect()->back()->with('message', 'Votre avis est en attendant !');
 
         }
 

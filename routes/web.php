@@ -32,7 +32,7 @@ Route::get('/artistes',[PagesController::class,'artistes']);
 //Controlleur Manifestation
 Route::get('/manifestations',[ManifestationController::class,'index']);
 Route::resource('/manifestations',ManifestationController::class);
-Route::resource('/avis',AvisController::class);
+Route::post('/avis','AvisController@store');
 // Controlleur Artistes
 //Route::get('/artistes',[ArtistesController::class,'index']);
 //
