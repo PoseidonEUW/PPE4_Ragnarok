@@ -79,10 +79,13 @@ class ManifestationController extends Controller
     public function show($id)
     {
         $manifestation = Manifestation::join('lieu','manifestation.IDLIEU','=','lieu.IDLIEU');
-        $manifestation = $manifestation->find($id);
+
         $avis = Avis::join('users','avis.IDPERSONNE','=','users.id')
             ->join('personne','users.id','=','personne.IDPERSONNE')
+            ->where('IDMANIF',$id)
         ->paginate(4);
+        $manifestation = $manifestation->find($id);
+
         return view('manifestations.show',["manifestation"=>$manifestation,"avis"=>$avis]);
 
     }
