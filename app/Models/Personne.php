@@ -3,7 +3,7 @@
 namespace App\Models;
 
 use App\Http\Controllers\AvisController;
-use App\Http\Controllers\ArtistesController;
+use App\Http\Controllers\PagesController;
 use App\Http\Controllers\ReservationController;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
@@ -24,6 +24,9 @@ class Personne extends Model
         return $this->hasMany(Artistes::class);
     }
     public function avis(){
-        return $this->hasMany(AvisController::class);
+        return $this->hasMany(Avis::class);
+    }
+    public function participer(){
+        return $this->hasMany(Participer::class);
     }
 }

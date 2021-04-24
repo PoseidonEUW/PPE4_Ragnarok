@@ -1,7 +1,7 @@
 <?php
 
 
-use App\Http\Controllers\ArtistesController;
+//use App\Http\Controllers\ArtistesController;
 use App\Http\Controllers\AvisController;
 use App\Http\Controllers\ReservationController;
 use App\Models\Personne;
@@ -32,7 +32,7 @@ Route::get('/artistes',[PagesController::class,'artistes']);
 //Controlleur Manifestation
 Route::get('/manifestations',[ManifestationController::class,'index']);
 Route::resource('/manifestations',ManifestationController::class);
-Route::post('/avis','AvisController@store');
+Route::post('/avis',[AvisController::class,'store'])->name('avis.store');
 // Controlleur Artistes
 //Route::get('/artistes',[ArtistesController::class,'index']);
 //

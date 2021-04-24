@@ -13,9 +13,10 @@ class Avis extends Model
     protected $table = 'avis';
     public $timestamps = false;
     protected $primaryKey = 'IDAVIS';
+    protected $fillable = ['IDMANIF','IDPERSONNE','NOTEAVIS','LIBELLEAVIS'];
 
     public function personnes(){
-        return $this->belongsTo(PersonneController::class,'IDPERSONNE');
+        return $this->belongsTo(Personne::class,'IDPERSONNE');
     }
     public function manifestation(){
         $this->belongsTo(Manifestation::class,'IDMANIF');

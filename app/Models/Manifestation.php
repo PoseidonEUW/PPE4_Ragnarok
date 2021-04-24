@@ -19,7 +19,10 @@ class Manifestation extends Model
         return $this->hasMany(Reservation::class);
     }
     public function avis(){
-        return $this->hasMany(AvisController::class);
+        return $this->hasMany(Avis::class);
+    }
+    public function participer(){
+        return $this->hasMany(Participer::class);
     }
 
 

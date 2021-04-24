@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers;
 use App\Models\Avis;
-use App\Models\Reservation;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -11,11 +10,19 @@ class AvisController extends Controller
     /**
      * Display a listing of the resource.
      *
-     * @return \Illuminate\Http\Response
+     * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View|\Illuminate\Http\Response
      */
     public function index()
     {
-        //
+        $avis = Avis::join('users','avis.IDPERSONNE','=','users.id')
+            ->join('personne','users.id','=','personne.IDPERSONNE')
+            ->where('personne.IDPERSONNE', Auth::id())
+            ->get();
+
+        return view('avis',[
+            'avis'=>$avis
+
+        ]);
     }
 
     /**
@@ -36,20 +43,23 @@ class AvisController extends Controller
      */
     public function store(Request $request)
     {
+
         if(Auth::check()){
+
+
             $request->validate([
                 'noteavis' => 'numeric|min:1|max:5',
-                'libelleavis'=>'required|string',
             ]);
 
             $avis = Avis::create([
                 'IDMANIF'=>$request->input('idmanif'),
                 'IDPERSONNE'=>$request->input('idpersonne'),
                 'NOTEAVIS'=>$request->input('noteavis'),
-                'LIBELLEAVIS'=>$request->input('libelleavis')
+                'LIBELLEAVIS'=>$request->input('libelle'),
+
 
             ]);
-//    Decrement
+
             return redirect()->back()->with('message', 'Votre avis est en attendant !');
 
         }
