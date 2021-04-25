@@ -22,7 +22,7 @@ class Manifestation extends Model
         return $this->hasMany(Avis::class);
     }
     public function participer(){
-        return $this->hasMany(Participer::class);
+        return $this->hasMany(Participer::class,'IDMANIF',$this->primaryKey);
     }
 
 

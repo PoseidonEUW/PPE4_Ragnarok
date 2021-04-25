@@ -16,7 +16,7 @@ class Participer extends Model
     public $timestamps = false;
     protected $primaryKey = ['IDMANIF','IDPERSONNE'];
     public function manifestation(){
-        return $this->belongsTo(Manifestation::class,'IDMANIF');
+        return $this->belongsTo(Manifestation::class,'IDMANIF','IDMANIF');
     }
     public function personnes(){
         return $this->belongsTo(Personne::class,'IDPERSONNE');
