@@ -19,24 +19,6 @@
 
                 @foreach($artistes as $artiste)
 
-{{--                    <div class="grid grid-rows-3 grid-flow-col gap-4 ">--}}
-{{--                        <div class="row-span-3 ...">--}}
-{{--                            <input type="hidden" name="num" value={{$artiste->IDPERSONNE}}>--}}
-{{--                            <div class="/artistes/{{$artiste->IDPERSONNE}}">--}}
-{{--                                <img src="{{asset('images/michael-discenza-MxfcoxycH_Y-unsplash.jpg')}}" alt="Image" class=" w-12 h-12" class="align-items: center";>--}}
-{{--                            </div>--}}
-{{--                        </div>--}}
-{{--                        <div class="col-span-2 ...">--}}
-{{--                            <div class=" text-3xl text-md-center uppercase mt-3">{{$artiste->NOMPERSONNE}} {{$artiste->PRENOMPERSONNE}} </div>--}}
-{{--                            <div class=" text-md-center text-red-600  mt-2">Rôle de l'artiste : {{$artiste->ROLEARTISTE}} </div>--}}
-{{--                            <div class="">{{$artiste->LIBELLEARTISTES}}</div>--}}
-{{--                        </div>--}}
-{{--                        <div class="row-span-2 col-span-2 ...">--}}
-{{--                            <div class=" text-md-center  mt-2"><p class="text-red-600 ">Suivre l'artiste : </p>{{$artiste->LIENFBSITEARTISTE}} </div>--}}
-{{--                        </div>--}}
-
-{{--                    </div>--}}
-
                         <div class="flex flex-row mt-6 ml-3">
                             <div class="ImageInfo">
                             <input type="hidden" name="num" value={{$artiste->IDPERSONNE}}>
@@ -52,7 +34,7 @@
                             </div>
 
 
-                            
+
                             </div>
 
 
