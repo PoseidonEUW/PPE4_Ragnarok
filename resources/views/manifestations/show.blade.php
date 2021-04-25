@@ -80,7 +80,7 @@
 {{--Bloqué ici     --}}
             @if (Auth::check())
 
-                    <form class="mt-12 ml-12 bg-gray-500 border-b border-gray-200 rounded-lg" action="{{route('avis.store')}}" method="POST">
+                    <form class="mt-12 ml-12 bg-gray-500 border-b border-gray-200 rounded-lg" action="/avis" method="POST">
 
                         @csrf
                         <h2 class="text-xl ml-12  font-semibold underline text-red-600 mb-1"> Mettre votre avis  </h2>
