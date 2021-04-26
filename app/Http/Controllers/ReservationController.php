@@ -29,10 +29,14 @@ class ReservationController extends Controller
      * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View|\Illuminate\Http\Response
      */
    public function show($id){
-       $reservations = Reservation::join('manifestation','reservation.IDMANIF','=','manifestation.IDMANIF','personne','reservation.IDPERSONNE','=','personne.IDPERSONNE');
-       $reservations = $reservations->find($id);
-       return view('reservations')->with('reservations',$reservations);
-   }
 
+   }
+    public function create($id)
+    {
+        $reservation = Reservation::join('manifestation','reservation.IDMANIF','=','manifestation.IDMANIF','personne','reservation.IDPERSONNE','=','personne.IDPERSONNE')
+        ->first();
+        $reservation = $reservation->find($id);
+        return view('avis')->with(['reservation'=>$reservation]);
+    }
 
 }

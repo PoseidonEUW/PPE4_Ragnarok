@@ -32,39 +32,10 @@ Route::get('/artistes',[PagesController::class,'artistes']);
 //Controlleur Manifestation
 Route::get('/manifestations',[ManifestationController::class,'index']);
 Route::resource('/manifestations',ManifestationController::class);
-Route::post('/avis',[AvisController::class,'store'])->name('avis.store');
-// Controlleur Artistes
-//Route::get('/artistes',[ArtistesController::class,'index']);
-//
-
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth'])->name('dashboard');
-
-
-// Mettre a jour ton email
-Route::get('/settings', function () {
-    return view('settings',[
-        'user'=>request()->user(),
-
-    ]);
-})->middleware(['auth'])->name('settings');
-
-Route::post('/settings',function(Request $request){
-    $request->validate([
-        'email'=>['required','email',Rule::unique('users','email')],
-
-    ]);
-    $user = $request->user();
-    $user->update([
-        'email'=>$request->input('email'),
-    ]);
-
-
-    return redirect()->back();
-});
+//Route::post('/avis',[AvisController::class,'store'])->name('avis.store');
 
 // Fin de Mettre a jour
+
 // Show Billets
 Route::get('reservations', function () {
     return view('reservations');
@@ -73,8 +44,8 @@ Route::get('reservations',[ReservationController::class,'index'])->middleware(['
 
 // Fin de Show Billets
 //Mettre ton avis apres avoir Participer
-Route::get('avis', function () {
+Route::get('/avis', function () {
     return view('avis');
 })->middleware(['auth'])->name('avis');
-Route::get('avis',[AvisController::class,'index'])->middleware(['auth'])->name('avis');
+Route::get('/avis/{id}',[ReservationController::class,'create'])->middleware(['auth'])->name('avis');
 require __DIR__.'/auth.php';

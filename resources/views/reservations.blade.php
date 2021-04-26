@@ -42,6 +42,9 @@
                     <h2 class="font-semibold text-md text-gray-800 leading-tight mb-4">Mes Reservations passées :</h2>
                     @foreach($reservations as $reservation)
                         @if($reservation->DATEMANIF > date("Y-m-d"))
+                            <input type="hidden" name="idreservation" value="{{$reservation->IDRESERVATION}}">
+                            <input type="hidden" name="idmanif" value="{{$reservation->IDMANIF}}">
+                            <input type="hidden" name="idpersonne" value="{{Auth::user()->id}}">
                     <div class="flex ml-24 border-t-2 border-gray-500">
                         <span>Nom de Manif : {{$reservation->LIBELLEMANIF}}</span>
                         <span class="mx-2">| </span>
@@ -51,7 +54,7 @@
 
                     </div>
                     <div class="flex items-center justify-end mt-4">
-                        <a href="/avis">
+                        <a href="/avis/{{$reservation->IDMANIF}}">
                         <x-button class="ml-4">
                             {{ __('Mettre un avis') }}
                         </x-button>
