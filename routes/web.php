@@ -72,4 +72,9 @@ Route::get('reservations', function () {
 Route::get('reservations',[ReservationController::class,'index'])->middleware(['auth'])->name('reservations');
 
 // Fin de Show Billets
+//Mettre ton avis apres avoir Participer
+Route::get('avis', function () {
+    return view('avis');
+})->middleware(['auth'])->name('avis');
+Route::get('avis',[AvisController::class,'index'])->middleware(['auth'])->name('avis');
 require __DIR__.'/auth.php';

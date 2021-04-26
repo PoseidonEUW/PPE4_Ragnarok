@@ -51,10 +51,12 @@
 
                     </div>
                     <div class="flex items-center justify-end mt-4">
-
+                        <a href="/avis">
                         <x-button class="ml-4">
                             {{ __('Mettre un avis') }}
                         </x-button>
+
+                        </a>
                     </div>
                     <span class="ml-24 font-bold">Prix Total : </span>{{$reservation->PRIXMANIF*$reservation->QUANTITERESERVATION}} €
 
