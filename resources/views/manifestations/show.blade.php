@@ -77,39 +77,6 @@
 
                     {!! $avis->render() !!}
 
-{{--Bloqué ici     --}}
-            @if (Auth::check())
-
-                    <form class="mt-12 ml-12 bg-gray-500 border-b border-gray-200 rounded-lg" action="/avis" method="POST">
-
-                        @csrf
-                        <h2 class="text-xl ml-12  font-semibold underline text-red-600 mb-1"> Mettre votre avis  </h2>
-                        <input type="hidden" name="idmanif" value={{$manifestation->IDMANIF}}>
-                        <input type="hidden" name="idpersonne" value={{Auth::user()->id}}>
-                        <div class="flex items-center">
-                        <label class="mx-3" for="noteavis">Note : </label>
-{{--                        <select class="cursor-default text-gray-600" id="noteavis">--}}
-{{--                            <option value="1star">1</option>--}}
-{{--                            <option value="2stars">2</option>--}}
-{{--                            <option value="3stars">3</option>--}}
-{{--                            <option value="4stars">4</option>--}}
-{{--                            <option value="5stars">5</option>--}}
-{{--                        </select>--}}
-                            <input class="text-gray-600" type="number" id="noteavis" name="noteavis" min="1" max="5" value="1">
-                        <label class="mx-3" for="libelle">Avis : </label><br>
-
-                            <input type="text" class="text-gray-600 ml-8" id="libelle" name="libelle" placeholder="Ici!"></div>
-                            <button class="position-center mt-4 ml-8 bg-red-600 text-gray-300 rounded font-semibold px-5 py-4 hover:bg-red-400 transition ease-in-out duration-150" type="submit">Submit Avis</button>
-                        {{-- Les Messages Succés / Erreurs--}}
-                        @if(session()->has('message'))
-                            <div class="alert alert-success">
-                                {{ session()->get('message') }}
-                            </div>
-                        @endif
-
-               </form>
-
-    @endif
 
         </div>
     </div>

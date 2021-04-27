@@ -84,7 +84,7 @@ class ManifestationController extends Controller
             ->join('personne','users.id','=','personne.IDPERSONNE')
             ->where('IDMANIF',$id)
             ->where('VALIDEAVIS','=','1')
-        ->paginate(4);
+            ->paginate(4);
         $manifestation = $manifestation->find($id);
 
         return view('manifestations.show',["manifestation"=>$manifestation,"avis"=>$avis]);
