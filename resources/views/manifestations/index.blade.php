@@ -23,9 +23,8 @@
 
                    <div class="mt-6 ml-3 transition duration-5000 ease-in delay-150 transform hover:-translate-y-1 hover:scale-110 ">
                        <input type="hidden" name="num" value={{$manifestation->IDMANIF}}>
-                       <a href="/manifestations/{{$manifestation->IDMANIF}}">
-                           <img src="{{asset('images/michael-discenza-MxfcoxycH_Y-unsplash.jpg')}}" alt="Image" class=" w-25 h-25">
-                       </a>
+                       <img src="{{asset($manifestation->IMGMANIF)}}" alt="Image" class=" w-25 h-25">
+
                        <div class="mt-2 cursor-default ">
                            <a href="/manifestations/{{$manifestation->IDMANIF}}" class=" text-md-center uppercase mt-2 hover:text-red-600">{{$manifestation->LIBELLEMANIF}} </a>
                            <div class="flex items-center divide-x-4 divide-opacity-25 divide-red-600 text-gray-400">

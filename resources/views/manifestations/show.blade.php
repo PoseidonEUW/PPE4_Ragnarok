@@ -4,7 +4,7 @@
     <div class="manifestation-info border-b border-gray-800 pb-8 pt-8">
 
         <div class="container mx-auto px4 py16 flex mb-12">
-            <img src="{{asset('images/samantha-gades-fIHozNWfcvs-unsplash.jpg')}}" alt="image" class="w-96" style="width:24rem">
+            <img src="{{asset($manifestation->IMGMANIF)}}" alt="image" class="w-96" style="width:24rem">
             <div class="ml-24">
                 <h2 class="text-4xl font-semibold text-red-600">
                     {{$manifestation->LIBELLEMANIF}}
@@ -33,7 +33,7 @@
                         <input type="hidden" name="idpersonne" value={{Auth::user()->id}}>
                         <div class="flex items-center">
                         <label class="mx-3" for="quantiter">Quantité : </label>
-                        <input class="text-gray-600" type="number" id="quantiter" name="quantiter" min="1" max="10" value="1">
+                        <input class="text-gray-600" type="number" id="quantiter" name="quantiter" min="1" max="4" value="1">
                         </div>
                         <button class="position-center mt-4 bg-red-600 text-gray-300 rounded font-semibold px-5 py-4 hover:bg-red-400 transition ease-in-out duration-150" type="submit">Réserver</button>
                     {{-- Les Messages Succés / Erreurs--}}
