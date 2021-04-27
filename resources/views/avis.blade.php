@@ -12,13 +12,15 @@
                     <form action="/avis" method="POST">
                         @csrf
                         <h2 class="text-xl ml-12  font-semibold underline text-red-600 mb-1"> Mettre votre avis  </h2>
-{{--                        <input type="text" name="idmanif" value={{$reservation->IDMANIF}}>--}}
+
+                        <input type="hidden" name="idmanif" value={{ request()->route('IDMANIF') }}>
+
                         <input type="hidden" name="idpersonne" value={{Auth::user()->id}}>
                         <label class="mx-3" for="noteavis">Note : </label>
-                        <input class="text-gray-600 mb-12" type="number" id="noteavis" name="noteavis" min="1" max="5" value="1"><br>
+                        <input class="text-gray-600" type="number" id="noteavis" name="noteavis" min="1" max="5" value="1"><br>
                         <label class="mx-3" for="libelle">Avis : </label>
 
-                        <input type="text" class="block text-gray-600 ml-8 h-60" id="libelle" name="libelle" placeholder="Ici!">
+                        <input type="text" class="block text-gray-600 ml-8 h-60 w-60" id="libelle" name="libelle" placeholder="Ici!">
                         <x-button class="ml-4">
                             {{ __('Mettre un avis') }}
                         </x-button>

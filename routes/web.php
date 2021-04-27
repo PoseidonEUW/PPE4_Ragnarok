@@ -32,7 +32,7 @@ Route::get('/artistes',[PagesController::class,'artistes']);
 //Controlleur Manifestation
 Route::get('/manifestations',[ManifestationController::class,'index']);
 Route::resource('/manifestations',ManifestationController::class);
-//Route::post('/avis',[AvisController::class,'store'])->name('avis.store');
+Route::post('/avis',[AvisController::class,'store'])->name('avis.store');
 
 // Fin de Mettre a jour
 
@@ -47,5 +47,6 @@ Route::get('reservations',[ReservationController::class,'index'])->middleware(['
 Route::get('/avis', function () {
     return view('avis');
 })->middleware(['auth'])->name('avis');
-Route::get('/avis/{id}',[ReservationController::class,'create'])->middleware(['auth'])->name('avis');
+Route::get('/avis/{IDMANIF}',[ReservationController::class,'create'])->middleware(['auth'])->name('avis');
+///
 require __DIR__.'/auth.php';
