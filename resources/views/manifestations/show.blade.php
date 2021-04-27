@@ -34,6 +34,17 @@
                         <div class="flex items-center">
                         <label class="mx-3" for="quantiter">Quantité : </label>
                         <input class="text-gray-600" type="number" id="quantiter" name="quantiter" min="1" max="4" value="1">
+                            <script>
+                                calculate = function(){
+                                    var quantiter=document.getElementById('quantiter');
+                                    var prix=document.getElementById('prix');
+                                    document.getElementById('prixtotal').value=parseInt('quantiter')*parseInt('prix');
+                                }
+                            </script>
+                            <label for="prix" id="prix">Prix : </label>
+                            <span id="prix">{{$manifestation->PRIXMANIF}}</span>
+                            <label for="prixtotal" class="mx-3">Prix Total : </label>
+                            <span id="prixtotal" class="mx-3"></span>
                         </div>
                         <button class="position-center mt-4 bg-red-600 text-gray-300 rounded font-semibold px-5 py-4 hover:bg-red-400 transition ease-in-out duration-150" type="submit">Réserver</button>
                     {{-- Les Messages Succés / Erreurs--}}

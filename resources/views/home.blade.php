@@ -9,8 +9,11 @@
             <div class="absolute inset-0 bg-gray-900 bg-opacity-75"></div>
             <div class="flex h-full items-center justify-center relative">
                 <img src="{{asset('images/carantec.png')}}" alt="">
+                <img src="{{asset('images/2021.png')}}" alt="">
+
 
             </div>
+
         </div>
 
     </div>

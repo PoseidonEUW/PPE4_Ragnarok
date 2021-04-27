@@ -22,10 +22,13 @@
 
                         </div>
                         <div class="flex items-center justify-end mt-4">
-
+                            <form action="reservations/{{$reservation->REFRESERVATION}}" method="POST">
+                                @csrf
+                                @method('delete')
                             <x-button class="ml-4">
                                 {{ __('Remboursement') }}
                             </x-button>
+                            </form>
                         </div>
                         <span class="ml-24 font-bold">Prix Total : </span>{{$reservation->PRIXMANIF*$reservation->QUANTITERESERVATION}} €
 
@@ -52,8 +55,10 @@
                         <span class="mx-2">| </span>
                         <span>Prix : {{$reservation->PRIXMANIF}}</span>
 
+
                     </div>
-                    <div class="flex items-center justify-end mt-4">
+                            <span class="ml-24 font-bold">Prix Total : </span>{{$reservation->PRIXMANIF*$reservation->QUANTITERESERVATION}} €
+                    <div class="flex items-center justify-end -pb-4">
                         <a href="/avis/{{$reservation->IDMANIF}}">
                         <x-button class="ml-4">
                             {{ __('Mettre un avis') }}
@@ -61,7 +66,6 @@
 
                         </a>
                     </div>
-                    <span class="ml-24 font-bold">Prix Total : </span>{{$reservation->PRIXMANIF*$reservation->QUANTITERESERVATION}} €
 
                         @endif
                     @endforeach

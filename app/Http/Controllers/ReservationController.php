@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Avis;
 use App\Models\Reservation;
 use App\Models\Personne;
 use App\Models\Manifestation;
@@ -16,8 +17,12 @@ class ReservationController extends Controller
                                     ->join('personne','reservation.IDPERSONNE','=','personne.IDPERSONNE')
                                     ->where('reservation.IDPERSONNE', Auth::id())
                                 ->get();
+        $avis = Avis::join('reservation','avis.IDPERSONNE','=','reservation.IDPERSONNE')
+            ->where('avis.IDPERSONNE',Auth::id())
+        ->get();
         return view('reservations',[
-            'reservations'=>$reservations
+            'reservations'=>$reservations,
+            'avis'=>$avis,
 
         ]);
 
@@ -37,5 +42,11 @@ class ReservationController extends Controller
             ->where('reservation.IDREFRESERVATION',$id);
         return view('avis')->with('reservation',$reservation);
     }
+public function delete($id){
 
+       $reservation = Reservation::find($id)->first();
+       dd($reservation);
+//       $reservation->delete();
+//    return redirect()->back();
+}
 }
