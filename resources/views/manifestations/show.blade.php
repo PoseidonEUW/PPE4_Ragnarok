@@ -26,7 +26,9 @@
                 </p>
 
                 @if (Auth::check())
+                    @if($manifestation->DATEMANIF > date("Y-m-d"))
                     @if($manifestation->PRIXMANIF !=0)
+
                     <form class="mt-12" action="/manifestations" method="POST">
                         @csrf
                         <input type="hidden" name="idmanif" value={{$manifestation->IDMANIF}}>
@@ -47,11 +49,13 @@
                         {{--Fin--}}
                     </form>
                         @endif
+                    @endif
                 @else
                     <a href="{{ route('login') }}">
                         <button class="position-center mt-4 bg-red-600 text-gray-300 rounded font-semibold px-5 py-4 hover:bg-red-400 transition ease-in-out duration-150" type="submit">Réserver</button>
                     </a>
                 @endif
+
 
             </div>
 

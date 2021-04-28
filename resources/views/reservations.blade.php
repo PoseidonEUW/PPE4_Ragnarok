@@ -22,13 +22,14 @@
 
                         </div>
                         <div class="flex items-center justify-end mt-4">
-                            <form action="reservations/{{$reservation->REFRESERVATION}}" method="POST">
-                                @csrf
+                    {{--                            FORM REMBOURSEMENT POUR PLUS TARD!--}}
+{{--                            <form action="reservations/{{$reservation->REFRESERVATION}}" method="POST">--}}
+{{--                                @csrf--}}
 
                             <x-button class="ml-4">
                                 {{ __('Remboursement') }}
                             </x-button>
-                            </form>
+{{--                            </form>--}}
                         </div>
                         <span class="ml-24 font-bold">Prix Total : </span>{{$reservation->PRIXMANIF*$reservation->QUANTITERESERVATION}} €
 
