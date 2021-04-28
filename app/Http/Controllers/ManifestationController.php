@@ -57,6 +57,7 @@ class ManifestationController extends Controller
                 'quantiter' => 'numeric|min:1|max:10',
             ]);
 
+            try {
     $reservation = Reservation::create([
         'IDMANIF'=>$request->input('idmanif'),
         'IDPERSONNE'=>$request->input('idpersonne'),
@@ -65,6 +66,9 @@ class ManifestationController extends Controller
     ]);
 //    Decrement
             return redirect()->back()->with('message', 'Votre place est reservée !');
+            }catch (\Exception $e) {
+                return redirect()->back()->with('message', 'Vous ne pouvez réserver que pour 4 personnes !');
+            }
 
     }
 
