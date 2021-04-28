@@ -47,18 +47,19 @@ class AvisController extends Controller
 
             ]
             );
+            try {
+                $avis = Avis::create([
+                    'IDMANIF' => $request->input('idmanif'),
+                    'IDPERSONNE' => $request->input('idpersonne'),
+                    'NOTEAVIS' => $request->input('noteavis'),
+                    'LIBELLEAVIS' => $request->input('libelle'),
 
-            $avis = Avis::create([
-                'IDMANIF'=>$request->input('idmanif'),
-                'IDPERSONNE'=>$request->input('idpersonne'),
-                'NOTEAVIS'=>$request->input('noteavis'),
-                'LIBELLEAVIS'=>$request->input('libelle'),
 
-
-            ]);
-
-            return redirect()->back()->with('message', 'Votre avis est en attendant !');
-
+                ]);
+                return redirect()->back()->with('message', 'Votre avis est en attente !');
+            }catch (\Exception $e) {
+                return redirect()->back()->with('message', 'Vous avez déjà donné votre avis sur cette manifestation !');
+            }
         }
 
     }
