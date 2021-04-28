@@ -39,7 +39,7 @@ class ReservationController extends Controller
     public function create($id)
     {
         $reservation = Reservation::join('manifestation','reservation.IDMANIF','=','manifestation.IDMANIF','personne','reservation.IDPERSONNE','=','personne.IDPERSONNE')
-            ->where('reservation.IDREFRESERVATION',$id);
+            ->where('reservation.REFRESERVATION',$id);
         return view('avis')->with('reservation',$reservation);
     }
 public function delete($id){
