@@ -17,13 +17,6 @@
 
     </div>
     <div class="static border-b-4 border-red-600 mb-12"></div>
-   <div class="m-auto w-4/5 py-24">
-       <div class="text-center">
-           <h1 class=" cursor-default text-5xl uppercase bold">
-        Festival Carantec
-           </h1>
-       </div>
-   </div>
 
 
    <div class="container mx-auto px-4 pt-16">
@@ -31,7 +24,7 @@
            <h2 class=" cursor-default uppercase tracking-wider ml-12 text-gray-300 text-3xl font-semibold">
                Les Evenements
            </h2>
-           <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 divide-x-4 divide-y-4 divide-red-600 gap-8 p-6">
+           <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 divide-x-4 divide-y-4 divide-red-600 gap-8 p-6">
 
     @foreach($manifestations as $manifestation)
 

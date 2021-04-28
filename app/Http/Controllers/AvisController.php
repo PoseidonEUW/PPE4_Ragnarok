@@ -40,12 +40,8 @@ class AvisController extends Controller
             $request->validate([
                 'noteavis' => 'required|numeric|min:1|max:5',
                 'libelle'=>'required|max:500',
-            ],
-            [
-                'noteavis.required' => 'Trop Trop, doucement paapi!',
-                'libelle.required' => 'Trop Trop, doucement paapi!',
-
             ]
+
             );
             try {
                 $avis = Avis::create([
