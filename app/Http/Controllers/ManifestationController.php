@@ -54,7 +54,7 @@ class ManifestationController extends Controller
     {
         if(Auth::check()){
             $request->validate([
-                'quantiter' => 'numeric|min:1|max:10',
+                'quantiter' => 'numeric|min:1|max:4',
             ]);
 
             try {
