@@ -43,10 +43,8 @@ class ReservationController extends Controller
         return view('avis')->with('reservation',$reservation);
     }
 public function delete($id){
-
        $reservation = Reservation::find($id)->first();
-       dd($reservation);
-//       $reservation->delete();
-//    return redirect()->back();
+       $reservation->delete();
+    return redirect()->back();
 }
 }

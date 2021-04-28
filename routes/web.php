@@ -41,7 +41,7 @@ Route::get('reservations', function () {
     return view('reservations');
 })->middleware(['auth'])->name('reservations');
 Route::get('reservations',[ReservationController::class,'index'])->middleware(['auth'])->name('reservations');
-Route::get('reservations/{id}',[ReservationController::class,'delete'])->middleware(['auth'])->name('reservations.delete');
+Route::post('reservations/{id}',[ReservationController::class,'delete'])->middleware(['auth'])->name('reservations.delete');
 
 // Fin de Show Billets
 //Mettre ton avis apres avoir Participer

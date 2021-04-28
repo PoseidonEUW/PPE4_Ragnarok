@@ -24,7 +24,7 @@
                         <div class="flex items-center justify-end mt-4">
                             <form action="reservations/{{$reservation->REFRESERVATION}}" method="POST">
                                 @csrf
-                                @method('delete')
+
                             <x-button class="ml-4">
                                 {{ __('Remboursement') }}
                             </x-button>
