@@ -40,25 +40,20 @@ class AvisController extends Controller
             $request->validate([
                 'noteavis' => 'required|numeric|min:1|max:5',
                 'libelle'=>'required|max:500',
-            ],
-            [
-                'noteavis.required' => 'Trop Trop, doucement paapi!',
-                'libelle.required' => 'Trop Trop, doucement paapi!',
-
-            ]
-            );
-
-            $avis = Avis::create([
-                'IDMANIF'=>$request->input('idmanif'),
-                'IDPERSONNE'=>$request->input('idpersonne'),
-                'NOTEAVIS'=>$request->input('noteavis'),
-                'LIBELLEAVIS'=>$request->input('libelle'),
-
-
             ]);
+            try {
+                $avis = Avis::create([
+                    'IDMANIF' => $request->input('idmanif'),
+                    'IDPERSONNE' => $request->input('idpersonne'),
+                    'NOTEAVIS' => $request->input('noteavis'),
+                    'LIBELLEAVIS' => $request->input('libelle'),
 
-            return redirect()->back()->with('message', 'Votre avis est en attendant !');
 
+                ]);
+                return redirect()->back()->with('message', 'Votre avis est en attente !');
+            }catch (\Exception $e) {
+                return redirect()->back()->with('message', 'Vous avez déjà donné votre avis sur cette manifestation !');
+            }
         }
 
     }
