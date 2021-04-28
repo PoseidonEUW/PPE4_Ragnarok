@@ -67,7 +67,7 @@ class ManifestationController extends Controller
 //    Decrement
             return redirect()->back()->with('message', 'Votre place est reservée !');
             }catch (\Exception $e) {
-                return redirect()->back()->with('message', 'Vous ne pouvez réserver que pour 4 personnes !');
+                return redirect()->back()->with('message', 'Vous ne pouvez réserver que pour 4 personnes ou le nombre de places restantes est atteinte!');
             }
 
     }
