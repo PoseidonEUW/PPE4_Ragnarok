@@ -72,7 +72,7 @@
         <div class="sm:flex sm:mt-8">
             <div class="mt-8 sm:mt-0 sm:w-full sm:px-8 flex flex-col md:flex-row justify-between ">
                 <div class="container flex flex-col text-center">
-                    <img class="w-32 object-center mx-auto"src="/images/carantec.png" alt="Carantec">
+                    <img class="w-64 object-center mx-auto pb-8"src="/images/carantec.png" alt="Carantec">
                     <div class="flex text-center space-x-20 mx-auto text-gray-300">
                     <li class="my-2"><a href="/manifestations" class="text-md hover:text-red-600">Programmation</a></li>
                     <li class="my-2"><a href="/artistes" class="text-md hover:text-red-600">Artistes</a></li>

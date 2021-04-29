@@ -18,29 +18,25 @@
 
     </div>
     <div class="static border-b-4 border-red-600 mb-12"></div>
-
+    <h2 class=" cursor-default uppercase tracking-wider ml-52  text-gray-300 text-4xl font-semibold ">
+        Les Artistes
+    </h2>
     <div class="container mx-auto px-4 pt-16 flex-col">
-        <h2 class=" cursor-default uppercase tracking-wider ml-12 text-gray-300 text-4xl font-semibold ">
-            Les Artistes
-        </h2>
+
 
 
                 @foreach($artistes as $artiste)
 
                         <div class="flex flex-row mt-6 ml-3">
-                            <div class="ImageInfo">
-                            <input type="hidden" name="num" value={{$artiste->IDPERSONNE}}>
+                            <img src="{{asset($artiste->IMGARTISTE)}}" alt="image" class="w-96 object-contain">
 
-                                <img src="{{asset($artiste->IMGARTISTE)}}" alt="image" class="w-96 " style="width:20rem">
-
-                            </div>
-                            <div class="ml-24">
+                            <div class="ml-32 items-center text-justify object-contain">
+                                <input type="hidden" name="num" value={{$artiste->IDPERSONNE}}>
                                 <div class=" text-3xl text-md-center uppercase mt-3">{{$artiste->NOMPERSONNE}} {{$artiste->PRENOMPERSONNE}} </div>
-                                <div class=" text-md-center text-red-600  mt-2">Rôle de l'artiste : {{$artiste->ROLEARTISTE}} </div>
-                                <div class="">{{$artiste->LIBELLEARTISTE}}</div>
-                                <div class=" text-md-center  mt-2"><p class="text-red-600 ">Suivre l'artiste : </p> </div>
-                                <div>
-                                    <a href="{{$artiste->LIENFBSITEARTISTE}}"/>{{$artiste->LIENFBSITEARTISTE}}</a>
+                                <div class="text-md-center text-red-600">
+                                <div class="   mt-2">Rôle de l'artiste : {{$artiste->ROLEARTISTE}} </div>
+                                <div class=" text-gray-300">{{$artiste->LIBELLEARTISTE}}</div>
+                                <div class="mt-2"><p class=" ">Suivre l'artiste : </p> <a href="{{$artiste->LIENFBSITEARTISTE}}" class="text-gray-300 hover:text-gray-400"> {{$artiste->LIENFBSITEARTISTE}}</a></div>
                                 </div>
                             </div>
 
