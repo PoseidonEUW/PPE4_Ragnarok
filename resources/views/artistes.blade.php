@@ -47,9 +47,8 @@
 
 
                     @endforeach
-                        <h2 class=" cursor-default uppercase tracking-wider text-gray-300 text-3xl font-semibold">
-                            Les Intervenants
-                        </h2>
+        <div class="static border-b-4 border-red-600 mt-12 mb-12"></div>
+
         </div>
 
 

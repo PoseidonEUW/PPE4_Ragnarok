@@ -55,7 +55,6 @@ class AvisController extends Controller
                 return redirect()->back()->with('message', 'Vous avez déjà donné votre avis sur cette manifestation !');
             }
         }
-
     }
 
     /**
