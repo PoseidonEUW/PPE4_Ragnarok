@@ -25,7 +25,7 @@
                     </li>
                     <li class="md:ml-6 mt-3 md:mt-0 transition duration-150 ease-in-out transform hover:-translate-y-1 hover:scale-110">
                         <a href="/artistes" class="hover:text-red-600 capitalize">
-                            Acteurs
+                            Artistes
                         </a>
                     </li>
                 </ul>

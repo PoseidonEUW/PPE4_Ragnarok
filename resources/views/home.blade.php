@@ -35,7 +35,7 @@ Cras laoreet semper est eget efficitur. Proin vehicula posuere tempus. Fusce feu
 <div class="container mx-auto px4 py16 flex-col">
     <img src="{{asset('images/samantha-gades-fIHozNWfcvs-unsplash.jpg')}}" alt="" class=" object-contain h-92 w-full mb-2 ">
     <h2 class="text-4xl font-semibold text-gray-300 text-left border-b-2 border-red-600" >
-        Les Acteurs
+        Les Artistes
     </h2>
     <div class="flex items-center text-justify text-gray-300 text-md text-left">
         <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras cursus suscipit interdum. Nam nec libero dictum, ultrices sapien sollicitudin, congue sapien. Nam ut pharetra nibh. Etiam euismod lacus odio, rutrum sagittis mauris tempus in. Praesent imperdiet semper dui sed iaculis. Donec sed nisl in ex luctus tempor. Maecenas feugiat nec massa nec consectetur. Curabitur ipsum quam, sollicitudin non aliquet eu, tincidunt in mi. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
@@ -44,7 +44,6 @@ Cras laoreet semper est eget efficitur. Proin vehicula posuere tempus. Fusce feu
     </div>
     <div class="flex text-gray-300 text-md mt-1">
         <a href="/artistes" class="uppercase hover:text-red-600 ml-auto mb-8">Plus d'information</a>
-
     </div>
 </div>
 {{--Flex Col Programmation --}}
@@ -60,7 +59,7 @@ Cras laoreet semper est eget efficitur. Proin vehicula posuere tempus. Fusce feu
         </div>
 
         <div class="flex text-gray-300 text-md mt-1">
-            <a href="/manifestations" class="uppercase hover:text-red-600 ml-auto">Plus d'information</a>
+            <a href="/manifestations" class="uppercase hover:text-red-600 ml-auto">Plus d'informations</a>
 
         </div>
     </div>
