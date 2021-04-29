@@ -72,10 +72,12 @@
         <div class="sm:flex sm:mt-8">
             <div class="mt-8 sm:mt-0 sm:w-full sm:px-8 flex flex-col md:flex-row justify-between ">
                 <div class="container flex flex-col text-center">
-                    <span class="font-bold text-gray-400 uppercase mb-2 ">Footer header 1</span>
-                    <span class="my-2"><a href="#" class="text-blue-700  text-md hover:text-blue-500">link 1</a></span>
-                    <span class="my-2"><a href="#" class="text-blue-700  text-md hover:text-blue-500">link 1</a></span>
-                    <span class="my-2"><a href="#" class="text-blue-700  text-md hover:text-blue-500">link 1</a></span>
+                    <img class="w-32 object-center mx-auto"src="/images/carantec.png" alt="Carantec">
+                    <div class="flex text-center space-x-20 mx-auto text-gray-300">
+                    <li class="my-2"><a href="/manifestations" class="text-md hover:text-red-600">Programmation</a></li>
+                    <li class="my-2"><a href="/artistes" class="text-md hover:text-red-600">Artistes</a></li>
+                    <li class="my-2"><a href="https://www.ville-carantec.com/" class="text-md hover:text-red-600">Ville de Carantec</a></li>
+                    </div>
                 </div>
             </div>
         </div>
