@@ -6,6 +6,7 @@ use App\Http\Requests\StoreReservationRequest;
 use App\Models\Avis;
 use App\Models\Manifestation;
 use App\Models\Reservation;
+use App\Models\Debat;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
@@ -24,7 +25,6 @@ class ManifestationController extends Controller
         $manifestations = Manifestation::join('lieu','manifestation.IDLIEU','=','lieu.IDLIEU')
             ->join('festival','manifestation.ANNEEFESTIVAL','=','festival.ANNEEFESTIVAL')
             ->get();
-
         return view('manifestations.index',[
             'manifestations'=>$manifestations
 
