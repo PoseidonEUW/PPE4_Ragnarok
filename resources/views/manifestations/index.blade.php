@@ -49,8 +49,8 @@
                             </div>
                             <div class="ml-3">
                                 <span>Date de Manifestation : {{$manifestation->DATEMANIF->translatedFormat('d F Y')}} à {{$manifestation->HORAIREDEBUTMANIF->translatedFormat('h:i ')}}</span>
-                                @if(#)
-                                    <span>Type : Debat</span>
+                                @if($manifestation->concertIDMANIF != NULL)
+                                    <span>Type : Concert</span>
                                 @endif
 
 
