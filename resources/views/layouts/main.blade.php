@@ -28,11 +28,6 @@
                             Acteurs
                         </a>
                     </li>
-                    <li class="md:ml-6 mt-3 md:mt-0 transition duration-150 ease-in-out transform hover:-translate-y-1 hover:scale-110">
-                        <a href="/about-us" class="hover:text-red-600 capitalize">
-                            Qui sommes nous?
-                        </a>
-                    </li>
                 </ul>
                     @if (Route::has('login'))
                         <div class="hidden flex px-6 py-4 sm:block">

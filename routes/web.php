@@ -25,7 +25,6 @@ use Illuminate\Validation\Rule;
 
 // Main Page
 Route::get('/',[PagesController::class,'index']);
-Route::get('/about-us',[PagesController::class,'aboutus']);
 Route::get('/artistes',[PagesController::class,'artistes']);
 
 //Find de main Page
