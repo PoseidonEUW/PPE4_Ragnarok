@@ -37,7 +37,7 @@
                             <div class="flex items-center divide-x-4 divide-opacity-25 divide-red-600 text-gray-400">
                                 <!-- Info -->
                                 <h2 class=" ml-3 text-gray-500 ml-2"> {{$manifestation->LIBELLELIEU}} </h2>
-                                @if($manifestation->PRIXMANIF != 0 || $manifestation->PRIX != NULL)
+                                @if($manifestation->PRIXMANIF != 0 || $manifestation->PRIXMANIF != NULL)
                                 <p class="ml-3 text-gray-400 uppercase mx-2">
                                     Payante</p>
                             @else
@@ -49,13 +49,10 @@
                             </div>
                             <div class="ml-3">
                                 <span>Date de Manifestation : {{$manifestation->DATEMANIF->translatedFormat('d F Y')}} à {{$manifestation->HORAIREDEBUTMANIF->translatedFormat('h:i ')}}</span>
-                                @if($manifestation->concertIDMANIF != NULL)
-                                    <span>Type : Concert</span>
-                                @endif
-
-
                             </div>
-
+                            @if($manifestation->concertIDMANIF != NULL)
+                                <span>Type : Concert</span>
+                            @endif
                         </div>
                     </div>
 
