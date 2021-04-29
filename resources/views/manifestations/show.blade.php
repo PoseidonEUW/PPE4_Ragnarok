@@ -70,9 +70,9 @@
                 <div class="ml-24 bg-white border-b border-gray-200 rounded-lg">
                     <div class="flex items-center text-gray-800 text-sm mt-1">
                         <span class=" text-3xl text-md-center uppercase mt-3">{{$a->NOMPERSONNE}} | {{$a->PRENOMPERSONNE}}</span>
-                        <span class=" text-2xl text-md-center text-red-600 uppercase mt-4 ml-4">Note : {{$a->NOTEAVIS}} </span>
+                        <span class=" text-2xl text-md-center text-red-600 uppercase mt-4 ml-4">Note de la manifestation: {{$a->NOTEAVIS}} </span>
                     </div>
-                    <h2 class="text-xl font-semibold underline text-red-600 mb-1"> Libelle Avis  </h2>
+                    <h2 class="text-xl font-semibold underline text-red-600 mb-1"> Avis de la personne </h2>
                     <p class="text-gray-800">
                         {{$a->LIBELLEAVIS}}
                     </p>
