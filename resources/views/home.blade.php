@@ -43,8 +43,7 @@ Cras laoreet semper est eget efficitur. Proin vehicula posuere tempus. Fusce feu
 Cras laoreet semper est eget efficitur. Proin vehicula posuere tempus. Fusce feugiat, ipsum et aliquam mattis, eros magna pulvinar eros, sed fringilla lectus leo at quam. Nunc fermentum magna est, et faucibus arcu efficitur eget. Aliquam ac leo risus. Vivamus ornare dictum euismod. Nunc sed ligula neque. Aliquam sodales, quam non luctus tempor, justo lectus euismod orci, ut tempor nulla enim sed augue. Donec et tincidunt enim, sed egestas dui. Sed quis ullamcorper turpis, vel laoreet tellus. Vivamus quis mi rhoncus, euismod ligula et, ornare nibh. Nulla vitae dolor aliquam, lobortis erat in, aliquam erat. Ut tempus elementum rutrum. Suspendisse vel pellentesque sem, in suscipit lorem.</span>
     </div>
     <div class="flex text-gray-300 text-md mt-1">
-        <a href="/artistes" class="uppercase hover:text-red-600 ml-auto">Plus d'informations</a>
-
+        <a href="/artistes" class="uppercase hover:text-red-600 ml-auto mb-8">Plus d'information</a>
     </div>
 </div>
 {{--Flex Col Programmation --}}
