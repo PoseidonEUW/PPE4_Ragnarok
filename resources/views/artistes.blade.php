@@ -30,15 +30,18 @@
                         <div class="flex flex-row mt-6 ml-3">
                             <div class="ImageInfo">
                             <input type="hidden" name="num" value={{$artiste->IDPERSONNE}}>
-                            <a href="/artistes/{{$artiste->IDPERSONNE}}">
-                                <img src="{{asset('images/samantha-gades-fIHozNWfcvs-unsplash.jpg')}}" alt="image" class="w-96" style="width:24rem">
-                            </a>
+
+                                <img src="{{asset($artiste->IMGARTISTE)}}" alt="image" class="w-96 " style="width:20rem">
+
                             </div>
                             <div class="ml-24">
                                 <div class=" text-3xl text-md-center uppercase mt-3">{{$artiste->NOMPERSONNE}} {{$artiste->PRENOMPERSONNE}} </div>
                                 <div class=" text-md-center text-red-600  mt-2">Rôle de l'artiste : {{$artiste->ROLEARTISTE}} </div>
-                                <div class="">{{$artiste->LIBELLEARTISTES}}</div>
-                                <div class=" text-md-center  mt-2"><p class="text-red-600 ">Suivre l'artiste : </p>{{$artiste->LIENFBSITEARTISTE}} </div>
+                                <div class="">{{$artiste->LIBELLEARTISTE}}</div>
+                                <div class=" text-md-center  mt-2"><p class="text-red-600 ">Suivre l'artiste : </p> </div>
+                                <div>
+                                    <a href="{{$artiste->LIENFBSITEARTISTE}}"/>{{$artiste->LIENFBSITEARTISTE}}</a>
+                                </div>
                             </div>
 
 
