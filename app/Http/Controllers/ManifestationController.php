@@ -71,7 +71,6 @@ class ManifestationController extends Controller
             }
 
     }
-
     }
 
     /**
