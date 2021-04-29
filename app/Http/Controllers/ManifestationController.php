@@ -24,9 +24,6 @@ class ManifestationController extends Controller
         //Select * from Manifestation
         $manifestations = Manifestation::join('lieu','manifestation.IDLIEU','=','lieu.IDLIEU')
             ->join('festival','manifestation.ANNEEFESTIVAL','=','festival.ANNEEFESTIVAL')
-            ->leftJoin('debat','manifestation.IDMANIF','=','debat.IDMANIF')
-            ->leftJoin('concert','manifestation.IDMANIF','=','concert.IDMANIF')
-            ->leftJoin('conference','manifestation.IDMANIF','=','conference.IDMANIF')
             ->get();
         return view('manifestations.index',[
             'manifestations'=>$manifestations

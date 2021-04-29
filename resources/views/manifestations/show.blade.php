@@ -27,7 +27,7 @@
 
                 @if (Auth::check())
                     @if($manifestation->DATEMANIF > date("Y-m-d"))
-                        @if($manifestation->PRIXMANIF !=0)
+                        @if($manifestation->PRIXMANIF !=0 || $manifestation->PRIXMANIF !=NULL)
 
                             <form class="mt-12" action="/manifestations" method="POST">
                                 @csrf

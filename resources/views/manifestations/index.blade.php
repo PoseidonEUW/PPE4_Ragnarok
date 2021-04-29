@@ -43,16 +43,13 @@
                             @else
                                     <p class="ml-3 text-gray-400 uppercase mx-2">
                                         Gratuite</p>
-                               @endif
+                            @endif
                                 <!-- Info -->
 
                             </div>
                             <div class="ml-3">
                                 <span>Date de Manifestation : {{$manifestation->DATEMANIF->translatedFormat('d F Y')}} à {{$manifestation->HORAIREDEBUTMANIF->translatedFormat('h:i ')}}</span>
                             </div>
-                            @if($manifestation->concertIDMANIF != NULL)
-                                <span>Type : Concert</span>
-                            @endif
                         </div>
                     </div>
 
