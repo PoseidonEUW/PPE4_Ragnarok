@@ -37,7 +37,6 @@ namespace CarantecAdminPanel
             this.tbLibelleManif = new System.Windows.Forms.TextBox();
             this.labelError = new System.Windows.Forms.Label();
             this.btnEnregistrer = new System.Windows.Forms.Button();
-            this.labelActionTitle = new System.Windows.Forms.Label();
             this.gradientPanel1 = new CarantecAdminPanel.GradientPanel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.rtbDescManif = new System.Windows.Forms.RichTextBox();
@@ -139,18 +138,6 @@ namespace CarantecAdminPanel
             this.btnEnregistrer.TabIndex = 42;
             this.btnEnregistrer.Text = "Enregistrer";
             this.btnEnregistrer.UseVisualStyleBackColor = false;
-            // 
-            // labelActionTitle
-            // 
-            this.labelActionTitle.AutoSize = true;
-            this.labelActionTitle.Font = new System.Drawing.Font("Netflix Sans", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelActionTitle.Location = new System.Drawing.Point(336, 133);
-            this.labelActionTitle.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.labelActionTitle.Name = "labelActionTitle";
-            this.labelActionTitle.Size = new System.Drawing.Size(325, 27);
-            this.labelActionTitle.TabIndex = 41;
-            this.labelActionTitle.Text = "MODIFICATION/SUPPRESSION";
-            this.labelActionTitle.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // gradientPanel1
             // 
@@ -377,7 +364,6 @@ namespace CarantecAdminPanel
             this.Controls.Add(this.tbLibelleManif);
             this.Controls.Add(this.labelError);
             this.Controls.Add(this.btnEnregistrer);
-            this.Controls.Add(this.labelActionTitle);
             this.Controls.Add(this.gradientPanel1);
             this.Font = new System.Drawing.Font("Netflix Sans", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.Color.White;
@@ -401,7 +387,6 @@ namespace CarantecAdminPanel
         private System.Windows.Forms.TextBox tbLibelleManif;
         private System.Windows.Forms.Label labelError;
         private System.Windows.Forms.Button btnEnregistrer;
-        private System.Windows.Forms.Label labelActionTitle;
         private GradientPanel gradientPanel1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.RichTextBox rtbDescManif;
@@ -428,7 +413,6 @@ namespace CarantecAdminPanel
         public TextBox TbLibelleManif { get => tbLibelleManif; set => tbLibelleManif = value; }
         public Label LabelError { get => labelError; set => labelError = value; }
         public Button BtnEnregistrer { get => btnEnregistrer; set => btnEnregistrer = value; }
-        public Label LabelActionTitle { get => labelActionTitle; set => labelActionTitle = value; }
         internal GradientPanel GradientPanel1 { get => gradientPanel1; set => gradientPanel1 = value; }
         public PictureBox PictureBox1 { get => pictureBox1; set => pictureBox1 = value; }
         public RichTextBox RtbDescManif { get => rtbDescManif; set => rtbDescManif = value; }

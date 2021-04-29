@@ -35,7 +35,6 @@ namespace CarantecAdminPanel
             this.label2 = new System.Windows.Forms.Label();
             this.labelError = new System.Windows.Forms.Label();
             this.btnEnregistrer = new System.Windows.Forms.Button();
-            this.labelActionTitle = new System.Windows.Forms.Label();
             this.gradientPanel1 = new CarantecAdminPanel.GradientPanel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.rtbLibelleLieux = new System.Windows.Forms.RichTextBox();
@@ -55,7 +54,7 @@ namespace CarantecAdminPanel
             this.tbCapaciteLieux.ForeColor = System.Drawing.Color.White;
             this.tbCapaciteLieux.Location = new System.Drawing.Point(314, 413);
             this.tbCapaciteLieux.Name = "tbCapaciteLieux";
-            this.tbCapaciteLieux.Size = new System.Drawing.Size(142, 31);
+            this.tbCapaciteLieux.Size = new System.Drawing.Size(142, 27);
             this.tbCapaciteLieux.TabIndex = 79;
             // 
             // label6
@@ -64,7 +63,7 @@ namespace CarantecAdminPanel
             this.label6.Font = new System.Drawing.Font("Netflix Sans", 11.25F);
             this.label6.Location = new System.Drawing.Point(220, 415);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(89, 24);
+            this.label6.Size = new System.Drawing.Size(69, 19);
             this.label6.TabIndex = 78;
             this.label6.Text = "Capacité";
             // 
@@ -74,7 +73,7 @@ namespace CarantecAdminPanel
             this.label2.Font = new System.Drawing.Font("Netflix Sans", 11.25F);
             this.label2.Location = new System.Drawing.Point(238, 176);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(71, 24);
+            this.label2.Size = new System.Drawing.Size(52, 19);
             this.label2.TabIndex = 71;
             this.label2.Text = "Libelle";
             // 
@@ -85,7 +84,7 @@ namespace CarantecAdminPanel
             this.labelError.ForeColor = System.Drawing.Color.Firebrick;
             this.labelError.Location = new System.Drawing.Point(365, 457);
             this.labelError.Name = "labelError";
-            this.labelError.Size = new System.Drawing.Size(465, 24);
+            this.labelError.Size = new System.Drawing.Size(371, 19);
             this.labelError.TabIndex = 65;
             this.labelError.Text = "ERROR SAMPLE ERROR SAMPLE ERROR SAMPLE";
             this.labelError.Visible = false;
@@ -104,18 +103,6 @@ namespace CarantecAdminPanel
             this.btnEnregistrer.TabIndex = 64;
             this.btnEnregistrer.Text = "Enregistrer";
             this.btnEnregistrer.UseVisualStyleBackColor = false;
-            // 
-            // labelActionTitle
-            // 
-            this.labelActionTitle.AutoSize = true;
-            this.labelActionTitle.Font = new System.Drawing.Font("Netflix Sans", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelActionTitle.Location = new System.Drawing.Point(450, 133);
-            this.labelActionTitle.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.labelActionTitle.Name = "labelActionTitle";
-            this.labelActionTitle.Size = new System.Drawing.Size(420, 34);
-            this.labelActionTitle.TabIndex = 63;
-            this.labelActionTitle.Text = "MODIFICATION/SUPPRESSION";
-            this.labelActionTitle.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // gradientPanel1
             // 
@@ -170,7 +157,7 @@ namespace CarantecAdminPanel
             this.rbExtLieux.AutoSize = true;
             this.rbExtLieux.Location = new System.Drawing.Point(31, 71);
             this.rbExtLieux.Name = "rbExtLieux";
-            this.rbExtLieux.Size = new System.Drawing.Size(89, 22);
+            this.rbExtLieux.Size = new System.Drawing.Size(71, 18);
             this.rbExtLieux.TabIndex = 1;
             this.rbExtLieux.Text = "Extérieur";
             this.rbExtLieux.UseVisualStyleBackColor = true;
@@ -181,7 +168,7 @@ namespace CarantecAdminPanel
             this.rbIntLieux.Checked = true;
             this.rbIntLieux.Location = new System.Drawing.Point(31, 38);
             this.rbIntLieux.Name = "rbIntLieux";
-            this.rbIntLieux.Size = new System.Drawing.Size(84, 22);
+            this.rbIntLieux.Size = new System.Drawing.Size(67, 18);
             this.rbIntLieux.TabIndex = 0;
             this.rbIntLieux.TabStop = true;
             this.rbIntLieux.Text = "Intérieur";
@@ -189,7 +176,7 @@ namespace CarantecAdminPanel
             // 
             // FormCRUDLieux
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
             this.ClientSize = new System.Drawing.Size(1070, 550);
@@ -200,7 +187,6 @@ namespace CarantecAdminPanel
             this.Controls.Add(this.label2);
             this.Controls.Add(this.labelError);
             this.Controls.Add(this.btnEnregistrer);
-            this.Controls.Add(this.labelActionTitle);
             this.Controls.Add(this.gradientPanel1);
             this.Font = new System.Drawing.Font("Netflix Sans", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.Color.White;
@@ -221,7 +207,6 @@ namespace CarantecAdminPanel
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label labelError;
         private System.Windows.Forms.Button btnEnregistrer;
-        private System.Windows.Forms.Label labelActionTitle;
         private GradientPanel gradientPanel1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.RichTextBox rtbLibelleLieux;
@@ -234,7 +219,6 @@ namespace CarantecAdminPanel
         public Label Label2 { get => label2; set => label2 = value; }
         public Label LabelError { get => labelError; set => labelError = value; }
         public Button BtnEnregistrer { get => btnEnregistrer; set => btnEnregistrer = value; }
-        public Label LabelActionTitle { get => labelActionTitle; set => labelActionTitle = value; }
         internal GradientPanel GradientPanel1 { get => gradientPanel1; set => gradientPanel1 = value; }
         public PictureBox PictureBox1 { get => pictureBox1; set => pictureBox1 = value; }
         public RichTextBox RtbLibelleLieux { get => rtbLibelleLieux; set => rtbLibelleLieux = value; }

@@ -32,7 +32,6 @@ namespace CarantecAdminPanel
         {
             this.labelError = new System.Windows.Forms.Label();
             this.btnEnregistrer = new System.Windows.Forms.Button();
-            this.labelActionTitle = new System.Windows.Forms.Label();
             this.gradientPanel1 = new CarantecAdminPanel.GradientPanel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.cbManifReservation = new System.Windows.Forms.ComboBox();
@@ -53,7 +52,7 @@ namespace CarantecAdminPanel
             this.labelError.ForeColor = System.Drawing.Color.Firebrick;
             this.labelError.Location = new System.Drawing.Point(366, 408);
             this.labelError.Name = "labelError";
-            this.labelError.Size = new System.Drawing.Size(465, 24);
+            this.labelError.Size = new System.Drawing.Size(371, 19);
             this.labelError.TabIndex = 85;
             this.labelError.Text = "ERROR SAMPLE ERROR SAMPLE ERROR SAMPLE";
             this.labelError.Visible = false;
@@ -72,18 +71,6 @@ namespace CarantecAdminPanel
             this.btnEnregistrer.TabIndex = 84;
             this.btnEnregistrer.Text = "Enregistrer";
             this.btnEnregistrer.UseVisualStyleBackColor = false;
-            // 
-            // labelActionTitle
-            // 
-            this.labelActionTitle.AutoSize = true;
-            this.labelActionTitle.Font = new System.Drawing.Font("Netflix Sans", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelActionTitle.Location = new System.Drawing.Point(469, 133);
-            this.labelActionTitle.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.labelActionTitle.Name = "labelActionTitle";
-            this.labelActionTitle.Size = new System.Drawing.Size(420, 34);
-            this.labelActionTitle.TabIndex = 83;
-            this.labelActionTitle.Text = "MODIFICATION/SUPPRESSION";
-            this.labelActionTitle.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // gradientPanel1
             // 
@@ -119,7 +106,7 @@ namespace CarantecAdminPanel
             this.cbManifReservation.FormattingEnabled = true;
             this.cbManifReservation.Location = new System.Drawing.Point(360, 208);
             this.cbManifReservation.Name = "cbManifReservation";
-            this.cbManifReservation.Size = new System.Drawing.Size(349, 32);
+            this.cbManifReservation.Size = new System.Drawing.Size(349, 27);
             this.cbManifReservation.TabIndex = 89;
             this.cbManifReservation.SelectedIndexChanged += new System.EventHandler(this.cbManifReservation_SelectedIndexChanged);
             // 
@@ -129,7 +116,7 @@ namespace CarantecAdminPanel
             this.label1.Font = new System.Drawing.Font("Netflix Sans", 11.25F);
             this.label1.Location = new System.Drawing.Point(222, 211);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(132, 24);
+            this.label1.Size = new System.Drawing.Size(101, 19);
             this.label1.TabIndex = 90;
             this.label1.Text = "Manifestation";
             // 
@@ -139,7 +126,7 @@ namespace CarantecAdminPanel
             this.label2.Font = new System.Drawing.Font("Netflix Sans", 11.25F);
             this.label2.Location = new System.Drawing.Point(261, 278);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(93, 24);
+            this.label2.Size = new System.Drawing.Size(72, 19);
             this.label2.TabIndex = 92;
             this.label2.Text = "Adhérent";
             // 
@@ -153,7 +140,7 @@ namespace CarantecAdminPanel
             this.cbAdhReservation.FormattingEnabled = true;
             this.cbAdhReservation.Location = new System.Drawing.Point(360, 275);
             this.cbAdhReservation.Name = "cbAdhReservation";
-            this.cbAdhReservation.Size = new System.Drawing.Size(349, 32);
+            this.cbAdhReservation.Size = new System.Drawing.Size(349, 27);
             this.cbAdhReservation.TabIndex = 91;
             this.cbAdhReservation.SelectedIndexChanged += new System.EventHandler(this.cbAdhReservation_SelectedIndexChanged);
             // 
@@ -165,7 +152,7 @@ namespace CarantecAdminPanel
             this.nudPersReservation.ForeColor = System.Drawing.Color.White;
             this.nudPersReservation.Location = new System.Drawing.Point(360, 336);
             this.nudPersReservation.Name = "nudPersReservation";
-            this.nudPersReservation.Size = new System.Drawing.Size(70, 31);
+            this.nudPersReservation.Size = new System.Drawing.Size(70, 27);
             this.nudPersReservation.TabIndex = 93;
             this.nudPersReservation.Value = new decimal(new int[] {
             1,
@@ -180,13 +167,13 @@ namespace CarantecAdminPanel
             this.label3.Font = new System.Drawing.Font("Netflix Sans", 11.25F);
             this.label3.Location = new System.Drawing.Point(147, 338);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(207, 24);
+            this.label3.Size = new System.Drawing.Size(160, 19);
             this.label3.TabIndex = 94;
             this.label3.Text = "Nombre de personnes";
             // 
             // FormCRUDReservation
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
             this.ClientSize = new System.Drawing.Size(1070, 529);
@@ -198,7 +185,6 @@ namespace CarantecAdminPanel
             this.Controls.Add(this.cbManifReservation);
             this.Controls.Add(this.labelError);
             this.Controls.Add(this.btnEnregistrer);
-            this.Controls.Add(this.labelActionTitle);
             this.Controls.Add(this.gradientPanel1);
             this.Font = new System.Drawing.Font("Netflix Sans", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.Color.White;
@@ -215,7 +201,6 @@ namespace CarantecAdminPanel
         #endregion
         private System.Windows.Forms.Label labelError;
         private System.Windows.Forms.Button btnEnregistrer;
-        private System.Windows.Forms.Label labelActionTitle;
         private GradientPanel gradientPanel1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.ComboBox cbManifReservation;
@@ -227,7 +212,6 @@ namespace CarantecAdminPanel
 
         public Label LabelError { get => labelError; set => labelError = value; }
         public Button BtnEnregistrer { get => btnEnregistrer; set => btnEnregistrer = value; }
-        public Label LabelActionTitle { get => labelActionTitle; set => labelActionTitle = value; }
         internal GradientPanel GradientPanel1 { get => gradientPanel1; set => gradientPanel1 = value; }
         public PictureBox PictureBox1 { get => pictureBox1; set => pictureBox1 = value; }
         public ComboBox CbManifReservation { get => cbManifReservation; set => cbManifReservation = value; }

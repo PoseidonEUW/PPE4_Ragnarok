@@ -64,6 +64,9 @@ namespace CarantecAdminPanel
         public static void crud_festival(Char c, int indice)
         {
             Controleur.Vmodele.charger_donnees("festival", -1, "","");
+            Controleur.Vmodele.charger_donnees("respToPers", -1, "", "");
+            Controleur.Vmodele.charger_donnees("thematique", -1, "", "");
+            Controleur.Vmodele.charger_donnees("responsable", -1, "", "");
             if (c == 'd') // cas de la suppression
             {
                 //   DialogResult rep = MessageBox.Show("Etes-vous sûr de vouloir supprimer ce constructeur "+ vmodele.DTConstructeur.Rows[indice][1].ToString()+ " ? ", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
@@ -80,8 +83,6 @@ namespace CarantecAdminPanel
                 FormCRUDFestival formCRUD = new FormCRUDFestival();  // création de la nouvelle forme
                 if (c == 'c')  // mode ajout donc pas de valeur à passer à la nouvelle forme
                 {
-                    Controleur.Vmodele.charger_donnees("respToPers", -1, "","");
-                    Controleur.Vmodele.charger_donnees("thematique", -1, "","");
                     formCRUD.DateTimeAnnee.Value = DateTime.Now;
                     for (int i = 0; i < vmodele.DT[10].Rows.Count; i++)
                     {
@@ -94,27 +95,21 @@ namespace CarantecAdminPanel
                     }
                     formCRUD.CbResponsable.SelectedIndex = -1;
                     formCRUD.TbNomFestival.Text = "";
-                    formCRUD.LabelActionTitle.Text = "AJOUT";
                 }
-
                 if (c == 'u')   // mode update donc on récupère les champs
                 {
-                    formCRUD.DateTimeAnnee.Value = DateTime.Now;
-                    Controleur.Vmodele.charger_donnees("respToPers", -1, "", "");
-                    Controleur.Vmodele.charger_donnees("thematique", -1, "", "");
-                    Controleur.Vmodele.charger_donnees("responsable", -1, "", "");
+                    formCRUD.DateTimeAnnee.Value = new DateTime(Convert.ToInt32(vmodele.DT[9].Rows[indice][0].ToString()), 1, 1);
                     for (int i = 0; i < vmodele.DT[10].Rows.Count; i++)
                     {
                         formCRUD.CbThematique.Items.Add(vmodele.DT[10].Rows[i][1].ToString());
                     }
-                    formCRUD.CbThematique.SelectedItem = vmodele.DT[9].Rows[(indice)][2].ToString();
+                    formCRUD.CbThematique.SelectedItem = vmodele.DT[9].Rows[indice][2].ToString();
                     for (int i = 0; i < vmodele.DT[11].Rows.Count; i++)
                     {
                         formCRUD.CbResponsable.Items.Add(vmodele.DT[11].Rows[i][0].ToString());
                     }
-                    formCRUD.CbResponsable.SelectedIndex = Convert.ToInt32(vmodele.DT[12].Rows[indice][0]);
-                    formCRUD.TbNomFestival.Text = vmodele.DT[9].Rows[(indice)][1].ToString();
-                    formCRUD.LabelActionTitle.Text = "MODIFICATION";
+                    formCRUD.CbResponsable.SelectedItem = vmodele.DT[9].Rows[indice][3].ToString();
+                    formCRUD.TbNomFestival.Text = vmodele.DT[9].Rows[indice][1].ToString();
                 }
             eti:
                 // on affiche la nouvelle form
@@ -140,7 +135,15 @@ namespace CarantecAdminPanel
                             NouvLigne["IDPERSONNE"] = Convert.ToInt32(vmodele.DT[13].Rows[0][0].ToString());
                             NouvLigne["NOMFESTIVAL"] = formCRUD.TbNomFestival.Text;
                             vmodele.DT[2].Rows.Add(NouvLigne);
-                            vmodele.DA[2].Update(vmodele.DT[2]);
+                            try
+                            {
+                                vmodele.DA[2].Update(vmodele.DT[2]);
+                            }
+                            catch
+                            {
+                                MessageBox.Show("Erreur : Le Festival édition " + formCRUD.DateTimeAnnee.Value.Year.ToString() + " existe déjà", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                goto eti;
+                            }
                         }
                         else
                         {
@@ -163,7 +166,15 @@ namespace CarantecAdminPanel
                             Controleur.Vmodele.charger_donnees("persToResp", -1, nom, "");
                             vmodele.DT[2].Rows[indice]["IDPERSONNE"] = Convert.ToInt32(vmodele.DT[13].Rows[0][0].ToString());
                             vmodele.DT[2].Rows[indice]["NOMFESTIVAL"] = formCRUD.TbNomFestival.Text;
-                            vmodele.DA[2].Update(vmodele.DT[2]);
+                            try
+                            {
+                                vmodele.DA[2].Update(vmodele.DT[2]);
+                            }
+                            catch
+                            {
+                                MessageBox.Show("Erreur : Le Festival édition " + formCRUD.DateTimeAnnee.Value.Year.ToString() + " existe déjà", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                goto eti;
+                            }
                         }
                         else
                         {
@@ -208,14 +219,12 @@ namespace CarantecAdminPanel
                 {
                     formCRUD.TbNom.Clear();
                     formCRUD.TbPrenom.Clear();
-                    formCRUD.LabelActionTitle.Text = "AJOUT";
                 }
                 if (c == 'u')   // mode update donc on récupère les champs
                 {
                     // on remplit les zones par les valeurs du dataGridView correspondantes
                     formUpdate.TbNom.Text = vmodele.DT[1].Rows[indice][1].ToString();
                     formUpdate.TbPrenom.Text = vmodele.DT[1].Rows[indice][2].ToString();
-                    formUpdate.LabelActionTitle.Text = "MODIFICATION";
                 }
             eti:
                 // on affiche la nouvelle form
@@ -358,7 +367,6 @@ namespace CarantecAdminPanel
                     formCRUD.TbJaugeManif.Text = "";
                     formCRUD.TbPrixManif.Text = "";
                     formCRUD.RtbDescManif.Text = "";
-                    formCRUD.LabelActionTitle.Text = "AJOUT";
                 }
 
                 if (c == 'u')   // mode update donc on récupère les champs
@@ -382,7 +390,6 @@ namespace CarantecAdminPanel
                     formCRUD.TbJaugeManif.Text = vmodele.DT[3].Rows[indice][6].ToString();
                     formCRUD.RtbDescManif.Text = vmodele.DT[3].Rows[indice][7].ToString();
                     formCRUD.TbPrixManif.Text = vmodele.DT[3].Rows[indice][8].ToString();
-                    formCRUD.LabelActionTitle.Text = "MODIFICATION";
                 }
             eti:
                 // on affiche la nouvelle form
@@ -511,7 +518,6 @@ namespace CarantecAdminPanel
                     formCRUD.TbCapaciteLieux.Text = "";
                     formCRUD.RbExtLieux.Checked = true;
                     formCRUD.RbIntLieux.Checked = false;
-                    formCRUD.LabelActionTitle.Text = "AJOUT";
                 }
 
                 if (c == 'u')   // mode update donc on récupère les champs
@@ -520,7 +526,6 @@ namespace CarantecAdminPanel
                     formCRUD.TbCapaciteLieux.Text = vmodele.DT[5].Rows[indice][2].ToString();
                     formCRUD.RbExtLieux.Checked = Convert.ToInt32(vmodele.DT[5].Rows[indice][3]) == 0;
                     formCRUD.RbIntLieux.Checked = (Convert.ToInt32(vmodele.DT[5].Rows[indice][3]) == 1);
-                    formCRUD.LabelActionTitle.Text = "MODIFICATION";
                 }
             eti:
                 // on affiche la nouvelle form
@@ -603,14 +608,12 @@ namespace CarantecAdminPanel
                 {
                     formCRUD.TbLibellePublic.Text = "";
                     formCRUD.RtbDescrPublic.Text = "";
-                    formCRUD.LabelActionTitle.Text = "AJOUT";
                 }
 
                 if (c == 'u')   // mode update donc on récupère les champs
                 {
                     formCRUD.TbLibellePublic.Text = vmodele.DT[7].Rows[indice][1].ToString();
                     formCRUD.RtbDescrPublic.Text = vmodele.DT[7].Rows[indice][2].ToString();
-                    formCRUD.LabelActionTitle.Text = "MODIFICATION";
                 }
             eti:
                 // on affiche la nouvelle form
@@ -700,7 +703,6 @@ namespace CarantecAdminPanel
                     formCRUD.CbManifReservation.SelectedIndex = -1;
                     formCRUD.CbAdhReservation.SelectedIndex = -1;
                     formCRUD.NudPersReservation.Value = 0;
-                    formCRUD.LabelActionTitle.Text = "AJOUT";
                 }
 
                 if (c == 'u')   // mode update donc on récupère les champs
@@ -719,7 +721,6 @@ namespace CarantecAdminPanel
                     formCRUD.CbManifReservation.SelectedItem = vmodele.DT[21].Rows[indice][1].ToString();
                     formCRUD.CbAdhReservation.SelectedItem = vmodele.DT[22].Rows[indice][1].ToString();
                     formCRUD.NudPersReservation.Value = Convert.ToInt32(vmodele.DT[4].Rows[indice][3]);
-                    formCRUD.LabelActionTitle.Text = "MODIFICATION";
                 }
             eti:
                 // on affiche la nouvelle form
@@ -808,7 +809,6 @@ namespace CarantecAdminPanel
                 {
                     if (Convert.ToInt32(vmodele.DT[6].Rows[indice][5]) == 0) formCRUD.RbRefuser.Checked = true;
                     else formCRUD.RbAccepter.Checked = true;
-                    formCRUD.LabelActionTitle.Text = "MODIFICATION";
                 }
             eti:
                 // on affiche la nouvelle form
@@ -858,9 +858,7 @@ namespace CarantecAdminPanel
                 {
                     formCRUD.CbManif.SelectedIndex = -1;
                     formCRUD.CbPersonne.SelectedIndex = -1;
-                    formCRUD.LabelActionTitle.Text = "AJOUT";
                 }
-
                 if (c == 'u')   // mode update donc on récupère les champs
                 {
                     MessageBox.Show("La modification n'est pas possible", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);

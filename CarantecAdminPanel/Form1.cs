@@ -163,7 +163,9 @@ namespace CarantecAdminPanel
         {
             refreshBtnColor("btnManifestation");
             btnTables("manifestation");
-            dgvDonnees.Columns[0].Width = 150;
+            dgvDonnees.Columns[0].Width = 100;
+            dgvDonnees.Columns[1].Width = 100;
+            dgvDonnees.Columns[2].Width = 75;
             dgvDonnees.Visible = true;
         }
 

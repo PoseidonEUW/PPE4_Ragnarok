@@ -34,7 +34,6 @@ namespace CarantecAdminPanel
             this.labelPrenom = new System.Windows.Forms.Label();
             this.tbNom = new System.Windows.Forms.TextBox();
             this.labelNom = new System.Windows.Forms.Label();
-            this.labelActionTitle = new System.Windows.Forms.Label();
             this.gradientPanel1 = new CarantecAdminPanel.GradientPanel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.labelError = new System.Windows.Forms.Label();
@@ -84,18 +83,6 @@ namespace CarantecAdminPanel
             this.labelNom.Size = new System.Drawing.Size(42, 19);
             this.labelNom.TabIndex = 30;
             this.labelNom.Text = "Nom";
-            // 
-            // labelActionTitle
-            // 
-            this.labelActionTitle.AutoSize = true;
-            this.labelActionTitle.Font = new System.Drawing.Font("Netflix Sans", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelActionTitle.Location = new System.Drawing.Point(336, 126);
-            this.labelActionTitle.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.labelActionTitle.Name = "labelActionTitle";
-            this.labelActionTitle.Size = new System.Drawing.Size(168, 27);
-            this.labelActionTitle.TabIndex = 29;
-            this.labelActionTitle.Text = "MODIFICATION";
-            this.labelActionTitle.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // gradientPanel1
             // 
@@ -160,7 +147,6 @@ namespace CarantecAdminPanel
             this.Controls.Add(this.labelPrenom);
             this.Controls.Add(this.tbNom);
             this.Controls.Add(this.labelNom);
-            this.Controls.Add(this.labelActionTitle);
             this.Controls.Add(this.gradientPanel1);
             this.ForeColor = System.Drawing.Color.White;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
@@ -180,7 +166,6 @@ namespace CarantecAdminPanel
         private System.Windows.Forms.Label labelPrenom;
         private System.Windows.Forms.TextBox tbNom;
         private System.Windows.Forms.Label labelNom;
-        private System.Windows.Forms.Label labelActionTitle;
         private GradientPanel gradientPanel1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label labelError;
@@ -190,7 +175,6 @@ namespace CarantecAdminPanel
         public Label LabelPrenom { get => labelPrenom; set => labelPrenom = value; }
         public TextBox TbNom { get => tbNom; set => tbNom = value; }
         public Label LabelNom { get => labelNom; set => labelNom = value; }
-        public Label LabelActionTitle { get => labelActionTitle; set => labelActionTitle = value; }
         internal GradientPanel GradientPanel1 { get => gradientPanel1; set => gradientPanel1 = value; }
         public PictureBox PictureBox1 { get => pictureBox1; set => pictureBox1 = value; }
         public Label LabelError { get => labelError; set => labelError = value; }

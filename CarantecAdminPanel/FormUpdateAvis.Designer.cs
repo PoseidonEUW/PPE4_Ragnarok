@@ -31,12 +31,11 @@ namespace CarantecAdminPanel
         private void InitializeComponent()
         {
             this.btnEnregistrer = new System.Windows.Forms.Button();
-            this.labelActionTitle = new System.Windows.Forms.Label();
             this.gradientPanel1 = new CarantecAdminPanel.GradientPanel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.rbAccepter = new System.Windows.Forms.RadioButton();
             this.rbRefuser = new System.Windows.Forms.RadioButton();
+            this.rbAccepter = new System.Windows.Forms.RadioButton();
             this.gradientPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -56,17 +55,6 @@ namespace CarantecAdminPanel
             this.btnEnregistrer.TabIndex = 119;
             this.btnEnregistrer.Text = "Enregistrer";
             this.btnEnregistrer.UseVisualStyleBackColor = false;
-            // 
-            // labelActionTitle
-            // 
-            this.labelActionTitle.AutoSize = true;
-            this.labelActionTitle.Font = new System.Drawing.Font("Netflix Sans", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelActionTitle.Location = new System.Drawing.Point(180, 103);
-            this.labelActionTitle.Name = "labelActionTitle";
-            this.labelActionTitle.Size = new System.Drawing.Size(325, 27);
-            this.labelActionTitle.TabIndex = 118;
-            this.labelActionTitle.Text = "MODIFICATION/SUPPRESSION";
-            this.labelActionTitle.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // gradientPanel1
             // 
@@ -106,17 +94,6 @@ namespace CarantecAdminPanel
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Avis";
             // 
-            // rbAccepter
-            // 
-            this.rbAccepter.AutoSize = true;
-            this.rbAccepter.Location = new System.Drawing.Point(73, 56);
-            this.rbAccepter.Name = "rbAccepter";
-            this.rbAccepter.Size = new System.Drawing.Size(79, 20);
-            this.rbAccepter.TabIndex = 0;
-            this.rbAccepter.TabStop = true;
-            this.rbAccepter.Text = "Accepter";
-            this.rbAccepter.UseVisualStyleBackColor = true;
-            // 
             // rbRefuser
             // 
             this.rbRefuser.AutoSize = true;
@@ -129,6 +106,17 @@ namespace CarantecAdminPanel
             this.rbRefuser.UseVisualStyleBackColor = true;
             this.rbRefuser.CheckedChanged += new System.EventHandler(this.radioButton2_CheckedChanged);
             // 
+            // rbAccepter
+            // 
+            this.rbAccepter.AutoSize = true;
+            this.rbAccepter.Location = new System.Drawing.Point(73, 56);
+            this.rbAccepter.Name = "rbAccepter";
+            this.rbAccepter.Size = new System.Drawing.Size(79, 20);
+            this.rbAccepter.TabIndex = 0;
+            this.rbAccepter.TabStop = true;
+            this.rbAccepter.Text = "Accepter";
+            this.rbAccepter.UseVisualStyleBackColor = true;
+            // 
             // FormUpdateAvis
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -137,7 +125,6 @@ namespace CarantecAdminPanel
             this.ClientSize = new System.Drawing.Size(497, 397);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btnEnregistrer);
-            this.Controls.Add(this.labelActionTitle);
             this.Controls.Add(this.gradientPanel1);
             this.ForeColor = System.Drawing.Color.White;
             this.Name = "FormUpdateAvis";
@@ -147,14 +134,12 @@ namespace CarantecAdminPanel
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
         private System.Windows.Forms.Button btnEnregistrer;
-        private System.Windows.Forms.Label labelActionTitle;
         private GradientPanel gradientPanel1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.GroupBox groupBox1;
@@ -162,7 +147,6 @@ namespace CarantecAdminPanel
         private System.Windows.Forms.RadioButton rbAccepter;
 
         public Button BtnEnregistrer { get => btnEnregistrer; set => btnEnregistrer = value; }
-        public Label LabelActionTitle { get => labelActionTitle; set => labelActionTitle = value; }
         internal GradientPanel GradientPanel1 { get => gradientPanel1; set => gradientPanel1 = value; }
         public PictureBox PictureBox1 { get => pictureBox1; set => pictureBox1 = value; }
         public GroupBox GroupBox1 { get => groupBox1; set => groupBox1 = value; }
