@@ -353,9 +353,9 @@ namespace CarantecAdminPanel
             {
                 charger("CALL nomsPublicToIdPublic('" + text1 + "')", dT[41], dA[41]);
             }
-            if (table == "totalCapaciteRestanteLieu ")
+            if (table == "totalCapaciteRestanteLieu")
             {
-                charger("CALL totalCapaciteRestanteLieu ('" + text1 + "')", dT[42], dA[42]);
+                charger("CALL totalCapaciteRestanteLieu('" + text1 + "')", dT[42], dA[42]);
             }
             if (table == "infosParticiper")
             {

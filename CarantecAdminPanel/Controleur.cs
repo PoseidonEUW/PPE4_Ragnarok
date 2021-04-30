@@ -426,12 +426,13 @@ namespace CarantecAdminPanel
                                     NouvLigne["IDMANIF"] = Convert.ToInt32(vmodele.DT[3].Rows[vmodele.DT[3].Rows.Count - 1][0]);
                                     NouvLigne["ANNEEFESTIVAL"] = Convert.ToInt32(formCRUD.CbAnnee.SelectedItem);
                                     string libelleLieu = formCRUD.ComboBoxLieuManif.SelectedItem.ToString();
-                                    Controleur.Vmodele.charger_donnees("totalCapaciteRestanteLieu ", -1, libelleLieu, "");
-                                    try
+
+                                    Controleur.Vmodele.charger_donnees("nomLieuToIdLieu", -1, libelleLieu, "");
+                                    Controleur.Vmodele.charger_donnees("totalCapaciteRestanteLieu", -1, libelleLieu, "");
+                                    if (vmodele.DT[42].Rows[0][0].ToString() != "")
                                     {
                                         if ((Convert.ToInt32(vmodele.DT[42].Rows[0][0].ToString()) - Convert.ToInt32(formCRUD.TbJaugeManif.Text)) >= 0)
                                         {
-                                            Controleur.Vmodele.charger_donnees("nomLieuToIdLieu", -1, libelleLieu, "");
                                             NouvLigne["IDLIEU"] = Convert.ToInt32(vmodele.DT[19].Rows[0][0].ToString());
                                         }
                                         else
@@ -440,7 +441,7 @@ namespace CarantecAdminPanel
                                             goto eti;
                                         }
                                     }
-                                    catch
+                                    else
                                     {
                                         MessageBox.Show("Erreur : Le capacité du lieu sélectionné est dépassée", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
                                         goto eti;
@@ -532,18 +533,25 @@ namespace CarantecAdminPanel
                                 else
                                 {
                                     vmodele.DT[3].Rows[indice]["ANNEEFESTIVAL"] = Convert.ToInt32(formCRUD.CbAnnee.SelectedItem);
-                                    string libelleLieu = formCRUD.ComboBoxLieuManif.SelectedItem.ToString();
+                                    string libelleLieu = "";
+                                    libelleLieu = formCRUD.ComboBoxLieuManif.SelectedItem.ToString();
                                     Controleur.Vmodele.charger_donnees("nomLieuToIdLieu", -1, libelleLieu, "");
                                     Controleur.Vmodele.charger_donnees("totalCapaciteRestanteLieu", -1, libelleLieu, "");
-                                    if ((Convert.ToInt32(vmodele.DT[42].Rows[0][0].ToString()) - Convert.ToInt32(formCRUD.TbJaugeManif.Text)) >= 0)
+                                    if (vmodele.DT[42].Rows[0][0].ToString() != "")
                                     {
-                                        Controleur.Vmodele.charger_donnees("nomLieuToIdLieu", -1, libelleLieu, "");
-                                        vmodele.DT[3].Rows[indice]["IDLIEU"] = Convert.ToInt32(vmodele.DT[19].Rows[0][0].ToString());
+                                        if ((Convert.ToInt32(vmodele.DT[42].Rows[0][0].ToString()) - Convert.ToInt32(formCRUD.TbJaugeManif.Text)) >= 0)
+                                        {
+                                            vmodele.DT[3].Rows[indice]["IDLIEU"] = Convert.ToInt32(vmodele.DT[19].Rows[0][0].ToString());
+                                        }
+                                        else
+                                        {
+                                            MessageBox.Show("Erreur : Le capacité du lieu sélectionné est dépassée", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                            goto eti;
+                                        }
                                     }
                                     else
                                     {
-                                        MessageBox.Show("Erreur : Le capacité du lieu sélectionné est dépassée", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                                        goto eti;
+                                        vmodele.DT[3].Rows[indice]["IDLIEU"] = Convert.ToInt32(vmodele.DT[19].Rows[0][0].ToString());
                                     }
                                     vmodele.DT[3].Rows[indice]["LIBELLEMANIF"] = formCRUD.TbLibelleManif.Text;
                                     vmodele.DT[3].Rows[indice]["DATEMANIF"] = formCRUD.DateManif.Text + " " + formCRUD.CbAnnee.SelectedItem.ToString();
