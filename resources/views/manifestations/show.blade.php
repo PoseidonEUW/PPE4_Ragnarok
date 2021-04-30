@@ -52,13 +52,21 @@
                             </form>
                         @endif
                     @endif
+
                     {{-- Fin Auth Login --}
                     {{--  Mode Publique--}}
-                @elseif($manifestation->DATEMANIF >= date("Y-m-d"))
+                @else
+                @if($manifestation->DATEMANIF >= date("Y-m-d"))
+                    @if($manifestation->PRIXMANIF !=0 || $manifestation->PRIXMANIF !=NULL)
+
+
                     <a href="{{ route('login') }}">
                         <button class="position-center mt-4 bg-red-600 text-gray-300 rounded font-semibold px-5 py-4 hover:bg-red-400 transition ease-in-out duration-150" type="submit">Réserver</button>
                     </a>
                 @endif
+                @endif
+                @endif
+{{--                fin mode publique--}}
 
 
             </div>
