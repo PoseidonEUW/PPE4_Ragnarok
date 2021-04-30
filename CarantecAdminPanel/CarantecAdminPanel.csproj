@@ -47,6 +47,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>ic_launcher.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="BouncyCastle.Crypto, Version=1.8.5.0, Culture=neutral, PublicKeyToken=0e99375e54769942">
       <HintPath>..\packages\BouncyCastle.1.8.5\lib\BouncyCastle.Crypto.dll</HintPath>
@@ -279,6 +282,7 @@
   <ItemGroup>
     <None Include="Resources\AvisInverse.png" />
     <None Include="Resources\carantecred.png" />
+    <Content Include="ic_launcher.ico" />
     <Content Include="Resources\EtoileRempli.png" />
     <None Include="Resources\UserInverse.png" />
     <None Include="Resources\EtoileVide1.png" />

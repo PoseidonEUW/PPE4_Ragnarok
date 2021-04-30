@@ -291,6 +291,7 @@ namespace CarantecAdminPanel
             bindingSource1.MoveLast();
             bindingSource1.MoveFirst();
             dgvDonnees.Refresh();
+            btnTables(tableG);
         }
 
         private void ajouterToolStripMenuItem_Click(object sender, EventArgs e)
