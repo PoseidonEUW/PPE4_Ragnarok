@@ -290,6 +290,7 @@ namespace CarantecAdminPanel
             this.Controls.Add(this.btnEnregistrer);
             this.Controls.Add(this.gradientPanel1);
             this.ForeColor = System.Drawing.Color.White;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FormCRUDAvis";
             this.Text = "FormCRUDAvis";

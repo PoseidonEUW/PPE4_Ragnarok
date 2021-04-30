@@ -34,6 +34,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.dgvDonnees = new System.Windows.Forms.DataGridView();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.ajouterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -117,7 +118,7 @@
             this.dgvDonnees.RowsDefaultCellStyle = dataGridViewCellStyle5;
             this.dgvDonnees.RowTemplate.Height = 25;
             this.dgvDonnees.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvDonnees.Size = new System.Drawing.Size(1791, 846);
+            this.dgvDonnees.Size = new System.Drawing.Size(2454, 1208);
             this.dgvDonnees.TabIndex = 1;
             this.dgvDonnees.Visible = false;
             this.dgvDonnees.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDonnees_CellContentClick);
@@ -171,7 +172,7 @@
             this.gradientPanel1.Controls.Add(this.pictureBox1);
             this.gradientPanel1.Location = new System.Drawing.Point(-1, -3);
             this.gradientPanel1.Name = "gradientPanel1";
-            this.gradientPanel1.Size = new System.Drawing.Size(1925, 120);
+            this.gradientPanel1.Size = new System.Drawing.Size(4503, 120);
             this.gradientPanel1.TabIndex = 0;
             // 
             // btnParticiper
@@ -184,7 +185,7 @@
             this.btnParticiper.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnParticiper.ForeColor = System.Drawing.Color.White;
             this.btnParticiper.Image = global::CarantecAdminPanel.Properties.Resources.ParticipationInverse;
-            this.btnParticiper.Location = new System.Drawing.Point(741, 15);
+            this.btnParticiper.Location = new System.Drawing.Point(974, 18);
             this.btnParticiper.Name = "btnParticiper";
             this.btnParticiper.Size = new System.Drawing.Size(98, 102);
             this.btnParticiper.TabIndex = 10;
@@ -206,7 +207,7 @@
             this.btnAvis.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAvis.ForeColor = System.Drawing.Color.White;
             this.btnAvis.Image = global::CarantecAdminPanel.Properties.Resources.AvisInverse;
-            this.btnAvis.Location = new System.Drawing.Point(1468, 15);
+            this.btnAvis.Location = new System.Drawing.Point(1701, 18);
             this.btnAvis.Name = "btnAvis";
             this.btnAvis.Size = new System.Drawing.Size(89, 102);
             this.btnAvis.TabIndex = 9;
@@ -228,7 +229,7 @@
             this.btnReservation.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnReservation.ForeColor = System.Drawing.Color.White;
             this.btnReservation.Image = global::CarantecAdminPanel.Properties.Resources.ReservationInverse;
-            this.btnReservation.Location = new System.Drawing.Point(1323, 15);
+            this.btnReservation.Location = new System.Drawing.Point(1556, 18);
             this.btnReservation.Name = "btnReservation";
             this.btnReservation.Size = new System.Drawing.Size(89, 102);
             this.btnReservation.TabIndex = 8;
@@ -250,7 +251,7 @@
             this.btnLieux.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLieux.ForeColor = System.Drawing.Color.White;
             this.btnLieux.Image = global::CarantecAdminPanel.Properties.Resources.LieuxInverse;
-            this.btnLieux.Location = new System.Drawing.Point(1183, 15);
+            this.btnLieux.Location = new System.Drawing.Point(1416, 18);
             this.btnLieux.Name = "btnLieux";
             this.btnLieux.Size = new System.Drawing.Size(89, 102);
             this.btnLieux.TabIndex = 7;
@@ -272,7 +273,7 @@
             this.btnPublic.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPublic.ForeColor = System.Drawing.Color.White;
             this.btnPublic.Image = global::CarantecAdminPanel.Properties.Resources.PublicInverse;
-            this.btnPublic.Location = new System.Drawing.Point(1038, 15);
+            this.btnPublic.Location = new System.Drawing.Point(1271, 18);
             this.btnPublic.Name = "btnPublic";
             this.btnPublic.Size = new System.Drawing.Size(89, 102);
             this.btnPublic.TabIndex = 6;
@@ -294,7 +295,7 @@
             this.btnUsers.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUsers.ForeColor = System.Drawing.Color.White;
             this.btnUsers.Image = global::CarantecAdminPanel.Properties.Resources.UserInverse;
-            this.btnUsers.Location = new System.Drawing.Point(895, 15);
+            this.btnUsers.Location = new System.Drawing.Point(1128, 18);
             this.btnUsers.Name = "btnUsers";
             this.btnUsers.Size = new System.Drawing.Size(89, 102);
             this.btnUsers.TabIndex = 5;
@@ -316,7 +317,7 @@
             this.btnManifestation.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnManifestation.ForeColor = System.Drawing.Color.White;
             this.btnManifestation.Image = global::CarantecAdminPanel.Properties.Resources.ManifestationsInverse;
-            this.btnManifestation.Location = new System.Drawing.Point(573, 15);
+            this.btnManifestation.Location = new System.Drawing.Point(806, 18);
             this.btnManifestation.Name = "btnManifestation";
             this.btnManifestation.Size = new System.Drawing.Size(105, 102);
             this.btnManifestation.TabIndex = 4;
@@ -336,7 +337,7 @@
             this.btnDeco.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDeco.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDeco.ForeColor = System.Drawing.Color.White;
-            this.btnDeco.Location = new System.Drawing.Point(1740, 26);
+            this.btnDeco.Location = new System.Drawing.Point(2408, 15);
             this.btnDeco.Name = "btnDeco";
             this.btnDeco.Size = new System.Drawing.Size(141, 25);
             this.btnDeco.TabIndex = 3;
@@ -354,7 +355,7 @@
             this.btnFestival.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnFestival.ForeColor = System.Drawing.Color.White;
             this.btnFestival.Image = global::CarantecAdminPanel.Properties.Resources.FestivalInverse;
-            this.btnFestival.Location = new System.Drawing.Point(429, 15);
+            this.btnFestival.Location = new System.Drawing.Point(662, 18);
             this.btnFestival.Name = "btnFestival";
             this.btnFestival.Size = new System.Drawing.Size(90, 102);
             this.btnFestival.TabIndex = 2;
@@ -385,11 +386,12 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
-            this.ClientSize = new System.Drawing.Size(1925, 1209);
+            this.ClientSize = new System.Drawing.Size(2560, 1440);
             this.Controls.Add(this.dgvDonnees);
             this.Controls.Add(this.gradientPanel1);
             this.ForeColor = System.Drawing.Color.White;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";

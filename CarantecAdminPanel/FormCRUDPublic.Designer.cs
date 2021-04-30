@@ -30,6 +30,7 @@ namespace CarantecAdminPanel
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormCRUDPublic));
             this.label1 = new System.Windows.Forms.Label();
             this.tbLibellePublic = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
@@ -151,6 +152,7 @@ namespace CarantecAdminPanel
             this.Controls.Add(this.gradientPanel1);
             this.Font = new System.Drawing.Font("Netflix Sans", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.Color.White;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormCRUDPublic";
             this.Text = "FormCRUDPublic";
             this.gradientPanel1.ResumeLayout(false);

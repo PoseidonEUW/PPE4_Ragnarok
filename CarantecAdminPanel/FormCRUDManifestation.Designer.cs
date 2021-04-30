@@ -30,6 +30,7 @@ namespace CarantecAdminPanel
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormCRUDManifestation));
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.comboBoxLieuManif = new System.Windows.Forms.ComboBox();
@@ -37,8 +38,6 @@ namespace CarantecAdminPanel
             this.tbLibelleManif = new System.Windows.Forms.TextBox();
             this.labelError = new System.Windows.Forms.Label();
             this.btnEnregistrer = new System.Windows.Forms.Button();
-            this.gradientPanel1 = new CarantecAdminPanel.GradientPanel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.rtbDescManif = new System.Windows.Forms.RichTextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.dateManif = new System.Windows.Forms.DateTimePicker();
@@ -55,16 +54,24 @@ namespace CarantecAdminPanel
             this.rbConferenceManif = new System.Windows.Forms.RadioButton();
             this.rbConcertManif = new System.Windows.Forms.RadioButton();
             this.rbAtelierManif = new System.Windows.Forms.RadioButton();
+            this.HeureManifFin = new System.Windows.Forms.DateTimePicker();
+            this.label8 = new System.Windows.Forms.Label();
+            this.gradientPanel1 = new CarantecAdminPanel.GradientPanel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.cbPublic = new System.Windows.Forms.ComboBox();
+            this.labelPublic = new System.Windows.Forms.Label();
+            this.tbURL = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.gbTypeManif.SuspendLayout();
             this.gradientPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.gbTypeManif.SuspendLayout();
             this.SuspendLayout();
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Netflix Sans", 11.25F);
-            this.label2.Location = new System.Drawing.Point(59, 448);
+            this.label2.Location = new System.Drawing.Point(76, 412);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(52, 19);
             this.label2.TabIndex = 51;
@@ -74,7 +81,7 @@ namespace CarantecAdminPanel
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Netflix Sans", 11.25F);
-            this.label1.Location = new System.Drawing.Point(81, 387);
+            this.label1.Location = new System.Drawing.Point(91, 365);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(37, 19);
             this.label1.TabIndex = 49;
@@ -86,7 +93,7 @@ namespace CarantecAdminPanel
             this.comboBoxLieuManif.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxLieuManif.ForeColor = System.Drawing.Color.White;
             this.comboBoxLieuManif.FormattingEnabled = true;
-            this.comboBoxLieuManif.Location = new System.Drawing.Point(136, 387);
+            this.comboBoxLieuManif.Location = new System.Drawing.Point(135, 365);
             this.comboBoxLieuManif.Name = "comboBoxLieuManif";
             this.comboBoxLieuManif.Size = new System.Drawing.Size(349, 21);
             this.comboBoxLieuManif.TabIndex = 48;
@@ -95,7 +102,7 @@ namespace CarantecAdminPanel
             // 
             this.labelAnnee.AutoSize = true;
             this.labelAnnee.Font = new System.Drawing.Font("Netflix Sans", 11.25F);
-            this.labelAnnee.Location = new System.Drawing.Point(63, 322);
+            this.labelAnnee.Location = new System.Drawing.Point(75, 322);
             this.labelAnnee.Name = "labelAnnee";
             this.labelAnnee.Size = new System.Drawing.Size(53, 19);
             this.labelAnnee.TabIndex = 47;
@@ -107,7 +114,7 @@ namespace CarantecAdminPanel
             this.tbLibelleManif.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tbLibelleManif.Font = new System.Drawing.Font("Netflix Sans", 11.25F);
             this.tbLibelleManif.ForeColor = System.Drawing.Color.White;
-            this.tbLibelleManif.Location = new System.Drawing.Point(136, 446);
+            this.tbLibelleManif.Location = new System.Drawing.Point(135, 410);
             this.tbLibelleManif.Name = "tbLibelleManif";
             this.tbLibelleManif.Size = new System.Drawing.Size(349, 27);
             this.tbLibelleManif.TabIndex = 45;
@@ -117,7 +124,7 @@ namespace CarantecAdminPanel
             this.labelError.AutoSize = true;
             this.labelError.Font = new System.Drawing.Font("Netflix Sans", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelError.ForeColor = System.Drawing.Color.Firebrick;
-            this.labelError.Location = new System.Drawing.Point(360, 608);
+            this.labelError.Location = new System.Drawing.Point(360, 644);
             this.labelError.Name = "labelError";
             this.labelError.Size = new System.Drawing.Size(371, 19);
             this.labelError.TabIndex = 43;
@@ -131,37 +138,13 @@ namespace CarantecAdminPanel
             this.btnEnregistrer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEnregistrer.Font = new System.Drawing.Font("Netflix Sans", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEnregistrer.ForeColor = System.Drawing.Color.White;
-            this.btnEnregistrer.Location = new System.Drawing.Point(413, 638);
+            this.btnEnregistrer.Location = new System.Drawing.Point(413, 674);
             this.btnEnregistrer.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnEnregistrer.Name = "btnEnregistrer";
             this.btnEnregistrer.Size = new System.Drawing.Size(248, 56);
             this.btnEnregistrer.TabIndex = 42;
             this.btnEnregistrer.Text = "Enregistrer";
             this.btnEnregistrer.UseVisualStyleBackColor = false;
-            // 
-            // gradientPanel1
-            // 
-            this.gradientPanel1.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.gradientPanel1.ColorBottom = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
-            this.gradientPanel1.ColorTop = System.Drawing.Color.Black;
-            this.gradientPanel1.Controls.Add(this.pictureBox1);
-            this.gradientPanel1.Location = new System.Drawing.Point(0, 8);
-            this.gradientPanel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.gradientPanel1.Name = "gradientPanel1";
-            this.gradientPanel1.Size = new System.Drawing.Size(1071, 103);
-            this.gradientPanel1.TabIndex = 40;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.BackgroundImage = global::CarantecAdminPanel.Properties.Resources.carantec;
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox1.Location = new System.Drawing.Point(360, -25);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(349, 148);
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
             // 
             // rtbDescManif
             // 
@@ -178,7 +161,7 @@ namespace CarantecAdminPanel
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Netflix Sans", 11.25F);
-            this.label3.Location = new System.Drawing.Point(17, 512);
+            this.label3.Location = new System.Drawing.Point(42, 506);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(86, 19);
             this.label3.TabIndex = 53;
@@ -189,7 +172,7 @@ namespace CarantecAdminPanel
             this.dateManif.CustomFormat = "dd MMMM";
             this.dateManif.Font = new System.Drawing.Font("Netflix Sans", 11.25F);
             this.dateManif.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateManif.Location = new System.Drawing.Point(710, 317);
+            this.dateManif.Location = new System.Drawing.Point(694, 316);
             this.dateManif.Name = "dateManif";
             this.dateManif.Size = new System.Drawing.Size(172, 27);
             this.dateManif.TabIndex = 54;
@@ -198,7 +181,7 @@ namespace CarantecAdminPanel
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Netflix Sans", 11.25F);
-            this.label4.Location = new System.Drawing.Point(636, 322);
+            this.label4.Location = new System.Drawing.Point(645, 322);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(41, 19);
             this.label4.TabIndex = 55;
@@ -208,7 +191,7 @@ namespace CarantecAdminPanel
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Netflix Sans", 11.25F);
-            this.label5.Location = new System.Drawing.Point(554, 384);
+            this.label5.Location = new System.Drawing.Point(572, 367);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(114, 19);
             this.label5.TabIndex = 56;
@@ -219,7 +202,7 @@ namespace CarantecAdminPanel
             this.HeureManif.CustomFormat = "HH:mm";
             this.HeureManif.Font = new System.Drawing.Font("Netflix Sans", 11.25F);
             this.HeureManif.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.HeureManif.Location = new System.Drawing.Point(709, 379);
+            this.HeureManif.Location = new System.Drawing.Point(694, 361);
             this.HeureManif.Name = "HeureManif";
             this.HeureManif.Size = new System.Drawing.Size(96, 27);
             this.HeureManif.TabIndex = 57;
@@ -228,7 +211,7 @@ namespace CarantecAdminPanel
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Netflix Sans", 11.25F);
-            this.label6.Location = new System.Drawing.Point(622, 448);
+            this.label6.Location = new System.Drawing.Point(631, 449);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(55, 19);
             this.label6.TabIndex = 58;
@@ -249,7 +232,7 @@ namespace CarantecAdminPanel
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Netflix Sans", 11.25F);
-            this.label7.Location = new System.Drawing.Point(847, 448);
+            this.label7.Location = new System.Drawing.Point(851, 449);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(35, 19);
             this.label7.TabIndex = 60;
@@ -339,12 +322,105 @@ namespace CarantecAdminPanel
             this.rbAtelierManif.Text = "Atelier";
             this.rbAtelierManif.UseVisualStyleBackColor = true;
             // 
+            // HeureManifFin
+            // 
+            this.HeureManifFin.CustomFormat = "HH:mm";
+            this.HeureManifFin.Font = new System.Drawing.Font("Netflix Sans", 11.25F);
+            this.HeureManifFin.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.HeureManifFin.Location = new System.Drawing.Point(694, 397);
+            this.HeureManifFin.Name = "HeureManifFin";
+            this.HeureManifFin.Size = new System.Drawing.Size(96, 27);
+            this.HeureManifFin.TabIndex = 65;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Netflix Sans", 11.25F);
+            this.label8.Location = new System.Drawing.Point(594, 403);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(92, 19);
+            this.label8.TabIndex = 64;
+            this.label8.Text = "Heure de fin";
+            // 
+            // gradientPanel1
+            // 
+            this.gradientPanel1.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.gradientPanel1.ColorBottom = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
+            this.gradientPanel1.ColorTop = System.Drawing.Color.Black;
+            this.gradientPanel1.Controls.Add(this.pictureBox1);
+            this.gradientPanel1.Location = new System.Drawing.Point(0, 8);
+            this.gradientPanel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.gradientPanel1.Name = "gradientPanel1";
+            this.gradientPanel1.Size = new System.Drawing.Size(1071, 103);
+            this.gradientPanel1.TabIndex = 40;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.BackgroundImage = global::CarantecAdminPanel.Properties.Resources.carantec;
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox1.Location = new System.Drawing.Point(360, -25);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(349, 148);
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            // 
+            // cbPublic
+            // 
+            this.cbPublic.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
+            this.cbPublic.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbPublic.ForeColor = System.Drawing.Color.White;
+            this.cbPublic.FormattingEnabled = true;
+            this.cbPublic.Location = new System.Drawing.Point(135, 458);
+            this.cbPublic.Name = "cbPublic";
+            this.cbPublic.Size = new System.Drawing.Size(97, 21);
+            this.cbPublic.TabIndex = 67;
+            // 
+            // labelPublic
+            // 
+            this.labelPublic.AutoSize = true;
+            this.labelPublic.Font = new System.Drawing.Font("Netflix Sans", 11.25F);
+            this.labelPublic.Location = new System.Drawing.Point(48, 458);
+            this.labelPublic.Name = "labelPublic";
+            this.labelPublic.Size = new System.Drawing.Size(80, 19);
+            this.labelPublic.TabIndex = 66;
+            this.labelPublic.Text = "Public visé";
+            // 
+            // tbURL
+            // 
+            this.tbURL.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
+            this.tbURL.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.tbURL.Font = new System.Drawing.Font("Netflix Sans", 11.25F);
+            this.tbURL.ForeColor = System.Drawing.Color.White;
+            this.tbURL.Location = new System.Drawing.Point(135, 598);
+            this.tbURL.Name = "tbURL";
+            this.tbURL.Size = new System.Drawing.Size(905, 27);
+            this.tbURL.TabIndex = 69;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Netflix Sans", 11.25F);
+            this.label9.Location = new System.Drawing.Point(17, 600);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(112, 19);
+            this.label9.TabIndex = 68;
+            this.label9.Text = "URL Illustration";
+            this.label9.Click += new System.EventHandler(this.label9_Click);
+            // 
             // FormCRUDManifestation
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
-            this.ClientSize = new System.Drawing.Size(1070, 732);
+            this.ClientSize = new System.Drawing.Size(1070, 774);
+            this.Controls.Add(this.tbURL);
+            this.Controls.Add(this.label9);
+            this.Controls.Add(this.cbPublic);
+            this.Controls.Add(this.labelPublic);
+            this.Controls.Add(this.HeureManifFin);
+            this.Controls.Add(this.label8);
             this.Controls.Add(this.gbTypeManif);
             this.Controls.Add(this.cbAnnee);
             this.Controls.Add(this.tbPrixManif);
@@ -367,12 +443,13 @@ namespace CarantecAdminPanel
             this.Controls.Add(this.gradientPanel1);
             this.Font = new System.Drawing.Font("Netflix Sans", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.Color.White;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormCRUDManifestation";
             this.Text = "FormCRUDManifestation";
-            this.gradientPanel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.gbTypeManif.ResumeLayout(false);
             this.gbTypeManif.PerformLayout();
+            this.gradientPanel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -405,6 +482,12 @@ namespace CarantecAdminPanel
         private RadioButton rbConferenceManif;
         private RadioButton rbConcertManif;
         private RadioButton rbAtelierManif;
+        private DateTimePicker HeureManifFin;
+        private Label label8;
+        private ComboBox cbPublic;
+        private Label labelPublic;
+        private TextBox tbURL;
+        private Label label9;
 
         public Label Label2 { get => label2; set => label2 = value; }
         public Label Label1 { get => label1; set => label1 = value; }
@@ -430,5 +513,9 @@ namespace CarantecAdminPanel
         public RadioButton RbConferenceManif { get => rbConferenceManif; set => rbConferenceManif = value; }
         public RadioButton RbConcertManif { get => rbConcertManif; set => rbConcertManif = value; }
         public RadioButton RbAtelierManif { get => rbAtelierManif; set => rbAtelierManif = value; }
+        public DateTimePicker HeureManifFin1 { get => HeureManifFin; set => HeureManifFin = value; }
+        public GroupBox GbTypeManif { get => gbTypeManif; set => gbTypeManif = value; }
+        public ComboBox CbPublic { get => cbPublic; set => cbPublic = value; }
+        public TextBox TbURL { get => tbURL; set => tbURL = value; }
     }
 }

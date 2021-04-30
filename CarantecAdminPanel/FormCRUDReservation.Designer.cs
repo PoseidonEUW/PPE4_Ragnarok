@@ -30,6 +30,7 @@ namespace CarantecAdminPanel
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormCRUDReservation));
             this.labelError = new System.Windows.Forms.Label();
             this.btnEnregistrer = new System.Windows.Forms.Button();
             this.gradientPanel1 = new CarantecAdminPanel.GradientPanel();
@@ -114,7 +115,7 @@ namespace CarantecAdminPanel
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Netflix Sans", 11.25F);
-            this.label1.Location = new System.Drawing.Point(222, 211);
+            this.label1.Location = new System.Drawing.Point(232, 211);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(101, 19);
             this.label1.TabIndex = 90;
@@ -165,7 +166,7 @@ namespace CarantecAdminPanel
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Netflix Sans", 11.25F);
-            this.label3.Location = new System.Drawing.Point(147, 338);
+            this.label3.Location = new System.Drawing.Point(163, 338);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(160, 19);
             this.label3.TabIndex = 94;
@@ -188,6 +189,7 @@ namespace CarantecAdminPanel
             this.Controls.Add(this.gradientPanel1);
             this.Font = new System.Drawing.Font("Netflix Sans", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.Color.White;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormCRUDReservation";
             this.Text = "FormCRUDReservation";
             this.gradientPanel1.ResumeLayout(false);

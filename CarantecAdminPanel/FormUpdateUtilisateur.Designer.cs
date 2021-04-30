@@ -30,6 +30,7 @@ namespace CarantecAdminPanel
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormUpdateUtilisateur));
             this.tbPrenom = new System.Windows.Forms.TextBox();
             this.labelPrenom = new System.Windows.Forms.Label();
             this.tbNom = new System.Windows.Forms.TextBox();
@@ -150,6 +151,7 @@ namespace CarantecAdminPanel
             this.Controls.Add(this.gradientPanel1);
             this.ForeColor = System.Drawing.Color.White;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormUpdateUtilisateur";
             this.Text = "FormUpdateUtilisateur";
             this.Load += new System.EventHandler(this.FormUpdateUtilisateur_Load);

@@ -234,7 +234,7 @@ namespace CarantecAdminPanel
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(6, 100);
+            this.label5.Location = new System.Drawing.Point(27, 100);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(132, 16);
             this.label5.TabIndex = 36;
@@ -290,7 +290,7 @@ namespace CarantecAdminPanel
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(35, 153);
+            this.label2.Location = new System.Drawing.Point(47, 153);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(112, 16);
             this.label2.TabIndex = 39;

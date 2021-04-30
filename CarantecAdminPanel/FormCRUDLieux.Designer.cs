@@ -30,7 +30,7 @@ namespace CarantecAdminPanel
         /// </summary>
         private void InitializeComponent()
         {
-            this.tbCapaciteLieux = new System.Windows.Forms.TextBox();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormCRUDLieux));
             this.label6 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.labelError = new System.Windows.Forms.Label();
@@ -41,21 +41,12 @@ namespace CarantecAdminPanel
             this.gbIntExtLieux = new System.Windows.Forms.GroupBox();
             this.rbExtLieux = new System.Windows.Forms.RadioButton();
             this.rbIntLieux = new System.Windows.Forms.RadioButton();
+            this.nudCapaciteLieu = new System.Windows.Forms.NumericUpDown();
             this.gradientPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.gbIntExtLieux.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nudCapaciteLieu)).BeginInit();
             this.SuspendLayout();
-            // 
-            // tbCapaciteLieux
-            // 
-            this.tbCapaciteLieux.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
-            this.tbCapaciteLieux.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.tbCapaciteLieux.Font = new System.Drawing.Font("Netflix Sans", 11.25F);
-            this.tbCapaciteLieux.ForeColor = System.Drawing.Color.White;
-            this.tbCapaciteLieux.Location = new System.Drawing.Point(314, 413);
-            this.tbCapaciteLieux.Name = "tbCapaciteLieux";
-            this.tbCapaciteLieux.Size = new System.Drawing.Size(142, 27);
-            this.tbCapaciteLieux.TabIndex = 79;
             // 
             // label6
             // 
@@ -174,15 +165,36 @@ namespace CarantecAdminPanel
             this.rbIntLieux.Text = "Intérieur";
             this.rbIntLieux.UseVisualStyleBackColor = true;
             // 
+            // nudCapaciteLieu
+            // 
+            this.nudCapaciteLieu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
+            this.nudCapaciteLieu.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.nudCapaciteLieu.Font = new System.Drawing.Font("Netflix Sans", 11.25F);
+            this.nudCapaciteLieu.ForeColor = System.Drawing.Color.White;
+            this.nudCapaciteLieu.Location = new System.Drawing.Point(314, 413);
+            this.nudCapaciteLieu.Maximum = new decimal(new int[] {
+            100000,
+            0,
+            0,
+            0});
+            this.nudCapaciteLieu.Name = "nudCapaciteLieu";
+            this.nudCapaciteLieu.Size = new System.Drawing.Size(70, 27);
+            this.nudCapaciteLieu.TabIndex = 94;
+            this.nudCapaciteLieu.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            // 
             // FormCRUDLieux
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
             this.ClientSize = new System.Drawing.Size(1070, 550);
+            this.Controls.Add(this.nudCapaciteLieu);
             this.Controls.Add(this.gbIntExtLieux);
             this.Controls.Add(this.rtbLibelleLieux);
-            this.Controls.Add(this.tbCapaciteLieux);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.labelError);
@@ -190,19 +202,20 @@ namespace CarantecAdminPanel
             this.Controls.Add(this.gradientPanel1);
             this.Font = new System.Drawing.Font("Netflix Sans", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.Color.White;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormCRUDLieux";
             this.Text = "FormCRUDLieux";
             this.gradientPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.gbIntExtLieux.ResumeLayout(false);
             this.gbIntExtLieux.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nudCapaciteLieu)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-        private System.Windows.Forms.TextBox tbCapaciteLieux;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label labelError;
@@ -213,8 +226,8 @@ namespace CarantecAdminPanel
         private System.Windows.Forms.GroupBox gbIntExtLieux;
         private System.Windows.Forms.RadioButton rbExtLieux;
         private System.Windows.Forms.RadioButton rbIntLieux;
+        private NumericUpDown nudCapaciteLieu;
 
-        public TextBox TbCapaciteLieux { get => tbCapaciteLieux; set => tbCapaciteLieux = value; }
         public Label Label6 { get => label6; set => label6 = value; }
         public Label Label2 { get => label2; set => label2 = value; }
         public Label LabelError { get => labelError; set => labelError = value; }
@@ -225,5 +238,6 @@ namespace CarantecAdminPanel
         public GroupBox GbIntExtLieux { get => gbIntExtLieux; set => gbIntExtLieux = value; }
         public RadioButton RbExtLieux { get => rbExtLieux; set => rbExtLieux = value; }
         public RadioButton RbIntLieux { get => rbIntLieux; set => rbIntLieux = value; }
+        public NumericUpDown NudCapaciteLieu { get => nudCapaciteLieu; set => nudCapaciteLieu = value; }
     }
 }

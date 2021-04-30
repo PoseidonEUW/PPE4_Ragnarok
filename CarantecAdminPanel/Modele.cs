@@ -91,7 +91,7 @@ namespace CarantecAdminPanel
         public Modele()
         {
             // instanciation des collections des Datatable et DataAdapter
-            for (int i = 0; i <= 40; i++)
+            for (int i = 0; i <= 50; i++)
             {
                 dA.Add(new MySqlDataAdapter());
                 dT.Add(new DataTable());
@@ -161,6 +161,19 @@ namespace CarantecAdminPanel
                 MessageBox.Show("Erreur chargement dataTable : " + err, "PBS table", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 errgrave = true;
             }
+        }
+
+        public void updatePublic(int idPublic, int idManif)
+        {
+            // préparation de la requête avec des paramètres
+            string requete = "UPDATE viser SET IDPUBLIC = @idPublic WHERE IDMANIF = @idManif";
+            MySqlCommand command = myConnection.CreateCommand();
+            command.CommandText = requete;
+            // mise à jour des paramètres de la requête préparée avec les infos passées en paramètre de la méthode
+            command.Parameters.AddWithValue("idPublic", idPublic);
+            command.Parameters.AddWithValue("idManif", idManif);
+            // Exécution de la requête
+            command.ExecuteNonQuery();
         }
 
         /// <summary>
@@ -323,6 +336,38 @@ namespace CarantecAdminPanel
             if (table == "IdForAdmin")
             {
                 charger("CALL IdForAdmin('" + text1 + "', '" + text2 + "')", dT[37], dA[37]);
+            }
+            if (table == "nomspublic")
+            {
+                charger("SELECT * FROM nomspublic", dT[38], dA[38]);
+            }
+            if (table == "infosManif")
+            {
+                charger("SELECT * FROM infosManif", dT[39], dA[39]);
+            }
+            if (table == "viser")
+            {
+                charger("SELECT * FROM viser", dT[40], dA[40]);
+            }
+            if (table == "nomsPublicToIdPublic")
+            {
+                charger("CALL nomsPublicToIdPublic('" + text1 + "')", dT[41], dA[41]);
+            }
+            if (table == "totalCapaciteRestanteLieu ")
+            {
+                charger("CALL totalCapaciteRestanteLieu ('" + text1 + "')", dT[42], dA[42]);
+            }
+            if (table == "infosParticiper")
+            {
+                charger("SELECT * FROM infosParticiper", dT[43], dA[43]);
+            }
+            if (table == "infosReservation")
+            {
+                charger("SELECT * FROM infosReservation", dT[44], dA[44]);
+            }
+            if (table == "infosAvis")
+            {
+                charger("SELECT * FROM infosAvis", dT[45], dA[45]);
             }
         }
     }

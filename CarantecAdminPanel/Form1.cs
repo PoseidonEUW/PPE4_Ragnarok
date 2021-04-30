@@ -54,37 +54,68 @@ namespace CarantecAdminPanel
                 dgvDonnees.Columns["LIBELLETHEMATIQUE"].HeaderText = "Libelle";
                 dgvDonnees.Columns["NOMPRENOMPERSONNE"].HeaderText = "Nom prénom de l'organisateur";
             }
-            else if (table == "manifestation")
+            else if (table == "infosManif")
             {
-                bindingSource1.DataSource = Controleur.Vmodele.DT[3];
+                bindingSource1.DataSource = Controleur.Vmodele.DT[39];
                 dgvDonnees.DataSource = bindingSource1;
+                dgvDonnees.Columns["IDMANIF"].HeaderText = "ID Manif";
+                dgvDonnees.Columns["ANNEEFESTIVAL"].HeaderText = "Année";
+                dgvDonnees.Columns["LIBELLELIEU"].HeaderText = "Lieu";
+                dgvDonnees.Columns["DATEMANIF"].HeaderText = "Date";
+                dgvDonnees.Columns["LIBELLEMANIF"].HeaderText = "Libelle";
+                dgvDonnees.Columns["HORAIREDEBUTMANIF"].HeaderText = "Horaire début";
+                dgvDonnees.Columns["HORAIREFINMANIF"].HeaderText = "Horaire fin";
+                dgvDonnees.Columns["JAUGEDISPOPERSMANIF"].HeaderText = "Places disponibles";
+                dgvDonnees.Columns["JAUGEPERSMANIF"].HeaderText = "Places totales";
+                dgvDonnees.Columns["DESCRIPTIONMANIF"].HeaderText = "Description";
+                dgvDonnees.Columns["PRIXMANIF"].HeaderText = "Prix";
+                dgvDonnees.Columns["IMGMANIF"].HeaderText = "Illustration";
+                dgvDonnees.Columns["PUBLICVISE"].HeaderText = "Public visé";
             }
-            else if (table == "reservation")
+            else if (table == "infosReservation")
             {
-                bindingSource1.DataSource = Controleur.Vmodele.DT[4];
+                bindingSource1.DataSource = Controleur.Vmodele.DT[44];
                 dgvDonnees.DataSource = bindingSource1;
+                dgvDonnees.Columns["REFRESERVATION"].HeaderText = "Référence";
+                dgvDonnees.Columns["LIBELLEMANIF"].HeaderText = "Manif";
+                dgvDonnees.Columns["NOMPRENOM"].HeaderText = "Personne";
+                dgvDonnees.Columns["QUANTITERESERVATION"].HeaderText = "Quantité";
 
             }
             else if (table == "lieu")
             {
                 bindingSource1.DataSource = Controleur.Vmodele.DT[5];
                 dgvDonnees.DataSource = bindingSource1;
-
+                dgvDonnees.Columns["IDLIEU"].HeaderText = "ID Lieu";
+                dgvDonnees.Columns["LIBELLELIEU"].HeaderText = "Libelle";
+                dgvDonnees.Columns["CAPACITELIEU"].HeaderText = "Capacité max";
+                dgvDonnees.Columns["INTERIEURLIEU"].HeaderText = "Intérieur";
             }
-            else if (table == "avis")
+            else if (table == "infosAvis")
             {
-                bindingSource1.DataSource = Controleur.Vmodele.DT[6];
+                bindingSource1.DataSource = Controleur.Vmodele.DT[45];
                 dgvDonnees.DataSource = bindingSource1;
+                dgvDonnees.Columns["IDAVIS"].HeaderText = "ID Avis";
+                dgvDonnees.Columns["LIBELLEMANIF"].HeaderText = "Manifestation";
+                dgvDonnees.Columns["NOMPRENOM"].HeaderText = "Personne";
+                dgvDonnees.Columns["LIBELLEAVIS"].HeaderText = "Libelle";
+                dgvDonnees.Columns["NOTEAVIS"].HeaderText = "Note";
+                dgvDonnees.Columns["VALIDEAVIS"].HeaderText = "Valide";
             }
             else if (table == "public")
             {
                 bindingSource1.DataSource = Controleur.Vmodele.DT[7];
                 dgvDonnees.DataSource = bindingSource1;
+                dgvDonnees.Columns["IDPUBLIC"].HeaderText = "ID Public";
+                dgvDonnees.Columns["LIBELLEPUBLIC"].HeaderText = "Libelle";
+                dgvDonnees.Columns["DESCRIPTIONPUBLIC"].HeaderText = "Description";
             }
-            else if (table == "participer")
+            else if (table == "infosParticiper")
             {
-                bindingSource1.DataSource = Controleur.Vmodele.DT[34];
+                bindingSource1.DataSource = Controleur.Vmodele.DT[43];
                 dgvDonnees.DataSource = bindingSource1;
+                dgvDonnees.Columns["LIBELLEMANIF"].HeaderText = "Manifestation";
+                dgvDonnees.Columns["NOMPRENOM"].HeaderText = "Personne";
             }
 
             // mise à jour du dataGridView via le bindingSource rempli par le DataTable
@@ -137,7 +168,7 @@ namespace CarantecAdminPanel
                     btnLieux.Image = CarantecAdminPanel.Properties.Resources.LieuxInverseRed;
                     break;
                 case "btnAvis":
-                    btnAvis.Image = CarantecAdminPanel.Properties.Resources.AvisInverseRedH;
+                    btnAvis.Image = CarantecAdminPanel.Properties.Resources.AvisInverseRed;
                     break;
                 case "btnPublic":
                     btnPublic.Image = CarantecAdminPanel.Properties.Resources.PublicInverseRed;
@@ -162,17 +193,19 @@ namespace CarantecAdminPanel
         private void btnManifestation_Click_1(object sender, EventArgs e)
         {
             refreshBtnColor("btnManifestation");
-            btnTables("manifestation");
+            btnTables("infosManif");
             dgvDonnees.Columns[0].Width = 100;
             dgvDonnees.Columns[1].Width = 100;
             dgvDonnees.Columns[2].Width = 75;
+            dgvDonnees.Columns[3].Width = 150;
+            dgvDonnees.Columns[10].Width = 90;
             dgvDonnees.Visible = true;
         }
 
         private void btnReservation_Click_1(object sender, EventArgs e)
         {
             refreshBtnColor("btnReservation");
-            btnTables("reservation");
+            btnTables("infosReservation");
             dgvDonnees.Columns[0].Width = 250;
             dgvDonnees.Visible = true;
         }
@@ -188,7 +221,7 @@ namespace CarantecAdminPanel
         private void btnAvis_Click_1(object sender, EventArgs e)
         {
             refreshBtnColor("btnAvis");
-            btnTables("avis");
+            btnTables("infosAvis");
             dgvDonnees.Columns[0].Width = 150;
             dgvDonnees.Visible = true;
         }
@@ -213,12 +246,12 @@ namespace CarantecAdminPanel
                 // appel de la méthode du controleur en mode create
                 if (tableG == "festivalDisplay") Controleur.crud_festival('c', -1);
                 if (tableG == "utilisateur") Controleur.crud_utilisateur('c', -1);
-                if (tableG == "manifestation") Controleur.crud_manifestation('c', -1);
-                if (tableG == "reservation") Controleur.crud_reservation('c', -1);
-                if (tableG == "avis") MessageBox.Show("Erreur : Vous n'avez pas la possibilité d'ajouter un avis", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                if (tableG == "infosManif") Controleur.crud_manifestation('c', -1);
+                if (tableG == "infosReservation") MessageBox.Show("Erreur : Vous n'avez pas la possibilité d'ajouter une reservation", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                if (tableG == "infosAvis") MessageBox.Show("Erreur : Vous n'avez pas la possibilité d'ajouter un avis", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 if (tableG == "public") Controleur.crud_public('c', -1);
                 if (tableG == "lieu") Controleur.crud_lieu('c', -1);
-                if (tableG == "participer") Controleur.crud_participation('c', -1);
+                if (tableG == "infosParticiper") Controleur.crud_participation('c', -1);
             }
             else
             {
@@ -229,23 +262,23 @@ namespace CarantecAdminPanel
                     {
                         if (tableG == "festivalDisplay") Controleur.crud_festival('u', Convert.ToInt32(dgvDonnees.SelectedRows[0].Index));
                         if (tableG == "utilisateur") Controleur.crud_utilisateur('u', Convert.ToInt32(dgvDonnees.SelectedRows[0].Index));
-                        if (tableG == "manifestation") Controleur.crud_manifestation('u', Convert.ToInt32(dgvDonnees.SelectedRows[0].Index));
-                        if (tableG == "reservation") Controleur.crud_reservation('u', Convert.ToInt32(dgvDonnees.SelectedRows[0].Index));
-                        if (tableG == "avis") Controleur.crud_avis('u', Convert.ToInt32(dgvDonnees.SelectedRows[0].Index));
+                        if (tableG == "infosManif") Controleur.crud_manifestation('u', Convert.ToInt32(dgvDonnees.SelectedRows[0].Index));
+                        if (tableG == "infosReservation") MessageBox.Show("Erreur : Vous n'avez pas la possibilité de modifier une reservation", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        if (tableG == "infosAvis") Controleur.crud_avis('u', Convert.ToInt32(dgvDonnees.SelectedRows[0].Index));
                         if (tableG == "public") Controleur.crud_public('u', Convert.ToInt32(dgvDonnees.SelectedRows[0].Index));
                         if (tableG == "lieu") Controleur.crud_lieu('u', Convert.ToInt32(dgvDonnees.SelectedRows[0].Index));
-                        if (tableG == "participer") Controleur.crud_participation('u', Convert.ToInt32(dgvDonnees.SelectedRows[0].Index));
+                        if (tableG == "infosParticiper") Controleur.crud_participation('u', Convert.ToInt32(dgvDonnees.SelectedRows[0].Index));
                     }
                     if (sender == supprimerToolStripMenuItem)
                     {
                         if (tableG == "festivalDisplay") Controleur.crud_festival('d', Convert.ToInt32(dgvDonnees.SelectedRows[0].Index));
                         if (tableG == "utilisateur") Controleur.crud_utilisateur('d', Convert.ToInt32(dgvDonnees.SelectedRows[0].Index));
-                        if (tableG == "manifestation") Controleur.crud_manifestation('d', Convert.ToInt32(dgvDonnees.SelectedRows[0].Index));
-                        if (tableG == "reservation") Controleur.crud_reservation('d', Convert.ToInt32(dgvDonnees.SelectedRows[0].Index));
-                        if (tableG == "avis") Controleur.crud_avis('d', Convert.ToInt32(dgvDonnees.SelectedRows[0].Index));
+                        if (tableG == "infosManif") Controleur.crud_manifestation('d', Convert.ToInt32(dgvDonnees.SelectedRows[0].Index));
+                        if (tableG == "infosReservation") Controleur.crud_reservation('d', Convert.ToInt32(dgvDonnees.SelectedRows[0].Index));
+                        if (tableG == "infosAvis") Controleur.crud_avis('d', Convert.ToInt32(dgvDonnees.SelectedRows[0].Index));
                         if (tableG == "public") Controleur.crud_public('d', Convert.ToInt32(dgvDonnees.SelectedRows[0].Index));
                         if (tableG == "lieu") Controleur.crud_lieu('d', Convert.ToInt32(dgvDonnees.SelectedRows[0].Index));
-                        if (tableG == "participer") Controleur.crud_participation('d', Convert.ToInt32(dgvDonnees.SelectedRows[0].Index));
+                        if (tableG == "infosParticiper") Controleur.crud_participation('d', Convert.ToInt32(dgvDonnees.SelectedRows[0].Index));
                     }
                 }
                 else
@@ -313,17 +346,13 @@ namespace CarantecAdminPanel
         {
             refreshBtnColor("btnUsers");
             btnTables("utilisateur");
-            dgvDonnees.Columns[0].Width = 150;
-            dgvDonnees.Columns[1].Width = 250;
-            dgvDonnees.Columns[2].Width = 250;
             dgvDonnees.Visible = true;
         }
 
         private void btnParticiper_Click(object sender, EventArgs e)
         {
             refreshBtnColor("btnParticiper");
-            btnTables("participer");
-            dgvDonnees.Columns[0].Width = 150;
+            btnTables("infosParticiper");
             dgvDonnees.Visible = true;
         }
 
@@ -407,7 +436,7 @@ namespace CarantecAdminPanel
 
         private void btnAvis_MouseEnter(object sender, EventArgs e)
         {
-            btnAvis.Image = CarantecAdminPanel.Properties.Resources.AvisInverseRedH;
+            btnAvis.Image = CarantecAdminPanel.Properties.Resources.AvisInverseRed;
         }
 
         private void btnAvis_MouseLeave(object sender, EventArgs e)
