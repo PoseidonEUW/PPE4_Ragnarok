@@ -33,7 +33,7 @@
                             <img src="{{asset($manifestation->IMGMANIF)}}" alt="Image" class=" w-25 h-25 object-contain"></a>
 
                         <div class="mt-2 cursor-default ">
-                            <a href="/manifestations/{{$manifestation->IDMANIF}}" class=" text-md-center uppercase mt-2 hover:text-red-600">{{$manifestation->LIBELLEMANIF}} </a>
+                            <a href="/manifestations/{{$manifestation->IDMANIF}}" class=" text-md-center text-justify ml-3 uppercase mt-2 hover:text-red-600">{{$manifestation->LIBELLEMANIF}} </a>
                             <div class="flex items-center divide-x-4 divide-opacity-25 divide-red-600 text-gray-400">
                                 <!-- Info -->
                                 <h2 class=" ml-3 text-gray-500 ml-2"> {{$manifestation->LIBELLELIEU}} </h2>
@@ -49,6 +49,40 @@
                             </div>
                             <div class="ml-3">
                                 <span>Date de Manifestation : {{$manifestation->DATEMANIF->translatedFormat('d F Y')}} à {{$manifestation->HORAIREDEBUTMANIF->translatedFormat('h:i ')}}</span>
+                            </div>
+
+                            <div class="ml-3">
+
+                                @foreach($manifAtelier as $atelier)
+                                    @if($atelier->IDMANIF == $manifestation->IDMANIF)
+                                        <span class="text-red-600">Type : </span><span> Atelier</span>
+                                        @else
+                                    @endif
+                            @endforeach
+
+                                @foreach($manifConcert as $Concert)
+                                    @if($Concert->IDMANIF == $manifestation->IDMANIF)
+                                            <span class="text-red-600">Type : </span><span> Concert</span>
+                                    @endif
+                                @endforeach
+
+                                @foreach($manifDebat as $Debat)
+                                    @if($Debat->IDMANIF == $manifestation->IDMANIF)
+                                            <span class="text-red-600">Type : </span><span> Debat</span>
+                                    @endif
+                                @endforeach
+
+                                @foreach($manifConference as $Conference)
+                                    @if($Conference->IDMANIF == $manifestation->IDMANIF)
+                                            <span class="text-red-600">Type : </span> <span> Conference</span>
+                                    @endif
+                                @endforeach
+                            </div>
+                            <div class="ml-3">
+                                <span class="text-red-600">Viser : <span>
+
+                                    </span>
+                                </span>
                             </div>
                         </div>
                     </div>
