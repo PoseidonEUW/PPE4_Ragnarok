@@ -24,9 +24,9 @@
                 <p class="text-gray-300">
                     {{$manifestation->DESCRIPTIONMANIF}}
                 </p>
-
+                {{-- Mode Auth  --}}
                 @if (Auth::check())
-                    @if($manifestation->DATEMANIF > date("Y-m-d"))
+                    @if($manifestation->DATEMANIF >= date("Y-m-d"))
                         @if($manifestation->PRIXMANIF !=0)
 
                             <form class="mt-12" action="/manifestations" method="POST">
@@ -50,7 +50,9 @@
                             </form>
                         @endif
                     @endif
-                @else
+                    {{-- Fin Auth Login --}
+                    {{--  Mode Publique--}}
+                @elseif($manifestation->DATEMANIF >= date("Y-m-d"))
                     <a href="{{ route('login') }}">
                         <button class="position-center mt-4 bg-red-600 text-gray-300 rounded font-semibold px-5 py-4 hover:bg-red-400 transition ease-in-out duration-150" type="submit">Réserver</button>
                     </a>
