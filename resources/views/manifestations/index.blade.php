@@ -37,12 +37,12 @@
                             <div class="flex items-center divide-x-4 divide-opacity-25 divide-red-600 text-gray-400">
                                 <!-- Info -->
                                 <h2 class=" ml-3 text-gray-500 ml-2"> {{$manifestation->LIBELLELIEU}} </h2>
-                                @if($manifestation->PRIXMANIF != 0 || $manifestation->PRIXMANIF != NULL)
+                                @if($manifestation->PRIXMANIF == NULL || $manifestation->PRIXMANIF == 0)
                                 <p class="ml-3 text-gray-400 uppercase mx-2">
-                                    Payante</p>
+                                    Gratuite</p>
                             @else
                                     <p class="ml-3 text-gray-400 uppercase mx-2">
-                                        Gratuite</p>
+                                        Payante</p>
                             @endif
                                 <!-- Info -->
 
@@ -79,10 +79,8 @@
                                 @endforeach
                             </div>
                             <div class="ml-3">
-                                <span class="text-red-600">Viser : <span>
+                                <span class="text-red-600">Public :</span> <span>{{$manifestation-> LIBELLEPUBLIC}}</span>
 
-                                    </span>
-                                </span>
                             </div>
                         </div>
                     </div>

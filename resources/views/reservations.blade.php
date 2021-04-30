@@ -12,7 +12,7 @@
                     <h2 class="font-semibold text-md text-gray-800 leading-tight mb-4">Mes Reservations en Cours :</h2>
                  @foreach($reservations as $reservation)
 
-                    @if($reservation->DATEMANIF <= date("Y-m-d") )
+                    @if($reservation->DATEMANIF >= date("Y-m-d") )
 
                     <!-- Billet -->
                         <div class="flex ml-24 border-t-2 border-gray-500">
@@ -48,7 +48,7 @@
                     <h2 class="font-semibold text-md text-gray-800 leading-tight mb-4">Mes Reservations passées :</h2>
                     @foreach($reservations as $reservation)
 
-                        @if($reservation->DATEMANIF > date("Y-m-d")  )
+                        @if($reservation->DATEMANIF < date("Y-m-d")  )
 
                             <input type="hidden" name="idreservation" value="{{$reservation->IDRESERVATION}}">
                             <input type="hidden" name="idmanif" value="{{$reservation->IDMANIF}}">

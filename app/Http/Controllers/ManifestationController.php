@@ -28,6 +28,8 @@ class ManifestationController extends Controller
         //Select * from Manifestation
         $manifestations = Manifestation::join('lieu','manifestation.IDLIEU','=','lieu.IDLIEU')
             ->join('festival','manifestation.ANNEEFESTIVAL','=','festival.ANNEEFESTIVAL')
+            ->join('viser','manifestation.IDMANIF','=','viser.IDMANIF')
+            ->join('public','viser.IDPUBLIC','=','public.IDPUBLIC')
             ->get();
         $manifAtelier = manifAtelier::join('manifestation','manifAtelier.IDMANIF','=','manifestation.IDMANIF')->get();
         $manifConcert = manifConcert::join('manifestation','manifConcert.IDMANIF','=','manifestation.IDMANIF')->get();
