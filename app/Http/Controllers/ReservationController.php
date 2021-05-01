@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Avis;
 use App\Models\Reservation;
 use App\Models\Personne;
 use App\Models\Manifestation;
@@ -16,8 +17,12 @@ class ReservationController extends Controller
                                     ->join('personne','reservation.IDPERSONNE','=','personne.IDPERSONNE')
                                     ->where('reservation.IDPERSONNE', Auth::id())
                                 ->get();
+        $avis = Avis::join('reservation','avis.IDPERSONNE','=','reservation.IDPERSONNE')
+            ->where('avis.IDPERSONNE',Auth::id())
+        ->get();
         return view('reservations',[
-            'reservations'=>$reservations
+            'reservations'=>$reservations,
+            'avis'=>$avis,
 
         ]);
 
@@ -29,10 +34,17 @@ class ReservationController extends Controller
      * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View|\Illuminate\Http\Response
      */
    public function show($id){
-       $reservations = Reservation::join('manifestation','reservation.IDMANIF','=','manifestation.IDMANIF','personne','reservation.IDPERSONNE','=','personne.IDPERSONNE');
-       $reservations = $reservations->find($id);
-       return view('reservations')->with('reservations',$reservations);
+
    }
-
-
+    public function create($id)
+    {
+        $reservation = Reservation::join('manifestation','reservation.IDMANIF','=','manifestation.IDMANIF','personne','reservation.IDPERSONNE','=','personne.IDPERSONNE')
+            ->where('reservation.REFRESERVATION',$id);
+        return view('avis')->with('reservation',$reservation);
+    }
+public function delete($id){
+       $reservation = Reservation::find($id)->first();
+       $reservation->delete();
+    return redirect()->back();
+}
 }

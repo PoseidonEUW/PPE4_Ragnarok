@@ -26,16 +26,6 @@ class AvisController extends Controller
     }
 
     /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
-    }
-
-    /**
      * Store a newly created resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
@@ -48,22 +38,23 @@ class AvisController extends Controller
 
 
             $request->validate([
-                'noteavis' => 'numeric|min:1|max:5',
+                'noteavis' => 'required|numeric|min:1|max:5',
+                'libelle'=>'required|max:500',
             ]);
+            try {
+                $avis = Avis::create([
+                    'IDMANIF' => $request->input('idmanif'),
+                    'IDPERSONNE' => $request->input('idpersonne'),
+                    'NOTEAVIS' => $request->input('noteavis'),
+                    'LIBELLEAVIS' => $request->input('libelle'),
 
-            $avis = Avis::create([
-                'IDMANIF'=>$request->input('idmanif'),
-                'IDPERSONNE'=>$request->input('idpersonne'),
-                'NOTEAVIS'=>$request->input('noteavis'),
-                'LIBELLEAVIS'=>$request->input('libelle'),
 
-
-            ]);
-
-            return redirect()->back()->with('message', 'Votre avis est en attendant !');
-
+                ]);
+                return redirect()->back()->with('message', 'Votre avis est en attente !');
+            }catch (\Exception $e) {
+                return redirect()->back()->with('message', 'Vous avez déjà donné votre avis sur cette manifestation !');
+            }
         }
-
     }
 
     /**

@@ -4,8 +4,13 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\StoreReservationRequest;
 use App\Models\Avis;
+use App\Models\manifAtelier;
+use App\Models\manifConcert;
+use App\Models\manifConference;
+use App\Models\manifDebat;
 use App\Models\Manifestation;
 use App\Models\Reservation;
+use App\Models\Debat;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
@@ -23,11 +28,20 @@ class ManifestationController extends Controller
         //Select * from Manifestation
         $manifestations = Manifestation::join('lieu','manifestation.IDLIEU','=','lieu.IDLIEU')
             ->join('festival','manifestation.ANNEEFESTIVAL','=','festival.ANNEEFESTIVAL')
+            ->join('viser','manifestation.IDMANIF','=','viser.IDMANIF')
+            ->join('public','viser.IDPUBLIC','=','public.IDPUBLIC')
             ->get();
+        $manifAtelier = manifAtelier::join('manifestation','manifAtelier.IDMANIF','=','manifestation.IDMANIF')->get();
+        $manifConcert = manifConcert::join('manifestation','manifConcert.IDMANIF','=','manifestation.IDMANIF')->get();
+        $manifConference = manifConference::join('manifestation','manifConference.IDMANIF','=','manifestation.IDMANIF')->get();
+        $manifDebat = manifDebat::join('manifestation','manifDebat.IDMANIF','=','manifestation.IDMANIF')->get();
 
         return view('manifestations.index',[
-            'manifestations'=>$manifestations
-
+            'manifestations'=>$manifestations,
+            'manifAtelier'=>$manifAtelier,
+            'manifConcert'=>$manifConcert,
+            'manifConference'=>$manifConference,
+            'manifDebat'=>$manifDebat,
         ]);
 
 
@@ -54,9 +68,10 @@ class ManifestationController extends Controller
     {
         if(Auth::check()){
             $request->validate([
-                'quantiter' => 'numeric|min:1|max:10',
+                'quantiter' => 'numeric|min:1|max:4',
             ]);
 
+            try {
     $reservation = Reservation::create([
         'IDMANIF'=>$request->input('idmanif'),
         'IDPERSONNE'=>$request->input('idpersonne'),
@@ -65,9 +80,11 @@ class ManifestationController extends Controller
     ]);
 //    Decrement
             return redirect()->back()->with('message', 'Votre place est reservée !');
+            }catch (\Exception $e) {
+                return redirect()->back()->with('message', 'Vous ne pouvez réserver que pour 4 personnes ou le nombre de places restantes est atteinte!');
+            }
 
     }
-
     }
 
     /**
@@ -84,7 +101,7 @@ class ManifestationController extends Controller
             ->join('personne','users.id','=','personne.IDPERSONNE')
             ->where('IDMANIF',$id)
             ->where('VALIDEAVIS','=','1')
-        ->paginate(4);
+            ->paginate(4);
         $manifestation = $manifestation->find($id);
 
         return view('manifestations.show',["manifestation"=>$manifestation,"avis"=>$avis]);

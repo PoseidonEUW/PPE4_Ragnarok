@@ -28,11 +28,6 @@
                             Artistes
                         </a>
                     </li>
-                    <li class="md:ml-6 mt-3 md:mt-0 transition duration-150 ease-in-out transform hover:-translate-y-1 hover:scale-110">
-                        <a href="/about-us" class="hover:text-red-600 capitalize">
-                            Qui sommes nous?
-                        </a>
-                    </li>
                 </ul>
                     @if (Route::has('login'))
                         <div class="hidden flex px-6 py-4 sm:block">
@@ -77,10 +72,12 @@
         <div class="sm:flex sm:mt-8">
             <div class="mt-8 sm:mt-0 sm:w-full sm:px-8 flex flex-col md:flex-row justify-between ">
                 <div class="container flex flex-col text-center">
-                    <span class="font-bold text-gray-400 uppercase mb-2 ">Footer header 1</span>
-                    <span class="my-2"><a href="#" class="text-blue-700  text-md hover:text-blue-500">link 1</a></span>
-                    <span class="my-2"><a href="#" class="text-blue-700  text-md hover:text-blue-500">link 1</a></span>
-                    <span class="my-2"><a href="#" class="text-blue-700  text-md hover:text-blue-500">link 1</a></span>
+                    <img class="w-64 object-center mx-auto pb-8"src="/images/carantec.png" alt="Carantec">
+                    <div class="flex text-center space-x-20 mx-auto text-gray-300">
+                    <li class="my-2"><a href="/manifestations" class="text-md hover:text-red-600">Programmation</a></li>
+                    <li class="my-2"><a href="/artistes" class="text-md hover:text-red-600">Artistes</a></li>
+                    <li class="my-2"><a href="https://www.ville-carantec.com/" class="text-md hover:text-red-600">Ville de Carantec</a></li>
+                    </div>
                 </div>
             </div>
         </div>
