@@ -32,6 +32,4 @@ BOURNIQUE Yoann
 ANNAIX Titouan 
 
 ## Note pour le projet : 
-Moyenne -> 19,10/20
-PPE Technique -> 19,30/20
-PPE COMMUNICATION -> 18/20
+Moyenne : 19.04 / Détails (19.30 coeff 4 sur la partie Technique | 18 coeff 1 sur la partie Communication)
