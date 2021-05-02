@@ -1,4 +1,4 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/fr/0/07/Logo_Chevrollier.png" width="400"></a></p>
+<p align="center"><img src="https://upload.wikimedia.org/wikipedia/fr/0/07/Logo_Chevrollier.png" width="400"></p>
 
 
 ## PPE4_Carantec : Laravel Site Web
