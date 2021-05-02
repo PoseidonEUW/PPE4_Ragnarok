@@ -1,61 +1,37 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
+<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/fr/0/07/Logo_Chevrollier.png" width="400"></a></p>
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/d/total.svg" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/v/stable.svg" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/license.svg" alt="License"></a>
-</p>
 
-## About Laravel
+## PPE4_Carantec : Laravel Site Web
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+## Context Carantec: 
+Laravel -> Présentation : 
+        Edition 2020 annulé à cause de la crise sanitaire. Edition 2021 c’est 3 semaines au mois d’Avril 2021 avec différentes sortes de manifestions : musique/concert, expositions, conférences/débats et ateliers. Cette année la thématique du festival sera « Films et séries ».
+Manifestions qui se déroulent dans différents lieux avec capacités limitées.
+    C# / Laravel -> Affichage Programmation / Manifestations :
+        Chaque événement :  le nom, la date, l’horaire de début et le public visé (jeune, tout public, adultes etc.), une jauge de participants et un résumé de l’événement.
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+    Pour un concert : On connaitra le ou les artistes, et sa durée prédéfinie.
+    Conférences/Débats : Animateurs ou Intervenants spécialisés (Peuvent se dérouler sur plusieurs jours pas forcément consécutifs)
+    Ateliers : Peuvent changer de lieu, mais un seul lieu par jour d’atelier.
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+C# / Laravel -> Affichage Acteurs :
+    Artistes : Son domaine ( Musical, peinture, sculpture, photographie)  ROLEARTISTE de la BDD ? avec un lien Facebook.
 
-## Learning Laravel
+MANIFESTIONS : Gratuites mais 5 manifestions sont payantes 
+    Pour les payantes : RESERVATION dans la limite des places disponibles
+Manifestations accessible à tous. (Inscription : Nom, Prénom, Email, Tel port)
+Un users ne peut pas réserver plus de 4 fois la même manifestation.
+Une fois inscrit, il pourra consulter ses manifestions.
+Quand une manifestation est passée, il pourra émettre un avis avec une note de 1 à 5 (Une fois qu’il a participé).
+L’avis sera visible après validation de la modération (VISIBLE EN PUBLIC)
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+## Les etudiants : 
+PROVENZAL Jessy
+GUITTET Elliot
+BOURNIQUE Yoann
+ANNAIX Titouan 
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 1500 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
-
-## Laravel Sponsors
-
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
-
-### Premium Partners
-
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[OP.GG](https://op.gg)**
-
-## Contributing
-
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+## Note pour le projet : 
+Moyenne -> 19,10/20
+PPE Technique -> 19,30/20
+PPE COMMUNICATION -> 18/20
