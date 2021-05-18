@@ -18,7 +18,7 @@
                         <div class="flex ml-24 border-t-2 border-gray-500">
                             <span>Nom de Manif : {{$reservation->LIBELLEMANIF}}</span>
                             <span class="mx-2">| </span>
-                            <span>Quantiter : {{$reservation->QUANTITERESERVATION}}</span>
+                            <span>Quantité : {{$reservation->QUANTITERESERVATION}}</span>
                             <span class="mx-2">| </span>
                             <span>Prix : {{$reservation->PRIXMANIF}}</span>
 
