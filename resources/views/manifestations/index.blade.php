@@ -27,7 +27,7 @@
 
                 @foreach($manifestations as $manifestation)
     @if($manifestation->ANNEEFESTIVAL == 2021)
-                    <div class="mt-6 ml-3 border-l-4 border-t-4 border-red-600 transition duration-5000 ease-in delay-150 transform hover:-translate-y-1 hover:scale-110 ">
+                    <div class="mt-6 ml-3 border-l-4 border-t-4 border-red-600 lg:transition lg:duration-5000 lg:ease-in lg:delay-150 lg:transform lg:hover:-translate-y-1 lg:hover:scale-110 ">
                         <input type="hidden" name="num" value={{$manifestation->IDMANIF}}>
                         <a href="/manifestations/{{$manifestation->IDMANIF}}">
                             <img src="{{asset($manifestation->IMGMANIF)}}" alt="Image" class=" w-25 h-25 object-contain"></a>
