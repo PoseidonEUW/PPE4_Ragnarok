@@ -24,7 +24,10 @@ use Illuminate\Validation\Rule;
 */
 
 // Main Page
-Route::get('/',[PagesController::class,'index']);
+Route::get('/', function () {
+    return view('welcome');
+});
+Route::get('/home',[PagesController::class,'index']);
 Route::get('/artistes',[PagesController::class,'artistes']);
 
 //Find de main Page
