@@ -50,6 +50,6 @@ Route::post('reservations/{id}',[ReservationController::class,'delete'])->middle
 Route::get('/avis', function () {
     return view('avis');
 })->middleware(['auth'])->name('avis');
-Route::get('/avis/{IDMANIF}',[ReservationController::class,'create'])->middleware(['auth'])->name('avis');
+Route::get('/avis/{id}',[ReservationController::class,'create'])->middleware(['auth'])->name('avis');
 ///
 require __DIR__.'/auth.php';

@@ -53,31 +53,43 @@
 
                             <div class="ml-3">
 
-                                @foreach($manifAtelier as $atelier)
-                                    @if($atelier->IDMANIF == $manifestation->IDMANIF)
-                                        <span class="text-red-600">Type : </span><span> Atelier</span>
-                                        @else
-                                    @endif
-                            @endforeach
 
-                                @foreach($manifConcert as $Concert)
-                                    @if($Concert->IDMANIF == $manifestation->IDMANIF)
-                                            <span class="text-red-600">Type : </span><span> Concert</span>
-                                    @endif
+                                    @foreach($manifAtelier as $atelier)
+                                        @if($atelier->IDMANIF == $manifestation->IDMANIF)
+                                            <span class="text-red-600">Type : </span><span> Atelier</span>
+
+                                        @endif
+
                                 @endforeach
 
-                                @foreach($manifDebat as $Debat)
-                                    @if($Debat->IDMANIF == $manifestation->IDMANIF)
-                                            <span class="text-red-600">Type : </span><span> Debat</span>
-                                    @endif
-                                @endforeach
+                                    @foreach($manifConcert as $Concert)
+                                        @if($Concert->IDMANIF == $manifestation->IDMANIF)
+                                                <span class="text-red-600">Type : </span><span> Concert</span>
+                                        @endif
+                                    @endforeach
 
-                                @foreach($manifConference as $Conference)
-                                    @if($Conference->IDMANIF == $manifestation->IDMANIF)
-                                            <span class="text-red-600">Type : </span> <span> Conference</span>
-                                    @endif
-                                @endforeach
+                                    @foreach($manifDebat as $Debat)
+                                        @if($Debat->IDMANIF == $manifestation->IDMANIF)
+                                                <span class="text-red-600">Type : </span><span> Debat</span>
+                                        @endif
+                                    @endforeach
+
+                                    @foreach($manifConference as $Conference)
+                                        @if($Conference->IDMANIF == $manifestation->IDMANIF)
+                                                <span class="text-red-600">Type : </span> <span> Conference</span>
+                                        @endif
+                                    @endforeach
+
                             </div>
+                            <div class="ml-3">@foreach($avis as $a)
+                                    @if($a->IDMANIF == $manifestation->IDMANIF)
+                                        @if($a->moyenneavis == NULL)
+                                        @else
+                                            <span class="text-red-600">Avis : </span><span> {{$a->moyenneavis}}/5</span>
+
+                                        @endif
+                                    @endif
+                                @endforeach </div>
                             <div class="ml-3">
                                 <span class="text-red-600">Public :</span> <span>{{$manifestation-> LIBELLEPUBLIC}}</span>
 

@@ -35,6 +35,11 @@ class ManifestationController extends Controller
         $manifConcert = manifConcert::join('manifestation','manifConcert.IDMANIF','=','manifestation.IDMANIF')->get();
         $manifConference = manifConference::join('manifestation','manifConference.IDMANIF','=','manifestation.IDMANIF')->get();
         $manifDebat = manifDebat::join('manifestation','manifDebat.IDMANIF','=','manifestation.IDMANIF')->get();
+        $avis = Avis::select( 'avis.IDMANIF', DB::raw( 'round(AVG(NOTEAVIS),2) AS moyenneavis'))
+            ->join('manifestation','avis.IDMANIF','=','manifestation.IDMANIF')
+            ->where('VALIDEAVIS','=','1')
+            ->groupBy('manifestation.IDMANIF')
+            ->get();
 
         return view('manifestations.index',[
             'manifestations'=>$manifestations,
@@ -42,6 +47,7 @@ class ManifestationController extends Controller
             'manifConcert'=>$manifConcert,
             'manifConference'=>$manifConference,
             'manifDebat'=>$manifDebat,
+            'avis'=> $avis,
         ]);
 
 
