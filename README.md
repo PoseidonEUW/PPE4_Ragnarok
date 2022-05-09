@@ -25,6 +25,12 @@ Une fois inscrit, il pourra consulter ses manifestions.
 Quand une manifestation est passée, il pourra émettre un avis avec une note de 1 à 5 (Une fois qu’il a participé).
 L’avis sera visible après validation de la modération (VISIBLE EN PUBLIC)
 
+## Installation : 
+    1. Git clone https://github.com/PoseidonEUW/PPE4_Ragnarok.git
+    2. Composer Install
+    3. npm install
+    4. php artisan serve
+    
 ## Les etudiants : 
 PROVENZAL Jessy
 GUITTET Elliot
