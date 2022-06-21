@@ -25,9 +25,9 @@ use Illuminate\Validation\Rule;
 
 // Main Page
 Route::get('/', function () {
-    return view('welcome');
+    return view('home');
 });
-Route::get('/home',[PagesController::class,'index']);
+// Route::get('/home',[PagesController::class,'index']);
 Route::get('/artistes',[PagesController::class,'artistes']);
 
 //Find de main Page

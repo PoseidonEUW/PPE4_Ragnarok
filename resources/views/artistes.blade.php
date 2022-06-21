@@ -36,7 +36,7 @@
                                 <div class="text-md-center text-red-600">
                                 <div class="mt-2">Rôle de l'artiste : {{$artiste->ROLEARTISTE}} </div>
                                 <div class=" text-gray-300">{{$artiste->LIBELLEARTISTE}}</div>
-                                <div class="mt-2"><p class=" ">Suivre l'artiste : </p> <a href="{{$artiste->LIENFBSITEARTISTE}}" class="text-gray-300 hover:text-gray-400"> {{$artiste->LIENFBSITEARTISTE}}</a></div>
+                                <div class="mt-2"><p class=" ">Suivre l'artiste : </p> <a href="{{$artiste->LIENFBSITEARTISTE}}" target="_blank" class="text-gray-300 hover:text-gray-400">Facebook </a></div>
                                 </div>
                             </div>
 

@@ -11,12 +11,12 @@
 <body class="font-sans bg-gray-900 text-white">
     <div class="py-8 mb-24 md:mb-8">
         <nav class="border-b border-gray-800 bg-gray-900 fixed top-0 inset-x-0">
-        <a href="/"> <button class="hidden md:block left-0 top-0 bg-gray-500 rounded-lg">Retour</button></a>
+        <a href="https://www.jessy-provenzal.fr" target="_blank"> <button class="hidden md:block left-0 top-0 bg-gray-500 rounded-lg">Retour</button></a>
             <div class="container mx-auto items-center flex flex-col md:flex-row justify-between md:px4 md:py6 text-gray-300 ">
                 <ul class="flex flex-col md:flex-row items-center">
                 
                     <li>
-                        <a href="/home">
+                        <a href="/">
                             <img class="w-32 md:ml-6 object-center"src="/images/carantecred.png" alt="Carantec">
                         </a>
                     </li>
