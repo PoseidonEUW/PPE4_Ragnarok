@@ -27,9 +27,10 @@ L’avis sera visible après validation de la modération (VISIBLE EN PUBLIC)
 
 ## Installation : 
     1. Git clone https://github.com/PoseidonEUW/PPE4_Ragnarok.git
-    2. Composer Install
-    3. npm install
-    4. php artisan serve
+    2. Changer la branche en master
+    3. Composer Install
+    4. npm install
+    5. php artisan serve
     
 ## Les etudiants : 
 PROVENZAL Jessy
